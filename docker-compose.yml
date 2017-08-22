@@ -1,0 +1,38 @@
+version: '2'
+
+volumes:
+  bundle-data:
+    external: false
+
+services:
+  dev:
+    build: .
+    command: ./start.sh
+    volumes:
+      - .:/var/www:cached
+    volumes_from:
+      - bundle
+    hostname: gem_dev
+    environment:
+      RAILS_ENV: development
+      GEM_ENV: development
+      BUNDLE_PATH: /bundle
+
+  test:
+    build: .
+    command: ./start.sh
+    volumes:
+      - .:/var/www:cached
+    volumes_from:
+      - bundle
+    hostname: gem_test
+    environment:
+      BUNDLE_PATH: /bundle
+      GEM_ENV: test
+      RAILS_ENV: test
+
+  bundle:
+    image: busybox
+    volumes:
+      - bundle-data:/bundle:cached
+
