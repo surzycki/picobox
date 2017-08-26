@@ -1,15 +1,13 @@
 # Picobox
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/www`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'www'
+gem 'picobox'
 ```
 
 And then execute:
@@ -18,18 +16,20 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install www
+    $ gem install picobox
 
 ## Usage
-
-picobox configure
-picobox dns add local rails.dev
-picobox dns rm local rails.dev
-picobox version
-picobox start
-picobox stop
-picobox destroy
-picobox add <component>
+```bash
+$ picobox configure
+$ picobox dns add local rails.dev
+$ picobox dns rm local rails.dev
+$ picobox version
+$ picobox start
+$ picobox stop
+$ picobox destroy
+$ picobox create <component>
+$ picobox clean
+```
 
 ## Development
 

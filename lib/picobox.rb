@@ -1,5 +1,4 @@
+require 'thor'
 require 'picobox/version'
+require 'picobox/cli'
 
-module Picobox
-  # Your code goes here...
-end
