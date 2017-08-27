@@ -15,7 +15,7 @@ module Picobox
       say 'INSTALL PICOBOX'
       say '-------------------------------'
 
-      Installer.new(Os::Darwin.new).install
+      Installer.new(Picobox::Os::Darwin).install
     end
   end
 end

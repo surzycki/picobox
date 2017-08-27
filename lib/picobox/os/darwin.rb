@@ -1,36 +1,23 @@
-module Picobox::Os
-  class Darwin
-    FILE = 'Docker.dmg'
-    URL  = "https://download.docker.com/mac/stable/#{FILE}"
+module Picobox
+  module Os
+    class Darwin
+      class << self
+        def tmp_dir() '/tmp' end
 
-    def download_docker(start:, progress:)
-      @stream = open(URL, content_length_proc: start, progress_proc: progress)
-    end
+        def docker_filename() 'Docker.dmg' end
+        def docker_url() "https://download.docker.com/mac/stable/#{docker_filename}" end
+        def docker_fullpath() "#{tmp_dir}/#{docker_filename}" end
 
-    def install_docker(start:, progress:)
-      commands = [
-        "/usr/bin/hdiutil attach -noidme -nobrowse -quiet #{filename}",
-        "cp -R /Volumes/Docker/Docker.app /Applications",
-        "open -a Docker",
-        "/usr/bin/hdiutil unmount -quiet /Volumes/Docker"
-      ]
+        def docker_installed?
+          true
+        end
 
-      start.call( commands.length + 1 )
+        def docker_version?
+          `docker --version`
+        end
 
-      IO.copy_stream( stream, filename )
-      progress.call()
-
-      commands.each do |command|
-        system(command)
-        progress.call()
+        def to_s() :darwin end
       end
-    end
-
-    private
-    attr_reader :stream
-
-    def filename
-      "#{Picobox::TMP_DIR}/#{FILE}"
     end
   end
 end
