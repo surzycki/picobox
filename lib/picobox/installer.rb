@@ -8,8 +8,9 @@ module Picobox
 
     def install
       os.install_docker
-    rescue
+    rescue Exception => e
       Formatador.display_line('[red]Something not so good happened[/]')
+      Formatador.display_line('[red]#{e}[/]')
     end
 
     private
