@@ -1,51 +1,36 @@
 module Picobox::Os
   class Darwin
-    def install_docker
-      file = 'Docker.dmg'
-      url  = "https://download.docker.com/mac/stable/#{file}"
-      path = Picobox::TMP_DIR
-      fq_filename = "#{path}/#{file}"
+    FILE = 'Docker.dmg'
+    URL  = "https://download.docker.com/mac/stable/#{FILE}"
 
-      Formatador.display_line('[green]Downloading Docker[/]')
+    def download_docker(start:, progress:)
+      @stream = open(URL, content_length_proc: start, progress_proc: progress)
+    end
 
-      progress_bar = nil
-      stream = open(url,
-        content_length_proc: proc { |total|
-          if total.to_i > 0
-            progress_bar = ProgressBar.create(
-              format:         "%a %b\u{15E7}%i %p%% %t",
-              progress_mark:  ' ',
-              remainder_mark: "\u{FF65}",
-              title:          'Downloaded',
-              total:          total
-            )
-          end
-        },
-        progress_proc: proc { |step|
-          progress_bar.progress = step
-        }
-      )
-
-      Formatador.display_line('[green]Installing Docker[/]')
-      total_steps = 6
-
-      progress = Formatador::ProgressBar.new(total_steps) { |b| b.opts[:color] = "green" }
-      progress.increment
-
-      IO.copy_stream( stream, fq_filename)
-      progress.increment
-
-      [
-        "/usr/bin/hdiutil attach -noidme -nobrowse -quiet #{fq_filename}",
+    def install_docker(start:, progress:)
+      commands = [
+        "/usr/bin/hdiutil attach -noidme -nobrowse -quiet #{filename}",
         "cp -R /Volumes/Docker/Docker.app /Applications",
         "open -a Docker",
         "/usr/bin/hdiutil unmount -quiet /Volumes/Docker"
-      ].each do |command|
-        system(command)
-        progress.increment
-      end
+      ]
 
-      Formatador.display_line('[green]Installed Docker[/]')
+      start.call( commands.length + 1 )
+
+      IO.copy_stream( stream, filname )
+      progress.call()
+
+      commands.each do |command|
+        system(command)
+        progress.call()
+      end
+    end
+
+    private
+    attr_reader :stream
+
+    def filename
+      "#{Picobox::TMP_DIR}/#{FILE}"
     end
   end
 end
