@@ -7,15 +7,15 @@ module Picobox
       puts Picobox::VERSION
     end
 
-    desc 'configure', 'configure picobox'
+    desc 'install', 'install picobox'
     long_desc <<-LONGDESC
     LONGDESC
-    def configure
+    def install
       say ''
-      say 'CONFIGURE PICOBOX'
+      say 'INSTALL PICOBOX'
       say '-------------------------------'
-      shell = `id -u -n`
-      say "hello #{shell}"
+
+      Installer.new(Os::Darwin.new).install
     end
   end
 end

@@ -40,4 +40,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'aruba'
 
   spec.add_dependency 'thor'
+  spec.add_dependency 'formatador'
+  spec.add_dependency 'ruby-progressbar'
+  spec.add_dependency 'spinning_cursor'
+
 end
