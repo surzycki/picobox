@@ -37,7 +37,7 @@ module Picobox::Os
 
       [
         "/usr/bin/hdiutil attach -noidme -nobrowse -quiet #{fq_filename}",
-        "cp -R /Volumes/Docker /Applications",
+        "cp -R /Volumes/Docker/Docker.app /Applications",
         "open -a Docker",
         "hdiutil unmount /Volumes/Docker"
       ].each do |command|
