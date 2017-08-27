@@ -17,7 +17,7 @@ module Picobox::Os
 
       start.call( commands.length + 1 )
 
-      IO.copy_stream( stream, filname )
+      IO.copy_stream( stream, filename )
       progress.call()
 
       commands.each do |command|

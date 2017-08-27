@@ -20,14 +20,15 @@ Or install it yourself as:
 
 ## Usage
 ```bash
-$ picobox configure
-$ picobox dns add local rails.dev
-$ picobox dns rm local rails.dev
-$ picobox version
+$ picobox install
+$ picobox init
 $ picobox start
 $ picobox stop
 $ picobox destroy
 $ picobox create <component>
+$ picobox dns add local rails.dev
+$ picobox dns rm local rails.dev
+$ picobox version
 $ picobox clean
 ```
 
