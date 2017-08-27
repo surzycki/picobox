@@ -29,7 +29,7 @@ module Picobox::Os
       Formatador.display_line('[green]Installing Docker[/]')
       total_steps = 6
 
-      progress = Formatador::ProgressBar.new(total) { |b| b.opts[:color] = "green" }
+      progress = Formatador::ProgressBar.new(total_steps) { |b| b.opts[:color] = "green" }
       progress.increment
 
       IO.copy_stream( stream, fq_filename)
