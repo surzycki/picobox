@@ -1,5 +1,5 @@
 module Picobox
-  TMP_DIR = 'tmp'
+  TMP_DIR = '/tmp'
 
   class Installer
     def initialize(os)
