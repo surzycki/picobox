@@ -36,7 +36,7 @@ module Picobox
     LONGDESC
     def dev()
       cmd = TTY::Command.new
-      cmd.run :"docker-compose", 'exec dev bash'
+      cmd.run 'docker-compose exec dev bash'
     end
   end
 end
