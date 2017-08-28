@@ -6,48 +6,49 @@ module Picobox
       end
 
       def unpack(type)
-        # raises an exception if we can't find the type in the manifest
-        Manifest.new.check!(type)
-        unpack_start_script type
-        unpack_docker_files type
+        @manifest = Manifest.new(os, type)
+        @manifest.check! # raises an exception if we can't find the type in the manifest
 
-        # TODO get more fancy here, but if we use external sources this doesn't matter
-          #box_dir        = "#{Picobox.template_dir}/boxes"
-          #start_template = "#{box_dir}/#{type}/start"
-
-          #TTY::File.copy_file(start_template, "#{os.current_dir}/#{os.picobox_dir}")
-          #TTY::File.chmod(start_dest, 0777)
-
-          #docker_compose_template = "#{box_dir}/#{type}/docker-compose.yml"
-          #dockerfile_template     = "#{box_dir}/#{type}/Dockerfile"
-          ##TTY::File.copy_file(docker_compose_template, os.project_dir)
-        #TTY::File.copy_file(dockerfile_template, os.project_dir)
+        unpack_start_script
+        unpack_docker_files
+        unpack_additional_files
       end
 
       private
-      attr_reader :os
+      attr_reader :os, :manifest
 
-      def unpack_start_script(type)
-        # TODO put project root dir in ini file
-        source = "#{Picobox.template_dir}/boxes/#{type}/start"
-        dest   = "#{os.current_dir}/#{os.picobox_dir}/start"
+      def unpack_start_script
+        # start script
+        TTY::File.copy_file(
+          manifest.source.start_script,
+          manifest.dest.start_script
+        )
 
-        TTY::File.copy_file(source, dest)
-        TTY::File.chmod(dest, 0777)
+        TTY::File.chmod(manifest.dest.start_script, 0777)
       end
 
-      def unpack_docker_files(type)
+      def unpack_docker_files
         # docker-compose.yml
-        source = "#{Picobox.template_dir}/boxes/#{type}/docker-compose.yml"
-        dest   = "#{os.current_dir}/docker-compose.yml"
-
-        TTY::File.copy_file(source, dest)
+        TTY::File.copy_file(
+          manifest.source.docker_compose,
+          manifest.dest.docker_compose
+        )
 
         # Dockerfile
-        source = "#{Picobox.template_dir}/boxes/#{type}/Dockerfile"
-        dest   = "#{os.current_dir}/Dockerfile"
+        TTY::File.copy_file(
+          manifest.source.dockerfile,
+          manifest.dest.dockerfile
+        )
+      end
 
-        TTY::File.copy_file(source, dest)
+      def unpack_additional_files
+        # unpack remaining in project root director
+        manifest.additional_files.each do |file|
+          TTY::File.copy_file(
+            file[:source],
+            file[:dest]
+          )
+        end
       end
     end
   end

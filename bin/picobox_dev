@@ -2,5 +2,6 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'picobox'
+require 'byebug'
 
 Picobox::CLI.start
