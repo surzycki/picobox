@@ -1,6 +1,4 @@
 module Picobox
-
-
   class Installer
     include Picobox::Utils::Visitable
 
@@ -14,6 +12,7 @@ module Picobox
       accept(Picobox::Commands::DownloadDocker.new)
       accept(Picobox::Commands::InstallDocker.new)
       accept(Picobox::Commands::SetupShell.new)
+      accept(Picobox::Commands::FinishInstall.new)
     rescue Exception => e
       Formatador.display_line("[red]#{e}[/]")
     end

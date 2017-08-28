@@ -32,7 +32,19 @@ module Picobox
       end
 
       def setup_shell_start
-        Formatador.display_line('[green]Setting up shell[/]')
+        Formatador.display_line('[green]Setting up Shell[/]')
+      end
+
+      def install_complete
+        Formatador.display_line('[green]Install Complete[/]')
+      end
+
+      def project_initialize_start
+        Formatador.display_line('[green]Initializing Project[/]')
+      end
+
+      def project_initialize_complete
+        Formatador.display_line('[green]Project Initialized[/]')
       end
     end
   end

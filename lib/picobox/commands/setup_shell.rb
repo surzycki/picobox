@@ -11,9 +11,7 @@ module Picobox
         TTY::File.copy_file template, picobox_proxies
 
         # install shell proxies
-        UserShell.new(
-          Picobox::Utils::ShellStartupScript.get(os)
-        ).install
+        Picobox::Shell::StartupScript.get(os).install_proxies
       end
 
       private

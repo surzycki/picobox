@@ -4,6 +4,7 @@ module Picobox
       class << self
         def tmp_dir() '/tmp' end
         def home_dir() "#{ENV['HOME']}" end
+        def current_dir() `pwd`.strip end
 
         def docker_filename() 'Docker.dmg' end
         def docker_url() "https://download.docker.com/mac/stable/#{docker_filename}" end
@@ -14,6 +15,7 @@ module Picobox
         def user_shell() "#{ENV['SHELL']}" end
 
         def picobox_proxies() '.picobox_proxies' end
+        def picobox_dotfile() '.picobox' end
 
         def to_s() :darwin end
       end
