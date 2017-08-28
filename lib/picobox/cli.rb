@@ -35,8 +35,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def dev()
-      cmd = TTY::Command.new
-      cmd.run 'docker-compose exec dev bash'
+      say("\e[1m\e[32m[open]\e[0m Running \e[33mdev terminal\e[0m")
+      system "bash", "-c", "docker-compose exec dev bash"
     end
   end
 end
