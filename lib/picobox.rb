@@ -5,6 +5,7 @@ require 'wisper'
 require 'open-uri'
 require 'uri'
 require 'tty-file'
+require 'tty-command'
 require 'ostruct'
 
 require 'picobox/utils/progress_bar'
