@@ -36,8 +36,6 @@ services:
       RAILS_ENV: test
       BUNDLE_PATH: /bundle
     hostname: picobox_test
-    ports:
-      - '81:3001'
 
   db:
     image: postgres:9.4

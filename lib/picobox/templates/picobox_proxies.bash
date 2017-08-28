@@ -21,7 +21,7 @@ can_execute () {
 
 picobox_proxy () {
   if can_execute; then
-    docker-compose exec $1 bin/$2 "${@:3}"
+    docker-compose exec $1 $2 "${@:3}"
   else
     `which $2` "${@:3}"
   fi
