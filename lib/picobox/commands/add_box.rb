@@ -1,6 +1,6 @@
 module Picobox
   module Commands
-    class InstallBox < Picobox::Utils::VisitorByOs
+    class AddBox < Picobox::Utils::VisitorByOs
       def initialize(type)
         @type = type
       end

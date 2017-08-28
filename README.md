@@ -24,12 +24,12 @@ $ picobox install
 $ picobox init
 $ picobox start
 $ picobox stop
-$ picobox destroy
-$ picobox create <component>
-$ picobox dns add local rails.dev
-$ picobox dns rm local rails.dev
+$ #picobox destroy
+$ #picobox add <box>
+$ #picobox dns add local rails.dev
+$ #picobox dns rm local rails.dev
 $ picobox version
-$ picobox clean
+$ #picobox clean
 ```
 
 ## Development

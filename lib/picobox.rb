@@ -22,7 +22,7 @@ require 'picobox/commands/install_docker'
 require 'picobox/commands/setup_shell'
 require 'picobox/commands/finish_install'
 require 'picobox/commands/initialize_project'
-require 'picobox/commands/install_box'
+require 'picobox/commands/add_box'
 
 require 'picobox/boxes/manifest'
 require 'picobox/boxes/unpacker'
