@@ -39,11 +39,11 @@ alias bundle=picobox_bundle
 ##
 ## rails proxies
 ##
-picobox_rails ()  { picobox_proxy $dev "rails" "$@" ; }
-picobox_spring () { picobox_proxy $dev "spring" "$@" ; }
+picobox_rails ()  { picobox_proxy $dev "bundle exec rails" "$@" ; }
+picobox_spring () { picobox_proxy $dev "bundle exec spring" "$@" ; }
 picobox_yarn () { picobox_proxy $dev "yarn" "$@" ; }
 picobox_webpacker () { picobox_proxy $dev "webpacker" "$@" ; }
-picobox_guard () { picobox_proxy $dev "guard" "$@" ; }
+picobox_guard () { picobox_proxy $dev "bundle exec guard" "$@" ; }
 
 alias rails=picobox_rails
 alias spring=picobox_spring
