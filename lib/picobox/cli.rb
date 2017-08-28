@@ -23,11 +23,12 @@ module Picobox
       say '-------------------------------'
     end
 
-    desc 'init', 'initialize director for use with picobox'
+    desc 'init [BOX] optional', 'initialize directory for use with picobox'
     long_desc <<-LONGDESC
     LONGDESC
-    def init
+    def init(box_type = nil)
       Project.new(Picobox::Os::Darwin).init
+      Box.new(Picobox::Os::Darwin).create box_type
     end
   end
 end

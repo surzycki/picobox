@@ -28,6 +28,8 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
+  spec.required_ruby_version = ">= 2.0.0"
+
   spec.bindir        = 'bin'
   spec.executables   = ['picobox']
   spec.require_paths = ['lib']

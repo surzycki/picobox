@@ -5,9 +5,9 @@ module Picobox
         @os = subject.os
 
         publish_event :project_initialize_start
-        # for now just empty file, bue eventualy add flags 'ie enabled, etc'
+        # for now just empty dir, but eventualy add flags with ini files 'ie enabled, etc'
         # https://github.com/albfan/bash-ini-parser
-        TTY::File.create_file "#{os.current_dir}/#{os.picobox_dotfile}", 'h'
+        TTY::File.create_dir os.picobox_dir, os.current_dir
 
         publish_event :project_initialize_complete
       end

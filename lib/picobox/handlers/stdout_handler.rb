@@ -46,6 +46,10 @@ module Picobox
       def project_initialize_complete
         Formatador.display_line('[green]Project Initialized[/]')
       end
+
+      def create_box_start(type)
+        Formatador.display_line("[green]Creating #{type} box[/]")
+      end
     end
   end
 end

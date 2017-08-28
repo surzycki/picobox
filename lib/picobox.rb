@@ -21,6 +21,7 @@ require 'picobox/commands/install_docker'
 require 'picobox/commands/setup_shell'
 require 'picobox/commands/finish_install'
 require 'picobox/commands/initialize_project'
+require 'picobox/commands/create_box'
 
 require 'picobox/os/darwin'
 require 'picobox/os/linux'
@@ -32,6 +33,7 @@ require 'picobox/version'
 require 'picobox/cli'
 require 'picobox/installer'
 require 'picobox/project'
+require 'picobox/box'
 
 Wisper.subscribe(
   Picobox::Handlers::StdoutHandler.new,

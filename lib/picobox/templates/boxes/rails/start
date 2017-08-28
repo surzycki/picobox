@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ -f tmp/pids/server.pid ]; then
+  rm tmp/pids/server.pid
+fi
+
+bundle check || bundle install
+
+# make an infinite process so we can enter containers
+tail -f /dev/null
