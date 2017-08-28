@@ -46,6 +46,7 @@ RUN npm -g install phantomjs-prebuilt
 
 # add bundler
 RUN gem install bundler
+RUN gem install rake
 
 # working dir
 WORKDIR $APP_HOME

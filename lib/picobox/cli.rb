@@ -32,12 +32,11 @@ module Picobox
     end
 
 
-    desc 'dev', 'open dev box shell'
+    desc 'build [BOX] optional', 'builds the picobox'
     long_desc <<-LONGDESC
     LONGDESC
-    def dev()
-      say("\e[1m\e[32m[open]\e[0m Running \e[33mdev terminal\e[0m")
-      system "bash", "-c", "docker-compose exec dev bash"
+    def build(instance = nil)
+      system "docker-compose build #{instance}"
     end
 
 
@@ -54,6 +53,15 @@ module Picobox
     LONGDESC
     def stop()
       system 'docker-compose stop'
+    end
+
+
+    desc 'dev', 'open dev box shell'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def dev()
+      say("\e[1m\e[32m[open]\e[0m Running \e[33mdev terminal\e[0m")
+      system "bash", "-c", "docker-compose exec dev bash"
     end
   end
 end
