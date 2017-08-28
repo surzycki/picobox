@@ -30,5 +30,12 @@ module Picobox
       Project.new(Picobox::Os::Darwin).init
       Box.new(Picobox::Os::Darwin).install box_type
     end
+
+    desc 'dev', 'open dev box shell'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def dev()
+      `docker-compose exec dev bash`
+    end
   end
 end
