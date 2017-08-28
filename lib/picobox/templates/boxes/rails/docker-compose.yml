@@ -16,8 +16,6 @@ services:
       - bundle
     links:
       - db
-      - cache
-      - redis
     environment:
       RAILS_ENV: development
       BUNDLE_PATH: /bundle
