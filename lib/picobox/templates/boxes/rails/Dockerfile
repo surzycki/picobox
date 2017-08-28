@@ -32,6 +32,9 @@ RUN apt-get install -y wget nano curl
 # postgres client
 RUN apt-get install -y libpq-dev postgresql-client
 
+# sql-lite
+RUN apt-get install -y libsqlite3-dev
+
 # nodejs
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
