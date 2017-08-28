@@ -15,7 +15,7 @@ module Picobox
 
         def user_shell() "#{ENV['SHELL']}" end
 
-        def picobox_proxies() '.picobox_proxies' end
+        def picobox_proxies() '.picobox' end
 
         def to_s() :darwin end
       end
