@@ -17,6 +17,10 @@ module Picobox
 
         def picobox_proxies() '.picobox' end
 
+        def is_project?
+          File.exist? "#{current_dir}/#{picobox_dir}"
+        end
+
         def to_s() :darwin end
       end
     end

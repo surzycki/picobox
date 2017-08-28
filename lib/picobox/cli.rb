@@ -28,7 +28,7 @@ module Picobox
     LONGDESC
     def init(box_type = nil)
       Project.new(Picobox::Os::Darwin).init
-      Box.new(Picobox::Os::Darwin).create box_type
+      Box.new(Picobox::Os::Darwin).install box_type
     end
   end
 end

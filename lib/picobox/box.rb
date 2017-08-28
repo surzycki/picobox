@@ -8,10 +8,11 @@ module Picobox
       @os = os
     end
 
-    def create(type = nil)
+    def install(type = nil)
       return if type.nil?
-      accept(Picobox::Commands::CreateBox.new(type))
+      accept(Picobox::Commands::InstallBox.new(type))
     rescue Exception => e
+      byebug
       Formatador.display_line("[red]#{e}[/]")
     end
   end

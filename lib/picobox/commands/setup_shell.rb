@@ -6,7 +6,7 @@ module Picobox
 
         publish_event :setup_shell_start
 
-        template        = "#{Picobox.root}/templates/picobox_proxies.bash"
+        template        = "#{Picobox.template_dir}/picobox_proxies.bash"
         picobox_proxies = "#{os.home_dir}/#{os.picobox_proxies}"
         TTY::File.copy_file template, picobox_proxies
 

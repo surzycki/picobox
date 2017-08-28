@@ -12,6 +12,7 @@ require 'picobox/utils/visitable'
 require 'picobox/utils/domain_event_publisher'
 require 'picobox/utils/visitor_by_os'
 
+
 require 'picobox/errors/picobox_error'
 
 require 'picobox/handlers/stdout_handler'
@@ -21,7 +22,10 @@ require 'picobox/commands/install_docker'
 require 'picobox/commands/setup_shell'
 require 'picobox/commands/finish_install'
 require 'picobox/commands/initialize_project'
-require 'picobox/commands/create_box'
+require 'picobox/commands/install_box'
+
+require 'picobox/boxes/manifest'
+require 'picobox/boxes/unpacker'
 
 require 'picobox/os/darwin'
 require 'picobox/os/linux'
@@ -43,6 +47,7 @@ Wisper.subscribe(
 module Picobox
   module_function
   def root() File.expand_path('../picobox', __FILE__) end
+  def template_dir() "#{Picobox.root}/templates" end
 end
 
 

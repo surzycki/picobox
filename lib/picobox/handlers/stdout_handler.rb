@@ -50,6 +50,14 @@ module Picobox
       def create_box_start(type)
         Formatador.display_line("[green]Creating #{type} box[/]")
       end
+
+      def create_box_not_available(type)
+        Formatador.display_line("[red]#{type.capitalize} boxes are not implemented...yet[/]")
+      end
+
+      def create_box_not_initialized
+        Formatador.display_line("[red]Project has not been initialized, run 'picobox init'[/]")
+      end
     end
   end
 end
