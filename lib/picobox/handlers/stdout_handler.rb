@@ -31,7 +31,9 @@ module Picobox
         Formatador.display_line('[green]Installed Docker[/]')
       end
 
-
+      def setup_shell_start
+        Formatador.display_line('[green]Setting up shell[/]')
+      end
     end
   end
 end

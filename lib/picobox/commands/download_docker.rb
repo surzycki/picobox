@@ -12,14 +12,6 @@ module Picobox
           publish_event :download_docker_complete
         end
       end
-
-      def visit_linux subject
-        raise ::NotImplementedError, 'linux not supported'
-      end
-
-      def visit_windows subject
-        raise ::NotImplementedError, 'windows not supported'
-      end
     end
   end
 end

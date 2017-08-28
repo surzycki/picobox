@@ -22,14 +22,6 @@ module Picobox
           publish_event :docker_present, subject.os.docker_version?
         end
       end
-
-      def visit_linux subject
-        raise ::NotImplementedError, 'linux not supported'
-      end
-
-      def visit_windows subject
-        raise ::NotImplementedError, 'windows not supported'
-      end
     end
   end
 end
