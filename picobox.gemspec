@@ -37,9 +37,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'rake',  '~> 12.0'
-  spec.add_development_dependency 'aruba-turnip'
+  spec.add_development_dependency 'aruba-turnip', '0.1.1'
   spec.add_development_dependency 'turnip'
-  spec.add_development_dependency 'aruba'
+  spec.add_development_dependency 'aruba', '0.14.2'
 
   spec.add_dependency 'thor', '0.20.0'
   spec.add_dependency 'formatador', '0.2.5'

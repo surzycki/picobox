@@ -30,7 +30,14 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 To use without installing, use:
 
 ```bash
-$ picobox_dev version
+$ bin/picobox_dev version
+```
+
+To install locally:
+
+```bash
+$ rake build
+$ gem install pkg/picobox-x.x.x.gem
 ```
 
 ## TODO
