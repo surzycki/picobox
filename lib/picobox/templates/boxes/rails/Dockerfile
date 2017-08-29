@@ -17,7 +17,7 @@ WORKDIR /tmp
 
 # add repository software
 RUN apt-get update
-RUN apt-get install -y software-properties-common git
+RUN apt-get install -y software-properties-common git tzdata
 
 # add repository
 RUN apt-add-repository -y ppa:brightbox/ruby-ng
@@ -25,15 +25,6 @@ RUN apt-add-repository -y ppa:brightbox/ruby-ng
 # ruby
 RUN apt-get update -qq && apt-get install -y build-essential ruby2.4 ruby2.4-dev
 RUN gem update --system
-
-# utils
-RUN apt-get install -y wget nano curl
-
-# postgres client
-RUN apt-get install -y libpq-dev postgresql-client
-
-# sql-lite
-RUN apt-get install -y libsqlite3-dev
 
 # nodejs
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
@@ -47,13 +38,21 @@ RUN apt-get install -y libfontconfig1 libfontconfig1-dev
 # phantomjs latest
 RUN npm -g install phantomjs-prebuilt
 
+# postgres client
+RUN apt-get install -y libpq-dev postgresql-client
+
+# sql-lite
+RUN apt-get install -y libsqlite3-dev
+
+# mysql
+RUN apt-get install -y libmysqlclient-dev
+
+# utils
+RUN apt-get install -y wget nano curl
+
 # add bundler
 RUN gem install bundler
 RUN gem install rake
-
-# add timezone gem
-# see https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
-RUN gem install tzinfo-data
 
 # working dir
 WORKDIR $APP_HOME
