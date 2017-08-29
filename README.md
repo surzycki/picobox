@@ -31,7 +31,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## TODO
 
-- [x] a task list item
 - [ ] Include aliases specific to the box when unpacking
 - [ ] Put boxes on dockerhub
 - [ ] Add component command (redis, postgres, memcached, mongodb, etc)
