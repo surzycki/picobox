@@ -17,10 +17,12 @@ WORKDIR /tmp
 
 # add repository software
 RUN apt-get update
-RUN apt-get install -y software-properties-common git tzdata
+RUN apt-get install -y software-properties-common git tzdata wget curl
 
 # add repository
 RUN apt-add-repository -y ppa:brightbox/ruby-ng
+
+## Languages
 
 # ruby
 RUN apt-get update -qq && apt-get install -y build-essential ruby2.4 ruby2.4-dev
@@ -30,13 +32,7 @@ RUN gem update --system
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 
-# phantomjs pre-requisites
-RUN apt-get install -y chrpath libssl-dev libxft-dev
-RUN apt-get install -y libfreetype6 libfreetype6-dev
-RUN apt-get install -y libfontconfig1 libfontconfig1-dev
-
-# phantomjs latest
-RUN npm -g install phantomjs-prebuilt
+## Database dependencies
 
 # postgres client
 RUN apt-get install -y libpq-dev postgresql-client
@@ -47,18 +43,22 @@ RUN apt-get install -y libsqlite3-dev
 # mysql
 RUN apt-get install -y libmysqlclient-dev
 
-# utils
-RUN apt-get install -y wget nano curl
+## Tools
 
-# add bundler
+# phantomjs pre-requisites
+RUN apt-get install -y chrpath libssl-dev libxft-dev
+RUN apt-get install -y libfreetype6 libfreetype6-dev
+RUN apt-get install -y libfontconfig1 libfontconfig1-dev
+
+# phantomjs latest
+RUN npm -g install phantomjs-prebuilt
+
+# utils
+RUN apt-get install -y nano
+
+# add rails stuff
 RUN gem install bundler
 RUN gem install rake
-
-# working dir
-WORKDIR $APP_HOME
-
-# add gemfile
-ADD Gemfile* $APP_HOME/
 
 # make nano work
 RUN echo "export TERM=xterm" >> /etc/bash.bashrc
@@ -66,6 +66,11 @@ RUN echo "export TERM=xterm" >> /etc/bash.bashrc
 # hook up cache volume
 ENV BUNDLE_PATH /bundle
 
-# hook up source
-ADD . $APP_HOME
+# working dir
+WORKDIR $APP_HOME
 
+# add gemfile
+ONBUILD ADD Gemfile* $APP_HOME/
+
+# hook up source
+ONBUILD ADD . $APP_HOME

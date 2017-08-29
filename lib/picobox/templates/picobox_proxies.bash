@@ -30,9 +30,11 @@ picobox_proxy () {
 ##
 ## ruby proxies
 ##
+picobox_gem ()    { picobox_proxy $dev "gem" "$@" ; }
 picobox_rake ()   { picobox_proxy $dev "rake" "$@" ; }
 picobox_bundle () { picobox_proxy $dev "bundle" "$@" ; }
 
+alias gem=picobox_gem
 alias rake=picobox_rake
 alias bundle=picobox_bundle
 
