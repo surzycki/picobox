@@ -24,6 +24,7 @@ require 'picobox/commands/setup_shell'
 require 'picobox/commands/finish_install'
 require 'picobox/commands/initialize_project'
 require 'picobox/commands/add_box'
+require 'picobox/commands/list_box'
 
 require 'picobox/boxes/manifest'
 require 'picobox/boxes/unpacker'

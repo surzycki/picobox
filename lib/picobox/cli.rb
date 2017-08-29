@@ -17,8 +17,7 @@ module Picobox
       Installer.new(Picobox::Os::Darwin).install
 
       say ''
-      say 'use "picobox init" to initialize picobox in your project root folder'
-      say ''
+      say "use '\e[1m\e[33mpicobox init [BOX]\e[0m' to initialize picobox in your project root folder"
       say '-------------------------------'
     end
 
@@ -65,6 +64,14 @@ module Picobox
     end
 
 
+    desc 'boxes', 'list of available boxes'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def boxes()
+      Box.new(Picobox::Os::Darwin).list
+    end
+
+
     desc 'clean', 'clean stop containers'
     long_desc <<-LONGDESC
     LONGDESC
@@ -72,5 +79,7 @@ module Picobox
       say("\e[1m\e[32m[clean]\e[0m Cleaning stopped containers")
       system "docker container prune"
     end
+
+
   end
 end

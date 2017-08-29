@@ -58,6 +58,14 @@ module Picobox
       def create_box_not_initialized
         Formatador.display_line("[red]Project has not been initialized, run 'picobox init'[/]")
       end
+
+      def list_boxes(boxes)
+        Formatador.display_line("[green]Available boxes:[/]")
+
+        boxes.each do |box|
+          Formatador.display_line("  #{box}")
+        end
+      end
     end
   end
 end

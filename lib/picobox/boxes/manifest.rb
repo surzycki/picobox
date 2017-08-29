@@ -1,7 +1,7 @@
 module Picobox
   module Boxes
     class Manifest
-      def initialize(os, type)
+      def initialize(os, type = nil)
         @os, @type = os, type
       end
 

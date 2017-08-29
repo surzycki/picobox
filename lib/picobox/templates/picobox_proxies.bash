@@ -55,3 +55,9 @@ alias yarn=picobox_yarn
 alias webpacker=picobox_webpacker
 alias guard=picobox_guard
 
+##
+## ansible proxies
+##
+picobox_ansible_playbook () { picobox_proxy $DEV "ansible-playbook" "$@" ; }
+
+alias ansible-playbook=picobox_ansible_playbook
