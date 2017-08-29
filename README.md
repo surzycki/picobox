@@ -25,7 +25,7 @@ $ picobox init
 $ picobox start
 $ picobox stop
 $ #picobox destroy
-$ #picobox add <box>
+$ #picobox add <component>
 $ #picobox dns add local rails.dev
 $ #picobox dns rm local rails.dev
 $ picobox version
