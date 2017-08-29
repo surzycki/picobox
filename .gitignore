@@ -8,5 +8,8 @@
 /spec/reports/
 /tmp/
 
+.byebug_history
+.DS_Store
+
 # rspec failure tracking
 .rspec_status
