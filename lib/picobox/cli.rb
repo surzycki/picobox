@@ -23,10 +23,10 @@ module Picobox
     end
 
 
-    desc 'init [BOX] optional', 'initialize directory for use with picobox'
+    desc 'init [BOX]', 'initialize directory for use with picobox'
     long_desc <<-LONGDESC
     LONGDESC
-    def init(box_type = nil)
+    def init(box_type)
       Project.new(Picobox::Os::Darwin).init
       Box.new(Picobox::Os::Darwin).install box_type
     end
@@ -56,12 +56,21 @@ module Picobox
     end
 
 
-    desc 'dev', 'open dev box shell'
+    desc 'open [instance]', 'open shell to instance'
     long_desc <<-LONGDESC
     LONGDESC
-    def dev()
-      say("\e[1m\e[32m[open]\e[0m Running \e[33mdev terminal\e[0m")
-      system "bash", "-c", "docker-compose exec dev bash"
+    def open(instance)
+      say("\e[1m\e[32m[open]\e[0m Running \e[33m#{instance} shell\e[0m")
+      system "bash", "-c", "docker-compose exec #{instance} bash"
+    end
+
+
+    desc 'clean', 'clean stop containers'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def clean()
+      say("\e[1m\e[32m[clean]\e[0m Cleaning stopped containers")
+      system "docker container prune"
     end
   end
 end
