@@ -51,6 +51,10 @@ RUN npm -g install phantomjs-prebuilt
 RUN gem install bundler
 RUN gem install rake
 
+# add timezone gem
+# see https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
+RUN gem install tzinfo-data
+
 # working dir
 WORKDIR $APP_HOME
 
