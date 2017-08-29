@@ -55,7 +55,7 @@ module Picobox
     end
 
 
-    desc 'open [instance]', 'open shell to instance'
+    desc 'open [INSTANCE]', 'open shell to instance'
     long_desc <<-LONGDESC
     LONGDESC
     def open(instance)

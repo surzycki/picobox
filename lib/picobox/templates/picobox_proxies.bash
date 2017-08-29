@@ -61,3 +61,4 @@ alias guard=picobox_guard
 picobox_ansible_playbook () { picobox_proxy $DEV "ansible-playbook" "$@" ; }
 
 alias ansible-playbook=picobox_ansible_playbook
+alias ansible=picobox_ansible_playbook
