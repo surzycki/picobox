@@ -19,7 +19,7 @@ That's it your done
 
 ## Usage
 
-![alt text](http://url/to/img.png)
+![demo](https://github.com/surzycki/picobox/blob/master/docs/testdrive.gif)
 
 **Create box**
 
