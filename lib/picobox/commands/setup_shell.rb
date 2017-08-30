@@ -10,8 +10,10 @@ module Picobox
         picobox_proxies = "#{os.home_dir}/#{os.picobox_proxies}"
         TTY::File.copy_file template, picobox_proxies
 
-        # install shell proxies
-        Picobox::Shell::StartupScript.get(os).install_proxies
+        shell_startup_script = Picobox::Shell::StartupScript.get(os)
+        shell_startup_script.install_proxies
+
+        publish_event :setup_shell_installed, shell_startup_script.path
       end
 
       private

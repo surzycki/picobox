@@ -2,6 +2,10 @@
 
 Docker development environment for humans.  So thin (1×10−12 m) you can barley feel it.
 
+Don't want to learn a whole -bunch --of -commands_with_flags/just -to run_rails?
+
+Start picobox and continue with the way you have always done things, just now isolated inside a container
+
 Caution, there be dragons...
 
 ## Installation CLI
@@ -9,6 +13,8 @@ Caution, there be dragons...
 ```bash
 $ gem install picobox
 ```
+
+
 
 ## Usage
 ```bash
@@ -61,3 +67,25 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/surzyc
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+ctrl-k
+asciinema rec testdrive
+
+picobox install
+mkdir -p Code/rails
+cd Code/rails
+picobox init rails
+picobox build
+gem install rails
+picobox start
+the gems will be installed in the container
+gem install rails
+cd ..
+gem list | grep rails
+look ma no rails!
+cd rails
+rails new .
+rails c
+rails s
+picobox stop
+rails s
+the container is down so no rails

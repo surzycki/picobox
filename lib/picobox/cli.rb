@@ -13,12 +13,15 @@ module Picobox
       say ''
       say 'INSTALL PICOBOX'
       say '-------------------------------'
-
       Installer.new(Picobox::Os::Darwin).install
-
-      say ''
-      say "use '\e[1m\e[33mpicobox init [BOX]\e[0m' to initialize picobox in your project root folder"
       say '-------------------------------'
+      say ''
+      say 'You should reload open shells to pick up shell changes'
+      say ''
+      say_status 'opening', 'new shell'
+      say ''
+      # hack to load newly set aliases
+      system('exec /bin/bash -l')
     end
 
 
@@ -69,6 +72,14 @@ module Picobox
     LONGDESC
     def boxes()
       Box.new(Picobox::Os::Darwin).list
+    end
+
+
+    desc 'status', 'current status of containers'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def status()
+      system "docker container ps"
     end
 
 
