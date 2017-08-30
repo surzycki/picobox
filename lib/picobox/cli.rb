@@ -57,7 +57,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def stop()
-      system 'docker-compose stop'
+      system 'docker-compose down'
     end
 
 
