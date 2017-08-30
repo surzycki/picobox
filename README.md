@@ -19,6 +19,8 @@ That's it your done
 
 ## Usage
 
+![alt text](http://url/to/img.png)
+
 **Create box**
 
 ```bash
