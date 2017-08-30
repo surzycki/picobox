@@ -28,6 +28,30 @@ module Picobox
     end
 
 
+    desc 'update', 'udpates picobox'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def update
+      os = Picobox::Os::Darwin
+
+      say ''
+      say 'UPDATE PICOBOX'
+      say '-------------------------------'
+      Installer.new(os).install
+      say '-------------------------------'
+      say ''
+      say 'You should reload open shells to pick up shell changes'
+      say ''
+      say_status 'opening', 'new shell'
+      say ''
+
+      # hack to load newly set aliases into shell
+      system("exec #{os.user_shell} -l")
+    end
+
+
+
+
     desc 'init [BOX]', 'initialize directory for use with picobox'
     long_desc <<-LONGDESC
     LONGDESC
