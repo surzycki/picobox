@@ -10,18 +10,21 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def install
+      os = Picobox::Os::Darwin
+
       say ''
       say 'INSTALL PICOBOX'
       say '-------------------------------'
-      Installer.new(Picobox::Os::Darwin).install
+      Installer.new(os).install
       say '-------------------------------'
       say ''
       say 'You should reload open shells to pick up shell changes'
       say ''
       say_status 'opening', 'new shell'
       say ''
-      # hack to load newly set aliases
-      system('exec /bin/bash -l')
+
+      # hack to load newly set aliases into shell
+      system("exec #{os.user_shell} -l")
     end
 
 
