@@ -12,22 +12,44 @@ Caution, there be dragons...
 
 ```bash
 $ gem install picobox
+$ picobox install
 ```
 
-
+That's it your done
 
 ## Usage
+
+**Create box**
+
 ```bash
-$ picobox install
-$ picobox init [BOX]
+$ mkdir -p Code/rails
+$ cd Code/rails
+$ picobox init rails
+$ picobox build
 $ picobox start
-$ picobox stop
-$ picobox version
-$ picobox boxes
-$ picobox build [BOX] optional
-$ picobox clean
-$ picobox open [INSTANCE]
 ```
+
+Your box is up and running, use your container-ized rails as you would normally
+
+**Create a rails project**
+```bash
+$ gem install rails --no-ri --no-rdoc
+$ rails new .
+$ rails c
+$ rake -T
+$ rails s
+```
+
+**Do more stuff**
+```bash
+$ gem install rails --no-ri --no-rdoc
+$ irb
+$ bundle install
+$ ruby
+```
+
+Everything is running inside your box transparently !
+
 
 ## Development
 
@@ -67,25 +89,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/surzyc
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-ctrl-k
-asciinema rec testdrive
-
-picobox install
-mkdir -p Code/rails
-cd Code/rails
-picobox init rails
-picobox build
-gem install rails
-picobox start
-the gems will be installed in the container
-gem install rails
-cd ..
-gem list | grep rails
-look ma no rails!
-cd rails
-rails new .
-rails c
-rails s
-picobox stop
-rails s
-the container is down so no rails

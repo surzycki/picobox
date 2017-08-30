@@ -33,10 +33,14 @@ picobox_proxy () {
 picobox_gem ()    { picobox_proxy $DEV "gem" "$@" ; }
 picobox_rake ()   { picobox_proxy $DEV "rake" "$@" ; }
 picobox_bundle () { picobox_proxy $DEV "bundle" "$@" ; }
+picobox_irb()     { picobox_proxy $DEV "irb" "$@" ;}
+picobox_ruby()    { picobox_proxy $DEV "ruby" "$@" ;}
 
 alias gem=picobox_gem
 alias rake=picobox_rake
 alias bundle=picobox_bundle
+alias irb=picobox_irb
+alias ruby=picobox_ruby
 
 ##
 ## rails proxies
