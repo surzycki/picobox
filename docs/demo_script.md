@@ -1,4 +1,8 @@
+docker pull asciinema/asciicast2gif
+alias asciicast2gif='docker run --rm -v $PWD:/data asciinema/asciicast2gif'
+asciicast2gif -t solarized-dark testdrive testdrive.gif
 ctrl-k
+
 asciinema rec testdrive
 
 picobox install

@@ -2,11 +2,11 @@
 
 Docker development environment for humans.  So thin (1×10−12 m) you can barley feel it.
 
-Don't want to learn a whole -bunch --of -commands_with_flags/just -to run_rails?
+Don't want to learn a whole -bunch --of -commands_with_flags/just -to run_rails || other_things?
 
-Start picobox and continue with the way you have always done things, just now isolated inside a container
+Start picobox and continue with the way you have always done things, except now, isolated inside containers
 
-Caution, there be dragons...
+*Early release, caution, there be dragons...*
 
 ## Installation CLI
 
@@ -20,7 +20,7 @@ That's it your done
 ## Usage
 
 ![demo](https://github.com/surzycki/picobox/blob/master/docs/testdrive.gif)
-
+(may take a sec to load)
 **Create box**
 
 ```bash
@@ -73,7 +73,7 @@ $ gem install pkg/picobox-x.x.x.gem
 ## TODO
 - [ ] Write some tests, I mean come on!
 - [ ] Include aliases specific to the box when unpacking
-- [ ] Put boxes on dockerhub
+- [x] Put boxes on dockerhub
 - [ ] Add component command (redis, postgres, memcached, mongodb, etc)
 - [ ] Add more boxes
 - [ ] Add destroy command

@@ -1,3 +1,0 @@
-#!/bin/sh
-# make an infinite process so we can enter containers
-tail -f /dev/null

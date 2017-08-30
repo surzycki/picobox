@@ -6,13 +6,13 @@ module Picobox
       end
 
       def contents
-        result = Dir.glob("#{Picobox.template_dir}/boxes/*").select {|f| File.directory? f}
+        result = Dir.glob("#{Picobox.package_dir}/*").select {|f| File.directory? f}
         result.map {|r| strip_path(r) }
       end
 
 
       def box_contents
-        @box_contents ||= Dir.glob(File.join(box_dir, "*"))
+        @box_contents ||= Dir.glob(File.join(Picobox.package_dir, "*"))
       end
 
 
@@ -23,9 +23,9 @@ module Picobox
 
       def source
         @source ||= OpenStruct.new(
-          start_script: "#{box_dir}/start",
-          docker_compose: "#{box_dir}/docker-compose.yml",
-          dockerfile: "#{box_dir}/Dockerfile"
+          start_script: "#{Picobox.package_dir}/start",
+          docker_compose: "#{Picobox.package_dir}/docker-compose.yml",
+          dockerfile: "#{Picobox.package_dir}/Dockerfile"
         )
       end
 
@@ -47,10 +47,6 @@ module Picobox
 
       private
       attr_reader :os, :type
-
-      def box_dir
-        "#{Picobox.template_dir}/boxes/#{type}"
-      end
 
       def strip_path(file)
         file.split('/').last

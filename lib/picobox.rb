@@ -50,6 +50,7 @@ module Picobox
   module_function
   def root() File.expand_path('../picobox', __FILE__) end
   def template_dir() "#{Picobox.root}/templates" end
+  def package_dir() "#{Picobox.root}/boxes/packages" end
 end
 
 

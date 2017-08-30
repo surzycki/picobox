@@ -50,8 +50,6 @@ module Picobox
     end
 
 
-
-
     desc 'init [BOX]', 'initialize directory for use with picobox'
     long_desc <<-LONGDESC
     LONGDESC
@@ -94,6 +92,22 @@ module Picobox
     end
 
 
+    desc 'add [COMPONENT]', 'adds a component to your box'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def add(component)
+      say('Not yet implemented', :red)
+    end
+
+
+    desc 'components', 'list available components'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def components()
+      say('Not yet implemented', :red)
+    end
+
+
     desc 'boxes', 'list of available boxes'
     long_desc <<-LONGDESC
     LONGDESC
@@ -117,7 +131,5 @@ module Picobox
       say("\e[1m\e[32m[clean]\e[0m Cleaning stopped containers")
       system "docker container prune"
     end
-
-
   end
 end
