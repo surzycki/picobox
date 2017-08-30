@@ -1,0 +1,5658 @@
+{
+  "version": 1,
+  "width": 151,
+  "height": 25,
+  "duration": 189.128992,
+  "command": "/bin/bash -l",
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.076863,
+      "\u001b[?1034h\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~\u001b[0m$ "
+    ],
+    [
+      0.881396,
+      "p"
+    ],
+    [
+      0.055895,
+      "i"
+    ],
+    [
+      0.225098,
+      "c"
+    ],
+    [
+      0.552053,
+      "o"
+    ],
+    [
+      0.235886,
+      "b"
+    ],
+    [
+      0.089386,
+      "o"
+    ],
+    [
+      0.415674,
+      "x"
+    ],
+    [
+      0.47337,
+      " "
+    ],
+    [
+      0.213775,
+      "i"
+    ],
+    [
+      0.056164,
+      "n"
+    ],
+    [
+      0.11269,
+      "s"
+    ],
+    [
+      0.078449,
+      "t"
+    ],
+    [
+      0.157654,
+      "a"
+    ],
+    [
+      0.066542,
+      "l"
+    ],
+    [
+      0.147175,
+      "l"
+    ],
+    [
+      0.900508,
+      "\r\n"
+    ],
+    [
+      0.272897,
+      "\r\nINSTALL PICOBOX\r\n-------------------------------\r\n"
+    ],
+    [
+      0.026771,
+      "  \u001b[32mDocker version 17.06.1-ce, build 874a737 present\u001b[0m\r\n"
+    ],
+    [
+      4.2e-05,
+      "  \u001b[32mSetting up Shell\u001b[0m\r\n"
+    ],
+    [
+      0.001111,
+      "\u001b[32m      create\u001b[0m /Users/stefan/.picobox\r\n"
+    ],
+    [
+      0.001353,
+      "\u001b[32m      append\u001b[0m /Users/stefan/.profile\r\n"
+    ],
+    [
+      0.000364,
+      "  \u001b[32mInstall Complete\u001b[0m\r\n"
+    ],
+    [
+      5.5e-05,
+      "-------------------------------\r\n\r\nYou should reload open shells to pick up shell changes\r\n"
+    ],
+    [
+      2.1e-05,
+      "\r\n"
+    ],
+    [
+      7.4e-05,
+      "\u001b[1m\u001b[32m     opening\u001b[0m  new shell\r\n"
+    ],
+    [
+      2.1e-05,
+      "\r\n"
+    ],
+    [
+      0.067522,
+      "\u001b[?1034h\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~\u001b[0m$ "
+    ],
+    [
+      1.822784,
+      "m"
+    ],
+    [
+      0.056792,
+      "k"
+    ],
+    [
+      0.281174,
+      "d"
+    ],
+    [
+      0.101284,
+      "i"
+    ],
+    [
+      0.168482,
+      "r"
+    ],
+    [
+      0.089726,
+      " "
+    ],
+    [
+      0.14676,
+      "-"
+    ],
+    [
+      0.292261,
+      "p"
+    ],
+    [
+      0.483919,
+      " "
+    ],
+    [
+      0.224961,
+      "C"
+    ],
+    [
+      0.123992,
+      "o"
+    ],
+    [
+      0.100404,
+      "d"
+    ],
+    [
+      0.079064,
+      "e"
+    ],
+    [
+      0.202523,
+      "/"
+    ],
+    [
+      0.146032,
+      "r"
+    ],
+    [
+      0.112856,
+      "a"
+    ],
+    [
+      0.112348,
+      "i"
+    ],
+    [
+      0.032804,
+      "l"
+    ],
+    [
+      0.090835,
+      "s"
+    ],
+    [
+      0.359049,
+      "\r\n"
+    ],
+    [
+      0.011148,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~\u001b[0m$ "
+    ],
+    [
+      1.317151,
+      "c"
+    ],
+    [
+      0.06797,
+      "d"
+    ],
+    [
+      0.089852,
+      " "
+    ],
+    [
+      0.303647,
+      "C"
+    ],
+    [
+      0.089282,
+      "o"
+    ],
+    [
+      0.125189,
+      "de/"
+    ],
+    [
+      0.685888,
+      "r"
+    ],
+    [
+      0.888969,
+      "a"
+    ],
+    [
+      0.145597,
+      "ils/"
+    ],
+    [
+      2.0,
+      "\r\n"
+    ],
+    [
+      0.0093,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      0.373052,
+      "p"
+    ],
+    [
+      0.067831,
+      "i"
+    ],
+    [
+      0.100919,
+      "c"
+    ],
+    [
+      0.112282,
+      "o"
+    ],
+    [
+      0.236589,
+      "b"
+    ],
+    [
+      0.112352,
+      "o"
+    ],
+    [
+      0.090306,
+      "x"
+    ],
+    [
+      0.235942,
+      " "
+    ],
+    [
+      0.326661,
+      "i"
+    ],
+    [
+      0.067816,
+      "n"
+    ],
+    [
+      0.123187,
+      "i"
+    ],
+    [
+      0.101079,
+      "t"
+    ],
+    [
+      0.29267,
+      " "
+    ],
+    [
+      0.258957,
+      "r"
+    ],
+    [
+      0.101113,
+      "a"
+    ],
+    [
+      0.112406,
+      "i"
+    ],
+    [
+      0.043915,
+      "l"
+    ],
+    [
+      0.068871,
+      "s"
+    ],
+    [
+      0.371114,
+      "\r\n"
+    ],
+    [
+      0.26133,
+      "  \u001b[32mInitializing Project\u001b[0m\r\n"
+    ],
+    [
+      0.004681,
+      "\u001b[32m      create\u001b[0m /Users/stefan/Code/rails/.picobox\r\n"
+    ],
+    [
+      4.4e-05,
+      "  \u001b[32mProject Initialized\u001b[0m\r\n"
+    ],
+    [
+      0.000121,
+      "  \u001b[32mCreating rails box\u001b[0m\r\n"
+    ],
+    [
+      0.019096,
+      "\u001b[32m      create\u001b[0m /Users/stefan/Code/rails/.picobox/start\r\n"
+    ],
+    [
+      0.000324,
+      "\u001b[32m       chmod\u001b[0m /Users/stefan/Code/rails/.picobox/start\r\n"
+    ],
+    [
+      0.000477,
+      "\u001b[32m      create\u001b[0m /Users/stefan/Code/rails/docker-compose.yml\r\n"
+    ],
+    [
+      0.000722,
+      "\u001b[32m      create\u001b[0m /Users/stefan/Code/rails/Dockerfile\r\n"
+    ],
+    [
+      0.017178,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      1.844456,
+      "p"
+    ],
+    [
+      0.06807,
+      "i"
+    ],
+    [
+      0.179798,
+      "c"
+    ],
+    [
+      0.101039,
+      "o"
+    ],
+    [
+      0.303807,
+      "b"
+    ],
+    [
+      0.101301,
+      "o"
+    ],
+    [
+      0.101304,
+      "x"
+    ],
+    [
+      0.112309,
+      " "
+    ],
+    [
+      1.001152,
+      "b"
+    ],
+    [
+      0.067849,
+      "u"
+    ],
+    [
+      0.079063,
+      "i"
+    ],
+    [
+      0.032783,
+      "l"
+    ],
+    [
+      0.124273,
+      "d"
+    ],
+    [
+      1.259845,
+      "\r\n"
+    ],
+    [
+      1.013226,
+      "db uses an image, skipping\r\n"
+    ],
+    [
+      4.5e-05,
+      "bundle uses an image, skipping\r\n"
+    ],
+    [
+      2.7e-05,
+      "Building test\r\n"
+    ],
+    [
+      0.152452,
+      "Step 1/30 : FROM ubuntu:16.04\r\n"
+    ],
+    [
+      0.000285,
+      " ---> ccc7a11d65b1\r\n"
+    ],
+    [
+      0.000337,
+      "Step 2/30 : MAINTAINER Stefan Surzycki <stefan.surzycki@gmail.com>\r\n"
+    ],
+    [
+      0.000232,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000409,
+      " ---> b5a66c3bf9b1\r\n"
+    ],
+    [
+      0.000483,
+      "Step 3/30 : ENV APP_HOME /var/www\r\n"
+    ],
+    [
+      0.000413,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000158,
+      " ---> c0dead89875c\r\n"
+    ],
+    [
+      0.000184,
+      "Step 4/30 : ENV PATH $APP_HOME/bin:$PATH\r\n"
+    ],
+    [
+      0.000828,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000294,
+      " ---> bbadb4904674\r\n"
+    ],
+    [
+      0.000277,
+      "Step 5/30 : ENV DEBIAN_FRONTEND noninteractive\r\n"
+    ],
+    [
+      0.000754,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000333,
+      " ---> e669d8492c17\r\n"
+    ],
+    [
+      0.000259,
+      "Step 6/30 : ENV HOSTNAME picobox\r\n"
+    ],
+    [
+      0.000655,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000265,
+      " ---> b90c85d4a77e\r\n"
+    ],
+    [
+      0.000192,
+      "Step 7/30 : RUN mkdir -p /tmp\r\n"
+    ],
+    [
+      0.0005,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000265,
+      " ---> b3ebc2223425\r\n"
+    ],
+    [
+      0.000172,
+      "Step 8/30 : WORKDIR /tmp\r\n"
+    ],
+    [
+      0.000738,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000216,
+      " ---> de4b5b48bd7c\r\n"
+    ],
+    [
+      0.000174,
+      "Step 9/30 : RUN apt-get update\r\n"
+    ],
+    [
+      0.000595,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.00016,
+      " ---> ac3bcbeb1bfe\r\n"
+    ],
+    [
+      0.000108,
+      "Step 10/30 : RUN apt-get install -y software-properties-common git tzdata wget curl\r\n"
+    ],
+    [
+      0.000472,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000187,
+      " ---> bba2796a3795\r\n"
+    ],
+    [
+      0.000116,
+      "Step 11/30 : RUN apt-add-repository -y ppa:brightbox/ruby-ng\r\n"
+    ],
+    [
+      0.000497,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000183,
+      " ---> e8b43706788c\r\n"
+    ],
+    [
+      0.000117,
+      "Step 12/30 : RUN apt-get update -qq && apt-get install -y build-essential ruby2.4 ruby2.4-dev\r\n"
+    ],
+    [
+      0.000507,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000211,
+      " ---> fe774dba3057\r\n"
+    ],
+    [
+      0.000115,
+      "Step 13/30 : RUN gem update --system\r\n"
+    ],
+    [
+      0.000485,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000155,
+      " ---> 1db94320068b\r\n"
+    ],
+    [
+      0.000114,
+      "Step 14/30 : RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -\r\n"
+    ],
+    [
+      0.000504,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000169,
+      " ---> 36553c766da7\r\n"
+    ],
+    [
+      0.000127,
+      "Step 15/30 : RUN apt-get install -y nodejs\r\n"
+    ],
+    [
+      0.000574,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000176,
+      " ---> 5e0119698633\r\n"
+    ],
+    [
+      0.00011,
+      "Step 16/30 : RUN apt-get install -y libpq-dev postgresql-client\r\n"
+    ],
+    [
+      0.000495,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000158,
+      " ---> 86bb3229821b\r\n"
+    ],
+    [
+      0.000109,
+      "Step 17/30 : RUN apt-get install -y libsqlite3-dev\r\n"
+    ],
+    [
+      0.000641,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000187,
+      " ---> 5a7c7a48d0cd\r\n"
+    ],
+    [
+      0.000114,
+      "Step 18/30 : RUN apt-get install -y libmysqlclient-dev\r\n"
+    ],
+    [
+      0.000589,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000197,
+      " ---> fbc09a9ffc6d\r\n"
+    ],
+    [
+      0.000109,
+      "Step 19/30 : RUN apt-get install -y chrpath libssl-dev libxft-dev\r\n"
+    ],
+    [
+      0.00049,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000174,
+      " ---> 8e03619e0c8d\r\n"
+    ],
+    [
+      0.000165,
+      "Step 20/30 : RUN apt-get install -y libfreetype6 libfreetype6-dev\r\n"
+    ],
+    [
+      0.000509,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000171,
+      " ---> 951c0d5ed281\r\n"
+    ],
+    [
+      0.000156,
+      "Step 21/30 : RUN apt-get install -y libfontconfig1 libfontconfig1-dev\r\n"
+    ],
+    [
+      0.00046,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000159,
+      " ---> b29fa6ae4749\r\n"
+    ],
+    [
+      0.000129,
+      "Step 22/30 : RUN npm -g install phantomjs-prebuilt\r\n"
+    ],
+    [
+      0.000666,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000138,
+      " ---> 1ff9ce4a19a1\r\n"
+    ],
+    [
+      0.00012,
+      "Step 23/30 : RUN apt-get install -y nano\r\n"
+    ],
+    [
+      0.000539,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000166,
+      " ---> 2fddc823766f\r\n"
+    ],
+    [
+      0.000112,
+      "Step 24/30 : RUN gem install bundler\r\n"
+    ],
+    [
+      0.000557,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000178,
+      " ---> 19d812c6b1cd\r\n"
+    ],
+    [
+      0.000106,
+      "Step 25/30 : RUN gem install rake\r\n"
+    ],
+    [
+      0.000644,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000176,
+      " ---> 3ceefb9bcf16\r\n"
+    ],
+    [
+      0.000131,
+      "Step 26/30 : RUN echo \"export TERM=xterm\" >> /etc/bash.bashrc\r\n"
+    ],
+    [
+      0.001111,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000183,
+      " ---> ecb42d17c2ad\r\n"
+    ],
+    [
+      0.000106,
+      "Step 27/30 : ENV BUNDLE_PATH /bundle\r\n"
+    ],
+    [
+      0.000761,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000156,
+      " ---> 9b3e756935bf\r\n"
+    ],
+    [
+      0.000105,
+      "Step 28/30 : WORKDIR $APP_HOME\r\n"
+    ],
+    [
+      0.000694,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000186,
+      " ---> 32ee04032d8e\r\n"
+    ],
+    [
+      0.000118,
+      "Step 29/30 : ONBUILD add Gemfile* $APP_HOME/\r\n"
+    ],
+    [
+      0.000658,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000221,
+      " ---> 0bec87ee9b8a\r\n"
+    ],
+    [
+      0.000122,
+      "Step 30/30 : ONBUILD add . $APP_HOME\r\n"
+    ],
+    [
+      0.000691,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000142,
+      " ---> b83db1b41be3\r\n"
+    ],
+    [
+      0.00033,
+      "Successfully built b83db1b41be3\r\n"
+    ],
+    [
+      0.003379,
+      "Successfully tagged rails_test:latest\r\n"
+    ],
+    [
+      0.001124,
+      "Building dev\r\n"
+    ],
+    [
+      0.155106,
+      "Step 1/30 : FROM ubuntu:16.04\r\n"
+    ],
+    [
+      0.000322,
+      " ---> ccc7a11d65b1\r\nStep 2/30 : MAINTAINER Stefan Surzycki <stefan.surzycki@gmail.com>\r\n"
+    ],
+    [
+      0.000438,
+      " ---> Using cache\r\n"
+    ],
+    [
+      0.000115,
+      " ---> b5a66c3bf9b1\r\nStep 3/30 : ENV APP_HOME /var/www\r\n"
+    ],
+    [
+      0.000367,
+      " ---> Using cache\r\n"
+    ],
+    [
+      4.9e-05,
+      " ---> c0dead89875c\r\n"
+    ],
+    [
+      0.000334,
+      "Step 4/30 : ENV PATH $APP_HOME/bin:$PATH\r\n"
+    ],
+    [
+      0.000649,
+      " ---> Using cache\r\n"
+    ],
+    [
+      8.6e-05,
+      " ---> bbadb4904674\r\n"
+    ],
+    [
+      0.000235,
+      "Step 5/30 : ENV DEBIAN_FRONTEND noninteractive\r\n"
+    ],
+    [
+      0.000746,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3.4e-05,
+      " ---> e669d8492c17\r\n"
+    ],
+    [
+      2.6e-05,
+      "Step 6/30 : ENV HOSTNAME picobox\r\n"
+    ],
+    [
+      0.000766,
+      " ---> Using cache\r\n"
+    ],
+    [
+      4.9e-05,
+      " ---> b90c85d4a77e\r\nStep 7/30 : RUN mkdir -p /tmp\r\n"
+    ],
+    [
+      0.000837,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3.5e-05,
+      " ---> b3ebc2223425\r\n"
+    ],
+    [
+      6.8e-05,
+      "Step 8/30 : WORKDIR /tmp\r\n"
+    ],
+    [
+      0.000926,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3e-05,
+      " ---> de4b5b48bd7c\r\nStep 9/30 : RUN apt-get update\r\n"
+    ],
+    [
+      0.000754,
+      " ---> Using cache\r\n"
+    ],
+    [
+      4.3e-05,
+      " ---> ac3bcbeb1bfe\r\nStep 10/30 : RUN apt-get install -y software-properties-common git tzdata wget curl\r\n"
+    ],
+    [
+      0.000894,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3e-05,
+      " ---> bba2796a3795\r\nStep 11/30 : RUN apt-add-repository -y ppa:brightbox/ruby-ng\r\n"
+    ],
+    [
+      0.000886,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.9e-05,
+      " ---> e8b43706788c\r\n"
+    ],
+    [
+      3.3e-05,
+      "Step 12/30 : RUN apt-get update -qq && apt-get install -y build-essential ruby2.4 ruby2.4-dev\r\n"
+    ],
+    [
+      0.0007,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.2e-05,
+      " ---> fe774dba3057\r\nStep 13/30 : RUN gem update --system\r\n"
+    ],
+    [
+      0.000707,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.9e-05,
+      " ---> 1db94320068b\r\nStep 14/30 : RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -\r\n"
+    ],
+    [
+      0.00056,
+      " ---> Using cache\r\n"
+    ],
+    [
+      4.8e-05,
+      " ---> 36553c766da7\r\nStep 15/30 : RUN apt-get install -y nodejs\r\n"
+    ],
+    [
+      0.000558,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3.8e-05,
+      " ---> 5e0119698633\r\n"
+    ],
+    [
+      3.7e-05,
+      "Step 16/30 : RUN apt-get install -y libpq-dev postgresql-client\r\n"
+    ],
+    [
+      0.000519,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2e-05,
+      " ---> 86bb3229821b\r\nStep 17/30 : RUN apt-get install -y libsqlite3-dev\r\n"
+    ],
+    [
+      0.000577,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2e-05,
+      " ---> 5a7c7a48d0cd\r\nStep 18/30 : RUN apt-get install -y libmysqlclient-dev\r\n"
+    ],
+    [
+      0.000603,
+      " ---> Using cache\r\n"
+    ],
+    [
+      1.9e-05,
+      " ---> fbc09a9ffc6d\r\nStep 19/30 : RUN apt-get install -y chrpath libssl-dev libxft-dev\r\n"
+    ],
+    [
+      0.000605,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3.9e-05,
+      " ---> 8e03619e0c8d\r\nStep 20/30 : RUN apt-get install -y libfreetype6 libfreetype6-dev\r\n"
+    ],
+    [
+      0.00057,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3.6e-05,
+      " ---> 951c0d5ed281\r\n"
+    ],
+    [
+      3.8e-05,
+      "Step 21/30 : RUN apt-get install -y libfontconfig1 libfontconfig1-dev\r\n"
+    ],
+    [
+      0.000561,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.3e-05,
+      " ---> b29fa6ae4749\r\nStep 22/30 : RUN npm -g install phantomjs-prebuilt\r\n"
+    ],
+    [
+      0.000677,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.1e-05,
+      " ---> 1ff9ce4a19a1\r\nStep 23/30 : RUN apt-get install -y nano\r\n"
+    ],
+    [
+      0.000704,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3.8e-05,
+      " ---> 2fddc823766f\r\n"
+    ],
+    [
+      3.8e-05,
+      "Step 24/30 : RUN gem install bundler\r\n"
+    ],
+    [
+      0.000617,
+      " ---> Using cache\r\n ---> 19d812c6b1cd\r\n"
+    ],
+    [
+      0.000127,
+      "Step 25/30 : RUN gem install rake\r\n"
+    ],
+    [
+      0.000544,
+      " ---> Using cache\r\n"
+    ],
+    [
+      3.7e-05,
+      " ---> 3ceefb9bcf16\r\n"
+    ],
+    [
+      3.7e-05,
+      "Step 26/30 : RUN echo \"export TERM=xterm\" >> /etc/bash.bashrc\r\n"
+    ],
+    [
+      0.00124,
+      " ---> Using cache\r\n ---> ecb42d17c2ad\r\nStep 27/30 : ENV BUNDLE_PATH /bundle\r\n"
+    ],
+    [
+      0.000656,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.3e-05,
+      " ---> 9b3e756935bf\r\nStep 28/30 : WORKDIR $APP_HOME\r\n"
+    ],
+    [
+      0.000773,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.6e-05,
+      " ---> 32ee04032d8e\r\nStep 29/30 : ONBUILD add Gemfile* $APP_HOME/\r\n"
+    ],
+    [
+      0.000786,
+      " ---> Using cache\r\n"
+    ],
+    [
+      4e-05,
+      " ---> 0bec87ee9b8a\r\n"
+    ],
+    [
+      0.000103,
+      "Step 30/30 : ONBUILD add . $APP_HOME\r\n"
+    ],
+    [
+      0.000645,
+      " ---> Using cache\r\n"
+    ],
+    [
+      2.3e-05,
+      " ---> b83db1b41be3\r\n"
+    ],
+    [
+      0.000309,
+      "Successfully built b83db1b41be3\r\n"
+    ],
+    [
+      0.003216,
+      "Successfully tagged rails_dev:latest\r\n"
+    ],
+    [
+      0.013102,
+      "\u001b[0m"
+    ],
+    [
+      0.029773,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      0.917167,
+      "p"
+    ],
+    [
+      0.057029,
+      "i"
+    ],
+    [
+      0.146016,
+      "c"
+    ],
+    [
+      0.1688,
+      "o"
+    ],
+    [
+      0.270011,
+      "b"
+    ],
+    [
+      0.124143,
+      "o"
+    ],
+    [
+      0.101189,
+      "x"
+    ],
+    [
+      0.112284,
+      " "
+    ],
+    [
+      0.123594,
+      "s"
+    ],
+    [
+      0.090149,
+      "t"
+    ],
+    [
+      0.157639,
+      "a"
+    ],
+    [
+      0.066784,
+      "r"
+    ],
+    [
+      0.192034,
+      "t"
+    ],
+    [
+      0.157435,
+      "\r\n"
+    ],
+    [
+      1.020193,
+      "Creating network \"rails_default\" with the default driver\r\n"
+    ],
+    [
+      0.247918,
+      "Creating rails_db_1 ... \r\r\n"
+    ],
+    [
+      0.000135,
+      "Creating rails_bundle_1 ... \r\r\n"
+    ],
+    [
+      0.011723,
+      "Creating rails_bundle_1\r\n"
+    ],
+    [
+      0.003821,
+      "Creating rails_db_1\r\n"
+    ],
+    [
+      0.714787,
+      "\u001b[1A"
+    ],
+    [
+      0.000114,
+      "\u001b[1A\u001b[2K\rCreating rails_bundle_1 ... \u001b[32mdone\u001b[0m\r"
+    ],
+    [
+      3.9e-05,
+      "\u001b[1B"
+    ],
+    [
+      0.000173,
+      "\u001b[2K\rCreating rails_db_1 ... \u001b[32mdone\u001b[0m\r"
+    ],
+    [
+      2.6e-05,
+      "\u001b[1B"
+    ],
+    [
+      0.017122,
+      "Creating rails_dev_1 ... \r\r\n"
+    ],
+    [
+      0.004732,
+      "Creating rails_test_1 ... \r\r\n"
+    ],
+    [
+      0.037125,
+      "Creating rails_test_1\r\n"
+    ],
+    [
+      0.001518,
+      "Creating rails_dev_1\r\n"
+    ],
+    [
+      1.102762,
+      "\u001b[1A\u001b[2K\rCreating rails_dev_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B"
+    ],
+    [
+      1.199667,
+      "\u001b[1A\u001b[2K\rCreating rails_test_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B"
+    ],
+    [
+      0.018386,
+      "\u001b[0m"
+    ],
+    [
+      0.027269,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      0.812798,
+      "t"
+    ],
+    [
+      0.03212,
+      "h"
+    ],
+    [
+      0.125134,
+      "e"
+    ],
+    [
+      0.075906,
+      " "
+    ],
+    [
+      0.126416,
+      "g"
+    ],
+    [
+      0.112701,
+      "e"
+    ],
+    [
+      0.112459,
+      "m"
+    ],
+    [
+      0.179828,
+      "s"
+    ],
+    [
+      0.146469,
+      " "
+    ],
+    [
+      0.146352,
+      "w"
+    ],
+    [
+      0.078822,
+      "i"
+    ],
+    [
+      0.067364,
+      "l"
+    ],
+    [
+      0.168625,
+      "l"
+    ],
+    [
+      0.112663,
+      " "
+    ],
+    [
+      0.101269,
+      "b"
+    ],
+    [
+      0.101268,
+      "e"
+    ],
+    [
+      0.078721,
+      " "
+    ],
+    [
+      0.112476,
+      "i"
+    ],
+    [
+      0.067463,
+      "n"
+    ],
+    [
+      0.090033,
+      "s"
+    ],
+    [
+      0.078635,
+      "t"
+    ],
+    [
+      0.157901,
+      "a"
+    ],
+    [
+      0.078412,
+      "l"
+    ],
+    [
+      0.135309,
+      "l"
+    ],
+    [
+      0.067305,
+      "e"
+    ],
+    [
+      0.157445,
+      "d"
+    ],
+    [
+      0.078766,
+      " "
+    ],
+    [
+      0.146278,
+      "i"
+    ],
+    [
+      0.044966,
+      "n"
+    ],
+    [
+      0.123806,
+      "t"
+    ],
+    [
+      0.123691,
+      "o"
+    ],
+    [
+      0.090113,
+      " "
+    ],
+    [
+      0.089957,
+      "t"
+    ],
+    [
+      0.067382,
+      "h"
+    ],
+    [
+      0.123843,
+      "e"
+    ],
+    [
+      0.146104,
+      " "
+    ],
+    [
+      0.495088,
+      "c"
+    ],
+    [
+      0.089952,
+      "o"
+    ],
+    [
+      0.213839,
+      "n"
+    ],
+    [
+      0.36008,
+      "t"
+    ],
+    [
+      0.506426,
+      "a"
+    ],
+    [
+      0.112499,
+      "i"
+    ],
+    [
+      0.089726,
+      "n"
+    ],
+    [
+      0.146164,
+      "e"
+    ],
+    [
+      0.067434,
+      "r"
+    ],
+    [
+      0.393753,
+      "\b\u001b[K"
+    ],
+    [
+      0.505708,
+      "\b\u001b[K"
+    ],
+    [
+      0.084989,
+      "\b\u001b[K"
+    ],
+    [
+      0.087435,
+      "\b\u001b[K"
+    ],
+    [
+      0.085169,
+      "\b\u001b[K"
+    ],
+    [
+      0.083562,
+      "\b\u001b[K"
+    ],
+    [
+      0.083526,
+      "\b\u001b[K"
+    ],
+    [
+      0.08369,
+      "\b\u001b[K"
+    ],
+    [
+      0.083418,
+      "\b\u001b[K"
+    ],
+    [
+      0.0837,
+      "\b\u001b[K"
+    ],
+    [
+      0.083201,
+      "\b\u001b[K"
+    ],
+    [
+      0.083855,
+      "\b\u001b[K"
+    ],
+    [
+      0.083568,
+      "\b\u001b[K"
+    ],
+    [
+      0.083429,
+      "\b\u001b[K"
+    ],
+    [
+      0.08668,
+      "\b\u001b[K"
+    ],
+    [
+      0.085909,
+      "\b\u001b[K"
+    ],
+    [
+      0.085435,
+      "\b\u001b[K"
+    ],
+    [
+      0.085402,
+      "\b\u001b[K"
+    ],
+    [
+      0.088526,
+      "\b\u001b[K"
+    ],
+    [
+      0.086065,
+      "\b\u001b[K"
+    ],
+    [
+      0.083374,
+      "\b\u001b[K"
+    ],
+    [
+      0.083532,
+      "\b\u001b[K"
+    ],
+    [
+      0.083614,
+      "\b\u001b[K"
+    ],
+    [
+      0.08378,
+      "\b\u001b[K"
+    ],
+    [
+      0.082956,
+      "\b\u001b[K"
+    ],
+    [
+      0.087434,
+      "\b\u001b[K"
+    ],
+    [
+      0.086284,
+      "\b\u001b[K"
+    ],
+    [
+      0.083201,
+      "\b\u001b[K"
+    ],
+    [
+      0.089803,
+      "\b\u001b[K"
+    ],
+    [
+      0.088077,
+      "\b\u001b[K"
+    ],
+    [
+      0.084087,
+      "\b\u001b[K"
+    ],
+    [
+      0.083426,
+      "\b\u001b[K"
+    ],
+    [
+      0.083494,
+      "\b\u001b[K"
+    ],
+    [
+      0.083041,
+      "\b\u001b[K"
+    ],
+    [
+      0.084056,
+      "\b\u001b[K"
+    ],
+    [
+      0.083766,
+      "\b\u001b[K"
+    ],
+    [
+      0.083064,
+      "\b\u001b[K"
+    ],
+    [
+      0.08834,
+      "\b\u001b[K"
+    ],
+    [
+      0.088243,
+      "\b\u001b[K"
+    ],
+    [
+      0.088168,
+      "\b\u001b[K"
+    ],
+    [
+      0.086344,
+      "\b\u001b[K"
+    ],
+    [
+      0.087114,
+      "\b\u001b[K"
+    ],
+    [
+      0.088449,
+      "\b\u001b[K"
+    ],
+    [
+      0.086133,
+      "\b\u001b[K"
+    ],
+    [
+      0.083028,
+      "\b\u001b[K"
+    ],
+    [
+      0.088632,
+      "\u0007"
+    ],
+    [
+      0.279838,
+      "g"
+    ],
+    [
+      0.077946,
+      "e"
+    ],
+    [
+      0.191211,
+      "m"
+    ],
+    [
+      0.157461,
+      " "
+    ],
+    [
+      0.281529,
+      "i"
+    ],
+    [
+      0.067156,
+      "n"
+    ],
+    [
+      0.056616,
+      "s"
+    ],
+    [
+      0.10078,
+      "t"
+    ],
+    [
+      0.157815,
+      "a"
+    ],
+    [
+      0.067152,
+      "l"
+    ],
+    [
+      0.180108,
+      "l"
+    ],
+    [
+      0.090372,
+      " "
+    ],
+    [
+      0.26996,
+      "r"
+    ],
+    [
+      0.090075,
+      "a"
+    ],
+    [
+      0.169108,
+      "i"
+    ],
+    [
+      0.043863,
+      "l"
+    ],
+    [
+      0.135666,
+      "s"
+    ],
+    [
+      0.112821,
+      " "
+    ],
+    [
+      0.281356,
+      "-"
+    ],
+    [
+      0.157204,
+      "-"
+    ],
+    [
+      0.2361,
+      "n"
+    ],
+    [
+      0.090501,
+      "o"
+    ],
+    [
+      0.922216,
+      "-"
+    ],
+    [
+      0.371645,
+      "r"
+    ],
+    [
+      0.089609,
+      "i"
+    ],
+    [
+      0.214176,
+      " "
+    ],
+    [
+      0.303289,
+      "-"
+    ],
+    [
+      0.157277,
+      "-"
+    ],
+    [
+      0.258705,
+      "n"
+    ],
+    [
+      0.068039,
+      "o"
+    ],
+    [
+      0.325931,
+      "-"
+    ],
+    [
+      0.180181,
+      "r"
+    ],
+    [
+      0.33626,
+      "d"
+    ],
+    [
+      0.316213,
+      "o"
+    ],
+    [
+      0.168304,
+      "c"
+    ],
+    [
+      1.080181,
+      "\r\n"
+    ],
+    [
+      2.0,
+      "Fetching: i18n-0.8.6.gem"
+    ],
+    [
+      0.005859,
+      "\rFetching: i18n-0.8.6.gem (  5%)\rFetching: i18n-0.8.6.gem ( 10%)\rFetching: i18n-0.8.6.gem ( 14%)"
+    ],
+    [
+      0.000175,
+      "\rFetching: i18n-0.8.6.gem ( 19%)"
+    ],
+    [
+      0.002548,
+      "\rFetching: i18n-0.8.6.gem ( 24%)"
+    ],
+    [
+      0.001486,
+      "\rFetching: i18n-0.8.6.gem ( 28%)"
+    ],
+    [
+      0.002976,
+      "\rFetching: i18n-0.8.6.gem ( 32%)\rFetching: i18n-0.8.6.gem ( 37%)"
+    ],
+    [
+      0.00336,
+      "\rFetching: i18n-0.8.6.gem ( 42%)"
+    ],
+    [
+      0.002483,
+      "\rFetching: i18n-0.8.6.gem ( 46%)"
+    ],
+    [
+      0.00011,
+      "\rFetching: i18n-0.8.6.gem ( 51%)"
+    ],
+    [
+      0.003255,
+      "\rFetching: i18n-0.8.6.gem ( 55%)"
+    ],
+    [
+      0.011262,
+      "\rFetching: i18n-0.8.6.gem ( 83%)"
+    ],
+    [
+      0.06169,
+      "\rFetching: i18n-0.8.6.gem (100%)\rFetching: i18n-0.8.6.gem (100%)\r\n"
+    ],
+    [
+      0.042353,
+      "Successfully installed i18n-0.8.6\r\n"
+    ],
+    [
+      0.08296,
+      "Fetching: thread_safe-0.3.6.gem\rFetching: thread_safe-0.3.6.gem ( 13%)"
+    ],
+    [
+      0.008972,
+      "\rFetching: thread_safe-0.3.6.gem ( 27%)"
+    ],
+    [
+      0.009921,
+      "\rFetching: thread_safe-0.3.6.gem ( 40%)"
+    ],
+    [
+      0.011912,
+      "\rFetching: thread_safe-0.3.6.gem ( 54%)"
+    ],
+    [
+      0.011842,
+      "\rFetching: thread_safe-0.3.6.gem ( 68%)"
+    ],
+    [
+      0.011579,
+      "\rFetching: thread_safe-0.3.6.gem ( 81%)"
+    ],
+    [
+      0.012517,
+      "\rFetching: thread_safe-0.3.6.gem ( 95%)"
+    ],
+    [
+      0.002217,
+      "\rFetching: thread_safe-0.3.6.gem (100%)\rFetching: thread_safe-0.3.6.gem (100%)\r\n"
+    ],
+    [
+      0.028961,
+      "Successfully installed thread_safe-0.3.6\r\n"
+    ],
+    [
+      0.126483,
+      "Fetching: tzinfo-1.2.3.gem\rFetching: tzinfo-1.2.3.gem (  2%)"
+    ],
+    [
+      0.00523,
+      "\rFetching: tzinfo-1.2.3.gem (  4%)\rFetching: tzinfo-1.2.3.gem (  5%)\rFetching: tzinfo-1.2.3.gem (  7%)"
+    ],
+    [
+      0.00174,
+      "\rFetching: tzinfo-1.2.3.gem (  9%)"
+    ],
+    [
+      0.001213,
+      "\rFetching: tzinfo-1.2.3.gem ( 11%)"
+    ],
+    [
+      0.00275,
+      "\rFetching: tzinfo-1.2.3.gem ( 13%)\rFetching: tzinfo-1.2.3.gem ( 14%)"
+    ],
+    [
+      0.002842,
+      "\rFetching: tzinfo-1.2.3.gem ( 16%)"
+    ],
+    [
+      0.002166,
+      "\rFetching: tzinfo-1.2.3.gem ( 18%)"
+    ],
+    [
+      0.004322,
+      "\rFetching: tzinfo-1.2.3.gem ( 20%)\rFetching: tzinfo-1.2.3.gem ( 22%)"
+    ],
+    [
+      0.01215,
+      "\rFetching: tzinfo-1.2.3.gem ( 32%)"
+    ],
+    [
+      0.008827,
+      "\rFetching: tzinfo-1.2.3.gem ( 43%)"
+    ],
+    [
+      0.013045,
+      "\rFetching: tzinfo-1.2.3.gem ( 54%)"
+    ],
+    [
+      0.012028,
+      "\rFetching: tzinfo-1.2.3.gem ( 65%)"
+    ],
+    [
+      0.008527,
+      "\rFetching: tzinfo-1.2.3.gem ( 76%)"
+    ],
+    [
+      0.011456,
+      "\rFetching: tzinfo-1.2.3.gem ( 86%)"
+    ],
+    [
+      0.013145,
+      "\rFetching: tzinfo-1.2.3.gem ( 97%)"
+    ],
+    [
+      0.000729,
+      "\rFetching: tzinfo-1.2.3.gem (100%)\rFetching: tzinfo-1.2.3.gem (100%)\r\n"
+    ],
+    [
+      0.042307,
+      "Successfully installed tzinfo-1.2.3\r\n"
+    ],
+    [
+      0.125194,
+      "Fetching: minitest-5.10.3.gem"
+    ],
+    [
+      0.000887,
+      "\rFetching: minitest-5.10.3.gem (  4%)"
+    ],
+    [
+      0.001226,
+      "\rFetching: minitest-5.10.3.gem (  8%)"
+    ],
+    [
+      0.002606,
+      "\rFetching: minitest-5.10.3.gem ( 11%)"
+    ],
+    [
+      0.001043,
+      "\rFetching: minitest-5.10.3.gem ( 15%)"
+    ],
+    [
+      0.001434,
+      "\rFetching: minitest-5.10.3.gem ( 19%)"
+    ],
+    [
+      0.002895,
+      "\rFetching: minitest-5.10.3.gem ( 22%)"
+    ],
+    [
+      0.001455,
+      "\rFetching: minitest-5.10.3.gem ( 26%)"
+    ],
+    [
+      0.001387,
+      "\rFetching: minitest-5.10.3.gem ( 29%)"
+    ],
+    [
+      0.002628,
+      "\rFetching: minitest-5.10.3.gem ( 33%)"
+    ],
+    [
+      0.001342,
+      "\rFetching: minitest-5.10.3.gem ( 36%)"
+    ],
+    [
+      0.001629,
+      "\rFetching: minitest-5.10.3.gem ( 40%)"
+    ],
+    [
+      0.003416,
+      "\rFetching: minitest-5.10.3.gem ( 43%)"
+    ],
+    [
+      0.011623,
+      "\rFetching: minitest-5.10.3.gem ( 65%)"
+    ],
+    [
+      0.011538,
+      "\rFetching: minitest-5.10.3.gem ( 86%)"
+    ],
+    [
+      0.004381,
+      "\rFetching: minitest-5.10.3.gem (100%)\rFetching: minitest-5.10.3.gem (100%)\r\n"
+    ],
+    [
+      0.016798,
+      "Successfully installed minitest-5.10.3\r\n"
+    ],
+    [
+      0.135832,
+      "Fetching: concurrent-ruby-1.0.5.gem\rFetching: concurrent-ruby-1.0.5.gem ( 12%)"
+    ],
+    [
+      0.008714,
+      "\rFetching: concurrent-ruby-1.0.5.gem ( 25%)"
+    ],
+    [
+      0.012031,
+      "\rFetching: concurrent-ruby-1.0.5.gem ( 37%)"
+    ],
+    [
+      0.010583,
+      "\rFetching: concurrent-ruby-1.0.5.gem ( 49%)"
+    ],
+    [
+      0.011231,
+      "\rFetching: concurrent-ruby-1.0.5.gem ( 62%)"
+    ],
+    [
+      0.010335,
+      "\rFetching: concurrent-ruby-1.0.5.gem ( 74%)"
+    ],
+    [
+      0.012385,
+      "\rFetching: concurrent-ruby-1.0.5.gem ( 86%)"
+    ],
+    [
+      0.013225,
+      "\rFetching: concurrent-ruby-1.0.5.gem ( 99%)\rFetching: concurrent-ruby-1.0.5.gem (100%)\rFetching: concurrent-ruby-1.0.5.gem (100%)\r\n"
+    ],
+    [
+      0.046526,
+      "Successfully installed concurrent-ruby-1.0.5\r\n"
+    ],
+    [
+      0.13721,
+      "Fetching: activesupport-5.1.3.gem\rFetching: activesupport-5.1.3.gem (  5%)"
+    ],
+    [
+      0.007972,
+      "\rFetching: activesupport-5.1.3.gem (  9%)"
+    ],
+    [
+      0.01202,
+      "\rFetching: activesupport-5.1.3.gem ( 14%)"
+    ],
+    [
+      0.011033,
+      "\rFetching: activesupport-5.1.3.gem ( 18%)"
+    ],
+    [
+      0.011418,
+      "\rFetching: activesupport-5.1.3.gem ( 22%)"
+    ],
+    [
+      0.011015,
+      "\rFetching: activesupport-5.1.3.gem ( 27%)"
+    ],
+    [
+      0.014211,
+      "\rFetching: activesupport-5.1.3.gem ( 31%)"
+    ],
+    [
+      0.009101,
+      "\rFetching: activesupport-5.1.3.gem ( 36%)"
+    ],
+    [
+      0.010237,
+      "\rFetching: activesupport-5.1.3.gem ( 40%)"
+    ],
+    [
+      0.010187,
+      "\rFetching: activesupport-5.1.3.gem ( 45%)"
+    ],
+    [
+      0.012137,
+      "\rFetching: activesupport-5.1.3.gem ( 49%)"
+    ],
+    [
+      0.010472,
+      "\rFetching: activesupport-5.1.3.gem ( 53%)"
+    ],
+    [
+      0.011674,
+      "\rFetching: activesupport-5.1.3.gem ( 58%)"
+    ],
+    [
+      0.012135,
+      "\rFetching: activesupport-5.1.3.gem ( 62%)"
+    ],
+    [
+      0.009333,
+      "\rFetching: activesupport-5.1.3.gem ( 67%)"
+    ],
+    [
+      0.012258,
+      "\rFetching: activesupport-5.1.3.gem ( 71%)"
+    ],
+    [
+      0.010059,
+      "\rFetching: activesupport-5.1.3.gem ( 75%)"
+    ],
+    [
+      0.012613,
+      "\rFetching: activesupport-5.1.3.gem ( 79%)"
+    ],
+    [
+      0.009486,
+      "\rFetching: activesupport-5.1.3.gem ( 84%)"
+    ],
+    [
+      0.011217,
+      "\rFetching: activesupport-5.1.3.gem ( 88%)"
+    ],
+    [
+      0.011341,
+      "\rFetching: activesupport-5.1.3.gem ( 93%)"
+    ],
+    [
+      0.010956,
+      "\rFetching: activesupport-5.1.3.gem ( 97%)"
+    ],
+    [
+      0.071915,
+      "\rFetching: activesupport-5.1.3.gem (100%)\rFetching: activesupport-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.089729,
+      "Successfully installed activesupport-5.1.3\r\n"
+    ],
+    [
+      0.088702,
+      "Fetching: rack-2.0.3.gem"
+    ],
+    [
+      0.000249,
+      "\rFetching: rack-2.0.3.gem (  7%)"
+    ],
+    [
+      0.010018,
+      "\rFetching: rack-2.0.3.gem ( 13%)"
+    ],
+    [
+      0.008374,
+      "\rFetching: rack-2.0.3.gem ( 19%)"
+    ],
+    [
+      0.012851,
+      "\rFetching: rack-2.0.3.gem ( 26%)"
+    ],
+    [
+      0.010289,
+      "\rFetching: rack-2.0.3.gem ( 32%)"
+    ],
+    [
+      0.013023,
+      "\rFetching: rack-2.0.3.gem ( 39%)"
+    ],
+    [
+      0.009613,
+      "\rFetching: rack-2.0.3.gem ( 45%)"
+    ],
+    [
+      0.013094,
+      "\rFetching: rack-2.0.3.gem ( 52%)"
+    ],
+    [
+      0.009859,
+      "\rFetching: rack-2.0.3.gem ( 58%)"
+    ],
+    [
+      0.010521,
+      "\rFetching: rack-2.0.3.gem ( 65%)"
+    ],
+    [
+      0.012213,
+      "\rFetching: rack-2.0.3.gem ( 71%)"
+    ],
+    [
+      0.011598,
+      "\rFetching: rack-2.0.3.gem ( 77%)"
+    ],
+    [
+      0.01248,
+      "\rFetching: rack-2.0.3.gem ( 84%)"
+    ],
+    [
+      0.009909,
+      "\rFetching: rack-2.0.3.gem ( 90%)"
+    ],
+    [
+      0.010348,
+      "\rFetching: rack-2.0.3.gem ( 97%)"
+    ],
+    [
+      0.058674,
+      "\rFetching: rack-2.0.3.gem (100%)\rFetching: rack-2.0.3.gem (100%)\r\n"
+    ],
+    [
+      0.072908,
+      "Successfully installed rack-2.0.3\r\n"
+    ],
+    [
+      0.098236,
+      "Fetching: rack-test-0.6.3.gem\rFetching: rack-test-0.6.3.gem ( 66%)"
+    ],
+    [
+      0.003343,
+      "\rFetching: rack-test-0.6.3.gem (100%)\rFetching: rack-test-0.6.3.gem (100%)\r\n"
+    ],
+    [
+      0.017929,
+      "Successfully installed rack-test-0.6.3\r\n"
+    ],
+    [
+      0.137456,
+      "Fetching: mini_portile2-2.2.0.gem\rFetching: mini_portile2-2.2.0.gem ( 61%)"
+    ],
+    [
+      0.052429,
+      "\rFetching: mini_portile2-2.2.0.gem (100%)\rFetching: mini_portile2-2.2.0.gem (100%)\r\n"
+    ],
+    [
+      0.018861,
+      "Successfully installed mini_portile2-2.2.0\r\n"
+    ],
+    [
+      0.124238,
+      "Fetching: nokogiri-1.8.0.gem"
+    ],
+    [
+      0.002541,
+      "\rFetching: nokogiri-1.8.0.gem (  1%)"
+    ],
+    [
+      0.066101,
+      "\rFetching: nokogiri-1.8.0.gem (  2%)"
+    ],
+    [
+      0.09178,
+      "\rFetching: nokogiri-1.8.0.gem (  3%)"
+    ],
+    [
+      0.035449,
+      "\rFetching: nokogiri-1.8.0.gem (  4%)"
+    ],
+    [
+      0.055688,
+      "\rFetching: nokogiri-1.8.0.gem (  5%)"
+    ],
+    [
+      0.06856,
+      "\rFetching: nokogiri-1.8.0.gem (  6%)"
+    ],
+    [
+      0.066332,
+      "\rFetching: nokogiri-1.8.0.gem (  7%)"
+    ],
+    [
+      0.057395,
+      "\rFetching: nokogiri-1.8.0.gem (  8%)"
+    ],
+    [
+      0.066291,
+      "\rFetching: nokogiri-1.8.0.gem (  9%)"
+    ],
+    [
+      0.057533,
+      "\rFetching: nokogiri-1.8.0.gem ( 10%)"
+    ],
+    [
+      0.066602,
+      "\rFetching: nokogiri-1.8.0.gem ( 11%)"
+    ],
+    [
+      0.068082,
+      "\rFetching: nokogiri-1.8.0.gem ( 12%)"
+    ],
+    [
+      0.05579,
+      "\rFetching: nokogiri-1.8.0.gem ( 13%)"
+    ],
+    [
+      0.067513,
+      "\rFetching: nokogiri-1.8.0.gem ( 14%)"
+    ],
+    [
+      0.055944,
+      "\rFetching: nokogiri-1.8.0.gem ( 15%)"
+    ],
+    [
+      0.067794,
+      "\rFetching: nokogiri-1.8.0.gem ( 16%)"
+    ],
+    [
+      0.069128,
+      "\rFetching: nokogiri-1.8.0.gem ( 17%)"
+    ],
+    [
+      0.053725,
+      "\rFetching: nokogiri-1.8.0.gem ( 18%)"
+    ],
+    [
+      0.067606,
+      "\rFetching: nokogiri-1.8.0.gem ( 19%)"
+    ],
+    [
+      0.05635,
+      "\rFetching: nokogiri-1.8.0.gem ( 20%)"
+    ],
+    [
+      0.067399,
+      "\rFetching: nokogiri-1.8.0.gem ( 21%)"
+    ],
+    [
+      0.066982,
+      "\rFetching: nokogiri-1.8.0.gem ( 22%)"
+    ],
+    [
+      0.056808,
+      "\rFetching: nokogiri-1.8.0.gem ( 23%)"
+    ],
+    [
+      0.066624,
+      "\rFetching: nokogiri-1.8.0.gem ( 24%)"
+    ],
+    [
+      0.056541,
+      "\rFetching: nokogiri-1.8.0.gem ( 25%)"
+    ],
+    [
+      0.06839,
+      "\rFetching: nokogiri-1.8.0.gem ( 26%)"
+    ],
+    [
+      0.067054,
+      "\rFetching: nokogiri-1.8.0.gem ( 27%)"
+    ],
+    [
+      0.055471,
+      "\rFetching: nokogiri-1.8.0.gem ( 28%)"
+    ],
+    [
+      0.068286,
+      "\rFetching: nokogiri-1.8.0.gem ( 29%)"
+    ],
+    [
+      0.055029,
+      "\rFetching: nokogiri-1.8.0.gem ( 30%)"
+    ],
+    [
+      0.067423,
+      "\rFetching: nokogiri-1.8.0.gem ( 31%)"
+    ],
+    [
+      0.066979,
+      "\rFetching: nokogiri-1.8.0.gem ( 32%)"
+    ],
+    [
+      0.056976,
+      "\rFetching: nokogiri-1.8.0.gem ( 33%)"
+    ],
+    [
+      0.06863,
+      "\rFetching: nokogiri-1.8.0.gem ( 34%)"
+    ],
+    [
+      0.054667,
+      "\rFetching: nokogiri-1.8.0.gem ( 35%)"
+    ],
+    [
+      0.068474,
+      "\rFetching: nokogiri-1.8.0.gem ( 36%)"
+    ],
+    [
+      0.067811,
+      "\rFetching: nokogiri-1.8.0.gem ( 37%)"
+    ],
+    [
+      0.055643,
+      "\rFetching: nokogiri-1.8.0.gem ( 38%)"
+    ],
+    [
+      0.067079,
+      "\rFetching: nokogiri-1.8.0.gem ( 39%)"
+    ],
+    [
+      0.101092,
+      "\rFetching: nokogiri-1.8.0.gem ( 40%)"
+    ],
+    [
+      0.022002,
+      "\rFetching: nokogiri-1.8.0.gem ( 41%)"
+    ],
+    [
+      0.056186,
+      "\rFetching: nokogiri-1.8.0.gem ( 42%)"
+    ],
+    [
+      0.067541,
+      "\rFetching: nokogiri-1.8.0.gem ( 43%)"
+    ],
+    [
+      0.068249,
+      "\rFetching: nokogiri-1.8.0.gem ( 44%)"
+    ],
+    [
+      0.055107,
+      "\rFetching: nokogiri-1.8.0.gem ( 45%)"
+    ],
+    [
+      0.067329,
+      "\rFetching: nokogiri-1.8.0.gem ( 46%)"
+    ],
+    [
+      0.056723,
+      "\rFetching: nokogiri-1.8.0.gem ( 47%)"
+    ],
+    [
+      0.066842,
+      "\rFetching: nokogiri-1.8.0.gem ( 48%)"
+    ],
+    [
+      0.066709,
+      "\rFetching: nokogiri-1.8.0.gem ( 49%)"
+    ],
+    [
+      0.057841,
+      "\rFetching: nokogiri-1.8.0.gem ( 50%)"
+    ],
+    [
+      0.06611,
+      "\rFetching: nokogiri-1.8.0.gem ( 51%)"
+    ],
+    [
+      0.058039,
+      "\rFetching: nokogiri-1.8.0.gem ( 52%)"
+    ],
+    [
+      0.066114,
+      "\rFetching: nokogiri-1.8.0.gem ( 53%)"
+    ],
+    [
+      0.067604,
+      "\rFetching: nokogiri-1.8.0.gem ( 54%)"
+    ],
+    [
+      0.055872,
+      "\rFetching: nokogiri-1.8.0.gem ( 55%)"
+    ],
+    [
+      0.067855,
+      "\rFetching: nokogiri-1.8.0.gem ( 56%)"
+    ],
+    [
+      0.055665,
+      "\rFetching: nokogiri-1.8.0.gem ( 57%)"
+    ],
+    [
+      0.066792,
+      "\rFetching: nokogiri-1.8.0.gem ( 58%)"
+    ],
+    [
+      0.06736,
+      "\rFetching: nokogiri-1.8.0.gem ( 59%)"
+    ],
+    [
+      0.056809,
+      "\rFetching: nokogiri-1.8.0.gem ( 60%)"
+    ],
+    [
+      0.069057,
+      "\rFetching: nokogiri-1.8.0.gem ( 61%)"
+    ],
+    [
+      0.053404,
+      "\rFetching: nokogiri-1.8.0.gem ( 62%)"
+    ],
+    [
+      0.068255,
+      "\rFetching: nokogiri-1.8.0.gem ( 63%)"
+    ],
+    [
+      0.068233,
+      "\rFetching: nokogiri-1.8.0.gem ( 64%)"
+    ],
+    [
+      0.056591,
+      "\rFetching: nokogiri-1.8.0.gem ( 65%)"
+    ],
+    [
+      0.066664,
+      "\rFetching: nokogiri-1.8.0.gem ( 66%)"
+    ],
+    [
+      0.055603,
+      "\rFetching: nokogiri-1.8.0.gem ( 67%)"
+    ],
+    [
+      0.067447,
+      "\rFetching: nokogiri-1.8.0.gem ( 68%)"
+    ],
+    [
+      0.067557,
+      "\rFetching: nokogiri-1.8.0.gem ( 69%)"
+    ],
+    [
+      0.055546,
+      "\rFetching: nokogiri-1.8.0.gem ( 70%)"
+    ],
+    [
+      0.069918,
+      "\rFetching: nokogiri-1.8.0.gem ( 71%)"
+    ],
+    [
+      0.054231,
+      "\rFetching: nokogiri-1.8.0.gem ( 72%)"
+    ],
+    [
+      0.067495,
+      "\rFetching: nokogiri-1.8.0.gem ( 73%)"
+    ],
+    [
+      0.066441,
+      "\rFetching: nokogiri-1.8.0.gem ( 74%)"
+    ],
+    [
+      0.059413,
+      "\rFetching: nokogiri-1.8.0.gem ( 75%)"
+    ],
+    [
+      0.065247,
+      "\rFetching: nokogiri-1.8.0.gem ( 76%)"
+    ],
+    [
+      0.056073,
+      "\rFetching: nokogiri-1.8.0.gem ( 77%)"
+    ],
+    [
+      0.068282,
+      "\rFetching: nokogiri-1.8.0.gem ( 78%)"
+    ],
+    [
+      0.066684,
+      "\rFetching: nokogiri-1.8.0.gem ( 79%)"
+    ],
+    [
+      0.055535,
+      "\rFetching: nokogiri-1.8.0.gem ( 80%)"
+    ],
+    [
+      0.067823,
+      "\rFetching: nokogiri-1.8.0.gem ( 81%)"
+    ],
+    [
+      0.05608,
+      "\rFetching: nokogiri-1.8.0.gem ( 82%)"
+    ],
+    [
+      0.067637,
+      "\rFetching: nokogiri-1.8.0.gem ( 83%)"
+    ],
+    [
+      0.068064,
+      "\rFetching: nokogiri-1.8.0.gem ( 84%)"
+    ],
+    [
+      0.05598,
+      "\rFetching: nokogiri-1.8.0.gem ( 85%)"
+    ],
+    [
+      0.066388,
+      "\rFetching: nokogiri-1.8.0.gem ( 86%)"
+    ],
+    [
+      0.057875,
+      "\rFetching: nokogiri-1.8.0.gem ( 87%)"
+    ],
+    [
+      0.066529,
+      "\rFetching: nokogiri-1.8.0.gem ( 88%)"
+    ],
+    [
+      0.066407,
+      "\rFetching: nokogiri-1.8.0.gem ( 89%)"
+    ],
+    [
+      0.057379,
+      "\rFetching: nokogiri-1.8.0.gem ( 90%)"
+    ],
+    [
+      0.089955,
+      "\rFetching: nokogiri-1.8.0.gem ( 91%)"
+    ],
+    [
+      0.033157,
+      "\rFetching: nokogiri-1.8.0.gem ( 92%)"
+    ],
+    [
+      0.068719,
+      "\rFetching: nokogiri-1.8.0.gem ( 93%)"
+    ],
+    [
+      0.065433,
+      "\rFetching: nokogiri-1.8.0.gem ( 94%)"
+    ],
+    [
+      0.055999,
+      "\rFetching: nokogiri-1.8.0.gem ( 95%)"
+    ],
+    [
+      0.067217,
+      "\rFetching: nokogiri-1.8.0.gem ( 96%)"
+    ],
+    [
+      0.057131,
+      "\rFetching: nokogiri-1.8.0.gem ( 97%)"
+    ],
+    [
+      0.066479,
+      "\rFetching: nokogiri-1.8.0.gem ( 98%)"
+    ],
+    [
+      0.068505,
+      "\rFetching: nokogiri-1.8.0.gem ( 99%)"
+    ],
+    [
+      0.057645,
+      "\rFetching: nokogiri-1.8.0.gem (100%)"
+    ],
+    [
+      0.056128,
+      "\rFetching: nokogiri-1.8.0.gem (100%)\r\n"
+    ],
+    [
+      0.279026,
+      "Building native extensions.  This could take a while...\r\n"
+    ],
+    [
+      2.0,
+      "Successfully installed nokogiri-1.8.0\r\n"
+    ],
+    [
+      0.309098,
+      "Fetching: loofah-2.0.3.gem\rFetching: loofah-2.0.3.gem (  4%)\rFetching: loofah-2.0.3.gem (  8%)"
+    ],
+    [
+      0.004653,
+      "\rFetching: loofah-2.0.3.gem ( 13%)\rFetching: loofah-2.0.3.gem ( 17%)"
+    ],
+    [
+      0.000272,
+      "\rFetching: loofah-2.0.3.gem ( 22%)"
+    ],
+    [
+      0.022495,
+      "\rFetching: loofah-2.0.3.gem ( 26%)"
+    ],
+    [
+      0.001317,
+      "\rFetching: loofah-2.0.3.gem ( 31%)"
+    ],
+    [
+      0.006305,
+      "\rFetching: loofah-2.0.3.gem ( 35%)\rFetching: loofah-2.0.3.gem ( 40%)\rFetching: loofah-2.0.3.gem ( 44%)"
+    ],
+    [
+      0.001119,
+      "\rFetching: loofah-2.0.3.gem ( 49%)"
+    ],
+    [
+      0.001496,
+      "\rFetching: loofah-2.0.3.gem ( 53%)"
+    ],
+    [
+      0.019481,
+      "\rFetching: loofah-2.0.3.gem ( 80%)"
+    ],
+    [
+      0.053461,
+      "\rFetching: loofah-2.0.3.gem (100%)\rFetching: loofah-2.0.3.gem (100%)\r\n"
+    ],
+    [
+      0.02786,
+      "Successfully installed loofah-2.0.3\r\n"
+    ],
+    [
+      0.106908,
+      "Fetching: rails-html-sanitizer-1.0.3.gem\rFetching: rails-html-sanitizer-1.0.3.gem (100%)\rFetching: rails-html-sanitizer-1.0.3.gem (100%)\r\n"
+    ],
+    [
+      0.012977,
+      "Successfully installed rails-html-sanitizer-1.0.3\r\n"
+    ],
+    [
+      0.135422,
+      "Fetching: rails-dom-testing-2.0.3.gem\rFetching: rails-dom-testing-2.0.3.gem (100%)\rFetching: rails-dom-testing-2.0.3.gem (100%)\r\n"
+    ],
+    [
+      0.01361,
+      "Successfully installed rails-dom-testing-2.0.3\r\n"
+    ],
+    [
+      0.084634,
+      "Fetching: builder-3.2.3.gem\rFetching: builder-3.2.3.gem ( 49%)"
+    ],
+    [
+      0.057982,
+      "\rFetching: builder-3.2.3.gem (100%)\rFetching: builder-3.2.3.gem (100%)\r\n"
+    ],
+    [
+      0.018013,
+      "Successfully installed builder-3.2.3\r\n"
+    ],
+    [
+      0.086768,
+      "Fetching: erubi-1.6.1.gem\rFetching: erubi-1.6.1.gem (100%)\rFetching: erubi-1.6.1.gem (100%)\r\n"
+    ],
+    [
+      0.01039,
+      "Successfully installed erubi-1.6.1\r\n"
+    ],
+    [
+      0.141961,
+      "Fetching: actionview-5.1.3.gem\rFetching: actionview-5.1.3.gem ( 10%)"
+    ],
+    [
+      0.011267,
+      "\rFetching: actionview-5.1.3.gem ( 20%)"
+    ],
+    [
+      0.008742,
+      "\rFetching: actionview-5.1.3.gem ( 30%)"
+    ],
+    [
+      0.011799,
+      "\rFetching: actionview-5.1.3.gem ( 41%)"
+    ],
+    [
+      0.011336,
+      "\rFetching: actionview-5.1.3.gem ( 51%)"
+    ],
+    [
+      0.010044,
+      "\rFetching: actionview-5.1.3.gem ( 61%)"
+    ],
+    [
+      0.011953,
+      "\rFetching: actionview-5.1.3.gem ( 71%)"
+    ],
+    [
+      0.013956,
+      "\rFetching: actionview-5.1.3.gem ( 81%)"
+    ],
+    [
+      0.008649,
+      "\rFetching: actionview-5.1.3.gem ( 91%)"
+    ],
+    [
+      0.009624,
+      "\rFetching: actionview-5.1.3.gem (100%)\rFetching: actionview-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.04514,
+      "Successfully installed actionview-5.1.3\r\n"
+    ],
+    [
+      0.145128,
+      "Fetching: actionpack-5.1.3.gem"
+    ],
+    [
+      0.000319,
+      "\rFetching: actionpack-5.1.3.gem (  8%)"
+    ],
+    [
+      0.008105,
+      "\rFetching: actionpack-5.1.3.gem ( 16%)"
+    ],
+    [
+      0.011943,
+      "\rFetching: actionpack-5.1.3.gem ( 24%)"
+    ],
+    [
+      0.010013,
+      "\rFetching: actionpack-5.1.3.gem ( 32%)"
+    ],
+    [
+      0.011162,
+      "\rFetching: actionpack-5.1.3.gem ( 40%)"
+    ],
+    [
+      0.012362,
+      "\rFetching: actionpack-5.1.3.gem ( 48%)"
+    ],
+    [
+      0.011477,
+      "\rFetching: actionpack-5.1.3.gem ( 56%)"
+    ],
+    [
+      0.010802,
+      "\rFetching: actionpack-5.1.3.gem ( 63%)"
+    ],
+    [
+      0.011617,
+      "\rFetching: actionpack-5.1.3.gem ( 71%)"
+    ],
+    [
+      0.009934,
+      "\rFetching: actionpack-5.1.3.gem ( 79%)"
+    ],
+    [
+      0.037547,
+      "\rFetching: actionpack-5.1.3.gem ( 87%)"
+    ],
+    [
+      0.005724,
+      "\rFetching: actionpack-5.1.3.gem ( 95%)"
+    ],
+    [
+      0.023107,
+      "\rFetching: actionpack-5.1.3.gem (100%)\rFetching: actionpack-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.053942,
+      "Successfully installed actionpack-5.1.3\r\n"
+    ],
+    [
+      0.095745,
+      "Fetching: activemodel-5.1.3.gem\rFetching: activemodel-5.1.3.gem ( 31%)"
+    ],
+    [
+      0.010153,
+      "\rFetching: activemodel-5.1.3.gem ( 63%)"
+    ],
+    [
+      0.009379,
+      "\rFetching: activemodel-5.1.3.gem ( 95%)"
+    ],
+    [
+      0.04992,
+      "\rFetching: activemodel-5.1.3.gem (100%)\rFetching: activemodel-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.029477,
+      "Successfully installed activemodel-5.1.3\r\n"
+    ],
+    [
+      0.144279,
+      "Fetching: arel-8.0.0.gem\rFetching: arel-8.0.0.gem ( 48%)"
+    ],
+    [
+      0.059769,
+      "\rFetching: arel-8.0.0.gem ( 99%)\rFetching: arel-8.0.0.gem (100%)\rFetching: arel-8.0.0.gem (100%)\r\n"
+    ],
+    [
+      0.036533,
+      "Successfully installed arel-8.0.0\r\n"
+    ],
+    [
+      0.144629,
+      "Fetching: activerecord-5.1.3.gem"
+    ],
+    [
+      0.000375,
+      "\rFetching: activerecord-5.1.3.gem (  5%)"
+    ],
+    [
+      0.009558,
+      "\rFetching: activerecord-5.1.3.gem ( 10%)"
+    ],
+    [
+      0.010166,
+      "\rFetching: activerecord-5.1.3.gem ( 14%)"
+    ],
+    [
+      0.013367,
+      "\rFetching: activerecord-5.1.3.gem ( 19%)"
+    ],
+    [
+      0.009852,
+      "\rFetching: activerecord-5.1.3.gem ( 23%)"
+    ],
+    [
+      0.009669,
+      "\rFetching: activerecord-5.1.3.gem ( 28%)"
+    ],
+    [
+      0.011515,
+      "\rFetching: activerecord-5.1.3.gem ( 33%)"
+    ],
+    [
+      0.011667,
+      "\rFetching: activerecord-5.1.3.gem ( 37%)"
+    ],
+    [
+      0.010124,
+      "\rFetching: activerecord-5.1.3.gem ( 42%)"
+    ],
+    [
+      0.013031,
+      "\rFetching: activerecord-5.1.3.gem ( 47%)"
+    ],
+    [
+      0.009671,
+      "\rFetching: activerecord-5.1.3.gem ( 51%)"
+    ],
+    [
+      0.011776,
+      "\rFetching: activerecord-5.1.3.gem ( 56%)"
+    ],
+    [
+      0.011396,
+      "\rFetching: activerecord-5.1.3.gem ( 61%)"
+    ],
+    [
+      0.011773,
+      "\rFetching: activerecord-5.1.3.gem ( 65%)"
+    ],
+    [
+      0.010357,
+      "\rFetching: activerecord-5.1.3.gem ( 70%)"
+    ],
+    [
+      0.011476,
+      "\rFetching: activerecord-5.1.3.gem ( 75%)"
+    ],
+    [
+      0.011283,
+      "\rFetching: activerecord-5.1.3.gem ( 79%)"
+    ],
+    [
+      0.011436,
+      "\rFetching: activerecord-5.1.3.gem ( 84%)"
+    ],
+    [
+      0.01056,
+      "\rFetching: activerecord-5.1.3.gem ( 88%)"
+    ],
+    [
+      0.012037,
+      "\rFetching: activerecord-5.1.3.gem ( 93%)"
+    ],
+    [
+      0.010655,
+      "\rFetching: activerecord-5.1.3.gem ( 98%)"
+    ],
+    [
+      0.005677,
+      "\rFetching: activerecord-5.1.3.gem (100%)\rFetching: activerecord-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.085331,
+      "Successfully installed activerecord-5.1.3\r\n"
+    ],
+    [
+      0.136318,
+      "Fetching: globalid-0.4.0.gem\rFetching: globalid-0.4.0.gem (100%)\rFetching: globalid-0.4.0.gem (100%)\r\n"
+    ],
+    [
+      0.015331,
+      "Successfully installed globalid-0.4.0\r\n"
+    ],
+    [
+      0.094719,
+      "Fetching: activejob-5.1.3.gem\rFetching: activejob-5.1.3.gem ( 61%)"
+    ],
+    [
+      0.005534,
+      "\rFetching: activejob-5.1.3.gem (100%)\rFetching: activejob-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.019155,
+      "Successfully installed activejob-5.1.3\r\n"
+    ],
+    [
+      0.138002,
+      "Fetching: mime-types-data-3.2016.0521.gem\rFetching: mime-types-data-3.2016.0521.gem ( 16%)"
+    ],
+    [
+      0.008612,
+      "\rFetching: mime-types-data-3.2016.0521.gem ( 32%)"
+    ],
+    [
+      0.01124,
+      "\rFetching: mime-types-data-3.2016.0521.gem ( 48%)"
+    ],
+    [
+      0.012461,
+      "\rFetching: mime-types-data-3.2016.0521.gem ( 64%)"
+    ],
+    [
+      0.011021,
+      "\rFetching: mime-types-data-3.2016.0521.gem ( 80%)"
+    ],
+    [
+      0.010556,
+      "\rFetching: mime-types-data-3.2016.0521.gem ( 96%)"
+    ],
+    [
+      0.002828,
+      "\rFetching: mime-types-data-3.2016.0521.gem (100%)\rFetching: mime-types-data-3.2016.0521.gem (100%)\r\n"
+    ],
+    [
+      0.02276,
+      "Successfully installed mime-types-data-3.2016.0521\r\n"
+    ],
+    [
+      0.143408,
+      "Fetching: mime-types-3.1.gem"
+    ],
+    [
+      0.000642,
+      "\rFetching: mime-types-3.1.gem ( 37%)"
+    ],
+    [
+      0.006798,
+      "\rFetching: mime-types-3.1.gem ( 76%)"
+    ],
+    [
+      0.004617,
+      "\rFetching: mime-types-3.1.gem (100%)\rFetching: mime-types-3.1.gem (100%)\r\n"
+    ],
+    [
+      0.022311,
+      "Successfully installed mime-types-3.1\r\n"
+    ],
+    [
+      0.144541,
+      "Fetching: mail-2.6.6.gem"
+    ],
+    [
+      0.000464,
+      "\rFetching: mail-2.6.6.gem (  5%)"
+    ],
+    [
+      0.00811,
+      "\rFetching: mail-2.6.6.gem ( 10%)"
+    ],
+    [
+      0.010717,
+      "\rFetching: mail-2.6.6.gem ( 14%)"
+    ],
+    [
+      0.011471,
+      "\rFetching: mail-2.6.6.gem ( 19%)"
+    ],
+    [
+      0.016017,
+      "\rFetching: mail-2.6.6.gem ( 23%)"
+    ],
+    [
+      0.006649,
+      "\rFetching: mail-2.6.6.gem ( 28%)"
+    ],
+    [
+      0.011545,
+      "\rFetching: mail-2.6.6.gem ( 33%)"
+    ],
+    [
+      0.009803,
+      "\rFetching: mail-2.6.6.gem ( 37%)"
+    ],
+    [
+      0.012775,
+      "\rFetching: mail-2.6.6.gem ( 42%)"
+    ],
+    [
+      0.010288,
+      "\rFetching: mail-2.6.6.gem ( 47%)"
+    ],
+    [
+      0.011679,
+      "\rFetching: mail-2.6.6.gem ( 51%)"
+    ],
+    [
+      0.011103,
+      "\rFetching: mail-2.6.6.gem ( 56%)"
+    ],
+    [
+      0.010141,
+      "\rFetching: mail-2.6.6.gem ( 61%)"
+    ],
+    [
+      0.011492,
+      "\rFetching: mail-2.6.6.gem ( 65%)"
+    ],
+    [
+      0.012648,
+      "\rFetching: mail-2.6.6.gem ( 70%)"
+    ],
+    [
+      0.013502,
+      "\rFetching: mail-2.6.6.gem ( 75%)"
+    ],
+    [
+      0.009596,
+      "\rFetching: mail-2.6.6.gem ( 79%)"
+    ],
+    [
+      0.008733,
+      "\rFetching: mail-2.6.6.gem ( 84%)"
+    ],
+    [
+      0.011447,
+      "\rFetching: mail-2.6.6.gem ( 88%)"
+    ],
+    [
+      0.011439,
+      "\rFetching: mail-2.6.6.gem ( 93%)"
+    ],
+    [
+      0.012309,
+      "\rFetching: mail-2.6.6.gem ( 98%)"
+    ],
+    [
+      0.00555,
+      "\rFetching: mail-2.6.6.gem (100%)\rFetching: mail-2.6.6.gem (100%)\r\n"
+    ],
+    [
+      0.072873,
+      "Successfully installed mail-2.6.6\r\n"
+    ],
+    [
+      0.153559,
+      "Fetching: actionmailer-5.1.3.gem\rFetching: actionmailer-5.1.3.gem ( 54%)"
+    ],
+    [
+      0.006508,
+      "\rFetching: actionmailer-5.1.3.gem (100%)\rFetching: actionmailer-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.018712,
+      "Successfully installed actionmailer-5.1.3\r\n"
+    ],
+    [
+      0.096942,
+      "Fetching: nio4r-2.1.0.gem\rFetching: nio4r-2.1.0.gem ( 16%)"
+    ],
+    [
+      0.010497,
+      "\rFetching: nio4r-2.1.0.gem ( 32%)"
+    ],
+    [
+      0.009813,
+      "\rFetching: nio4r-2.1.0.gem ( 49%)"
+    ],
+    [
+      0.013348,
+      "\rFetching: nio4r-2.1.0.gem ( 65%)"
+    ],
+    [
+      0.010249,
+      "\rFetching: nio4r-2.1.0.gem ( 81%)"
+    ],
+    [
+      0.012326,
+      "\rFetching: nio4r-2.1.0.gem ( 98%)"
+    ],
+    [
+      0.049554,
+      "\rFetching: nio4r-2.1.0.gem (100%)\rFetching: nio4r-2.1.0.gem (100%)\r\n"
+    ],
+    [
+      0.025161,
+      "Building native extensions.  This could take a while...\r\n"
+    ],
+    [
+      2.0,
+      "Successfully installed nio4r-2.1.0\r\n"
+    ],
+    [
+      0.224127,
+      "Fetching: websocket-extensions-0.1.2.gem\rFetching: websocket-extensions-0.1.2.gem ( 18%)"
+    ],
+    [
+      0.000953,
+      "\rFetching: websocket-extensions-0.1.2.gem ( 44%)"
+    ],
+    [
+      0.005299,
+      "\rFetching: websocket-extensions-0.1.2.gem ( 69%)\rFetching: websocket-extensions-0.1.2.gem ( 95%)"
+    ],
+    [
+      0.000583,
+      "\rFetching: websocket-extensions-0.1.2.gem (100%)\rFetching: websocket-extensions-0.1.2.gem (100%)\r\n"
+    ],
+    [
+      0.010938,
+      "Successfully installed websocket-extensions-0.1.2\r\n"
+    ],
+    [
+      0.125449,
+      "Fetching: websocket-driver-0.6.5.gem\rFetching: websocket-driver-0.6.5.gem (  9%)"
+    ],
+    [
+      0.003085,
+      "\rFetching: websocket-driver-0.6.5.gem ( 21%)\rFetching: websocket-driver-0.6.5.gem ( 34%)"
+    ],
+    [
+      0.002518,
+      "\rFetching: websocket-driver-0.6.5.gem ( 47%)"
+    ],
+    [
+      0.003999,
+      "\rFetching: websocket-driver-0.6.5.gem ( 59%)\rFetching: websocket-driver-0.6.5.gem ( 71%)\rFetching: websocket-driver-0.6.5.gem ( 83%)"
+    ],
+    [
+      0.002316,
+      "\rFetching: websocket-driver-0.6.5.gem ( 96%)\rFetching: websocket-driver-0.6.5.gem (100%)\rFetching: websocket-driver-0.6.5.gem (100%)\r\n"
+    ],
+    [
+      0.012506,
+      "Building native extensions.  This could take a while...\r\n"
+    ],
+    [
+      0.210936,
+      "Successfully installed websocket-driver-0.6.5\r\n"
+    ],
+    [
+      0.107667,
+      "Fetching: actioncable-5.1.3.gem\rFetching: actioncable-5.1.3.gem (  5%)\rFetching: actioncable-5.1.3.gem ( 12%)"
+    ],
+    [
+      0.0017,
+      "\rFetching: actioncable-5.1.3.gem ( 18%)\rFetching: actioncable-5.1.3.gem ( 25%)"
+    ],
+    [
+      0.001284,
+      "\rFetching: actioncable-5.1.3.gem ( 32%)"
+    ],
+    [
+      0.003392,
+      "\rFetching: actioncable-5.1.3.gem ( 38%)\rFetching: actioncable-5.1.3.gem ( 44%)"
+    ],
+    [
+      0.002576,
+      "\rFetching: actioncable-5.1.3.gem ( 51%)"
+    ],
+    [
+      0.002434,
+      "\rFetching: actioncable-5.1.3.gem ( 58%)"
+    ],
+    [
+      0.000247,
+      "\rFetching: actioncable-5.1.3.gem ( 64%)"
+    ],
+    [
+      0.002665,
+      "\rFetching: actioncable-5.1.3.gem ( 71%)"
+    ],
+    [
+      0.001981,
+      "\rFetching: actioncable-5.1.3.gem ( 77%)"
+    ],
+    [
+      0.051605,
+      "\rFetching: actioncable-5.1.3.gem (100%)\rFetching: actioncable-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.029677,
+      "Successfully installed actioncable-5.1.3\r\n"
+    ],
+    [
+      0.106894,
+      "Fetching: thor-0.20.0.gem\rFetching: thor-0.20.0.gem ( 29%)"
+    ],
+    [
+      0.010279,
+      "\rFetching: thor-0.20.0.gem ( 59%)"
+    ],
+    [
+      0.010165,
+      "\rFetching: thor-0.20.0.gem ( 89%)"
+    ],
+    [
+      0.00265,
+      "\rFetching: thor-0.20.0.gem (100%)\rFetching: thor-0.20.0.gem (100%)\r\n"
+    ],
+    [
+      0.025834,
+      "Successfully installed thor-0.20.0\r\n"
+    ],
+    [
+      0.240762,
+      "Fetching: method_source-0.8.2.gem\rFetching: method_source-0.8.2.gem (100%)\rFetching: method_source-0.8.2.gem (100%)\r\n"
+    ],
+    [
+      0.018193,
+      "Successfully installed method_source-0.8.2\r\n"
+    ],
+    [
+      0.152865,
+      "Fetching: railties-5.1.3.gem\rFetching: railties-5.1.3.gem (  7%)"
+    ],
+    [
+      0.010129,
+      "\rFetching: railties-5.1.3.gem ( 14%)"
+    ],
+    [
+      0.008363,
+      "\rFetching: railties-5.1.3.gem ( 21%)"
+    ],
+    [
+      0.012008,
+      "\rFetching: railties-5.1.3.gem ( 29%)"
+    ],
+    [
+      0.010964,
+      "\rFetching: railties-5.1.3.gem ( 36%)"
+    ],
+    [
+      0.012678,
+      "\rFetching: railties-5.1.3.gem ( 43%)"
+    ],
+    [
+      0.00996,
+      "\rFetching: railties-5.1.3.gem ( 50%)"
+    ],
+    [
+      0.011731,
+      "\rFetching: railties-5.1.3.gem ( 57%)"
+    ],
+    [
+      0.014081,
+      "\rFetching: railties-5.1.3.gem ( 64%)"
+    ],
+    [
+      0.00816,
+      "\rFetching: railties-5.1.3.gem ( 71%)"
+    ],
+    [
+      0.012668,
+      "\rFetching: railties-5.1.3.gem ( 79%)"
+    ],
+    [
+      0.009271,
+      "\rFetching: railties-5.1.3.gem ( 86%)"
+    ],
+    [
+      0.011747,
+      "\rFetching: railties-5.1.3.gem ( 93%)"
+    ],
+    [
+      0.011232,
+      "\rFetching: railties-5.1.3.gem (100%)\rFetching: railties-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.095547,
+      "Successfully installed railties-5.1.3\r\n"
+    ],
+    [
+      0.162216,
+      "Fetching: sprockets-3.7.1.gem\rFetching: sprockets-3.7.1.gem ( 22%)"
+    ],
+    [
+      0.008181,
+      "\rFetching: sprockets-3.7.1.gem ( 44%)"
+    ],
+    [
+      0.011215,
+      "\rFetching: sprockets-3.7.1.gem ( 67%)"
+    ],
+    [
+      0.010186,
+      "\rFetching: sprockets-3.7.1.gem ( 89%)"
+    ],
+    [
+      0.005269,
+      "\rFetching: sprockets-3.7.1.gem (100%)\rFetching: sprockets-3.7.1.gem (100%)\r\n"
+    ],
+    [
+      0.034114,
+      "Successfully installed sprockets-3.7.1\r\n"
+    ],
+    [
+      0.102845,
+      "Fetching: sprockets-rails-3.2.0.gem\rFetching: sprockets-rails-3.2.0.gem (100%)\rFetching: sprockets-rails-3.2.0.gem (100%)"
+    ],
+    [
+      0.000285,
+      "\r\n"
+    ],
+    [
+      0.01679,
+      "Successfully installed sprockets-rails-3.2.0\r\n"
+    ],
+    [
+      0.127417,
+      "Fetching: rails-5.1.3.gem\rFetching: rails-5.1.3.gem (100%)\rFetching: rails-5.1.3.gem (100%)\r\n"
+    ],
+    [
+      0.011295,
+      "Successfully installed rails-5.1.3\r\n"
+    ],
+    [
+      0.000572,
+      "36 gems installed\r\n"
+    ],
+    [
+      0.043712,
+      "\u001b[0m"
+    ],
+    [
+      0.016681,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      2.0,
+      "g"
+    ],
+    [
+      0.043999,
+      "e"
+    ],
+    [
+      0.068354,
+      "m"
+    ],
+    [
+      0.112442,
+      " "
+    ],
+    [
+      0.202556,
+      "l"
+    ],
+    [
+      0.066925,
+      "i"
+    ],
+    [
+      0.056919,
+      "s"
+    ],
+    [
+      0.101094,
+      "t"
+    ],
+    [
+      0.078898,
+      " "
+    ],
+    [
+      0.551374,
+      "|"
+    ],
+    [
+      0.25774,
+      " "
+    ],
+    [
+      0.765963,
+      "g"
+    ],
+    [
+      0.134757,
+      "r"
+    ],
+    [
+      0.067706,
+      "e"
+    ],
+    [
+      0.056226,
+      "p"
+    ],
+    [
+      0.112146,
+      " "
+    ],
+    [
+      0.225102,
+      "r"
+    ],
+    [
+      0.090447,
+      "a"
+    ],
+    [
+      0.090099,
+      "i"
+    ],
+    [
+      0.022351,
+      "l"
+    ],
+    [
+      0.101027,
+      "s"
+    ],
+    [
+      0.370182,
+      "\r\n"
+    ],
+    [
+      1.001008,
+      "rails (5.1.3)\r\r\nrails-dom-testing (2.0.3)\r\r\n"
+    ],
+    [
+      0.000344,
+      "rails-html-sanitizer (1.0.3)\r\r\nsprockets-rails (3.2.0)\r\r\n"
+    ],
+    [
+      0.040637,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      2.0,
+      "a"
+    ],
+    [
+      0.101198,
+      "l"
+    ],
+    [
+      0.135161,
+      "l"
+    ],
+    [
+      0.089979,
+      " "
+    ],
+    [
+      0.134943,
+      "g"
+    ],
+    [
+      0.067572,
+      "o"
+    ],
+    [
+      0.134511,
+      "o"
+    ],
+    [
+      0.405271,
+      "d"
+    ],
+    [
+      0.26987,
+      "!"
+    ],
+    [
+      0.112559,
+      "!"
+    ],
+    [
+      0.731883,
+      "\b\u001b[K"
+    ],
+    [
+      0.505057,
+      "\b\u001b[K"
+    ],
+    [
+      0.084564,
+      "\b\u001b[K"
+    ],
+    [
+      0.083684,
+      "\b\u001b[K"
+    ],
+    [
+      0.083373,
+      "\b\u001b[K"
+    ],
+    [
+      0.083356,
+      "\b\u001b[K"
+    ],
+    [
+      0.083676,
+      "\b\u001b[K"
+    ],
+    [
+      0.083443,
+      "\b\u001b[K"
+    ],
+    [
+      0.083955,
+      "\b\u001b[K"
+    ],
+    [
+      0.083264,
+      "\b\u001b[K"
+    ],
+    [
+      0.083692,
+      "\u0007"
+    ],
+    [
+      0.093182,
+      "\u0007"
+    ],
+    [
+      0.020855,
+      "c"
+    ],
+    [
+      0.059826,
+      "d"
+    ],
+    [
+      0.084874,
+      " "
+    ],
+    [
+      0.215503,
+      "."
+    ],
+    [
+      0.134677,
+      "."
+    ],
+    [
+      0.224903,
+      "\r\n"
+    ],
+    [
+      0.008867,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code\u001b[0m$ "
+    ],
+    [
+      0.124081,
+      "g"
+    ],
+    [
+      0.112647,
+      "e"
+    ],
+    [
+      0.089771,
+      "m"
+    ],
+    [
+      0.18003,
+      " "
+    ],
+    [
+      0.179896,
+      "l"
+    ],
+    [
+      0.078797,
+      "i"
+    ],
+    [
+      0.067577,
+      "s"
+    ],
+    [
+      0.123269,
+      "t"
+    ],
+    [
+      0.101844,
+      " "
+    ],
+    [
+      0.42753,
+      "|"
+    ],
+    [
+      0.213648,
+      " "
+    ],
+    [
+      0.13531,
+      "g"
+    ],
+    [
+      0.145961,
+      "r"
+    ],
+    [
+      0.078583,
+      "e"
+    ],
+    [
+      0.077631,
+      "p"
+    ],
+    [
+      0.080229,
+      " "
+    ],
+    [
+      0.202398,
+      "r"
+    ],
+    [
+      0.089837,
+      "a"
+    ],
+    [
+      0.101473,
+      "i"
+    ],
+    [
+      0.044826,
+      "l"
+    ],
+    [
+      0.067563,
+      "s"
+    ],
+    [
+      0.978595,
+      "\r\n"
+    ],
+    [
+      0.268274,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code\u001b[0m$ "
+    ],
+    [
+      1.059256,
+      "n"
+    ],
+    [
+      0.069107,
+      "o"
+    ],
+    [
+      0.122223,
+      " "
+    ],
+    [
+      0.212808,
+      "r"
+    ],
+    [
+      0.091057,
+      "a"
+    ],
+    [
+      0.135022,
+      "i"
+    ],
+    [
+      0.022369,
+      "l"
+    ],
+    [
+      0.078938,
+      "s"
+    ],
+    [
+      0.686235,
+      "!"
+    ],
+    [
+      0.157152,
+      "!"
+    ],
+    [
+      0.157583,
+      "!"
+    ],
+    [
+      0.101495,
+      " "
+    ],
+    [
+      2.0,
+      "n"
+    ],
+    [
+      0.05551,
+      "o"
+    ],
+    [
+      0.147203,
+      "t"
+    ],
+    [
+      0.157343,
+      " "
+    ],
+    [
+      0.359842,
+      "i"
+    ],
+    [
+      0.067508,
+      "n"
+    ],
+    [
+      0.079167,
+      " "
+    ],
+    [
+      0.415626,
+      "a"
+    ],
+    [
+      0.146064,
+      " "
+    ],
+    [
+      0.292707,
+      "c"
+    ],
+    [
+      0.145627,
+      "o"
+    ],
+    [
+      0.06733,
+      "n"
+    ],
+    [
+      0.113836,
+      "t"
+    ],
+    [
+      0.100822,
+      "a"
+    ],
+    [
+      0.056578,
+      "i"
+    ],
+    [
+      0.067376,
+      "n"
+    ],
+    [
+      0.067776,
+      "e"
+    ],
+    [
+      0.068909,
+      "r"
+    ],
+    [
+      1.2248,
+      "\b\u001b[K"
+    ],
+    [
+      0.505226,
+      "\b\u001b[K"
+    ],
+    [
+      0.088456,
+      "\b\u001b[K"
+    ],
+    [
+      0.085228,
+      "\b\u001b[K"
+    ],
+    [
+      0.083825,
+      "\b\u001b[K"
+    ],
+    [
+      0.083573,
+      "\b\u001b[K"
+    ],
+    [
+      0.083525,
+      "\b\u001b[K"
+    ],
+    [
+      0.083493,
+      "\b\u001b[K"
+    ],
+    [
+      0.083558,
+      "\b\u001b[K"
+    ],
+    [
+      0.083473,
+      "\b\u001b[K"
+    ],
+    [
+      0.083705,
+      "\b\u001b[K"
+    ],
+    [
+      0.081832,
+      "\b\u001b[K"
+    ],
+    [
+      0.084789,
+      "\b\u001b[K"
+    ],
+    [
+      0.083673,
+      "\b\u001b[K"
+    ],
+    [
+      0.083944,
+      "\b\u001b[K"
+    ],
+    [
+      0.083645,
+      "\b\u001b[K"
+    ],
+    [
+      0.083588,
+      "\b\u001b[K"
+    ],
+    [
+      0.08567,
+      "\b\u001b[K"
+    ],
+    [
+      0.089887,
+      "\b\u001b[K"
+    ],
+    [
+      0.088215,
+      "\b\u001b[K"
+    ],
+    [
+      0.087078,
+      "\b\u001b[K"
+    ],
+    [
+      0.083387,
+      "\b\u001b[K"
+    ],
+    [
+      0.087689,
+      "\b\u001b[K"
+    ],
+    [
+      0.085879,
+      "\b\u001b[K"
+    ],
+    [
+      0.083579,
+      "\b\u001b[K"
+    ],
+    [
+      0.088032,
+      "\b\u001b[K"
+    ],
+    [
+      0.088709,
+      "\b\u001b[K"
+    ],
+    [
+      0.084413,
+      "\b\u001b[K"
+    ],
+    [
+      0.083629,
+      "\b\u001b[K"
+    ],
+    [
+      0.083355,
+      "\b\u001b[K"
+    ],
+    [
+      0.083341,
+      "\u0007"
+    ],
+    [
+      0.108588,
+      "c"
+    ],
+    [
+      0.049846,
+      "d"
+    ],
+    [
+      0.180678,
+      " "
+    ],
+    [
+      0.314902,
+      "r"
+    ],
+    [
+      0.6749,
+      "a"
+    ],
+    [
+      0.100251,
+      "i"
+    ],
+    [
+      0.057152,
+      "l"
+    ],
+    [
+      0.068572,
+      "s"
+    ],
+    [
+      1.528894,
+      "\r\n"
+    ],
+    [
+      0.009333,
+      "\u001b[0;37mstefan:\u001b[0m \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      1.532293,
+      "r"
+    ],
+    [
+      0.056069,
+      "a"
+    ],
+    [
+      0.090055,
+      "i"
+    ],
+    [
+      0.032788,
+      "l"
+    ],
+    [
+      0.090752,
+      "s"
+    ],
+    [
+      0.12384,
+      " "
+    ],
+    [
+      0.213646,
+      "n"
+    ],
+    [
+      0.203143,
+      "e"
+    ],
+    [
+      0.190897,
+      "w"
+    ],
+    [
+      0.191127,
+      " "
+    ],
+    [
+      0.281629,
+      "."
+    ],
+    [
+      0.966956,
+      "\r\n"
+    ],
+    [
+      1.068139,
+      "\u001b[1m\u001b[34m       exist\u001b[0m  "
+    ],
+    [
+      0.000295,
+      "\r\n"
+    ],
+    [
+      0.002746,
+      "\u001b[1m\u001b[32m      create\u001b[0m  README.md\r\n"
+    ],
+    [
+      0.002883,
+      "\u001b[1m\u001b[32m      create\u001b[0m  Rakefile\r\n"
+    ],
+    [
+      0.002212,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config.ru\r\n"
+    ],
+    [
+      0.002512,
+      "\u001b[1m\u001b[32m      create\u001b[0m  .gitignore\r\n"
+    ],
+    [
+      0.003176,
+      "\u001b[1m\u001b[32m      create\u001b[0m  Gemfile\r\n\u001b[1m\u001b[32m         run\u001b[0m  git init from \".\"\r\n"
+    ],
+    [
+      0.055898,
+      "Initialized empty Git repository in /var/www/.git/\r\n"
+    ],
+    [
+      0.001906,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app\r\n"
+    ],
+    [
+      0.005585,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/assets/config/manifest.js\r\n"
+    ],
+    [
+      0.002765,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/assets/javascripts/application.js\r\n"
+    ],
+    [
+      0.00214,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/assets/javascripts/cable.js\r\n"
+    ],
+    [
+      0.002691,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/assets/stylesheets/application.css\r\n"
+    ],
+    [
+      0.003764,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/channels/application_cable/channel.rb\r\n"
+    ],
+    [
+      0.00337,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/channels/application_cable/connection.rb\r\n"
+    ],
+    [
+      0.004017,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/controllers/application_controller.rb\r\n"
+    ],
+    [
+      0.002913,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/helpers/application_helper.rb\r\n"
+    ],
+    [
+      0.003078,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/jobs/application_job.rb\r\n"
+    ],
+    [
+      0.003264,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/mailers/application_mailer.rb\r\n"
+    ],
+    [
+      0.002195,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/models/application_record.rb\r\n"
+    ],
+    [
+      0.005047,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/views/layouts/application.html.erb\r\n"
+    ],
+    [
+      0.003034,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/views/layouts/mailer.html.erb\r\n"
+    ],
+    [
+      0.002529,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/views/layouts/mailer.text.erb\r\n"
+    ],
+    [
+      0.002725,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/assets/images/.keep\r\n"
+    ],
+    [
+      0.001524,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/assets/javascripts/channels\r\n"
+    ],
+    [
+      0.00209,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/assets/javascripts/channels/.keep\r\n"
+    ],
+    [
+      0.002454,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/controllers/concerns/.keep\r\n"
+    ],
+    [
+      0.002449,
+      "\u001b[1m\u001b[32m      create\u001b[0m  app/models/concerns/.keep\r\n"
+    ],
+    [
+      0.001482,
+      "\u001b[1m\u001b[32m      create\u001b[0m  bin\r\n"
+    ],
+    [
+      0.002702,
+      "\u001b[1m\u001b[32m      create\u001b[0m  bin/bundle\r\n"
+    ],
+    [
+      0.00239,
+      "\u001b[1m\u001b[32m      create\u001b[0m  bin/rails\r\n"
+    ],
+    [
+      0.002133,
+      "\u001b[1m\u001b[32m      create\u001b[0m  bin/rake\r\n"
+    ],
+    [
+      0.002855,
+      "\u001b[1m\u001b[32m      create\u001b[0m  bin/setup\r\n"
+    ],
+    [
+      0.002383,
+      "\u001b[1m\u001b[32m      create\u001b[0m  bin/update\r\n"
+    ],
+    [
+      0.002424,
+      "\u001b[1m\u001b[32m      create\u001b[0m  bin/yarn\r\n"
+    ],
+    [
+      0.008679,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config\r\n"
+    ],
+    [
+      0.003668,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/routes.rb\r\n"
+    ],
+    [
+      0.002572,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/application.rb\r\n"
+    ],
+    [
+      0.002251,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/environment.rb\r\n"
+    ],
+    [
+      0.003124,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/secrets.yml\r\n"
+    ],
+    [
+      0.002239,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/cable.yml\r\n"
+    ],
+    [
+      0.003121,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/puma.rb\r\n"
+    ],
+    [
+      0.002633,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/spring.rb\r\n"
+    ],
+    [
+      0.001378,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/environments\r\n"
+    ],
+    [
+      0.003617,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/environments/development.rb\r\n"
+    ],
+    [
+      0.003499,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/environments/production.rb\r\n"
+    ],
+    [
+      0.003243,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/environments/test.rb\r\n"
+    ],
+    [
+      0.002491,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers\r\n"
+    ],
+    [
+      0.002428,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/application_controller_renderer.rb\r\n"
+    ],
+    [
+      0.002264,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/assets.rb\r\n"
+    ],
+    [
+      0.002281,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/backtrace_silencers.rb\r\n"
+    ],
+    [
+      0.003412,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/cookies_serializer.rb\r\n"
+    ],
+    [
+      0.002909,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/cors.rb\r\n"
+    ],
+    [
+      0.002023,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/filter_parameter_logging.rb\r\n"
+    ],
+    [
+      0.002897,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/inflections.rb\r\n"
+    ],
+    [
+      0.002776,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/mime_types.rb\r\n"
+    ],
+    [
+      0.002973,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/new_framework_defaults_5_1.rb\r\n"
+    ],
+    [
+      0.002341,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/initializers/wrap_parameters.rb\r\n"
+    ],
+    [
+      0.001135,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/locales\r\n"
+    ],
+    [
+      0.003571,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/locales/en.yml\r\n"
+    ],
+    [
+      0.00337,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/boot.rb\r\n"
+    ],
+    [
+      0.00291,
+      "\u001b[1m\u001b[32m      create\u001b[0m  config/database.yml\r\n"
+    ],
+    [
+      0.001361,
+      "\u001b[1m\u001b[32m      create\u001b[0m  db\r\n"
+    ],
+    [
+      0.003323,
+      "\u001b[1m\u001b[32m      create\u001b[0m  db/seeds.rb\r\n"
+    ],
+    [
+      0.001303,
+      "\u001b[1m\u001b[32m      create\u001b[0m  lib\r\n"
+    ],
+    [
+      0.001088,
+      "\u001b[1m\u001b[32m      create\u001b[0m  lib/tasks\r\n"
+    ],
+    [
+      0.001815,
+      "\u001b[1m\u001b[32m      create\u001b[0m  lib/tasks/.keep\r\n"
+    ],
+    [
+      0.000999,
+      "\u001b[1m\u001b[32m      create\u001b[0m  lib/assets\r\n"
+    ],
+    [
+      0.001749,
+      "\u001b[1m\u001b[32m      create\u001b[0m  lib/assets/.keep\r\n"
+    ],
+    [
+      0.001142,
+      "\u001b[1m\u001b[32m      create\u001b[0m  log\r\n"
+    ],
+    [
+      0.002068,
+      "\u001b[1m\u001b[32m      create\u001b[0m  log/.keep\r\n"
+    ],
+    [
+      0.001399,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public\r\n"
+    ],
+    [
+      0.002641,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public/404.html\r\n"
+    ],
+    [
+      0.001976,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public/422.html\r\n"
+    ],
+    [
+      0.001893,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public/500.html\r\n"
+    ],
+    [
+      0.002583,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public/apple-touch-icon-precomposed.png\r\n"
+    ],
+    [
+      0.002743,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public/apple-touch-icon.png\r\n"
+    ],
+    [
+      0.002701,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public/favicon.ico\r\n"
+    ],
+    [
+      0.002644,
+      "\u001b[1m\u001b[32m      create\u001b[0m  public/robots.txt\r\n"
+    ],
+    [
+      0.002995,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/fixtures\r\n"
+    ],
+    [
+      0.002127,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/fixtures/.keep\r\n"
+    ],
+    [
+      0.001014,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/fixtures/files\r\n"
+    ],
+    [
+      0.001679,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/fixtures/files/.keep\r\n"
+    ],
+    [
+      0.000947,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/controllers\r\n"
+    ],
+    [
+      0.002189,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/controllers/.keep\r\n"
+    ],
+    [
+      0.001355,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/mailers\r\n"
+    ],
+    [
+      0.002328,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/mailers/.keep\r\n"
+    ],
+    [
+      0.001088,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/models\r\n"
+    ],
+    [
+      0.002178,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/models/.keep\r\n"
+    ],
+    [
+      0.001107,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/helpers\r\n"
+    ],
+    [
+      0.00206,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/helpers/.keep\r\n"
+    ],
+    [
+      0.001565,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/integration\r\n"
+    ],
+    [
+      0.002256,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/integration/.keep\r\n"
+    ],
+    [
+      0.002608,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/test_helper.rb\r\n"
+    ],
+    [
+      0.001117,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/system\r\n"
+    ],
+    [
+      0.00163,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/system/.keep\r\n"
+    ],
+    [
+      0.00225,
+      "\u001b[1m\u001b[32m      create\u001b[0m  test/application_system_test_case.rb\r\n"
+    ],
+    [
+      0.001084,
+      "\u001b[1m\u001b[32m      create\u001b[0m  tmp\r\n"
+    ],
+    [
+      0.002242,
+      "\u001b[1m\u001b[32m      create\u001b[0m  tmp/.keep\r\n"
+    ],
+    [
+      0.001024,
+      "\u001b[1m\u001b[32m      create\u001b[0m  tmp/cache\r\n"
+    ],
+    [
+      0.000934,
+      "\u001b[1m\u001b[32m      create\u001b[0m  tmp/cache/assets\r\n"
+    ],
+    [
+      0.001184,
+      "\u001b[1m\u001b[32m      create\u001b[0m  vendor\r\n"
+    ],
+    [
+      0.001854,
+      "\u001b[1m\u001b[32m      create\u001b[0m  vendor/.keep\r\n"
+    ],
+    [
+      0.002862,
+      "\u001b[1m\u001b[32m      create\u001b[0m  package.json\r\n"
+    ],
+    [
+      0.001106,
+      "\u001b[1m\u001b[32m      remove\u001b[0m  config/initializers/cors.rb\r\n"
+    ],
+    [
+      0.003405,
+      "\u001b[1m\u001b[32m      remove\u001b[0m  config/initializers/new_framework_defaults_5_1.rb\r\n"
+    ],
+    [
+      0.002234,
+      "\u001b[1m\u001b[32m         run\u001b[0m  bundle install\r\n"
+    ],
+    [
+      0.206542,
+      "\u001b[33mDon't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root\r\nusers on this machine.\u001b[0m\r\n"
+    ],
+    [
+      0.090735,
+      "\u001b[33mThe dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.\u001b[0m\r\n"
+    ],
+    [
+      2.0,
+      "Fetching gem metadata from https://rubygems.org/"
+    ],
+    [
+      0.001151,
+      "."
+    ],
+    [
+      0.319378,
+      "."
+    ],
+    [
+      0.896313,
+      "."
+    ],
+    [
+      0.697799,
+      "."
+    ],
+    [
+      0.923549,
+      "."
+    ],
+    [
+      0.609085,
+      "."
+    ],
+    [
+      0.39056,
+      "."
+    ],
+    [
+      0.053274,
+      "."
+    ],
+    [
+      0.043436,
+      "."
+    ],
+    [
+      0.333956,
+      "\r\nFetching version metadata from https://rubygems.org/"
+    ],
+    [
+      0.018413,
+      "."
+    ],
+    [
+      0.213182,
+      "."
+    ],
+    [
+      0.397071,
+      "\r\n"
+    ],
+    [
+      0.097016,
+      "Fetching dependency metadata from https://rubygems.org/"
+    ],
+    [
+      4.6e-05,
+      "."
+    ],
+    [
+      0.003563,
+      "\r\n"
+    ],
+    [
+      0.117227,
+      "Resolving dependencies..."
+    ],
+    [
+      0.176075,
+      "\r\n"
+    ],
+    [
+      0.037542,
+      "Using rake 12.0.0\r\n"
+    ],
+    [
+      0.001892,
+      "Using concurrent-ruby 1.0.5\r\n"
+    ],
+    [
+      0.000647,
+      "Using i18n 0.8.6\r\n"
+    ],
+    [
+      0.000846,
+      "Using minitest 5.10.3\r\n"
+    ],
+    [
+      0.000706,
+      "Using thread_safe 0.3.6\r\n"
+    ],
+    [
+      0.000752,
+      "Using builder 3.2.3\r\n"
+    ],
+    [
+      0.00082,
+      "Using erubi 1.6.1\r\n"
+    ],
+    [
+      0.000793,
+      "Using mini_portile2 2.2.0\r\n"
+    ],
+    [
+      0.000693,
+      "Using rack 2.0.3\r\n"
+    ],
+    [
+      0.00096,
+      "Using nio4r 2.1.0\r\n"
+    ],
+    [
+      0.000782,
+      "Using websocket-extensions 0.1.2\r\n"
+    ],
+    [
+      0.000803,
+      "Using mime-types-data 3.2016.0521\r\n"
+    ],
+    [
+      0.000734,
+      "Using arel 8.0.0\r\n"
+    ],
+    [
+      0.00094,
+      "\u001b[32mFetching public_suffix 3.0.0\u001b[0m\r\n"
+    ],
+    [
+      0.342328,
+      "\u001b[32mInstalling public_suffix 3.0.0\u001b[0m\r\n"
+    ],
+    [
+      0.030981,
+      "\u001b[32mFetching bindex 0.5.0\u001b[0m\r\n"
+    ],
+    [
+      0.169087,
+      "\u001b[32mInstalling bindex 0.5.0 with native extensions\u001b[0m\r\n"
+    ],
+    [
+      0.262739,
+      "Using bundler 1.15.4\r\n"
+    ],
+    [
+      0.001755,
+      "\u001b[32mFetching byebug 9.1.0\u001b[0m\r\n"
+    ],
+    [
+      0.27612,
+      "\u001b[32mInstalling byebug 9.1.0 with native extensions\u001b[0m\r\n"
+    ],
+    [
+      1.138839,
+      "\u001b[32mFetching mini_mime 0.1.4\u001b[0m\r\n"
+    ],
+    [
+      0.180919,
+      "\u001b[32mInstalling mini_mime 0.1.4\u001b[0m\r\n"
+    ],
+    [
+      0.015585,
+      "\u001b[32mFetching ffi 1.9.18\u001b[0m\r\n"
+    ],
+    [
+      0.810569,
+      "\u001b[32mInstalling ffi 1.9.18 with native extensions\u001b[0m\r\n"
+    ],
+    [
+      2.0,
+      "\u001b[32mFetching coffee-script-source 1.12.2\u001b[0m\r\n"
+    ],
+    [
+      0.2548,
+      "\u001b[32mInstalling coffee-script-source 1.12.2\u001b[0m\r\n"
+    ],
+    [
+      0.01599,
+      "\u001b[32mFetching execjs 2.7.0\u001b[0m\r\n"
+    ],
+    [
+      0.166612,
+      "\u001b[32mInstalling execjs 2.7.0\u001b[0m\r\n"
+    ],
+    [
+      0.017919,
+      "Using method_source 0.8.2\r\n"
+    ],
+    [
+      0.003666,
+      "Using thor 0.20.0\r\n"
+    ],
+    [
+      0.001221,
+      "\u001b[32mFetching multi_json 1.12.1\u001b[0m\r\n"
+    ],
+    [
+      0.221507,
+      "\u001b[32mInstalling multi_json 1.12.1\u001b[0m\r\n"
+    ],
+    [
+      0.018903,
+      "\u001b[32mFetching rb-fsevent 0.10.2\u001b[0m\r\n"
+    ],
+    [
+      0.194657,
+      "\u001b[32mInstalling rb-fsevent 0.10.2\u001b[0m\r\n"
+    ],
+    [
+      0.01932,
+      "\u001b[32mFetching ruby_dep 1.5.0\u001b[0m\r\n"
+    ],
+    [
+      0.190674,
+      "\u001b[32mInstalling ruby_dep 1.5.0\u001b[0m\r\n"
+    ],
+    [
+      0.015993,
+      "\u001b[32mFetching puma 3.10.0\u001b[0m\r\n"
+    ],
+    [
+      0.238092,
+      "\u001b[32mInstalling puma 3.10.0 with native extensions\u001b[0m\r\n"
+    ],
+    [
+      1.389972,
+      "\u001b[32mFetching rubyzip 1.2.1\u001b[0m\r\n"
+    ],
+    [
+      0.27216,
+      "\u001b[32mInstalling rubyzip 1.2.1\u001b[0m\r\n"
+    ],
+    [
+      0.04382,
+      "\u001b[32mFetching tilt 2.0.8\u001b[0m\r\n"
+    ],
+    [
+      0.198485,
+      "\u001b[32mInstalling tilt 2.0.8\u001b[0m\r\n"
+    ],
+    [
+      0.034073,
+      "\u001b[32mFetching sqlite3 1.3.13\u001b[0m\r\n"
+    ],
+    [
+      0.207155,
+      "\u001b[32mInstalling sqlite3 1.3.13 with native extensions\u001b[0m\r\n"
+    ],
+    [
+      2.0,
+      "\u001b[32mFetching turbolinks-source 5.0.3\u001b[0m\r\n"
+    ],
+    [
+      0.192465,
+      "\u001b[32mInstalling turbolinks-source 5.0.3\u001b[0m\r\n"
+    ],
+    [
+      0.012219,
+      "Using tzinfo 1.2.3\r\n"
+    ],
+    [
+      0.001491,
+      "Using nokogiri 1.8.0\r\nUsing rack-test 0.6.3\r\n"
+    ],
+    [
+      0.000819,
+      "Using sprockets 3.7.1\r\n"
+    ],
+    [
+      0.000401,
+      "Using websocket-driver 0.6.5\r\nUsing mime-types 3.1\r\n"
+    ],
+    [
+      0.000862,
+      "\u001b[32mFetching addressable 2.5.2\u001b[0m\r\n"
+    ],
+    [
+      0.236038,
+      "\u001b[32mInstalling addressable 2.5.2\u001b[0m\r\n"
+    ],
+    [
+      0.022845,
+      "\u001b[32mFetching childprocess 0.7.1\u001b[0m\r\n"
+    ],
+    [
+      0.180284,
+      "\u001b[32mInstalling childprocess 0.7.1\u001b[0m\r\n"
+    ],
+    [
+      0.022302,
+      "\u001b[32mFetching rb-inotify 0.9.10\u001b[0m\r\n"
+    ],
+    [
+      0.215352,
+      "\u001b[32mInstalling rb-inotify 0.9.10\u001b[0m\r\n"
+    ],
+    [
+      0.016088,
+      "\u001b[32mFetching coffee-script 2.4.1\u001b[0m\r\n"
+    ],
+    [
+      0.191525,
+      "\u001b[32mInstalling coffee-script 2.4.1\u001b[0m\r\n"
+    ],
+    [
+      0.011833,
+      "\u001b[32mFetching uglifier 3.2.0\u001b[0m\r\n"
+    ],
+    [
+      0.279256,
+      "\u001b[32mInstalling uglifier 3.2.0\u001b[0m\r\n"
+    ],
+    [
+      0.025847,
+      "\u001b[32mFetching turbolinks 5.0.1\u001b[0m\r\n"
+    ],
+    [
+      0.137535,
+      "\u001b[32mInstalling turbolinks 5.0.1\u001b[0m\r\n"
+    ],
+    [
+      0.010219,
+      "Using activesupport 5.1.3\r\n"
+    ],
+    [
+      0.000536,
+      "Using loofah 2.0.3\r\n"
+    ],
+    [
+      0.000691,
+      "\u001b[32mFetching xpath 2.1.0\u001b[0m\r\n"
+    ],
+    [
+      0.170342,
+      "\u001b[32mInstalling xpath 2.1.0\u001b[0m\r\n"
+    ],
+    [
+      0.040648,
+      "Using mail 2.6.6\r\n"
+    ],
+    [
+      0.00277,
+      "\u001b[32mFetching selenium-webdriver 3.5.1\u001b[0m\r\n"
+    ],
+    [
+      0.791609,
+      "\u001b[32mInstalling selenium-webdriver 3.5.1\u001b[0m\r\n"
+    ],
+    [
+      0.065787,
+      "\u001b[32mFetching listen 3.1.5\u001b[0m\r\n"
+    ],
+    [
+      0.174725,
+      "\u001b[32mInstalling listen 3.1.5\u001b[0m\r\n"
+    ],
+    [
+      0.024611,
+      "\u001b[32mFetching sass-listen 4.0.0\u001b[0m\r\n"
+    ],
+    [
+      0.175645,
+      "\u001b[32mInstalling sass-listen 4.0.0\u001b[0m\r\n"
+    ],
+    [
+      0.0242,
+      "Using rails-dom-testing 2.0.3\r\n"
+    ],
+    [
+      0.000854,
+      "Using globalid 0.4.0\r\n"
+    ],
+    [
+      0.001081,
+      "Using activemodel 5.1.3\r\n"
+    ],
+    [
+      0.001717,
+      "\u001b[32mFetching jbuilder 2.7.0\u001b[0m\r\n"
+    ],
+    [
+      0.184153,
+      "\u001b[32mInstalling jbuilder 2.7.0\u001b[0m\r\n"
+    ],
+    [
+      0.018829,
+      "\u001b[32mFetching spring 2.0.2\u001b[0m\r\n"
+    ],
+    [
+      0.182782,
+      "\u001b[32mInstalling spring 2.0.2\u001b[0m\r\n"
+    ],
+    [
+      0.019984,
+      "Using rails-html-sanitizer 1.0.3\r\n"
+    ],
+    [
+      0.000956,
+      "\u001b[32mFetching capybara 2.15.1\u001b[0m\r\n"
+    ],
+    [
+      0.358161,
+      "\u001b[32mInstalling capybara 2.15.1\u001b[0m\r\n"
+    ],
+    [
+      0.113843,
+      "\u001b[32mFetching sass 3.5.1\u001b[0m\r\n"
+    ],
+    [
+      0.415474,
+      "\u001b[32mInstalling sass 3.5.1\u001b[0m\r\n"
+    ],
+    [
+      0.094011,
+      "Using activejob 5.1.3\r\n"
+    ],
+    [
+      0.00071,
+      "Using activerecord 5.1.3\r\n\u001b[32mFetching spring-watcher-listen 2.0.1\u001b[0m\r\n"
+    ],
+    [
+      0.141758,
+      "\u001b[32mInstalling spring-watcher-listen 2.0.1\u001b[0m\r\n"
+    ],
+    [
+      0.012556,
+      "Using actionview 5.1.3\r\n"
+    ],
+    [
+      0.000433,
+      "Using actionpack 5.1.3\r\n"
+    ],
+    [
+      0.000638,
+      "Using actioncable 5.1.3\r\n"
+    ],
+    [
+      0.000447,
+      "Using actionmailer 5.1.3\r\n"
+    ],
+    [
+      0.000417,
+      "Using railties 5.1.3\r\n"
+    ],
+    [
+      0.0005,
+      "Using sprockets-rails 3.2.0\r\n"
+    ],
+    [
+      0.00049,
+      "\u001b[32mFetching coffee-rails 4.2.2\u001b[0m\r\n"
+    ],
+    [
+      0.1412,
+      "\u001b[32mInstalling coffee-rails 4.2.2\u001b[0m\r\n"
+    ],
+    [
+      0.013176,
+      "\u001b[32mFetching web-console 3.5.1\u001b[0m\r\n"
+    ],
+    [
+      0.17253,
+      "\u001b[32mInstalling web-console 3.5.1\u001b[0m\r\n"
+    ],
+    [
+      0.020372,
+      "Using rails 5.1.3\r\n"
+    ],
+    [
+      0.000242,
+      "\u001b[32mFetching sass-rails 5.0.6\u001b[0m\r\n"
+    ],
+    [
+      0.142423,
+      "\u001b[32mInstalling sass-rails 5.0.6\u001b[0m\r\n"
+    ],
+    [
+      0.026395,
+      "\u001b[32mBundle complete! 16 Gemfile dependencies, 71 gems now installed.\u001b[0m\r\n\u001b[32mUse `bundle info [gemname]` to see where a bundled gem is installed.\u001b[0m\r\n"
+    ],
+    [
+      0.061518,
+      "\u001b[1m\u001b[32m         run\u001b[0m  bundle exec spring binstub --all\r\n"
+    ],
+    [
+      0.366517,
+      "* bin/rake: spring inserted\r\n"
+    ],
+    [
+      0.002476,
+      "* bin/rails: spring inserted\r\n"
+    ],
+    [
+      0.036624,
+      "\u001b[0m"
+    ],
+    [
+      0.039893,
+      "\u001b[0;37mstefan:\u001b[0m\u001b[0;31m (master) \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      2.0,
+      "r"
+    ],
+    [
+      0.067225,
+      "a"
+    ],
+    [
+      0.06708,
+      "i"
+    ],
+    [
+      0.045542,
+      "l"
+    ],
+    [
+      0.078537,
+      "s"
+    ],
+    [
+      0.123669,
+      " "
+    ],
+    [
+      0.157611,
+      "c"
+    ],
+    [
+      0.753695,
+      "\r\n"
+    ],
+    [
+      2.0,
+      "Running via Spring preloader in process 15306\r\n"
+    ],
+    [
+      0.236496,
+      "Loading development environment (Rails 5.1.3)\r\n"
+    ],
+    [
+      0.013216,
+      "irb(main):001:0> "
+    ],
+    [
+      0.812729,
+      "e"
+    ],
+    [
+      0.179932,
+      "x"
+    ],
+    [
+      0.134397,
+      "i"
+    ],
+    [
+      0.202651,
+      "t"
+    ],
+    [
+      0.382709,
+      "\r\n"
+    ],
+    [
+      0.066939,
+      "\u001b[0m"
+    ],
+    [
+      0.032838,
+      "\u001b[0;37mstefan:\u001b[0m\u001b[0;31m (master) \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      0.43763,
+      "r"
+    ],
+    [
+      0.056885,
+      "a"
+    ],
+    [
+      0.100652,
+      "i"
+    ],
+    [
+      0.045127,
+      "l"
+    ],
+    [
+      0.101251,
+      "s"
+    ],
+    [
+      0.359495,
+      " "
+    ],
+    [
+      0.113107,
+      "s"
+    ],
+    [
+      0.337334,
+      "\r\n"
+    ],
+    [
+      2.0,
+      "=> Booting Puma\r\n=> Rails 5.1.3 application starting in development on http://localhost:3000\r\n=> Run `rails server -h` for more startup options\r\n"
+    ],
+    [
+      1.598613,
+      "Puma starting in single mode...\r\n* Version 3.10.0 (ruby 2.4.1-p111), codename: Russell's Teapot\r\n* Min threads: 5, max threads: 5\r\n* Environment: development\r\n"
+    ],
+    [
+      0.000164,
+      "* Listening on tcp://0.0.0.0:3000\r\n"
+    ],
+    [
+      0.000463,
+      "Use Ctrl-C to stop\r\n"
+    ],
+    [
+      2.0,
+      "^C"
+    ],
+    [
+      0.007682,
+      "Exiting\r\n"
+    ],
+    [
+      0.006259,
+      "/var/lib/gems/2.4.0/gems/puma-3.10.0/lib/puma/server.rb:395:in `close': stream closed (IOError)\r\n\tfrom /var/lib/gems/2.4.0/gems/puma-3.10.0/lib/puma/server.rb:395:in `ensure in handle_servers'\r\n\tfrom /var/lib/gems/2.4.0/gems/puma-3.10.0/lib/puma/server.rb:398:in `handle_servers'\r\n\tfrom /var/lib/gems/2.4.0/gems/puma-3.10.0/lib/puma/server.rb:327:in `block in run'\r\n"
+    ],
+    [
+      0.031228,
+      "\u001b[0m"
+    ],
+    [
+      0.034671,
+      "\u001b[0;37mstefan:\u001b[0m\u001b[0;31m (master) \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      1.830404,
+      "r"
+    ],
+    [
+      0.055306,
+      "a"
+    ],
+    [
+      0.315759,
+      "\b\u001b[K"
+    ],
+    [
+      0.135879,
+      "\b\u001b[K"
+    ],
+    [
+      0.134485,
+      "r"
+    ],
+    [
+      0.088805,
+      "a"
+    ],
+    [
+      0.113031,
+      "k"
+    ],
+    [
+      0.090653,
+      "e"
+    ],
+    [
+      0.124023,
+      " "
+    ],
+    [
+      0.134434,
+      "-"
+    ],
+    [
+      0.304201,
+      "T"
+    ],
+    [
+      0.888564,
+      "\r\n"
+    ],
+    [
+      2.0,
+      "Running via Spring preloader in process 15360\r\n"
+    ],
+    [
+      0.404037,
+      "rake about                              # List versions of all Rails frameworks and the environment\r\nrake app:template                       # Applies the template supplied by LOCATION=(/path/to/template) or URL\r\nrake app:update                         # Update configs and some other initially generated files (or use just update:configs or update:bin)\r\nrake assets:clean[keep]                 # Remove old compiled assets\r\nrake assets:clobber                     # Remove compiled assets\r\nrake assets:environment                 # Load asset compile environment\r\nrake assets:precompile                  # Compile all the assets named in config.assets.precompile\r\nrake cache_digests:dependencies         # Lookup first-level dependencies for TEMPLATE (like messages/show or comments/_comment.html)\r\nrake cache_digests:nested_dependencies  # Lookup nested dependencies for TEMPLATE (like messages/show or comments/_comment.html)\r\nrake db:create                          # Creates the database from DATABASE_URL or config/dat"
+    ],
+    [
+      5.4e-05,
+      "abase.yml for the current RAILS_ENV (use db:create:a...\r\nrake db:drop                            # Drops the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:drop:all t...\r\n"
+    ],
+    [
+      0.000295,
+      "rake db:environment:set                 # Set the environment value for the database\r\n"
+    ],
+    [
+      0.002356,
+      "rake db:fixtures:load                   # Loads fixtures into the current environment's database\r\nrake db:migrate                         # Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)\r\nrake db:migrate:status                  # Display status of migrations\r\n"
+    ],
+    [
+      0.000299,
+      "rake db:rollback                        # Rolls the schema back to the previous version (specify steps w/ STEP=n)\r\n"
+    ],
+    [
+      0.000315,
+      "rake db:schema:cache:clear              # Clears a db/schema_cache.yml file\r\n"
+    ],
+    [
+      0.000507,
+      "rake db:schema:cache:dump               # Creates a db/schema_cache.yml file\r\nrake db:schema:dump                     # Creates a db/schema.rb file that is portable against any DB supported by Active Record\r\n"
+    ],
+    [
+      0.000283,
+      "rake db:schema:load                     # Loads a schema.rb file into the database\r\nrake db:seed                            # Loads the seed data from db/seeds.rb"
+    ],
+    [
+      0.000364,
+      "\r\n"
+    ],
+    [
+      0.000324,
+      "rake db:setup                           # Creates the database, loads the schema, and initializes with the seed data (use db:reset to also drop th...\r\nrake db:structure:dump                  # Dumps the database structure to db/structure.sql\r\n"
+    ],
+    [
+      0.000491,
+      "rake db:structure:load                  # Recreates the databases from the structure.sql file\r\nrake db:version                         # Retrieves the current schema version number\r\n"
+    ],
+    [
+      0.000404,
+      "rake dev:cache                          # Toggle development mode caching on/off\r\n"
+    ],
+    [
+      0.000435,
+      "rake initializers                       # Print out all defined initializers in the order they are invoked by Rails\r\nrake log:clear                          # Truncates all/specified *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)\r\n"
+    ],
+    [
+      0.000309,
+      "rake middleware                         # Prints out your Rack middleware stack\r\nrake notes                              # Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)\r\n"
+    ],
+    [
+      0.000583,
+      "rake notes:custom                       # Enumerate a custom annotation, specify with ANNOTATION=CUSTOM\r\nrake restart                            # Restart app by touching tmp/restart.txt\r\n"
+    ],
+    [
+      0.000284,
+      "rake routes                             # Print out all defined routes in match order, with names\r\n"
+    ],
+    [
+      0.00038,
+      "rake secret                             # Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie s...\r\nrake stats                              # Report code statistics (KLOCs, etc) from the application or engine\r\n"
+    ],
+    [
+      0.000381,
+      "rake test                               # Runs all tests in test folder except system ones\r\nrake test:db                            # Run tests quickly, but also reset db\r\nrake test:system                        # Run system tests only\r\n"
+    ],
+    [
+      0.000305,
+      "rake time:zones[country_or_offset]      # List all time zones, list by two-letter country code (`rails time:zones[US]`), or list by UTC offset (`r...\r\nrake tmp:clear                          # Clear cache and socket files from tmp/ (narrow w/ tmp:cache:clear, tmp:sockets:clear)\r\nrake tmp:create                         # Creates tmp directories for cache, sockets, and pids"
+    ],
+    [
+      0.000215,
+      "\r\nrake yarn:install                       # Install all JavaScript dependencies as specified via Yarn\r\n"
+    ],
+    [
+      0.104695,
+      "\u001b[0m"
+    ],
+    [
+      0.034693,
+      "\u001b[0;37mstefan:\u001b[0m\u001b[0;31m (master) \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      1.749884,
+      "p"
+    ],
+    [
+      0.055982,
+      "i"
+    ],
+    [
+      0.326257,
+      "c"
+    ],
+    [
+      0.101387,
+      "o"
+    ],
+    [
+      0.30391,
+      "b"
+    ],
+    [
+      0.089916,
+      "o"
+    ],
+    [
+      0.12388,
+      "x"
+    ],
+    [
+      0.12356,
+      " "
+    ],
+    [
+      0.23622,
+      "s"
+    ],
+    [
+      0.123784,
+      "t"
+    ],
+    [
+      0.122775,
+      "o"
+    ],
+    [
+      0.056136,
+      "p"
+    ],
+    [
+      0.394949,
+      "\r\n"
+    ],
+    [
+      1.000804,
+      "Stopping rails_dev_1 ... \r\r\nStopping rails_test_1 ... \r\r\nStopping rails_db_1 ... \r\r\n"
+    ],
+    [
+      2.0,
+      "\u001b[2A\u001b[2K\rStopping rails_test_1 ... \u001b[32mdone\u001b[0m\r\u001b[2B"
+    ],
+    [
+      0.205821,
+      "\u001b[3A\u001b[2K\rStopping rails_dev_1 ... \u001b[32mdone\u001b[0m\r\u001b[3B"
+    ],
+    [
+      0.628046,
+      "\u001b[1A\u001b[2K\rStopping rails_db_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B"
+    ],
+    [
+      0.040305,
+      "Removing rails_dev_1 ... \r\r\nRemoving rails_test_1 ... \r\r\nRemoving rails_db_1 ... \r\r\nRemoving rails_bundle_1 ... \r\r\n"
+    ],
+    [
+      0.211846,
+      "\u001b[4A\u001b[2K\rRemoving rails_dev_1 ... \u001b[32mdone\u001b[0m\r\u001b[4B"
+    ],
+    [
+      0.003365,
+      "\u001b[2A\u001b[2K\rRemoving rails_db_1 ... \u001b[32mdone\u001b[0m\r"
+    ],
+    [
+      5.5e-05,
+      "\u001b[2B"
+    ],
+    [
+      0.001857,
+      "\u001b[3A\u001b[2K\rRemoving rails_test_1 ... \u001b[32mdone\u001b[0m\r\u001b[3B"
+    ],
+    [
+      0.004049,
+      "\u001b[1A\u001b[2K\rRemoving rails_bundle_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B"
+    ],
+    [
+      0.000207,
+      "Removing network rails_default\r\n"
+    ],
+    [
+      0.210585,
+      "\u001b[0m"
+    ],
+    [
+      0.047822,
+      "\u001b[0;37mstefan:\u001b[0m\u001b[0;31m (master) \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      0.623918,
+      "r"
+    ],
+    [
+      0.090112,
+      "a"
+    ],
+    [
+      0.089633,
+      "i"
+    ],
+    [
+      0.055373,
+      "l"
+    ],
+    [
+      0.146305,
+      "s"
+    ],
+    [
+      0.451244,
+      " "
+    ],
+    [
+      0.134947,
+      "s"
+    ],
+    [
+      0.483961,
+      "\r\n"
+    ],
+    [
+      0.752019,
+      "\u001b[31mERROR\u001b[0m: No container found for dev_1\r\n"
+    ],
+    [
+      0.017706,
+      "\u001b[0m"
+    ],
+    [
+      0.037075,
+      "\u001b[0;37mstefan:\u001b[0m\u001b[0;31m (master) \u001b[0;33m~/Code/rails\u001b[0m$ "
+    ],
+    [
+      1.735744,
+      "t"
+    ],
+    [
+      0.056147,
+      "h"
+    ],
+    [
+      0.089916,
+      "e"
+    ],
+    [
+      0.112766,
+      " "
+    ],
+    [
+      0.101052,
+      "c"
+    ],
+    [
+      0.10132,
+      "o"
+    ],
+    [
+      0.067368,
+      "n"
+    ],
+    [
+      0.314947,
+      "t"
+    ],
+    [
+      0.495348,
+      "a"
+    ],
+    [
+      0.134829,
+      "i"
+    ],
+    [
+      0.068845,
+      "n"
+    ],
+    [
+      0.16767,
+      "e"
+    ],
+    [
+      0.078501,
+      "r"
+    ],
+    [
+      0.123828,
+      " "
+    ],
+    [
+      0.078165,
+      "i"
+    ],
+    [
+      0.078756,
+      "s"
+    ],
+    [
+      0.113387,
+      " "
+    ],
+    [
+      0.561887,
+      "d"
+    ],
+    [
+      0.090285,
+      "o"
+    ],
+    [
+      0.157018,
+      "w"
+    ],
+    [
+      0.248069,
+      "n"
+    ],
+    [
+      0.382111,
+      " "
+    ],
+    [
+      0.068271,
+      "s"
+    ],
+    [
+      0.134545,
+      "o"
+    ],
+    [
+      0.090038,
+      " "
+    ],
+    [
+      0.191513,
+      "n"
+    ],
+    [
+      0.077643,
+      "o"
+    ],
+    [
+      0.203853,
+      " "
+    ],
+    [
+      0.213196,
+      "r"
+    ],
+    [
+      0.101633,
+      "a"
+    ],
+    [
+      0.089845,
+      "i"
+    ],
+    [
+      0.067548,
+      "l"
+    ],
+    [
+      0.202442,
+      "s"
+    ],
+    [
+      0.280451,
+      "!"
+    ],
+    [
+      1.001507,
+      "\b\u001b[K"
+    ],
+    [
+      0.505849,
+      "\b\u001b[K"
+    ],
+    [
+      0.085447,
+      "\b\u001b[K"
+    ],
+    [
+      0.083401,
+      "\b\u001b[K"
+    ],
+    [
+      0.083595,
+      "\b\u001b[K"
+    ],
+    [
+      0.083197,
+      "\b\u001b[K"
+    ],
+    [
+      0.083867,
+      "\b\u001b[K"
+    ],
+    [
+      0.083661,
+      "\b\u001b[K"
+    ],
+    [
+      0.083569,
+      "\b\u001b[K"
+    ],
+    [
+      0.083459,
+      "\b\u001b[K"
+    ],
+    [
+      0.083539,
+      "\b\u001b[K"
+    ],
+    [
+      0.087392,
+      "\b\u001b[K"
+    ],
+    [
+      0.087088,
+      "\b\u001b[K"
+    ],
+    [
+      0.088338,
+      "\b\u001b[K"
+    ],
+    [
+      0.088181,
+      "\b\u001b[K"
+    ],
+    [
+      0.086875,
+      "\b\u001b[K"
+    ],
+    [
+      0.086892,
+      "\b\u001b[K"
+    ],
+    [
+      0.088971,
+      "\b\u001b[K"
+    ],
+    [
+      0.087883,
+      "\b\u001b[K"
+    ],
+    [
+      0.083951,
+      "\b\u001b[K"
+    ],
+    [
+      0.083559,
+      "\b\u001b[K"
+    ],
+    [
+      0.083656,
+      "\b\u001b[K"
+    ],
+    [
+      0.083401,
+      "\b\u001b[K"
+    ],
+    [
+      0.082205,
+      "\b\u001b[K"
+    ],
+    [
+      0.084881,
+      "\b\u001b[K"
+    ],
+    [
+      0.086022,
+      "\b\u001b[K"
+    ],
+    [
+      0.085039,
+      "\b\u001b[K"
+    ],
+    [
+      0.088468,
+      "\b\u001b[K"
+    ],
+    [
+      0.088178,
+      "\b\u001b[K"
+    ],
+    [
+      0.086502,
+      "\b\u001b[K"
+    ],
+    [
+      0.086917,
+      "\b\u001b[K"
+    ],
+    [
+      0.08834,
+      "\b\u001b[K"
+    ],
+    [
+      0.086584,
+      "\b\u001b[K"
+    ],
+    [
+      0.088035,
+      "\b\u001b[K"
+    ],
+    [
+      0.085617,
+      "\u0007"
+    ],
+    [
+      0.093963,
+      "\u0007"
+    ],
+    [
+      0.081074,
+      "\u0007"
+    ],
+    [
+      0.145855,
+      "\r\n"
+    ]
+  ]
+}
