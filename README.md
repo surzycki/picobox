@@ -64,6 +64,15 @@ To use without installing, use:
 $ bin/picobox_dev version
 ```
 
+To run tests:
+
+```bash
+$ bundle exec guard -g rspec
+$ bundle exec guard -g acceptance
+$ bundle exec guard -g wip
+```
+
+
 To install locally:
 
 ```bash

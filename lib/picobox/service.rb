@@ -1,6 +1,7 @@
 module Picobox
   class Service
     include Utils::Visitable
+    include Utils::Output
 
     attr_reader :os
 
@@ -10,15 +11,17 @@ module Picobox
 
     def add(type = nil)
       return if type.nil?
-      #accept(Picobox::Commands::AddService.new(type))
+      accept(Picobox::Commands::AddService.new(type))
     rescue Exception => e
-      Formatador.display_line("[red]#{e}[/]")
+      display_info(e, :red)
+      exit 1
     end
 
     def list()
       accept(Commands::ListServices.new)
     rescue Exception => e
-      Formatador.display_line("[red]#{e}[/]")
+      display_info(e, :red)
+      exit 1
     end
   end
 end

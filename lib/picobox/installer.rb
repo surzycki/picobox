@@ -1,6 +1,7 @@
 module Picobox
   class Installer
     include Utils::Visitable
+    include Utils::Output
 
     attr_reader :os
 
@@ -14,7 +15,7 @@ module Picobox
       accept(Commands::SetupShell.new)
       accept(Commands::FinishInstall.new)
     rescue Exception => e
-      Formatador.display_line("[red]#{e}[/]")
+      display_info(e, :red)
       exit 1
     end
   end

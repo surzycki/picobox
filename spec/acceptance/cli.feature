@@ -29,7 +29,7 @@ Feature: CLI Commands
     Then a file named ".picobox" should exist
     And the file named ".profile" should contain "source ~/.picobox"
 
-  @unsupported_os
+  @unsupported_os @wip
   Scenario: Picobox on unsupported OS
     And I run `picobox install`
     Then the output should contain "is not yet supported"
@@ -48,7 +48,7 @@ Feature: CLI Commands
         Initializing Project
             create .+aruba\/.picobox
         Project Initialized
-        Creating rails box
+        Adding rails box
             create .+aruba\/.picobox/start
              chmod .+aruba\/.picobox/start
             create .+aruba\/docker-compose.yml

@@ -1,6 +1,7 @@
 module Picobox
   class Box
     include Utils::Visitable
+    include Utils::Output
 
     attr_reader :os
 
@@ -12,13 +13,15 @@ module Picobox
       return if type.nil?
       accept(Commands::AddBox.new(type))
     rescue Exception => e
-      Formatador.display_line("[red]#{e}[/]")
+      display_info(e, :red)
+      exit 1
     end
 
     def list()
       accept(Commands::ListBoxes.new)
     rescue Exception => e
-      Formatador.display_line("[red]#{e}[/]")
+      display_info(e, :red)
+      exit 1
     end
   end
 end

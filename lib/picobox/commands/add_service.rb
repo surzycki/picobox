@@ -1,16 +1,16 @@
 module Picobox
   module Commands
-    class AddBox < Picobox::Utils::VisitorByOs
+    class AddService < Picobox::Utils::VisitorByOs
       def initialize(type)
         @type = type
       end
 
       def visit_darwin subject
         @os = subject.os
-        publish_event :add_box_start, type
+        publish_event :add_service_start, type
 
         if os.is_project?
-          Boxes::Unpacker.new(os).unpack(type)
+          #Boxes::Unpacker.new(os).unpack(type)
         else
           publish_event :box_not_initialized
         end

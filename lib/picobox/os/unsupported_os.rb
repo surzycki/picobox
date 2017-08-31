@@ -9,7 +9,7 @@ module Picobox
 
         def docker_filename()   end
         def docker_url()        end
-        def docker_fullpath()   end
+        def docker_installer()   end
         def docker_installed?() end
         def docker_version?()   end
 

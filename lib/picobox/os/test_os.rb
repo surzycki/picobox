@@ -9,7 +9,7 @@ module Picobox
 
         def docker_filename() 'Docker.dmg' end
         def docker_url() "https://download.docker.com/mac/stable/#{docker_filename}" end
-        def docker_fullpath() "#{tmp_dir}/#{docker_filename}" end
+        def docker_installer() "#{tmp_dir}/#{docker_filename}" end
         def docker_installed?() true end
         def docker_version?() "Docker version test" end
 

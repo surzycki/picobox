@@ -5,5 +5,6 @@ module Picobox
     class BoxNotImplemented < PicoboxError; end
     class ServiceNotImplemented < PicoboxError; end
     class UnsupportedOsError < PicoboxError; end
+    class FileNotFoundError < PicoboxError; end
   end
 end

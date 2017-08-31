@@ -4,7 +4,7 @@ module Picobox
       def visit_darwin subject
         unless subject.os.docker_installed?
           commands = [
-            "/usr/bin/hdiutil attach -noidme -nobrowse -quiet #{subject.os.docker_fullpath}",
+            "/usr/bin/hdiutil attach -noidme -nobrowse -quiet #{subject.os.docker_installer}",
             "cp -R /Volumes/Docker/Docker.app /Applications",
             "open -a Docker",
             "/usr/bin/hdiutil unmount -quiet /Volumes/Docker"

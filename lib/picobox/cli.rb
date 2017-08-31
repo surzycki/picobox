@@ -1,5 +1,7 @@
 module Picobox
   class CLI < Thor
+    include Utils::Output
+
     desc 'version', 'displays current version'
     def version
       say Picobox::VERSION
@@ -10,19 +12,18 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def install
-      say ''
-      say 'INSTALL PICOBOX'
-      say '-------------------------------'
+      display_line ''
+      display_line 'INSTALL PICOBOX'
+      display_line '-------------------------------'
       Installer.new(Os::CurrentOs.get).install
-      say '-------------------------------'
-      say ''
-      say 'You should reload open shells to pick up shell changes'
-      say ''
-      say_status 'opening', 'new shell'
-      say ''
+      display_line '-------------------------------'
+      display_line ''
+      display_line 'You should reload open shells to pick up shell changes'
+      display_line ''
+      display_status 'opening', 'new shell'
+      display_line ''
 
-      # hack to load newly set aliases into shell
-      system("exec #{os.user_shell} -l")
+      Utils::Shell.new(Os::CurrentOs.get).reload
     end
 
 
@@ -30,19 +31,18 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def update
-      say ''
-      say 'UPDATE PICOBOX'
-      say '-------------------------------'
+      display_line ''
+      display_line 'UPDATE PICOBOX'
+      display_line '-------------------------------'
       Installer.new(Os::CurrentOs.get).install
-      say '-------------------------------'
-      say ''
-      say 'You should reload open shells to pick up shell changes'
-      say ''
-      say_status 'opening', 'new shell'
-      say ''
+      display_line '-------------------------------'
+      display_line ''
+      display_line 'You should reload open shells to pick up shell changes'
+      display_line ''
+      display_status 'opening', 'new shell'
+      display_line ''
 
-      # hack to load newly set aliases into shell
-      system("exec #{os.user_shell} -l")
+      Utils::Shell.new(Os::CurrentOs.get).reload
     end
 
 
@@ -83,7 +83,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def open(instance)
-      say("\e[1m\e[32m[open]\e[0m Running \e[33m#{instance} shell\e[0m")
+      display_line("\e[1m\e[32m[open]\e[0m Running \e[33m#{instance} shell\e[0m")
       system "bash", "-c", "docker-compose exec #{instance} bash"
     end
 
@@ -124,7 +124,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def clean()
-      say("\e[1m\e[32m[clean]\e[0m Cleaning stopped containers")
+      display_line("\e[1m\e[32m[clean]\e[0m Cleaning stopped containers")
       system "docker container prune"
     end
   end

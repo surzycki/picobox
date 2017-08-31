@@ -1,5 +1,4 @@
 require 'thor'
-require 'formatador'
 require 'ruby-progressbar'
 require 'wisper'
 require 'open-uri'
@@ -8,12 +7,16 @@ require 'tty-file'
 require 'tty-command'
 require 'tty-platform'
 require 'ostruct'
+require 'yaml'
 
 require 'picobox/utils/progress_bar'
 require 'picobox/utils/visitable'
 require 'picobox/utils/domain_event_publisher'
 require 'picobox/utils/visitor_by_os'
+require 'picobox/utils/output'
+require 'picobox/utils/shell'
 
+require 'picobox/docker_compose/config'
 
 require 'picobox/errors/picobox_error'
 
@@ -27,6 +30,7 @@ require 'picobox/commands/initialize_project'
 require 'picobox/commands/add_box'
 require 'picobox/commands/list_boxes'
 require 'picobox/commands/list_services'
+require 'picobox/commands/add_service'
 
 require 'picobox/boxes/manifest'
 require 'picobox/boxes/unpacker'
@@ -57,10 +61,10 @@ Wisper.subscribe(
 
 module Picobox
   module_function
-  def root()                 File.expand_path('../picobox', __FILE__) end
-  def template_dir()         "#{Picobox.root}/templates" end
-  def box_packages_dir()     "#{Picobox.root}/boxes/packages" end
-  def service_packages_dir() "#{Picobox.root}/services/packages" end
+  def root()                 File.expand_path('../..', __FILE__) end
+  def template_dir()         "#{Picobox.root}/lib/picobox/templates" end
+  def box_packages_dir()     "#{Picobox.root}/lib/picobox/boxes/packages" end
+  def service_packages_dir() "#{Picobox.root}/lib/picobox/services/packages" end
 end
 
 

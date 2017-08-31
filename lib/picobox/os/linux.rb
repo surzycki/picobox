@@ -6,7 +6,7 @@ module Picobox
 
         def docker_filename() '' end
         def docker_url() "" end
-        def docker_fullpath() "#{tmp_dir}/#{docker_filename}" end
+        def docker_installer() "#{tmp_dir}/#{docker_filename}" end
 
         def docker_installed?() end
 

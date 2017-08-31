@@ -37,13 +37,6 @@ services:
       BUNDLE_PATH: /bundle
     hostname: picobox_test
 
-  #db:
-  #  image: postgres:9.4
-  #  volumes:
-  #    - db-data:/var/lib/postgresql/db-data
-  #  environment:
-  #    POSTGRES_USER: 'picobox'
-  #    POSTGRES_PASSWORD: 'picobox'
 
   bundle:
     image: busybox

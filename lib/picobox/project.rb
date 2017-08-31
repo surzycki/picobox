@@ -1,6 +1,7 @@
 module Picobox
   class Project
     include Utils::Visitable
+     include Utils::Output
 
     attr_reader :os
 
@@ -11,7 +12,8 @@ module Picobox
     def init
       accept(Commands::InitializeProject.new)
     rescue Exception => e
-      Formatador.display_line("[red]#{e}[/]")
+      display_info(e, :red)
+      exit 1
     end
   end
 end

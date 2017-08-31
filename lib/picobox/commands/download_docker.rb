@@ -8,7 +8,7 @@ module Picobox
             progress_proc: lambda { |step| publish_event :download_docker_progress, step }
           )
 
-          IO.copy_stream( stream, subject.os.docker_fullpath )
+          IO.copy_stream( stream, subject.os.docker_installer )
           publish_event :download_docker_complete
         end
       end
