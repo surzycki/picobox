@@ -10,12 +10,12 @@ module Picobox
         publish_event :create_box_start, type
 
         if os.is_project?
-          Picobox::Boxes::Unpacker.new(os).unpack(type)
+          Boxes::Unpacker.new(os).unpack(type)
         else
           publish_event :create_box_not_initialized
         end
 
-      rescue Picobox::Errors::BoxNotImplemented
+      rescue Errors::BoxNotImplemented
         publish_event :create_box_not_available, type
       end
 

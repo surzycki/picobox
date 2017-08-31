@@ -5,8 +5,8 @@ module Picobox
         @os, @type = os, type
       end
 
-      def contents
-        result = Dir.glob("#{Picobox.package_dir}/*").select {|f| File.directory? f}
+      def list
+        result = Dir.glob("#{Picobox.box_packages_dir}/*").select {|f| File.directory? f}
         result.map {|r| strip_path(r) }
       end
 
@@ -17,7 +17,7 @@ module Picobox
 
 
       def check!
-        raise Picobox::Errors::BoxNotImplemented unless contents.include?(type)
+        raise Errors::BoxNotImplemented unless list.include?(type)
       end
 
 
@@ -49,7 +49,7 @@ module Picobox
       attr_reader :os, :type
 
       def package
-        "#{Picobox.package_dir}/#{type}"
+        "#{Picobox.box_packages_dir}/#{type}"
       end
 
       def strip_path(file)

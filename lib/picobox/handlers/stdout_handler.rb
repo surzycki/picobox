@@ -7,11 +7,11 @@ module Picobox
 
       def download_docker_start(size)
         Formatador.display_line('[green]Downloading Docker[/]')
-        Picobox::Utils::ProgressBar.new(size)
+        Utils::ProgressBar.new(size)
       end
 
       def download_docker_progress(progress)
-        Picobox::Utils::ProgressBar.step(progress)
+        Utils::ProgressBar.step(progress)
       end
 
       def download_docker_complete()
@@ -20,11 +20,11 @@ module Picobox
 
       def install_docker_start(size)
         Formatador.display_line('[green]Installing Docker[/]')
-        Picobox::Utils::ProgressBar.new(size)
+        Utils::ProgressBar.new(size)
       end
 
       def install_docker_progress
-        Picobox::Utils::ProgressBar.increment
+        Utils::ProgressBar.increment
       end
 
       def install_docker_complete()
@@ -64,6 +64,14 @@ module Picobox
 
         boxes.each do |box|
           Formatador.display_line("  #{box}")
+        end
+      end
+
+      def list_services(services)
+        Formatador.display_line("[green]Available services:[/]")
+
+        services.each do |service|
+          Formatador.display_line("  #{service}")
         end
       end
     end

@@ -39,7 +39,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake',  '~> 12.0'
   spec.add_development_dependency 'aruba-turnip', '0.1.1'
   spec.add_development_dependency 'turnip'
+  spec.add_development_dependency 'aruba-doubles'
   spec.add_development_dependency 'aruba', '0.14.2'
+  spec.add_development_dependency 'rb-readline'
 
   spec.add_dependency 'thor', '0.20.0'
   spec.add_dependency 'formatador', '0.2.5'
@@ -47,5 +49,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'wisper', '~> 1.6.1'
   spec.add_dependency 'tty-file', '0.3.0'
   spec.add_dependency 'tty-command', '0.6.0'
-  #spec.add_dependency 'tty-platform'
+  spec.add_dependency 'tty-platform'
 end

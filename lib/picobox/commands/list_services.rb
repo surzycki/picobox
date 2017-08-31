@@ -1,12 +1,12 @@
 module Picobox
   module Commands
-    class ListBox < Picobox::Utils::VisitorByOs
+    class ListServices < Picobox::Utils::VisitorByOs
       def visit_darwin subject
         @os = subject.os
 
-        boxes = Picobox::Boxes::Manifest.new(os).contents
+        services = Services::Manifest.new(os).list
 
-        publish_event :list_boxes, boxes
+        publish_event :list_services, services
       end
 
       private

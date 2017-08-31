@@ -6,6 +6,7 @@ require 'open-uri'
 require 'uri'
 require 'tty-file'
 require 'tty-command'
+require 'tty-platform'
 require 'ostruct'
 
 require 'picobox/utils/progress_bar'
@@ -24,13 +25,20 @@ require 'picobox/commands/setup_shell'
 require 'picobox/commands/finish_install'
 require 'picobox/commands/initialize_project'
 require 'picobox/commands/add_box'
-require 'picobox/commands/list_box'
+require 'picobox/commands/list_boxes'
+require 'picobox/commands/list_services'
 
 require 'picobox/boxes/manifest'
 require 'picobox/boxes/unpacker'
 
+require 'picobox/services/manifest'
+
+
 require 'picobox/os/darwin'
 require 'picobox/os/linux'
+require 'picobox/os/test_os'
+require 'picobox/os/unsupported_os'
+require 'picobox/os/current_os'
 
 require 'picobox/shell/startup_script'
 require 'picobox/shell/dot_profile'
@@ -40,6 +48,7 @@ require 'picobox/cli'
 require 'picobox/installer'
 require 'picobox/project'
 require 'picobox/box'
+require 'picobox/service'
 
 Wisper.subscribe(
   Picobox::Handlers::StdoutHandler.new,
@@ -48,9 +57,10 @@ Wisper.subscribe(
 
 module Picobox
   module_function
-  def root() File.expand_path('../picobox', __FILE__) end
-  def template_dir() "#{Picobox.root}/templates" end
-  def package_dir() "#{Picobox.root}/boxes/packages" end
+  def root()                 File.expand_path('../picobox', __FILE__) end
+  def template_dir()         "#{Picobox.root}/templates" end
+  def box_packages_dir()     "#{Picobox.root}/boxes/packages" end
+  def service_packages_dir() "#{Picobox.root}/services/packages" end
 end
 
 

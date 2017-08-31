@@ -5,7 +5,7 @@ module Picobox
         def get(os)
           case "#{os.user_shell}:#{os.to_s}"
           when '/bin/bash:darwin'
-            Picobox::Shell::DotProfile.new(os)
+            Shell::DotProfile.new(os)
           else
             raise ::NotImplementedError, "shell unsupported #{os.user_shell}:#{os.to_s}"
           end

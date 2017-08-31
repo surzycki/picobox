@@ -1,11 +1,14 @@
+ENV['PICOBOX_ENV'] ||= 'test'
+
 require 'picobox'
+require 'fileutils'
 
 spec = File.expand_path('..', __FILE__)
 
+Bundler.require(:default, :development)
+
 Dir["#{spec}/support/**/*.rb"].each  { |f| require f }
 Dir["#{spec}/shared/**/*.rb"].each   { |f| require f }
-
-Bundler.require(:default, :development)
 
 require 'byebug'
 require 'turnip_helper'

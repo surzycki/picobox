@@ -1,7 +1,7 @@
 module Picobox
   module Utils
     class VisitorByOs
-      include Picobox::Utils::DomainEventPublisher
+      include Utils::DomainEventPublisher
 
       def visit subject
         method_name = "visit_#{subject.os.to_s}".intern
@@ -18,6 +18,11 @@ module Picobox
 
       def visit_windows subject
         raise ::NotImplementedError, 'windows not supported'
+      end
+
+      def visit_unsupported subject
+        os = TTY::Platform.new.os
+        raise Errors::UnsupportedOsError, "#{os} is not yet supported"
       end
     end
   end

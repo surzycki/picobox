@@ -1,6 +1,6 @@
 module Picobox
   class Installer
-    include Picobox::Utils::Visitable
+    include Utils::Visitable
 
     attr_reader :os
 
@@ -9,12 +9,13 @@ module Picobox
     end
 
     def install
-      accept(Picobox::Commands::DownloadDocker.new)
-      accept(Picobox::Commands::InstallDocker.new)
-      accept(Picobox::Commands::SetupShell.new)
-      accept(Picobox::Commands::FinishInstall.new)
+      accept(Commands::DownloadDocker.new)
+      accept(Commands::InstallDocker.new)
+      accept(Commands::SetupShell.new)
+      accept(Commands::FinishInstall.new)
     rescue Exception => e
       Formatador.display_line("[red]#{e}[/]")
+      exit 1
     end
   end
 end

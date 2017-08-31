@@ -2,7 +2,7 @@ module Picobox
   class CLI < Thor
     desc 'version', 'displays current version'
     def version
-      puts Picobox::VERSION
+      say Picobox::VERSION
     end
 
 
@@ -10,12 +10,10 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def install
-      os = Picobox::Os::Darwin
-
       say ''
       say 'INSTALL PICOBOX'
       say '-------------------------------'
-      Installer.new(os).install
+      Installer.new(Os::CurrentOs.get).install
       say '-------------------------------'
       say ''
       say 'You should reload open shells to pick up shell changes'
@@ -24,7 +22,7 @@ module Picobox
       say ''
 
       # hack to load newly set aliases into shell
-      system("exec #{os.user_shell} -l")
+      #system("exec #{os.user_shell} -l")
     end
 
 
@@ -32,12 +30,10 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def update
-      os = Picobox::Os::Darwin
-
       say ''
       say 'UPDATE PICOBOX'
       say '-------------------------------'
-      Installer.new(os).install
+      Installer.new(Os::CurrentOs.get).install
       say '-------------------------------'
       say ''
       say 'You should reload open shells to pick up shell changes'
@@ -54,8 +50,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def init(box_type)
-      Project.new(Picobox::Os::Darwin).init
-      Box.new(Picobox::Os::Darwin).install box_type
+      Project.new(Os::CurrentOs.get).init
+      Box.new(Os::CurrentOs.get).install box_type
     end
 
 
@@ -92,19 +88,19 @@ module Picobox
     end
 
 
-    desc 'add [COMPONENT]', 'adds a component to your box'
+    desc 'add [SERVICE]', 'adds a service to your box'
     long_desc <<-LONGDESC
     LONGDESC
-    def add(component)
-      say('Not yet implemented', :red)
+    def add(service)
+      Service.new(Os::CurrentOs.get).add service
     end
 
 
-    desc 'components', 'list available components'
+    desc 'services', 'list available services'
     long_desc <<-LONGDESC
     LONGDESC
-    def components()
-      say('Not yet implemented', :red)
+    def services()
+      Service.new(Os::CurrentOs.get).list
     end
 
 
@@ -112,7 +108,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def boxes()
-      Box.new(Picobox::Os::Darwin).list
+      Box.new(Os::CurrentOs.get).list
     end
 
 
