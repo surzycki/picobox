@@ -2,14 +2,13 @@
 Feature: CLI Commands
   Background:
     Given a mocked home directory
-
+    And the file named ".profile" with "# test bash script"
 
   Scenario: Picobox has a version
     Given I run `picobox version`
     Then the output should contain "0.1.5"
 
 
-  @wip
   Scenario: Picobox can be installed
     Given I run `picobox install`
     Then the output should match:
@@ -17,13 +16,21 @@ Feature: CLI Commands
       INSTALL PICOBOX
       -------------------------------
         Docker version test present
+        Setting up Shell
+            create .+aruba\/.picobox
+            append .+aruba\/.profile
+        Install Complete
+      -------------------------------
+
+      You should reload open shells to pick up shell changes
+
+           opening  new shell
       """
-    #And I type "exit"
-    #Then the output should contain "0.1.5"
+    Then a file named ".picobox" should exist
+    And the file named ".profile" should contain "source ~/.picobox"
 
-
+  @unsupported_os
   Scenario: Picobox on unsupported OS
-    Given I am on an unsupported OS
     And I run `picobox install`
     Then the output should contain "is not yet supported"
 
@@ -34,7 +41,7 @@ Feature: CLI Commands
     And the output should contain "picobox init [BOX]"
 
 
-  Scenario: Picobox init without box
+  Scenario: Picobox init with rails box
     Given I run `picobox init rails`
     Then the output should match:
       """

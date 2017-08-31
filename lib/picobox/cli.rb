@@ -22,7 +22,7 @@ module Picobox
       say ''
 
       # hack to load newly set aliases into shell
-      #system("exec #{os.user_shell} -l")
+      system("exec #{os.user_shell} -l")
     end
 
 

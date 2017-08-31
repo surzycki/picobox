@@ -8,6 +8,15 @@ RSpec.configure do |config|
 
   config.after :each do
     ArubaDoubles::Double.teardown
+    ENV['PICOBOX_OS'] = nil
+  end
+
+
+  config.before(:each, type: /feature/) do |example|
+    case example.metadata
+    when ->(n) { n[:unsupported_os] }
+      ENV['PICOBOX_OS'] = 'unsupported'
+    end
   end
 end
 
