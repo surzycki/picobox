@@ -82,11 +82,20 @@ $ gem install pkg/picobox-x.x.x.gem
 
 ## Helpful stuff
 
-last_command_started will show that last command aruba executed
-to debug during an aruba test run, use byebug in remote mode
-see spec/support/aruba.rb
-then connect using: bundle exec byebug -R localhost:8989
+**will show that last command aruba executed**
+```last_command_started```
 
+**debug during an aruba test run**
+spec/support/aruba.rb
+```ruby
+require 'byebug/core'
+Byebug.wait_connection = true
+Byebug.start_server('localhost', 8989)
+```
+then connect using:
+```bash
+$ bundle exec byebug -R localhost:8989
+```
 
 ## TODO
 - [ ] Write some tests, I mean come on!
