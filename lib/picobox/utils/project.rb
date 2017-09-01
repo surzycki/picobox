@@ -16,11 +16,22 @@ module Picobox
       end
 
       def root
-        return false if os.current_dir == '/'
+        find_root_from Pathname.new(os.current_dir)
       end
 
       private
       attr_reader :os
+
+      def find_root_from(dir)
+        return nil if dir.root?
+
+        if Pathname.new("#{dir}/#{Picobox::CONFIG_DIR}/#{Picobox::PROJECT_INI}").exist?
+          return dir.to_s
+        else
+          dir, base = dir.split
+          find_root_from dir
+        end
+      end
     end
   end
 end

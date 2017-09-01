@@ -2,6 +2,8 @@
 Feature: CLI Commands
   Background:
     Given a mocked home directory
+    And I am using a darwin OS
+    And docker is installed
     And the file named ".profile" with "# test bash script"
 
   Scenario: Picobox has a version
@@ -15,7 +17,7 @@ Feature: CLI Commands
       """
       INSTALL PICOBOX
       -------------------------------
-        Docker version test present
+        Docker version test! present
         Setting up Shell
             create .+aruba\/.picobox
             create .+aruba\/.picobox/shell_extensions
@@ -32,8 +34,9 @@ Feature: CLI Commands
     And the file named ".profile" should contain "source ~/.picobox/shell_extensions"
 
 
-  @unsupported_os
+
   Scenario: Picobox on unsupported OS
+    And I am using an unsupported OS
     And I run `picobox install`
     Then the output should contain "is not yet supported"
 
@@ -60,10 +63,10 @@ Feature: CLI Commands
     And a file named ".picobox/project.ini" should exist
 
 
+
   Scenario: Picobox init without box
     Given I run `picobox init`
     Then the output should contain "ERROR:"
-    And the output should contain "picobox init [BOX]"
 
 
   Scenario: Picobox init with unknown box

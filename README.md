@@ -80,6 +80,14 @@ $ rake build
 $ gem install pkg/picobox-x.x.x.gem
 ```
 
+## Helpful stuff
+
+last_command_started will show that last command aruba executed
+to debug during an aruba test run, use byebug in remote mode
+see spec/support/aruba.rb
+then connect using: bundle exec byebug -R localhost:8989
+
+
 ## TODO
 - [ ] Write some tests, I mean come on!
 - [ ] Include aliases specific to the box when unpacking

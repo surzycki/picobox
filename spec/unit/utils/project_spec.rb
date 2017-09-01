@@ -1,6 +1,6 @@
 describe Picobox::Utils::Project do
   subject  { described_class.new os}
-  let(:os) { Picobox::Os::TestOs }
+  let(:os) { Picobox::Os::Darwin }
 
   describe '#project_initialzed?' do
     context 'when no project root' do

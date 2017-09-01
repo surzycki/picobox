@@ -35,8 +35,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'byebug'
-  spec.add_development_dependency 'rspec', '~> 3.6'
-  spec.add_development_dependency 'rake',  '~> 12.0'
+  spec.add_development_dependency 'rspec',        '~> 3.6'
+  spec.add_development_dependency 'rake',         '~> 12.0'
   spec.add_development_dependency 'aruba-turnip', '0.1.1'
   spec.add_development_dependency 'turnip'
   spec.add_development_dependency 'aruba-doubles'
@@ -46,11 +46,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'guard-rspec'
 
 
-  spec.add_dependency 'thor', '0.20.0'
+  spec.add_dependency 'thor',             '0.20.0'
   spec.add_dependency 'ruby-progressbar', '1.8.1'
-  spec.add_dependency 'wisper', '~> 1.6.1'
-  spec.add_dependency 'tty-file', '0.3.0'
-  spec.add_dependency 'tty-command', '0.6.0'
+  spec.add_dependency 'wisper',           '~> 1.6.1'
+  spec.add_dependency 'tty-file',         '0.3.0'
+  spec.add_dependency 'tty-command',      '0.6.0'
   spec.add_dependency 'tty-platform'
   spec.add_dependency 'inifile'
 end

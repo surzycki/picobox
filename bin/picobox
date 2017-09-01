@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 require 'rubygems'
-require 'picobox'
+require 'runner'
 
-Picobox::CLI.start
+Picobox::Runner.new(ARGV.dup).execute!

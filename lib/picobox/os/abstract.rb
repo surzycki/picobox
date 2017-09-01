@@ -20,9 +20,8 @@ module Picobox
 
         def to_s() raise ::NotImplementedError, 'must override to_s' end
 
-        def project_root()
-          Utils::Project.new(self).root
-        end
+        def project_root() Utils::Project.new(self).root end
+        def reload_shell() system("exec #{os.user_shell} -l") end
       end
     end
   end

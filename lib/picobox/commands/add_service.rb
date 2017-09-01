@@ -9,7 +9,7 @@ module Picobox
         @os = subject.os
         publish_event :add_service_start, type
 
-        if os.is_project?
+        if project_initialzed?
           Services::Installer.new(os).install(type)
         else
           publish_event :project_not_initialized
@@ -21,6 +21,8 @@ module Picobox
 
       private
       attr_reader :os, :type
+
+      def project_initialzed?() Utils::Project.new(os).project_initialzed? end
     end
   end
 end

@@ -8,7 +8,7 @@ module Picobox
 
       def reload
         # hack to load newly set aliases into shell
-        system("exec #{os.user_shell} -l")
+        os.reload_shell
       end
 
       private

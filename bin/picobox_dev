@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'bundler/setup'
-
 Bundler.require(:default, :development)
 
-Picobox::CLI.start
+require 'runner'
+
+Picobox::Runner.new(ARGV.dup).execute!
+
+#Picobox::CLI.start
