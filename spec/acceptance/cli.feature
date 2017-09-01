@@ -18,6 +18,7 @@ Feature: CLI Commands
         Docker version test present
         Setting up Shell
             create .+aruba\/.picobox
+            create .+aruba\/.picobox/shell_extensions
             append .+aruba\/.profile
         Install Complete
       -------------------------------
@@ -26,19 +27,15 @@ Feature: CLI Commands
 
            opening  new shell
       """
-    Then a file named ".picobox" should exist
-    And the file named ".profile" should contain "source ~/.picobox"
+    Then a directory named ".picobox" should exist
+    And a file named ".picobox/shell_extensions" should exist
+    And the file named ".profile" should contain "source ~/.picobox/shell_extensions"
 
-  @unsupported_os @wip
+
+  @unsupported_os
   Scenario: Picobox on unsupported OS
     And I run `picobox install`
     Then the output should contain "is not yet supported"
-
-
-  Scenario: Picobox init without box
-    Given I run `picobox init`
-    Then the output should contain "ERROR:"
-    And the output should contain "picobox init [BOX]"
 
 
   Scenario: Picobox init with rails box
@@ -47,6 +44,7 @@ Feature: CLI Commands
       """
         Initializing Project
             create .+aruba\/.picobox
+            create .+aruba\/.picobox/project.ini
         Project Initialized
         Adding rails box
             create .+aruba\/.picobox/start
@@ -59,6 +57,27 @@ Feature: CLI Commands
     And the file named ".picobox/start" should have permissions "0777"
     And a file named "docker-compose.yml" should exist
     And a file named "Dockerfile" should exist
+    And a file named ".picobox/project.ini" should exist
+
+
+  Scenario: Picobox init without box
+    Given I run `picobox init`
+    Then the output should contain "ERROR:"
+    And the output should contain "picobox init [BOX]"
+
+
+  Scenario: Picobox init with unknown box
+    Given I run `picobox init nerd`
+    Then the output should match:
+      """
+        Initializing Project
+            create .+aruba\/.picobox
+            create .+aruba\/.picobox/project.ini
+        Project Initialized
+        Adding nerd box
+             error  Nerd boxes are not available...yet
+        Available boxes:
+      """
 
 
   Scenario: Picobox lists boxes

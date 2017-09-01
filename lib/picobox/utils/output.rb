@@ -11,8 +11,8 @@ module Picobox
       end
 
 
-      def display_status(status, line)
-        thor.say_status status, line
+      def display_status(status, line, log_status=true)
+        thor.say_status status, line, log_status
       end
 
       private

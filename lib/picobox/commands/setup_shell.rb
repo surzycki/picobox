@@ -4,20 +4,29 @@ module Picobox
       def visit_darwin subject
         @os = subject.os
 
-        publish_event :setup_shell_start
+        publish_event :shell_setup_start
 
-        template        = "#{Picobox.template_dir}/picobox_proxies.bash"
-        picobox_proxies = "#{os.home_dir}/#{os.picobox_proxies}"
-        TTY::File.copy_file template, picobox_proxies
+        create_config_directory
+        install_shell_extensions
 
-        shell_startup_script = Shell::StartupScript.get(os)
-        shell_startup_script.install_proxies
-
-        publish_event :setup_shell_installed, shell_startup_script.path
+        publish_event :shell_setup_complete
       end
 
       private
       attr_reader :os
+
+      def create_config_directory
+        TTY::File.create_dir os.config_dir
+      end
+
+      def install_shell_extensions
+        source  = "#{Picobox.template_dir}/shell_extensions.bash"
+        dest    = os.shell_extensions
+        TTY::File.copy_file source, dest
+
+        script = Shell::StartupScript.get(os)
+        script.install_extensions
+      end
     end
   end
 end

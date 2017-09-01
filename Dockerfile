@@ -1,7 +1,7 @@
-# picobox with ruby 2.4, nodejs
+# picobox for use with rails containing ruby and nodejs
 #
 # VERSION               0.1.0
-FROM ubuntu:16.04
+FROM picobox/ruby:latest
 MAINTAINER Stefan Surzycki <stefan.surzycki@gmail.com>
 
 ENV APP_HOME /var/www
@@ -14,23 +14,6 @@ ENV HOSTNAME picobox
 # do install here
 RUN mkdir -p /tmp
 WORKDIR /tmp
-
-# add repository software
-RUN apt-get update
-RUN apt-get install -y software-properties-common git tzdata wget curl
-
-# add repository
-RUN apt-add-repository -y ppa:brightbox/ruby-ng
-
-## Languages
-
-# ruby
-RUN apt-get update -qq && apt-get install -y build-essential ruby2.4 ruby2.4-dev
-RUN gem update --system
-
-# nodejs
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
-RUN apt-get install -y nodejs
 
 ## Database dependencies
 
@@ -55,13 +38,6 @@ RUN npm -g install phantomjs-prebuilt
 
 # utils
 RUN apt-get install -y nano
-
-# add rails stuff
-RUN gem install bundler
-RUN gem install rake
-
-# make nano work
-RUN echo "export TERM=xterm" >> /etc/bash.bashrc
 
 # hook up cache volume
 ENV BUNDLE_PATH /bundle

@@ -8,8 +8,10 @@ require 'tty-command'
 require 'tty-platform'
 require 'ostruct'
 require 'yaml'
+require 'inifile'
 
 require 'picobox/utils/progress_bar'
+require 'picobox/utils/project'
 require 'picobox/utils/visitable'
 require 'picobox/utils/domain_event_publisher'
 require 'picobox/utils/visitor_by_os'
@@ -36,8 +38,9 @@ require 'picobox/boxes/manifest'
 require 'picobox/boxes/unpacker'
 
 require 'picobox/services/manifest'
+require 'picobox/services/installer'
 
-
+require 'picobox/os/abstract'
 require 'picobox/os/darwin'
 require 'picobox/os/linux'
 require 'picobox/os/test_os'
@@ -60,6 +63,11 @@ Wisper.subscribe(
 )
 
 module Picobox
+  # names for files / directories
+  CONFIG_DIR      =  '.picobox'
+  PROJECT_INI      = 'project.ini'
+  SHELL_EXTENSIONS = 'shell_extensions'
+
   module_function
   def root()                 File.expand_path('../..', __FILE__) end
   def template_dir()         "#{Picobox.root}/lib/picobox/templates" end

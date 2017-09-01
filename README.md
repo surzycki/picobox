@@ -61,7 +61,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 To use without installing, use:
 
 ```bash
-$ bin/picobox_dev version
+$ bin/picobox version
 ```
 
 To run tests:

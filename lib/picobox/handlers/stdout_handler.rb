@@ -33,7 +33,7 @@ module Picobox
         display_info('Installed Docker', :green)
       end
 
-      def setup_shell_start
+      def shell_setup_start
         display_info('Setting up Shell', :green)
       end
 
@@ -54,10 +54,10 @@ module Picobox
       end
 
       def box_not_available(type)
-        display_info("#{type.capitalize} boxes are not implemented...yet", :red)
+        display_status('error', "#{type.capitalize} boxes are not available...yet", :red)
       end
 
-      def box_not_initialized
+      def project_not_initialized
         display_info("Project has not been initialized, run 'picobox init'", :red)
       end
 
@@ -79,6 +79,10 @@ module Picobox
 
       def add_service_start(type)
         display_info("Adding #{type} service", :green)
+      end
+
+      def service_not_available(type)
+        display_status('error', "#{type.capitalize} service is not available...yet", :red)
       end
     end
   end

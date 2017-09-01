@@ -7,12 +7,20 @@ module Picobox
         @os = os
       end
 
-      def install_proxies
-        TTY::File.append_to_file(path, "\n# added by picobox\nsource ~/#{os.picobox_proxies}\n")
+      def install_extensions
+        TTY::File.append_to_file(
+          filename,
+          "\n# added by picobox\nsource #{source_file}\n"
+          )
       end
 
-      def path
+      def filename
         "#{os.home_dir}/.profile"
+      end
+
+      private
+      def source_file
+        "~/#{Picobox::CONFIG_DIR}/#{Picobox::SHELL_EXTENSIONS}"
       end
     end
   end

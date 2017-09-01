@@ -10,13 +10,13 @@ module Picobox
         publish_event :add_service_start, type
 
         if os.is_project?
-          #Boxes::Unpacker.new(os).unpack(type)
+          Services::Installer.new(os).install(type)
         else
-          publish_event :box_not_initialized
+          publish_event :project_not_initialized
         end
 
-      rescue Errors::BoxNotImplemented
-        publish_event :box_not_available, type
+      rescue Errors::ServiceNotImplemented
+        publish_event :service_not_available, type
       end
 
       private

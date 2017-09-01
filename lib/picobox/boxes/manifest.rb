@@ -33,15 +33,15 @@ module Picobox
       def dest
         # TODO put project root dir in ini file
         @dest ||= OpenStruct.new(
-          start_script: "#{os.current_dir}/#{os.picobox_dir}/start",
-          docker_compose: "#{os.current_dir}/docker-compose.yml",
-          dockerfile: "#{os.current_dir}/Dockerfile"
+          start_script: "#{os.project_root}/#{Picobox::CONFIG_DIR}/start",
+          docker_compose: "#{os.project_root}/docker-compose.yml",
+          dockerfile: "#{os.project_root}/Dockerfile"
         )
       end
 
       def additional_files
         (package_contents - source.to_h.values).map do |file|
-          { source: file, dest: "#{os.current_dir}/#{strip_path(file)}" }
+          { source: file, dest: "#{os.project_root}/#{strip_path(file)}" }
         end
       end
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'bundler/setup'
-require 'picobox'
-require 'byebug'
+
+Bundler.require(:default, :development)
 
 Picobox::CLI.start
