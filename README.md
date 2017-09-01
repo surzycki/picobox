@@ -82,9 +82,6 @@ $ gem install pkg/picobox-x.x.x.gem
 
 ## Helpful stuff
 
-**will show that last command aruba executed**
-```last_command_started```
-
 **debug during an aruba test run**
 spec/support/aruba.rb
 ```ruby
@@ -96,6 +93,13 @@ then connect using:
 ```bash
 $ bundle exec byebug -R localhost:8989
 ```
+
+**will show that last command aruba executed**
+```ruby
+(byebug) last_command_started
+```
+
+
 
 ## TODO
 - [ ] Write some tests, I mean come on!
