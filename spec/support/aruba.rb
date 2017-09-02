@@ -6,9 +6,9 @@ RSpec.configure do |config|
   config.include Aruba::Api
 end
 
-require 'byebug/core'
-Byebug.wait_connection = true
-Byebug.start_server('localhost', 8989)
+#require 'byebug/core'
+#Byebug.wait_connection = true
+#Byebug.start_server('localhost', 8989)
 
 Aruba.configure do |config|
   config.exit_timeout = 2
