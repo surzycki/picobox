@@ -8,8 +8,9 @@ module Picobox
 
         raise Errors::ProjectNotInitialized unless project_initialized?
 
-        status = system('docker-compose down 2>/dev/null') if project_running?
-        puts status
+        #system('docker-compose down 2>/dev/null') if project_running?
+        system('docker-compose down') if project_running?
+
 
         publish_event :stopped
       end
