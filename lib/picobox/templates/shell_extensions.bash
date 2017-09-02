@@ -60,6 +60,13 @@ alias webpacker=picobox_webpacker
 alias guard=picobox_guard
 
 ##
+## redit proxies
+##
+picobox_redis () { picobox_proxy "redis" "redis-cli" "$@" ; }
+
+alias redis-cli=picobox_redis-cli
+
+##
 ## ansible proxies
 ##
 picobox_ansible_playbook () { picobox_proxy $DEV "ansible-playbook" "$@" ; }
