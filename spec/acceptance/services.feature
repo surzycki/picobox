@@ -13,7 +13,8 @@ Feature: CLI Commands
       """
         Adding postgres service
             modify  .+aruba\/docker-compose.yml
-              info  Postgres user and password are 'picobox'
+              info  hostname 'postgres' is visible to other services
+              info  postgres user and password are 'picobox'
         Service postgres added
       """
     And the file named "docker-compose.yml" should match:
@@ -205,7 +206,8 @@ Feature: CLI Commands
       """
         Adding postgres service
             modify  .+aruba\/docker-compose.yml
-              info  Postgres user and password are 'picobox'
+              info  hostname 'postgres' is visible to other services
+              info  postgres user and password are 'picobox'
         Service postgres added
       """
 
@@ -276,7 +278,7 @@ Feature: CLI Commands
           image: redis
       """
 
-  @wip
+
   Scenario: Adding service that has no post_install instructions
     Given I run `picobox init ruby`
     And I run `picobox add redis`
@@ -284,5 +286,6 @@ Feature: CLI Commands
       """
         Adding redis service
             modify  .+aruba\/docker-compose.yml
+              info  hostname 'redis' is visible to other services
         Service redis added
       """

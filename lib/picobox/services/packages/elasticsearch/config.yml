@@ -11,4 +11,4 @@ links:
   - dev
 
 # post install instructions
-instructions: Elasticsearch exposes 9200 to the public
+instructions: elasticsearch exposes 9200 to the public

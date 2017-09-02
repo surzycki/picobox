@@ -13,4 +13,4 @@ links:
   - test
 
 # post install instructions
-instructions: Postgres user and password are 'picobox'
+instructions: postgres user and password are 'picobox'

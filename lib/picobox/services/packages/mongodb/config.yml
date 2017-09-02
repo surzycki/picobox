@@ -10,4 +10,4 @@ links:
   - test
 
 # post install instructions
-instructions: Mongodb exposes 27017 to the public
+instructions: mongodb exposes 27017 to the public

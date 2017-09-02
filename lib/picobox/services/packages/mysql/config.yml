@@ -14,4 +14,4 @@ links:
   - test
 
 # post install instructions
-instructions: Mysql user, password and root password are 'picobox'
+instructions: mysql user, password and root password are 'picobox'

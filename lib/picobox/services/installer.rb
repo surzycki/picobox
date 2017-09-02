@@ -17,6 +17,7 @@ module Picobox
 
         config.save
         display_status 'modify', manifest.docker_compose_file
+        display_status 'info',   "hostname '#{manifest.service_name}' is visible to other services", :yellow
         display_status 'info',   manifest.post_install_instructions, :yellow
       end
 
