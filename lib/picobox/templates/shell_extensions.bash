@@ -62,9 +62,9 @@ alias guard=picobox_guard
 ##
 ## redit proxies
 ##
-picobox_redis () { picobox_proxy "redis" "redis-cli" "$@" ; }
+picobox_redis_cli () { picobox_proxy "redis" "redis-cli" "$@" ; }
 
-alias redis-cli=picobox_redis-cli
+alias redis-cli=picobox_redis_cli
 
 ##
 ## ansible proxies
