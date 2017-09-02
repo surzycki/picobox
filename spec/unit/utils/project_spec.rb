@@ -58,4 +58,8 @@ describe Picobox::Utils::Project do
 
     end
   end
+
+
+  describe '#running?', aruba: true do
+  end
 end

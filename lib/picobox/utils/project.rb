@@ -25,7 +25,7 @@ module Picobox
         result = %x[docker-compose ps]
 
         result = result.split("\n")
-        result = result.select { |line| line.match /dev|test/  }
+        result = result.select { |line| line.match /_dev|_test/  }
         result = result.map { |line| line.split(' ')[2] }
 
         result.uniq!
