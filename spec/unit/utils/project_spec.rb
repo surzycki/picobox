@@ -2,7 +2,7 @@ describe Picobox::Utils::Project do
   subject  { described_class.new os}
   let(:os) { Picobox::Os::Darwin }
 
-  describe '#project_initialzed?' do
+  describe '#project_initialized?' do
     context 'when no project root' do
       before do
         allow(os).
@@ -11,7 +11,7 @@ describe Picobox::Utils::Project do
       end
 
       it 'returns false' do
-        expect(subject.project_initialzed?).to eq false
+        expect(subject.project_initialized?).to eq false
       end
     end
 
@@ -28,7 +28,7 @@ describe Picobox::Utils::Project do
       end
 
       it 'returns true' do
-        expect(subject.project_initialzed?).to eq true
+        expect(subject.project_initialized?).to eq true
       end
     end
 
@@ -45,13 +45,15 @@ describe Picobox::Utils::Project do
       end
 
       it 'returns true' do
-        expect(subject.project_initialzed?).to eq true
+        expect(subject.project_initialized?).to eq true
       end
     end
   end
 
 
   describe '#root', aruba: true do
+    pending
+
     before do
 
     end

@@ -56,6 +56,8 @@ Everything is running inside your box transparently !
 
 ## Development
 
+To run the tests you'll need ruby 2.3 since we are using the <<~EOS operator (un-indented multiline strings)
+
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To use without installing, use:
@@ -102,10 +104,10 @@ $ bundle exec byebug -R localhost:8989
 
 
 ## TODO
-- [ ] Write some tests, I mean come on!
+- [x] Write some tests, I mean come on!
 - [ ] Include aliases specific to the box when unpacking
 - [x] Put boxes on dockerhub
-- [ ] Add component command (redis, postgres, memcached, mongodb, etc)
+- [x] Add component command (redis, postgres, memcached, mongodb, etc)
 - [ ] Add more boxes
 - [ ] Add destroy command
 - [ ] Add Habitus API web server to add ssh keys to containers**

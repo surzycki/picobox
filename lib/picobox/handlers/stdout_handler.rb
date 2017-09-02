@@ -58,7 +58,8 @@ module Picobox
       end
 
       def project_not_initialized
-        display_info("Project has not been initialized, run 'picobox init'", :red)
+        display_status('error', 'no project found', :red)
+        display_info("Run command in a project directory or create new project with 'picobox init [BOX]'", :green)
       end
 
       def list_boxes(boxes)
@@ -83,6 +84,14 @@ module Picobox
 
       def service_not_available(type)
         display_status('error', "#{type.capitalize} service is not available...yet", :red)
+      end
+
+      def add_service_completed(type)
+        display_info("Service #{type} added", :green)
+      end
+
+      def file_not_found(message)
+        display_status('error', message, :red)
       end
     end
   end

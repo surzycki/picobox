@@ -1,25 +1,27 @@
+---
 version: '2'
-
 volumes:
+  db-data:
+    external: false
   bundle-data:
     external: false
-
 services:
   dev:
-    build: .
-    entrypoint: .picobox/start
+    build: "."
+    entrypoint: ".picobox/start"
     volumes:
-      - .:/var/www:cached
+    - ".:/var/www:cached"
     volumes_from:
-      - bundle
+    - bundle
     environment:
-      BUNDLE_PATH: /bundle
+      RAILS_ENV: development
+      BUNDLE_PATH: "/bundle"
     hostname: picobox
-
+    ports:
+    - 80:3000
   bundle:
     image: busybox
     volumes:
-      - bundle-data:/bundle:cached
-
+    - bundle-data:/bundle:cached
 
 

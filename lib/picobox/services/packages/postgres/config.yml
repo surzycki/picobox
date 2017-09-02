@@ -1,3 +1,4 @@
+# the service
 postgres:
   image: postgres:9.4
   volumes:
@@ -5,3 +6,11 @@ postgres:
   environment:
     POSTGRES_USER: 'picobox'
     POSTGRES_PASSWORD: 'picobox'
+
+# create links to these services
+links:
+  - dev
+  - test
+
+# post install instructions
+instructions: Postgres user and password are 'picobox'

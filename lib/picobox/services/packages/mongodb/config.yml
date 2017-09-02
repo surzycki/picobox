@@ -1,0 +1,13 @@
+# the service
+mongodb:
+  image: mongo
+    ports:
+      - '27017:27017'
+
+# create links to these services
+links:
+  - dev
+  - test
+
+# post install instructions
+instructions: Mongodb exposes 27017 to the public

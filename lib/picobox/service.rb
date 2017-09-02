@@ -12,6 +12,7 @@ module Picobox
     def add(type = nil)
       return if type.nil?
       accept(Picobox::Commands::AddService.new(type))
+      #accept(Picobox::Commands::Restart.new)
     rescue Exception => e
       display_info(e, :red)
       exit 1

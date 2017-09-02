@@ -9,7 +9,7 @@ module Picobox
         @os = subject.os
         publish_event :add_box_start, type
 
-        if project_initialzed?
+        if project_initialized?
           Boxes::Unpacker.new(os).unpack(type)
         else
           publish_event :project_not_initialized
@@ -23,7 +23,7 @@ module Picobox
       private
       attr_reader :os, :type
 
-      def project_initialzed?() Utils::Project.new(os).project_initialzed? end
+      def project_initialized?() Utils::Project.new(os).project_initialized? end
     end
   end
 end

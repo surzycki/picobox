@@ -6,7 +6,7 @@ module Picobox
       end
 
 
-      def project_initialzed?
+      def project_initialized?
         return false if os.project_root.nil?
         root   = os.project_root
         target = os.current_dir
@@ -14,6 +14,7 @@ module Picobox
         target[0...root.size] == root &&
           (target.size == root.size || target[root.size] == ?/)
       end
+
 
       def root
         find_root_from Pathname.new(os.current_dir)

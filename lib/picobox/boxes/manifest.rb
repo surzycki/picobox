@@ -12,7 +12,7 @@ module Picobox
 
 
       def package_contents
-        @package_contents ||= Dir.glob(File.join(package, "*"))
+        @package_contents ||= Dir.glob(File.join(package_dir, "*"))
       end
 
 
@@ -23,15 +23,14 @@ module Picobox
 
       def source
         @source ||= OpenStruct.new(
-          start_script: "#{package}/start",
-          docker_compose: "#{package}/docker-compose.yml",
-          dockerfile: "#{package}/Dockerfile"
+          start_script: "#{package_dir}/start",
+          docker_compose: "#{package_dir}/docker-compose.yml",
+          dockerfile: "#{package_dir}/Dockerfile"
         )
       end
 
 
       def dest
-        # TODO put project root dir in ini file
         @dest ||= OpenStruct.new(
           start_script: "#{os.project_root}/#{Picobox::CONFIG_DIR}/start",
           docker_compose: "#{os.project_root}/docker-compose.yml",
@@ -48,7 +47,7 @@ module Picobox
       private
       attr_reader :os, :type
 
-      def package
+      def package_dir
         "#{Picobox.box_packages_dir}/#{type}"
       end
 

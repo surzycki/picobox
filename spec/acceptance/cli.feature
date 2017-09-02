@@ -4,7 +4,6 @@ Feature: CLI Commands
     Given a mocked home directory
     And I am using a darwin OS
     And docker is installed
-    And the file named ".profile" with "# test bash script"
 
   Scenario: Picobox has a version
     Given I run `picobox version`
@@ -12,7 +11,8 @@ Feature: CLI Commands
 
 
   Scenario: Picobox can be installed
-    Given I run `picobox install`
+    Given the file named ".profile" with "# test bash script"
+    And I run `picobox install`
     Then the output should match:
       """
       INSTALL PICOBOX
