@@ -275,3 +275,14 @@ Feature: CLI Commands
         redis:
           image: redis
       """
+
+  @wip
+  Scenario: Adding service that has no post_install instructions
+    Given I run `picobox init ruby`
+    And I run `picobox add redis`
+    Then the output should match:
+      """
+        Adding redis service
+            modify  .+aruba\/docker-compose.yml
+        Service redis added
+      """
