@@ -1,5 +1,5 @@
 @acceptance
-Feature: CLI Commands
+Feature: Add Service Commands
   Background:
     Given a mocked home directory
     And I am using a darwin OS
@@ -255,11 +255,8 @@ Feature: CLI Commands
           volumes_from:
           - bundle
           environment:
-            RAILS_ENV: development
             BUNDLE_PATH: "/bundle"
           hostname: picobox
-          ports:
-          - 80:3000
           links:
           - postgres
           - redis

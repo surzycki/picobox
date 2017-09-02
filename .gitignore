@@ -8,6 +8,9 @@
 /spec/reports/
 /tmp/
 
+docker-compose.yml
+Dockerfile
+.picobox
 .byebug_history
 .DS_Store
 

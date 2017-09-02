@@ -20,6 +20,23 @@ module Picobox
         find_root_from Pathname.new(os.current_dir)
       end
 
+
+      def running?
+        result = %x[docker-compose ps]
+
+        result = result.split("\n")
+        result = result.select { |line| line.match /dev|test/  }
+        result = result.map { |line| line.split(' ')[2] }
+
+        result.uniq!
+
+        # There are no container stopped or started (all removed or first run)
+        return false if result.empty?
+
+        # Get the status and return the correct value
+        (result.include? 'Exit') ? false : true
+      end
+
       private
       attr_reader :os
 

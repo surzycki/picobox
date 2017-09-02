@@ -67,7 +67,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def start()
-      system 'docker-compose up -d'
+      System.new(Os::CurrentOs.get).start
     end
 
 
@@ -75,16 +75,23 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def stop()
-      system 'docker-compose down'
+      System.new(Os::CurrentOs.get).stop
     end
 
 
-    desc 'open [INSTANCE]', 'open shell to instance'
+    desc 'restart', 'restart picobox'
     long_desc <<-LONGDESC
     LONGDESC
-    def open(instance)
-      display_line("\e[1m\e[32m[open]\e[0m Running \e[33m#{instance} shell\e[0m")
-      system "bash", "-c", "docker-compose exec #{instance} bash"
+    def restart()
+      System.new(Os::CurrentOs.get).restart
+    end
+
+
+    desc 'open [SERVICE]', 'open shell to service'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def open(service)
+      System.new(Os::CurrentOs.get).open_shell service
     end
 
 
@@ -116,7 +123,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def status()
-      system "docker container ps"
+      system "docker-compose ps"
     end
 
 
@@ -124,7 +131,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def clean()
-      display_line("\e[1m\e[32m[clean]\e[0m Cleaning stopped containers")
+      display_info('Cleaning stopped containers', :green)
+      display_status('execute', 'container prune')
       system "docker container prune"
     end
   end

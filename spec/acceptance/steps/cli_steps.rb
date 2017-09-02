@@ -28,6 +28,9 @@ module CliSteps
     allow(Picobox::Os::CurrentOs.get).
       to receive(:docker_installed?).
       and_return true
+
+    double_cmd('docker-compose up -d 2>/dev/null')
+    double_cmd('docker-compose stop 2>/dev/null')
   end
 
   step '(a/the) file (named) ":file" :outcome match:' do |file, expect_success, expected|
@@ -38,7 +41,7 @@ module CliSteps
     end
   end
 
-  step '(a/the) file (named) ":name" does not exist' do |name|
+  step '(a/the) (file/directory) (named) ":name" does not exist' do |name|
     remove(name, :force => true)
   end
 end

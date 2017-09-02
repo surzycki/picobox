@@ -93,6 +93,31 @@ module Picobox
       def file_not_found(message)
         display_status('error', message, :red)
       end
+
+      def stopping
+        display_info("Picobox stopping...", :green)
+      end
+
+      def stopped
+        display_info("Picobox stopped!", :green)
+      end
+
+      def starting
+        display_info("Picobox starting...", :green)
+      end
+
+      def started
+        display_info("Picobox started!", :green)
+      end
+
+      def system_stopped
+        display_info("Picobox is not running!", :red)
+      end
+
+      def opening_shell(service)
+        display_info("Getting shell", :green)
+        display_status('open', "Running \e[33m#{service}\e[0m shell", :green)
+      end
     end
   end
 end
