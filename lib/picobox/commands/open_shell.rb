@@ -14,9 +14,6 @@ module Picobox
         raise Errors::SystemDownError unless project_running?
 
         system "bash", "-c", "docker-compose exec #{service} bash"
-        #else
-        #  publish_event :system_stopped
-        #end
       end
 
       private

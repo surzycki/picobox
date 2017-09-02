@@ -12,7 +12,7 @@ module Picobox
     def add(type = nil)
       return if type.nil?
       accept(Commands::AddService.new(type))
-      #accept(Commands::Restart.new)
+      accept(Commands::Restart.new)
     rescue Errors::ServiceNotImplemented
       display_service_not_available type
       list # called like for exception handling
