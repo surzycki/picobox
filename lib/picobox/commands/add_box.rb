@@ -9,15 +9,9 @@ module Picobox
         @os = subject.os
         publish_event :add_box_start, type
 
-        if project_initialized?
-          Boxes::Unpacker.new(os).unpack(type)
-        else
-          publish_event :project_not_initialized
-        end
+        raise Errors::ProjectNotInitialized unless project_initialized?
 
-      rescue Errors::BoxNotImplemented
-        publish_event :box_not_available, type
-        Box.new(os).list
+        Boxes::Unpacker.new(os).unpack(type)
       end
 
       private

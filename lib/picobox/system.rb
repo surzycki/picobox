@@ -11,6 +11,9 @@ module Picobox
 
     def start
       accept(Commands::Start.new)
+    rescue Errors::ProjectNotInitialized
+      display_project_not_initialized
+      exit 1
     rescue Exception => e
       display_info(e, :red)
       exit 1
@@ -19,6 +22,9 @@ module Picobox
 
     def stop
       accept(Commands::Stop.new)
+    rescue Errors::ProjectNotInitialized
+      display_project_not_initialized
+      exit 1
     rescue Exception => e
       display_info(e, :red)
       exit 1
@@ -35,6 +41,12 @@ module Picobox
 
     def open_shell(service)
       accept(Commands::OpenShell.new(service))
+    rescue Errors::SystemDownError
+      display_system_down
+      exit 1
+    rescue Errors::ProjectNotInitialized
+      display_project_not_initialized
+      exit 1
     rescue Exception => e
       display_info(e, :red)
       exit 1

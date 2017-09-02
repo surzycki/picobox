@@ -6,12 +6,10 @@ module Picobox
 
         publish_event :starting
 
-        if project_initialized?
-          system('docker-compose up -d 2>/dev/null') unless project_running?
-          publish_event :started
-        else
-          publish_event :project_not_initialized
-        end
+        raise Errors::ProjectNotInitialized unless project_initialized?
+
+        system('docker-compose up -d 2>/dev/null') unless project_running?
+        publish_event :started
       end
 
       private

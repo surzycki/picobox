@@ -10,16 +10,13 @@ module Picobox
 
         publish_event :opening_shell, service
 
-        unless project_initialized?
-          publish_event :project_not_initialized
-          return
-        end
+        raise Errors::ProjectNotInitialized unless project_initialized?
+        raise Errors::SystemDownError unless project_running?
 
-        if project_running?
-          system "bash", "-c", "docker-compose exec #{service} bash"
-        else
-          publish_event :system_stopped
-        end
+        system "bash", "-c", "docker-compose exec #{service} bash"
+        #else
+        #  publish_event :system_stopped
+        #end
       end
 
       private

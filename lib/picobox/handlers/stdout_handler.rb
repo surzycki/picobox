@@ -53,15 +53,6 @@ module Picobox
         display_info("Adding #{type} box", :green)
       end
 
-      def box_not_available(type)
-        display_status('error', "#{type.capitalize} boxes are not available...yet", :red)
-      end
-
-      def project_not_initialized
-        display_status('error', 'no project found', :red)
-        display_info("Run command in a project directory or create new project with 'picobox init [BOX]'", :green)
-      end
-
       def list_boxes(boxes)
         display_info("Available boxes:", :green)
 
@@ -82,16 +73,8 @@ module Picobox
         display_info("Adding #{type} service", :green)
       end
 
-      def service_not_available(type)
-        display_status('error', "#{type.capitalize} service is not available...yet", :red)
-      end
-
       def add_service_completed(type)
         display_info("Service #{type} added", :green)
-      end
-
-      def file_not_found(message)
-        display_status('error', message, :red)
       end
 
       def stopping
@@ -108,10 +91,6 @@ module Picobox
 
       def started
         display_info("Picobox started!", :green)
-      end
-
-      def system_stopped
-        display_info("Picobox is not running!", :red)
       end
 
       def opening_shell(service)

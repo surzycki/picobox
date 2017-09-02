@@ -9,17 +9,11 @@ module Picobox
         @os = subject.os
         publish_event :add_service_start, type
 
-        if project_initialized?
-          Services::Installer.new(os).install(type)
-          publish_event :add_service_completed, type
-        else
-          publish_event :project_not_initialized
-        end
+        raise Errors::ProjectNotInitialized unless project_initialized?
 
-      rescue Errors::ServiceNotImplemented
-        publish_event :service_not_available, type
-      rescue Picobox::Errors::FileNotFoundError => e
-        publish_event :file_not_found, e.message
+        Services::Installer.new(os).install(type)
+
+        publish_event :add_service_completed, type
       end
 
       private

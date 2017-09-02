@@ -16,6 +16,32 @@ module Picobox
         thor.say_status status, line, log_status
       end
 
+
+      def display_project_not_initialized
+        display_status('error', 'no project found', :red)
+        display_info("Run command in a project directory or create new project with 'picobox init [BOX]'", :green)
+      end
+
+
+      def display_box_not_available(type)
+        display_status('error', "#{type.capitalize} boxes are not available...yet", :red)
+      end
+
+
+      def display_service_not_available(type)
+        display_status('error', "#{type.capitalize} service is not available...yet", :red)
+      end
+
+
+      def display_file_not_found(message)
+        display_status('error', message, :red)
+      end
+
+
+      def display_system_down
+        display_info("Picobox is not running!", :red)
+      end
+
       private
       def thor
         @thor ||= Thor::Shell::Color.new

@@ -219,6 +219,7 @@ Feature: Add Service Commands
       """
         Adding geek service
              error  Geek service is not available...yet
+        Available services:
       """
 
 

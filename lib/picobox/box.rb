@@ -16,6 +16,12 @@ module Picobox
       # then on the net
       # accept(Commands::AddBox.new(type, FileUnpacker, NetUnpacker))
       accept(Commands::AddBox.new(type))
+    rescue Errors::BoxNotImplemented
+      display_box_not_available type
+      list # called like for exception handling
+    rescue Errors::ProjectNotInitialized
+      display_project_not_initialized
+      exit 1
     rescue Exception => e
       display_info(e, :red)
       exit 1
