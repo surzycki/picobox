@@ -134,6 +134,7 @@ module Picobox
       display_info('Cleaning stopped containers', :green)
       display_status('execute', 'container prune')
       system "docker container prune"
+      system "docker volume prune"
     end
   end
 end

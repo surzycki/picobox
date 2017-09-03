@@ -2,11 +2,11 @@
 mysql:
   image: mysql:5.7
   volumes:
-    - db-data:/var/lib/mysql
+  - db-data:/var/lib/mysql
   environment:
-    - MYSQL_ROOT_PASSWORD="picobox"
-    - MYSQL_USER="picobox"
-    - MYSQL_PASSWORD="picobox"
+    MYSQL_ROOT_PASSWORD: picobox
+    MYSQL_USER: picobox
+    MYSQL_PASSWORD: picobox
 
 # create links to these services
 links:
