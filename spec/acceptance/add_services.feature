@@ -16,6 +16,8 @@ Feature: Add Service Commands
               info  hostname 'postgres' is visible to other services
               info  postgres user and password are 'picobox'
         Service postgres added
+        Picobox starting...
+        Picobox started!
       """
     And the file named "docker-compose.yml" should match:
       """
@@ -209,6 +211,8 @@ Feature: Add Service Commands
               info  hostname 'postgres' is visible to other services
               info  postgres user and password are 'picobox'
         Service postgres added
+        Picobox starting...
+        Picobox started!
       """
 
 

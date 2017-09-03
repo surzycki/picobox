@@ -1,8 +1,4 @@
-module CliSteps
-  step 'I debug' do
-    byebug
-  end
-
+module OsSteps
   step 'I am using an unsupported OS' do
     allow(Picobox::Os::CurrentOs).
       to receive(:get).
@@ -32,21 +28,8 @@ module CliSteps
     double_cmd('docker-compose up -d 2>/dev/null')
     double_cmd('docker-compose stop 2>/dev/null')
   end
-
-  step '(a/the) file (named) ":file" :outcome match:' do |file, expect_success, expected|
-    if expect_success
-      expect(file).to have_file_content file_content_matching(expected)
-    else
-      expect(file).not_to have_file_content file_content_matching(expected)
-    end
-  end
-
-  step '(a/the) (file/directory) (named) ":name" does not exist' do |name|
-    remove(name, :force => true)
-  end
 end
 
-
 RSpec.configure do |config|
-  config.include CliSteps
+  config.include OsSteps
 end
