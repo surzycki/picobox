@@ -61,5 +61,106 @@ describe Picobox::Utils::Project do
 
 
   describe '#running?', aruba: true do
+    before do
+      double_cmd('docker-compose ps', puts: docker_compose_ps)
+    end
+
+    context 'all services running' do
+      let(:docker_compose_ps) do
+        <<-EOS
+             Name                    Command               State           Ports
+        --------------------------------------------------------------------------------
+        test_bundle_1     sh                               Exit 0
+        test_dev_1        .picobox/start                   Up       0.0.0.0:80->3000/tcp
+        test_mysql_1      docker-entrypoint.sh mysqld      Up       3306/tcp
+        test_postgres_1   docker-entrypoint.sh postgres    Up       5432/tcp
+        test_redis_1      docker-entrypoint.sh redis ...   Up       6379/tcp
+        test_test_1       .picobox/start                   Up
+        EOS
+      end
+
+      it 'returns true' do
+        expect(subject.running?).to eq true
+      end
+    end
+
+    context 'services not running' do
+      let(:docker_compose_ps) do
+        <<-EOS
+             Name                    Command               State           Ports
+        --------------------------------------------------------------------------------
+        test_bundle_1     sh                               Exit 0
+        test_dev_1        .picobox/start                   Exit     0.0.0.0:80->3000/tcp
+        test_mysql_1      docker-entrypoint.sh mysqld      Up       3306/tcp
+        test_postgres_1   docker-entrypoint.sh postgres    Up       5432/tcp
+        test_redis_1      docker-entrypoint.sh redis ...   Up       6379/tcp
+        test_test_1       .picobox/start                   Exit
+        EOS
+      end
+
+      it 'returns false' do
+        expect(subject.running?).to eq false
+      end
+    end
+
+
+    context 'services up, extra services down' do
+      let(:docker_compose_ps) do
+        <<-EOS
+             Name                    Command               State           Ports
+        --------------------------------------------------------------------------------
+        test_bundle_1     sh                               Exit 0
+        test_dev_1        .picobox/start                   Up     0.0.0.0:80->3000/tcp
+        test_mysql_1      docker-entrypoint.sh mysqld      Exit     3306/tcp
+        test_postgres_1   docker-entrypoint.sh postgres    Exit     5432/tcp
+        test_redis_1      docker-entrypoint.sh redis ...   Exit     6379/tcp
+        test_test_1       .picobox/start                   Up
+        EOS
+      end
+
+      it 'returns true' do
+        expect(subject.running?).to eq true
+      end
+    end
+
+
+    context 'all services down' do
+      let(:docker_compose_ps) do
+        <<-EOS
+             Name                    Command               State           Ports
+        --------------------------------------------------------------------------------
+        test_bundle_1     sh                               Exit 0
+        test_dev_1        .picobox/start                   Exit     0.0.0.0:80->3000/tcp
+        test_mysql_1      docker-entrypoint.sh mysqld      Exit     3306/tcp
+        test_postgres_1   docker-entrypoint.sh postgres    Exit     5432/tcp
+        test_redis_1      docker-entrypoint.sh redis ...   Exit     6379/tcp
+        test_test_1       .picobox/start                   Exit
+        EOS
+      end
+
+      it 'returns false' do
+        expect(subject.running?).to eq false
+      end
+    end
+
+
+    context 'some services down' do
+      let(:docker_compose_ps) do
+        <<-EOS
+             Name                    Command               State           Ports
+        --------------------------------------------------------------------------------
+        test_bundle_1     sh                               Exit 0
+        test_dev_1        .picobox/start                   Up       0.0.0.0:80->3000/tcp
+        test_mysql_1      docker-entrypoint.sh mysqld      Exit     3306/tcp
+        test_postgres_1   docker-entrypoint.sh postgres    Exit     5432/tcp
+        test_redis_1      docker-entrypoint.sh redis ...   Exit     6379/tcp
+        test_test_1       .picobox/start                   Exit
+        EOS
+      end
+
+      it 'returns false' do
+        expect(subject.running?).to eq false
+      end
+    end
   end
 end
