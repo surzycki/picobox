@@ -8,21 +8,11 @@ module Picobox
     end
 
 
-    desc 'install', 'install picobox'
+    desc 'install', 'installs picobox'
     long_desc <<-LONGDESC
     LONGDESC
     def install
-      display_line ''
-      display_line 'INSTALL PICOBOX'
-      display_line '-------------------------------'
-      Installer.new(Os::CurrentOs.get).install
-      display_line '-------------------------------'
-      display_line ''
-      display_line 'You should reload open shells to pick up shell changes'
-      display_line ''
-      display_status 'opening', 'new shell'
-      display_line ''
-
+      System.new(Os::CurrentOs.get).install
       Utils::Shell.new(Os::CurrentOs.get).reload
     end
 
@@ -31,18 +21,16 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def update
-      display_line ''
-      display_line 'UPDATE PICOBOX'
-      display_line '-------------------------------'
-      Installer.new(Os::CurrentOs.get).install
-      display_line '-------------------------------'
-      display_line ''
-      display_line 'You should reload open shells to pick up shell changes'
-      display_line ''
-      display_status 'opening', 'new shell'
-      display_line ''
-
+      System.new(Os::CurrentOs.get).install
       Utils::Shell.new(Os::CurrentOs.get).reload
+    end
+
+
+    desc 'uninstall', 'removes picobox'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def uninstall
+      System.new(Os::CurrentOs.get).uninstall
     end
 
 

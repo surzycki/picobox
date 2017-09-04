@@ -7,7 +7,7 @@ module Picobox
           when '/bin/bash:darwin'
             Shell::DotProfile.new(os)
           else
-            raise ::NotImplementedError, "shell unsupported #{os.user_shell}:#{os.to_s}"
+            raise Errors::ShellNotSupported, "#{os.user_shell}:#{os.to_s}"
           end
         end
       end

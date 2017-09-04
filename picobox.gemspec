@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'picobox/version'
+require 'picobox/constants'
 
 Gem::Specification.new do |spec|
   spec.name          = "picobox"
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = <<-DESC
     The even more totally invisible ideal platform for developers
   DESC
-  spec.homepage      = "https://github.com/surzycki/picobox"
+  spec.homepage      = Picobox::HOMEPAGE
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

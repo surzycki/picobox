@@ -1,13 +1,13 @@
 @acceptance
-Feature: CLI Commands
+Feature: Install feature
   Background:
     Given a mocked home directory
     And I am using a darwin OS
     And docker is installed
+    And the file named ".profile" with "# test bash script"
 
 
   Scenario: Picobox can be installed
-    Given the file named ".profile" with "# test bash script"
     And I run `picobox install`
     Then the output should match:
       """
@@ -16,8 +16,8 @@ Feature: CLI Commands
         Docker version test! present
         Setting up Shell
             create .+aruba\/.picobox
-            create .+aruba\/.picobox/shell_extensions
             append .+aruba\/.profile
+            create .+aruba\/.picobox/shell_extensions
         Install Complete
       -------------------------------
 
@@ -31,6 +31,25 @@ Feature: CLI Commands
 
 
   Scenario: Picobox on unsupported OS
-    And I am using an unsupported OS
+    Given I am using an unsupported OS
     And I run `picobox install`
-    Then the output should contain "is not yet supported"
+    Then the output should match:
+      """
+        .+ is not yet supported
+      """
+
+
+  Scenario: Picobox on unsupported shell
+    Given I am using an unsupported shell
+    And I run `picobox install`
+    Then the output should match:
+      """
+      INSTALL PICOBOX
+      -------------------------------
+        Docker version test! present
+        Setting up Shell
+             error  shell not supported .+
+
+      You can file a request at: https://github.com/surzycki/picobox
+      and we'll get right on it!
+      """

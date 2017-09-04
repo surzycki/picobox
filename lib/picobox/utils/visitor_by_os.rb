@@ -22,7 +22,7 @@ module Picobox
 
       def visit_unsupported subject
         os = TTY::Platform.new.os
-        raise Errors::UnsupportedOsError, "#{os} is not yet supported"
+        raise Errors::UnsupportedOsError, "#{os} is not yet supported :("
       end
     end
   end

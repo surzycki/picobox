@@ -17,6 +17,16 @@ $ picobox install
 
 That's it your done
 
+
+## Uninstall Picobox
+```bash
+$ picobox uninstall
+$ gem uninstall picobox
+```
+
+Now you are really done
+
+
 ## Usage
 
 ![demo](https://github.com/surzycki/picobox/blob/master/docs/testdrive.gif)

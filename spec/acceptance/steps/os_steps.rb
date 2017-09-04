@@ -5,6 +5,12 @@ module OsSteps
       and_return Picobox::Os::UnsupportedOs
   end
 
+  step 'I am using an unsupported shell' do
+    allow(Picobox::Os::CurrentOs.get).
+      to receive(:user_shell).
+      and_return('/sh')
+  end
+
   step 'I am using a darwin OS' do
     allow(Picobox::Os::CurrentOs).
       to receive(:get).

@@ -28,7 +28,11 @@ require 'picobox/handlers/stdout_handler'
 require 'picobox/commands/download_docker'
 require 'picobox/commands/install_docker'
 require 'picobox/commands/setup_shell'
+require 'picobox/commands/remove_setup_shell'
+require 'picobox/commands/start_install'
+require 'picobox/commands/start_uninstall'
 require 'picobox/commands/finish_install'
+require 'picobox/commands/finish_uninstall'
 require 'picobox/commands/initialize_project'
 require 'picobox/commands/add_box'
 require 'picobox/commands/list_boxes'
@@ -55,9 +59,8 @@ require 'picobox/os/current_os'
 require 'picobox/shell/startup_script'
 require 'picobox/shell/dot_profile'
 
-require 'picobox/version'
+require 'picobox/constants'
 require 'picobox/cli'
-require 'picobox/installer'
 require 'picobox/system'
 require 'picobox/project'
 require 'picobox/box'
@@ -68,17 +71,5 @@ Wisper.subscribe(
   scope: Picobox::Utils::DomainEventPublisher
 )
 
-module Picobox
-  # names for files / directories
-  CONFIG_DIR      =  '.picobox'
-  PROJECT_INI      = 'project.ini'
-  SHELL_EXTENSIONS = 'shell_extensions'
-
-  module_function
-  def root()                 File.expand_path('../..', __FILE__) end
-  def template_dir()         "#{Picobox.root}/lib/picobox/templates" end
-  def box_packages_dir()     "#{Picobox.root}/lib/picobox/boxes/packages" end
-  def service_packages_dir() "#{Picobox.root}/lib/picobox/services/packages" end
-end
 
 

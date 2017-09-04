@@ -22,6 +22,7 @@ module Picobox
 
         def project_root() Utils::Project.new(self).root end
         def reload_shell() system("exec #{user_shell} -l") end
+
       end
     end
   end

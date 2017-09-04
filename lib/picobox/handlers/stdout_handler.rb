@@ -3,6 +3,26 @@ module Picobox
     class StdoutHandler
       include Utils::Output
 
+      def install_started
+        display_line ''
+        display_line 'INSTALL PICOBOX'
+        display_line '-------------------------------'
+      end
+
+      def install_complete
+        display_info   'Install Complete', :green
+        display_line   '-------------------------------'
+      end
+
+      def post_install_messages
+        display_line   ''
+        display_line   'You should reload open shells to pick up shell changes'
+        display_line   ''
+        display_status 'opening', 'new shell'
+        display_line   ''
+      end
+
+
       def docker_present(version)
         display_info("#{version.strip} present", :green)
       end
@@ -37,8 +57,19 @@ module Picobox
         display_info('Setting up Shell', :green)
       end
 
-      def install_complete
-        display_info('Install Complete', :green)
+      def remove_shell_setup_start
+        display_info('Removing shell extentions', :green)
+      end
+
+      def uninstall_started
+        display_line ''
+        display_line 'UNINSTALL PICOBOX'
+        display_line '-------------------------------'
+      end
+
+      def uninstall_complete
+        display_info('Uninstall Complete', :green)
+        display_line '-------------------------------'
       end
 
       def project_initialize_start
