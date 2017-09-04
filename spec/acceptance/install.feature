@@ -16,8 +16,8 @@ Feature: Install feature
         Docker version test! present
         Setting up Shell
             create .+aruba\/.picobox
-            append .+aruba\/.profile
             create .+aruba\/.picobox/shell_extensions
+            append .+aruba\/.profile
         Install Complete
       -------------------------------
 

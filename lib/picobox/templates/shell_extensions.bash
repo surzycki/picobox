@@ -23,7 +23,11 @@ picobox_proxy () {
   if can_execute; then
     docker-compose exec $1 $2 "${@:3}"
   else
-    `which $2` "${@:3}"
+    if [ "$ZSH_NAME" ]; then
+      `whence -p $2` "${@:3}"
+    else
+      `type -P $2` "${@:3}"
+    fi
   fi
 }
 
