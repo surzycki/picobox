@@ -29,7 +29,7 @@ module Picobox
 
 
       def display_service_not_available(type)
-        display_status('error', "#{type.capitalize} service is not available...yet", :red)
+        display_status('error', "#{type} service is not available...yet", :red)
       end
 
 

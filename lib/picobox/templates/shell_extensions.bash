@@ -12,7 +12,7 @@ TEST="test"
 ## functions
 ##
 can_execute () {
-  if [ -e "$PWD/.picobox" ]; then
+  if [ -e "$PWD/.picobox/project.ini" ]; then
     true
   else
     false

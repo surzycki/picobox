@@ -1,22 +1,23 @@
 @acceptance
-Feature: Add Service Commands
+Feature: Remove Service Commands
   Background:
     Given a mocked home directory
     And I am using a darwin OS
     And docker is installed
-    And I run `picobox init rails`
+    Given I run `picobox init rails`
+    And I run `picobox add postgres`
 
-  Scenario: Adding service
-    Given I run `picobox add postgres`
+  Scenario: Removing service
+    Given I run `picobox remove postgres`
     Then the output should match:
       """
-        Adding postgres service
+        Removing postgres service
+        Picobox stopping...
+        Picobox stopped!
             modify  .+aruba\/docker-compose.yml
-              info  hostname 'postgres' is visible to other services
-              info  postgres user and password are 'picobox'
-        Service postgres added
         Picobox starting...
         Picobox started!
+        Service postgres removed
       """
     And the file named "docker-compose.yml" should match:
       """
@@ -41,8 +42,6 @@ Feature: Add Service Commands
           ports:
           - 80:3000
           - 3000:3000
-          links:
-          - postgres
         test:
           build: "."
           entrypoint: ".picobox/start"
@@ -54,26 +53,18 @@ Feature: Add Service Commands
             RAILS_ENV: test
             BUNDLE_PATH: "/bundle"
           hostname: picobox_test
-          links:
-          - postgres
         bundle:
           image: busybox
           volumes:
           - bundle-data:/bundle:cached
-        postgres:
-          image: postgres:9.4
-          volumes:
-          - db-data:/var/lib/postgresql/db-data
-          environment:
-            POSTGRES_USER: picobox
-            POSTGRES_PASSWORD: picobox
       """
 
-
-  Scenario: Adding multiple services
-    Given I run `picobox add postgres`
-    And I run `picobox add memcached`
+  Scenario: Removing multiple services
+    Given I run `picobox add memcached`
     And I run `picobox add redis`
+    Then I run `picobox remove postgres`
+    And I run `picobox remove redis`
+    And I run `picobox remove memcached`
     And the file named "docker-compose.yml" should match:
       """
       version: '2'
@@ -97,10 +88,6 @@ Feature: Add Service Commands
           ports:
           - 80:3000
           - 3000:3000
-          links:
-          - postgres
-          - memcached
-          - redis
         test:
           build: "."
           entrypoint: ".picobox/start"
@@ -112,31 +99,20 @@ Feature: Add Service Commands
             RAILS_ENV: test
             BUNDLE_PATH: "/bundle"
           hostname: picobox_test
-          links:
-          - postgres
         bundle:
           image: busybox
           volumes:
           - bundle-data:/bundle:cached
-        postgres:
-          image: postgres:9.4
-          volumes:
-          - db-data:/var/lib/postgresql/db-data
-          environment:
-            POSTGRES_USER: picobox
-            POSTGRES_PASSWORD: picobox
-        memcached:
-          image: sameersbn/memcached:latest
-          environment:
-            CACHE_SIZE: '64'
-        redis:
-          image: redis
       """
 
-
-  Scenario: Adding same service multiple times
-    Given I run `picobox add postgres`
-    When I run `picobox add postgres`
+  Scenario: Removing same service multiple times
+    Given I run `picobox remove postgres`
+    When I run `picobox remove postgres`
+    Then the output should match:
+      """
+        Removing postgres service
+          info  postgres not installed
+      """
     Then the file named "docker-compose.yml" should match:
       """
       version: '2'
@@ -160,8 +136,6 @@ Feature: Add Service Commands
           ports:
           - 80:3000
           - 3000:3000
-          links:
-          - postgres
         test:
           build: "."
           entrypoint: ".picobox/start"
@@ -173,119 +147,51 @@ Feature: Add Service Commands
             RAILS_ENV: test
             BUNDLE_PATH: "/bundle"
           hostname: picobox_test
-          links:
-          - postgres
         bundle:
           image: busybox
           volumes:
           - bundle-data:/bundle:cached
-        postgres:
-          image: postgres:9.4
-          volumes:
-          - db-data:/var/lib/postgresql/db-data
-          environment:
-            POSTGRES_USER: picobox
-            POSTGRES_PASSWORD: picobox
       """
 
-
-  Scenario: Adding service to un-initialized project
+  Scenario: Removing service to un-initialized project
     Given the project is uninitialized
-    When I run `picobox add postgres`
+    When I run `picobox remove postgres`
     Then the output should match:
       """
-        Adding postgres service
+        Removing postgres service
              error  no project found
         Run command in a project directory or create new project with 'picobox init \[BOX\]'
       """
 
-
-  Scenario: Adding service in project sub-directory
+  Scenario: Removing service in project sub-directory
     Given a directory named "lib"
     And I cd to "lib"
-    When I run `picobox add postgres`
+    When I run `picobox remove postgres`
     Then the output should match:
       """
-        Adding postgres service
+        Removing postgres service
+        Picobox stopping...
+        Picobox stopped!
             modify  .+aruba\/docker-compose.yml
-              info  hostname 'postgres' is visible to other services
-              info  postgres user and password are 'picobox'
-        Service postgres added
         Picobox starting...
         Picobox started!
+        Service postgres removed
       """
 
-
-  Scenario: Adding unknown service
-    Given I run `picobox add geek`
+  Scenario: Removing unknown service
+    Given I run `picobox remove geek`
     Then the output should match:
       """
-        Adding geek service
+        Removing geek service
              error  geek service is not available...yet
-        Available services:
-      """
+        Installed services:
+    """
 
-
-  Scenario: Adding service with missing docker_compose.yml
+  Scenario: Removing service with missing docker_compose.yml
     Given the file "docker-compose.yml" does not exist
-    When I run `picobox add postgres`
+    When I run `picobox remove postgres`
     Then the output should match:
       """
-        Adding postgres service
+        Removing postgres service
              error  could not open .+aruba\/docker-compose.yml
-      """
-
-
-  Scenario: Adding service with only dev service (no test service)
-    Given the project is uninitialized
-    And I run `picobox init ruby`
-    When I run `picobox add postgres`
-    And I run `picobox add redis`
-    And the file named "docker-compose.yml" should match:
-      """
-      ---
-      version: '2'
-      volumes:
-        db-data:
-          external: false
-        bundle-data:
-          external: false
-      services:
-        dev:
-          build: "."
-          entrypoint: ".picobox/start"
-          volumes:
-          - ".:/var/www:cached"
-          volumes_from:
-          - bundle
-          environment:
-            BUNDLE_PATH: "/bundle"
-          hostname: picobox
-          links:
-          - postgres
-          - redis
-        bundle:
-          image: busybox
-          volumes:
-          - bundle-data:/bundle:cached
-        postgres:
-          image: postgres:9.4
-          volumes:
-          - db-data:/var/lib/postgresql/db-data
-          environment:
-            POSTGRES_USER: picobox
-            POSTGRES_PASSWORD: picobox
-        redis:
-          image: redis
-      """
-
-
-  Scenario: Adding service that has no post_install instructions
-    Given I run `picobox add redis`
-    Then the output should match:
-      """
-        Adding redis service
-            modify  .+aruba\/docker-compose.yml
-              info  hostname 'redis' is visible to other services
-        Service redis added
       """

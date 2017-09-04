@@ -52,6 +52,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'wisper',           '~> 1.6.1'
   spec.add_dependency 'tty-file',         '0.3.0'
   spec.add_dependency 'tty-command',      '0.6.0'
+  spec.add_dependency 'ghost'
   spec.add_dependency 'tty-platform'
   spec.add_dependency 'inifile'
 end
