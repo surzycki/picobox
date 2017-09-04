@@ -9,19 +9,18 @@ module Picobox
       @os = os
     end
 
-    def add(type = nil)
-      return if type.nil?
-      accept(Commands::AddService.new(type))
+    def add(services)
+      services.each { |service| accept(Commands::AddService.new(service)) }
       accept(Commands::Restart.new)
-    rescue Errors::ServiceNotImplemented
-      display_service_not_available type
-      list # called like for exception handling
+    rescue Errors::ServiceNotImplemented => e
+      display_service_not_available e.message
+      exit 1
     rescue Errors::ProjectNotInitialized
       display_project_not_initialized
       exit 1
     rescue Picobox::Errors::FileNotFoundError => e
       display_file_not_found e.message
-      exit
+      exit 1
     rescue Exception => e
       display_info(e, :red)
       exit 1

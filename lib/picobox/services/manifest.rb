@@ -17,7 +17,7 @@ module Picobox
 
 
       def check!
-        raise Errors::ServiceNotImplemented unless list.include?(type)
+        (raise Errors::ServiceNotImplemented, type) unless list.include?(type)
       end
 
       def docker_compose_file () "#{os.project_root}/docker-compose.yml" end

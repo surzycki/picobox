@@ -86,8 +86,8 @@ module Picobox
     desc 'add [SERVICE]', 'adds a service to your box'
     long_desc <<-LONGDESC
     LONGDESC
-    def add(service)
-      Service.new(Os::CurrentOs.get).add service
+    def add(*services)
+      Service.new(Os::CurrentOs.get).add services
     end
 
 

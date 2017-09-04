@@ -120,6 +120,7 @@ $ bundle exec byebug -R localhost:8989
 - [ ] Add destroy command
 - [ ] Add Habitus API web server to add ssh keys to containers**
 - [ ] Use traefik.io for dns
+- [ ] Uninstall should stop and remove all instances that are running
 
 **http://blog.cloud66.com/using-ssh-private-keys-securely-in-docker-build/
 

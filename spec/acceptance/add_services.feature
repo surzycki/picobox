@@ -6,6 +6,7 @@ Feature: Add Service Commands
     And docker is installed
     And I run `picobox init rails`
 
+
   Scenario: Adding service
     Given I run `picobox add postgres`
     Then the output should match:
@@ -71,9 +72,25 @@ Feature: Add Service Commands
 
 
   Scenario: Adding multiple services
-    Given I run `picobox add postgres`
-    And I run `picobox add memcached`
-    And I run `picobox add redis`
+    Given I run `picobox add postgres memcached redis`
+    Then the output should match:
+      """
+        Adding postgres service
+            modify  .+aruba\/docker-compose.yml
+              info  hostname 'postgres' is visible to other services
+              info  postgres user and password are 'picobox'
+        Service postgres added
+        Adding memcached service
+            modify  .+aruba\/docker-compose.yml
+              info  hostname 'memcached' is visible to other services
+        Service memcached added
+        Adding redis service
+            modify  .+aruba\/docker-compose.yml
+              info  hostname 'redis' is visible to other services
+        Service redis added
+        Picobox starting...
+        Picobox started!
+      """
     And the file named "docker-compose.yml" should match:
       """
       version: '2'
@@ -189,6 +206,20 @@ Feature: Add Service Commands
       """
 
 
+  Scenario: Adding multiple services with an undefined service
+    Given I run `picobox add postgres geek redis`
+    Then the output should match:
+      """
+        Adding postgres service
+            modify  .+aruba\/docker-compose.yml
+              info  hostname 'postgres' is visible to other services
+              info  postgres user and password are 'picobox'
+        Service postgres added
+        Adding geek service
+             error  geek service is not available...yet
+      """
+
+
   Scenario: Adding service to un-initialized project
     Given the project is uninitialized
     When I run `picobox add postgres`
@@ -222,7 +253,6 @@ Feature: Add Service Commands
       """
         Adding geek service
              error  geek service is not available...yet
-        Available services:
       """
 
 
