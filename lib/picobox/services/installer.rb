@@ -24,13 +24,14 @@ module Picobox
 
       def uninstall(type)
         @manifest = Manifest.new(os, type)
-        @manifest.check! # raises an exception if we can't find the type in the manifest
 
         config = DockerCompose::Config.new manifest.docker_compose_file
+        config.check!(type)  # raises an exception if we can't find the type currently installed
+
         config.remove_service manifest.service
 
         config.save
-        display_status 'modify', filename
+        display_status 'modify', manifest.docker_compose_file
       end
 
       private

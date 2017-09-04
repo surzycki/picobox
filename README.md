@@ -104,10 +104,8 @@ $ bundle exec byebug -R localhost:8989
 
 
 ## TODO
-- [x] Write some tests, I mean come on!
-- [ ] Include aliases specific to the box when unpacking
-- [x] Put boxes on dockerhub
-- [x] Add service command (redis, postgres, memcached, mongodb, etc)
+- [ ] Documentation (both in code and wiki)
+- [ ] Include aliases specific to the box when unpacking (maybe)
 - [ ] Add more boxes
 - [ ] Add destroy command
 - [ ] Add Habitus API web server to add ssh keys to containers**

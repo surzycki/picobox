@@ -42,6 +42,11 @@ module Picobox
         display_info("Picobox is not running!", :red)
       end
 
+
+      def display_service_not_installed(type)
+        display_status('info', "#{type} not installed", :yellow)
+      end
+
       private
       def thor
         @thor ||= Thor::Shell::Color.new

@@ -77,6 +77,15 @@ module Picobox
         display_info("Service #{type} added", :green)
       end
 
+
+      def remove_service_start(type)
+        display_info("Removing #{type} service", :green)
+      end
+
+      def remove_service_completed(type)
+        display_info("Service #{type} removed", :green)
+      end
+
       def stopping
         display_info("Picobox stopping...", :green)
       end

@@ -103,6 +103,14 @@ module Picobox
     end
 
 
+    desc 'remove [SERVICE]', 'removes a service from your box'
+    long_desc <<-LONGDESC
+    LONGDESC
+    def remove(service)
+      Service.new(Os::CurrentOs.get).remove service
+    end
+
+
     desc 'services', 'list available services'
     long_desc <<-LONGDESC
     LONGDESC

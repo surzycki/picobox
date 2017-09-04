@@ -9,6 +9,13 @@ module Picobox
       end
 
 
+      def check!(type)
+        unless config['services'].keys.include? type
+          raise Picobox::Errors::ServiceNotInstalled
+        end
+      end
+
+
       def add_service(service, links)
         service_name = service.keys.first
 
@@ -24,7 +31,18 @@ module Picobox
       end
 
 
-      def remove_service
+      def remove_service(service)
+        service_name = service.keys.first
+        services = config['services']
+
+        services.delete(service_name)
+
+        services.each_value do |service|
+          if service['links']
+            service['links'].delete(service_name)
+            service.delete('links') if service['links'].empty?
+          end
+        end
       end
 
 

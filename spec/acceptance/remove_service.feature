@@ -7,17 +7,16 @@ Feature: Remove Service Commands
     Given I run `picobox init rails`
     And I run `picobox add postgres`
 
+
   Scenario: Removing service
     Given I run `picobox remove postgres`
     Then the output should match:
       """
         Removing postgres service
-        Picobox stopping...
-        Picobox stopped!
             modify  .+aruba\/docker-compose.yml
+        Service postgres removed
         Picobox starting...
         Picobox started!
-        Service postgres removed
       """
     And the file named "docker-compose.yml" should match:
       """
@@ -59,11 +58,11 @@ Feature: Remove Service Commands
           - bundle-data:/bundle:cached
       """
 
+
   Scenario: Removing multiple services
     Given I run `picobox add memcached`
     And I run `picobox add redis`
     Then I run `picobox remove postgres`
-    And I run `picobox remove redis`
     And I run `picobox remove memcached`
     And the file named "docker-compose.yml" should match:
       """
@@ -88,6 +87,8 @@ Feature: Remove Service Commands
           ports:
           - 80:3000
           - 3000:3000
+          links:
+          - redis
         test:
           build: "."
           entrypoint: ".picobox/start"
@@ -103,7 +104,10 @@ Feature: Remove Service Commands
           image: busybox
           volumes:
           - bundle-data:/bundle:cached
+        redis:
+          image: redis
       """
+
 
   Scenario: Removing same service multiple times
     Given I run `picobox remove postgres`
@@ -111,7 +115,7 @@ Feature: Remove Service Commands
     Then the output should match:
       """
         Removing postgres service
-          info  postgres not installed
+              info  postgres not installed
       """
     Then the file named "docker-compose.yml" should match:
       """
@@ -153,6 +157,7 @@ Feature: Remove Service Commands
           - bundle-data:/bundle:cached
       """
 
+
   Scenario: Removing service to un-initialized project
     Given the project is uninitialized
     When I run `picobox remove postgres`
@@ -163,6 +168,7 @@ Feature: Remove Service Commands
         Run command in a project directory or create new project with 'picobox init \[BOX\]'
       """
 
+
   Scenario: Removing service in project sub-directory
     Given a directory named "lib"
     And I cd to "lib"
@@ -170,22 +176,21 @@ Feature: Remove Service Commands
     Then the output should match:
       """
         Removing postgres service
-        Picobox stopping...
-        Picobox stopped!
             modify  .+aruba\/docker-compose.yml
+        Service postgres removed
         Picobox starting...
         Picobox started!
-        Service postgres removed
       """
+
 
   Scenario: Removing unknown service
     Given I run `picobox remove geek`
     Then the output should match:
       """
         Removing geek service
-             error  geek service is not available...yet
-        Installed services:
-    """
+              info  geek not installed
+      """
+
 
   Scenario: Removing service with missing docker_compose.yml
     Given the file "docker-compose.yml" does not exist

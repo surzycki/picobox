@@ -4,6 +4,7 @@ module Picobox
     class UnknownError < PicoboxError; end
     class BoxNotImplemented < PicoboxError; end
     class ServiceNotImplemented < PicoboxError; end
+    class ServiceNotInstalled < PicoboxError; end
     class ProjectNotInitialized < PicoboxError; end
     class SystemDownError < PicoboxError; end
     class UnsupportedOsError < PicoboxError; end
