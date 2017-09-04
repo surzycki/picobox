@@ -58,6 +58,7 @@ require 'picobox/os/current_os'
 
 require 'picobox/shell/startup_script'
 require 'picobox/shell/dot_profile'
+require 'picobox/shell/dot_zshrc'
 
 require 'picobox/constants'
 require 'picobox/cli'

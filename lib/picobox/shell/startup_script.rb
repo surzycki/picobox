@@ -6,6 +6,8 @@ module Picobox
           case "#{os.user_shell}:#{os.to_s}"
           when '/bin/bash:darwin'
             Shell::DotProfile.new(os)
+          when '/bin/zsh:darwin'
+            Shell::DotZshrc.new(os)
           else
             raise Errors::ShellNotSupported, "#{os.user_shell}:#{os.to_s}"
           end
