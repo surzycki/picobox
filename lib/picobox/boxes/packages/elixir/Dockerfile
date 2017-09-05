@@ -37,7 +37,7 @@ RUN mix local.hex --force
 RUN mix local.rebar --force
 
 # phoenix
-RUN mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
+RUN mix archive.install --force https://github.com/phoenixframework/archives/raw/master/phx_new.ez
 
 # working dir
 RUN mkdir -p $APP_HOME
