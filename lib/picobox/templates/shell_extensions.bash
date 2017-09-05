@@ -11,8 +11,18 @@ TEST="test"
 ##
 ## functions
 ##
+project_root() {
+  slashes=${PWD//[^\/]/}
+  directory="$PWD"
+  for (( n=${#slashes}; n>0; --n ))
+  do
+    test -e "$directory/.picobox" && echo "$directory/.picobox" && return
+    directory="$directory/.."
+  done
+}
+
 can_execute () {
-  if [ -e "$PWD/.picobox/project.ini" ]; then
+  if [ -e "$(project_root)/project.ini" ]; then
     true
   else
     false
@@ -76,6 +86,13 @@ alias redis-cli=picobox_redis_cli
 picobox_psql () { picobox_proxy "postgres" "psql" "$@" ; }
 
 alias psql=picobox_psql
+
+##
+## mysql proxies
+##
+picobox_mysql () { picobox_proxy "mysql" "mysql" "$@" ; }
+
+alias psql=picobox_mysql
 
 
 ##
