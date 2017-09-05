@@ -15,6 +15,7 @@ Feature: CLI Commands
     Then the output should match:
       """
         Available boxes:
+          elixir
           rails
           ruby
       """
