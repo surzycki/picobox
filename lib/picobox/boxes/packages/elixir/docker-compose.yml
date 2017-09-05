@@ -3,17 +3,15 @@ version: '2'
 volumes:
   db-data:
     external: false
-  mix-data:
-    external: false
 services:
   dev:
     build: "."
     entrypoint: ".picobox/start"
     volumes:
     - ".:/var/www:cached"
-    volumes_from:
-    - mix
     hostname: picobox
+    environment:
+      MIX_ENV: dev
     ports:
     - 80:4000
     - 4000:4000
@@ -22,10 +20,7 @@ services:
     entrypoint: ".picobox/start"
     volumes:
     - ".:/var/www:cached"
-    volumes_from:
-    - mix
+    environment:
+      MIX_ENV: test
     hostname: picobox_test
-  mix:
-    image: busybox
-    volumes:
-    - mix-data:/mix:cached
+

@@ -76,3 +76,17 @@ alias redis-cli=picobox_redis_cli
 picobox_psql () { picobox_proxy "postgres" "psql" "$@" ; }
 
 alias psql=picobox_psql
+
+
+##
+## elixir proxies
+##
+picobox_elixir() { picobox_proxy $DEV "elixir" "$@" ; }
+picobox_mix()    { picobox_proxy $DEV "mix" "$@" ; }
+picobox_iex()    { picobox_proxy $DEV "iex" "$@" ; }
+picobox_erl()    { picobox_proxy $DEV "erl" "$@" ; }
+
+alias elixir=picobox_elixir
+alias mix=picobox_mix
+alias iex=picobox_iex
+alias erl=picobox_erl
