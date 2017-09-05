@@ -30,6 +30,7 @@ require 'picobox/commands/install_docker'
 require 'picobox/commands/setup_shell'
 require 'picobox/commands/remove_setup_shell'
 require 'picobox/commands/start_install'
+require 'picobox/commands/build_service'
 require 'picobox/commands/start_uninstall'
 require 'picobox/commands/finish_install'
 require 'picobox/commands/finish_uninstall'
@@ -72,5 +73,7 @@ Wisper.subscribe(
   scope: Picobox::Utils::DomainEventPublisher
 )
 
+# silence warnings found in tty-file-0.3.0 for forwarding to private method
+$VERBOSE=nil
 
 

@@ -9,6 +9,13 @@ module Picobox
       @os = os
     end
 
+    def build(service=nil)
+      accept(Commands::BuildService.new(service))
+    rescue Exception => e
+      display_info(e, :red)
+      exit 1
+    end
+
     def add(services)
       services.each { |service| accept(Commands::AddService.new(service)) }
       accept(Commands::Restart.new)

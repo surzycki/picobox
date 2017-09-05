@@ -38,16 +38,20 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def init(box_type)
-      Project.new(Os::CurrentOs.get).init
-      Box.new(Os::CurrentOs.get).install box_type
+      os = Os::CurrentOs.get
+
+      Project.new(os).init
+      Box.new(os).install box_type
+      Service.new(os).build
+      System.new(os).start
     end
 
 
-    desc 'build [BOX] optional', 'builds the picobox'
+    desc 'build [SERVICE] optional', 'builds the picobox'
     long_desc <<-LONGDESC
     LONGDESC
-    def build(instance = nil)
-      system "docker-compose build #{instance}"
+    def build(service = nil)
+      Service.new(Os::CurrentOs.get).build service
     end
 
 

@@ -31,8 +31,10 @@ module OsSteps
       to receive(:docker_installed?).
       and_return true
 
+    # don't do anything docker-ish during tests
     double_cmd('docker-compose up -d 2>/dev/null')
     double_cmd('docker-compose stop 2>/dev/null')
+    double_cmd('docker-compose build')
   end
 end
 
