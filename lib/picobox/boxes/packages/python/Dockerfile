@@ -24,7 +24,7 @@ RUN apt-get install -y python-pip python-yaml gcc python-dev libffi-dev libssl-d
 ## Tools
 
 # utils
-RUN apt-get -y sudo nano wget
+RUN apt-get install -y sudo nano wget
 
 # set working dir
 WORKDIR $APP_HOME
