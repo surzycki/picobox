@@ -16,6 +16,7 @@ Feature: CLI Commands
       """
         Available boxes:
           elixir
+          python
           rails
           ruby
       """
