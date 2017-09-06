@@ -107,3 +107,14 @@ alias elixir=picobox_elixir
 alias mix=picobox_mix
 alias iex=picobox_iex
 alias erl=picobox_erl
+
+
+##
+## python proxies
+##
+picobox_python() { picobox_proxy $DEV "python" "$@" ; }
+picobox_pip()    { picobox_proxy $DEV "pip" "$@" ; }
+
+alias python=picobox_python
+alias pip=picobox_pip
+
