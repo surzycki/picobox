@@ -122,6 +122,7 @@ $ bundle exec byebug -R localhost:8989
 - [ ] Use traefik.io for dns
 - [ ] Uninstall should stop and remove all instances that are running
 - [ ] Block most commands if picobox not installed
+- [ ] Some services should install thier own volumes
 
 **http://blog.cloud66.com/using-ssh-private-keys-securely-in-docker-build/
 

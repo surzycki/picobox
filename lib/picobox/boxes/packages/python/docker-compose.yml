@@ -1,0 +1,13 @@
+version: '2'
+volumes:
+  db-data:
+    external: false
+
+services:
+  dev:
+    build: .
+    environment:
+      SSH_AUTH_SOCK: $SSH_AUTH_SOCK
+    hostname: picobox
+    volumes:
+    - ".:/~:cached"
