@@ -9,7 +9,7 @@ Feature: Open Shell Commands
 
   Scenario: Open shell when stopped
     Given the containers have been stopped
-    When I run `picobox open dev`
+    When I run `picobox ssh dev`
     Then the output should match:
       """
         Getting shell
@@ -20,7 +20,7 @@ Feature: Open Shell Commands
 
   Scenario: Opening shell when no project initialize
     Given the directory ".picobox" does not exist
-    When I run `picobox open dev`
+    When I run `picobox ssh dev`
     Then the output should match:
       """
         Getting shell

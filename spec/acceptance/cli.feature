@@ -22,7 +22,7 @@ Feature: CLI Commands
 
 
   Scenario: Picobox lists services
-    Given I run `picobox services`
+    Given I run `picobox service list`
     Then the output should match:
       """
         Available services:

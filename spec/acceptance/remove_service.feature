@@ -5,11 +5,11 @@ Feature: Remove Service Commands
     And I am using a darwin OS
     And docker is installed
     Given I run `picobox init rails`
-    And I run `picobox add postgres`
+    And I run `picobox service add postgres`
 
 
   Scenario: Removing service
-    Given I run `picobox remove postgres`
+    Given I run `picobox service remove postgres`
     Then the output should match:
       """
         Removing postgres service
@@ -60,10 +60,10 @@ Feature: Remove Service Commands
 
 
   Scenario: Removing multiple services
-    Given I run `picobox add memcached`
-    And I run `picobox add redis`
-    Then I run `picobox remove postgres`
-    And I run `picobox remove memcached`
+    Given I run `picobox service add memcached`
+    And I run `picobox service add redis`
+    Then I run `picobox service remove postgres`
+    And I run `picobox service remove memcached`
     And the file named "docker-compose.yml" should match:
       """
       version: '2'
@@ -110,8 +110,8 @@ Feature: Remove Service Commands
 
 
   Scenario: Removing same service multiple times
-    Given I run `picobox remove postgres`
-    When I run `picobox remove postgres`
+    Given I run `picobox service remove postgres`
+    When I run `picobox service remove postgres`
     Then the output should match:
       """
         Removing postgres service
@@ -160,7 +160,7 @@ Feature: Remove Service Commands
 
   Scenario: Removing service to un-initialized project
     Given the project is uninitialized
-    When I run `picobox remove postgres`
+    When I run `picobox service remove postgres`
     Then the output should match:
       """
         Removing postgres service
@@ -172,7 +172,7 @@ Feature: Remove Service Commands
   Scenario: Removing service in project sub-directory
     Given a directory named "lib"
     And I cd to "lib"
-    When I run `picobox remove postgres`
+    When I run `picobox service remove postgres`
     Then the output should match:
       """
         Removing postgres service
@@ -184,7 +184,7 @@ Feature: Remove Service Commands
 
 
   Scenario: Removing unknown service
-    Given I run `picobox remove geek`
+    Given I run `picobox service remove geek`
     Then the output should match:
       """
         Removing geek service
@@ -194,7 +194,7 @@ Feature: Remove Service Commands
 
   Scenario: Removing service with missing docker_compose.yml
     Given the file "docker-compose.yml" does not exist
-    When I run `picobox remove postgres`
+    When I run `picobox service remove postgres`
     Then the output should match:
       """
         Removing postgres service

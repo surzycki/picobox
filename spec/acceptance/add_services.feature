@@ -8,7 +8,7 @@ Feature: Add Service Commands
 
 
   Scenario: Adding service
-    Given I run `picobox add postgres`
+    Given I run `picobox service add postgres`
     Then the output should match:
       """
         Adding postgres service
@@ -72,7 +72,7 @@ Feature: Add Service Commands
 
 
   Scenario: Adding multiple services
-    Given I run `picobox add postgres memcached redis`
+    Given I run `picobox service add postgres memcached redis`
     Then the output should match:
       """
         Adding postgres service
@@ -152,8 +152,8 @@ Feature: Add Service Commands
 
 
   Scenario: Adding same service multiple times
-    Given I run `picobox add postgres`
-    When I run `picobox add postgres`
+    Given I run `picobox service add postgres`
+    When I run `picobox service add postgres`
     Then the file named "docker-compose.yml" should match:
       """
       version: '2'
@@ -207,7 +207,7 @@ Feature: Add Service Commands
 
 
   Scenario: Adding multiple services with an undefined service
-    Given I run `picobox add postgres geek redis`
+    Given I run `picobox service add postgres geek redis`
     Then the output should match:
       """
         Adding postgres service
@@ -222,7 +222,7 @@ Feature: Add Service Commands
 
   Scenario: Adding service to un-initialized project
     Given the project is uninitialized
-    When I run `picobox add postgres`
+    When I run `picobox service add postgres`
     Then the output should match:
       """
         Adding postgres service
@@ -234,7 +234,7 @@ Feature: Add Service Commands
   Scenario: Adding service in project sub-directory
     Given a directory named "lib"
     And I cd to "lib"
-    When I run `picobox add postgres`
+    When I run `picobox service add postgres`
     Then the output should match:
       """
         Adding postgres service
@@ -248,7 +248,7 @@ Feature: Add Service Commands
 
 
   Scenario: Adding unknown service
-    Given I run `picobox add geek`
+    Given I run `picobox service add geek`
     Then the output should match:
       """
         Adding geek service
@@ -258,7 +258,7 @@ Feature: Add Service Commands
 
   Scenario: Adding service with missing docker_compose.yml
     Given the file "docker-compose.yml" does not exist
-    When I run `picobox add postgres`
+    When I run `picobox service add postgres`
     Then the output should match:
       """
         Adding postgres service
@@ -269,8 +269,8 @@ Feature: Add Service Commands
   Scenario: Adding service with only dev service (no test service)
     Given the project is uninitialized
     And I run `picobox init ruby`
-    When I run `picobox add postgres`
-    And I run `picobox add redis`
+    When I run `picobox service add postgres`
+    And I run `picobox service add redis`
     And the file named "docker-compose.yml" should match:
       """
       ---
@@ -311,7 +311,7 @@ Feature: Add Service Commands
 
 
   Scenario: Adding service that has no post_install instructions
-    Given I run `picobox add redis`
+    Given I run `picobox service add redis`
     Then the output should match:
       """
         Adding redis service
