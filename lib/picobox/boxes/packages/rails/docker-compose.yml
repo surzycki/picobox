@@ -20,6 +20,7 @@ services:
     ports:
     - 80:3000
     - 3000:3000
+    - 8080:8080  # webpacker_dev
   test:
     build: "."
     entrypoint: ".picobox/start"
