@@ -62,7 +62,7 @@ alias ruby=picobox_ruby
 picobox_rails ()  { picobox_proxy $DEV "bundle exec rails" "$@" ; }
 picobox_spring () { picobox_proxy $DEV "bundle exec spring" "$@" ; }
 picobox_yarn () { picobox_proxy $DEV "bundle exec yarn" "$@" ; }
-picobox_webpacker () { picobox_proxy $DEV "bundle exec webpacker" "$@" ; }
+picobox_webpack () { picobox_proxy $DEV "bundle exec webpack" "$@" ; }
 picobox_guard () { picobox_proxy $TEST "bundle exec guard" "$@" ; }
 picobox_rspec () { picobox_proxy $TEST "bundle exec rspec" "$@" ; }
 picobox_webpack_dev_server() { picobox_proxy $DEV "bundle exec webpack-dev-server" "$@" ; }
@@ -72,7 +72,7 @@ alias rails=picobox_rails
 alias rspec=picobox_rspec
 alias spring=picobox_spring
 alias yarn=picobox_yarn
-alias webpacker=picobox_webpacker
+alias webpacker=picobox_webpack
 alias webpack-dev-server=picobox_webpack_dev_server
 alias webpack-watcher=picobox_webpack_watcher
 alias guard=picobox_guard
