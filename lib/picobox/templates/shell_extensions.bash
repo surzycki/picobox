@@ -66,7 +66,7 @@ picobox_yarn () { picobox_proxy $DEV "bundle exec yarn" "$@" ; }
 picobox_webpack () { picobox_proxy $DEV "bundle exec webpack" "$@" ; }
 picobox_guard () { picobox_proxy $TEST "bundle exec guard" "$@" ; }
 picobox_rspec () { picobox_proxy $TEST "bundle exec rspec" "$@" ; }
-picobox_webpack_dev_server() { picobox_proxy "webpack" "bundle exec webpack-dev-server" "$@" ; }
+picobox_webpack_dev_server() { picobox_proxy "webpack" "bundle exec webpack-dev-server" "$@"; }
 picobox_webpack_watcher () { picobox_proxy "webpack" "bundle exec webpack-watcher" "$@" ; }
 
 alias rails=picobox_rails
