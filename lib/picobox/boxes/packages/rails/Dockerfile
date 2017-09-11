@@ -42,7 +42,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update && apt-get install -y yarn
 
 # utils
-RUN apt-get install -y nano
+RUN apt-get install -y nano git
 
 # hook up cache volume
 ENV BUNDLE_PATH /bundle
