@@ -18,7 +18,7 @@ module Picobox
     rescue Errors::ShellNotSupported => e
       display_shell_not_supported e.message
       exit 1
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -31,7 +31,7 @@ module Picobox
     rescue Errors::PicoboxNotInstalled
       display_picobox_not_installed
       exit 1
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -42,7 +42,7 @@ module Picobox
     rescue Errors::ProjectNotInitialized
       display_project_not_initialized
       exit 1
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -53,7 +53,7 @@ module Picobox
     rescue Errors::ProjectNotInitialized
       display_project_not_initialized
       exit 1
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -61,7 +61,7 @@ module Picobox
 
     def restart
       accept(Commands::Restart.new)
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -75,7 +75,7 @@ module Picobox
     rescue Errors::ProjectNotInitialized
       display_project_not_initialized
       exit 1
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end

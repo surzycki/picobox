@@ -22,14 +22,14 @@ module Picobox
     rescue Errors::ProjectNotInitialized
       display_project_not_initialized
       exit 1
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
 
     def list()
       accept(Commands::ListBoxes.new)
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end

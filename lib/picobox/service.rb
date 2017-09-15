@@ -11,7 +11,7 @@ module Picobox
 
     def build(service=nil)
       accept(Commands::BuildService.new(service))
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -28,7 +28,7 @@ module Picobox
     rescue Picobox::Errors::FileNotFoundError => e
       display_file_not_found e.message
       exit 1
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -48,7 +48,7 @@ module Picobox
     rescue Picobox::Errors::FileNotFoundError => e
       display_file_not_found e.message
       exit
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
@@ -56,7 +56,7 @@ module Picobox
 
     def list()
       accept(Commands::ListServices.new)
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end

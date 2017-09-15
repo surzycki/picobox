@@ -11,7 +11,7 @@ module Picobox
 
     def init
       accept(Commands::InitializeProject.new)
-    rescue Exception => e
+    rescue StandardError => e
       display_info(e, :red)
       exit 1
     end
