@@ -57,6 +57,19 @@ Feature: Add Service Commands
           hostname: picobox_test
           links:
           - postgres
+        webpack:
+          image: picobox/webpack_rails
+          entrypoint: ".picobox/start"
+          volumes_from:
+          - bundle
+          volumes:
+          - ".:/var/www:cached"
+          environment:
+            RAILS_ENV: development
+            BUNDLE_PATH: "/bundle"
+          hostname: picobox
+          ports:
+          - 8080:8080
         bundle:
           image: busybox
           volumes:
@@ -131,6 +144,19 @@ Feature: Add Service Commands
           hostname: picobox_test
           links:
           - postgres
+        webpack:
+          image: picobox/webpack_rails
+          entrypoint: ".picobox/start"
+          volumes_from:
+          - bundle
+          volumes:
+          - ".:/var/www:cached"
+          environment:
+            RAILS_ENV: development
+            BUNDLE_PATH: "/bundle"
+          hostname: picobox
+          ports:
+          - 8080:8080
         bundle:
           image: busybox
           volumes:
@@ -192,6 +218,19 @@ Feature: Add Service Commands
           hostname: picobox_test
           links:
           - postgres
+        webpack:
+          image: picobox/webpack_rails
+          entrypoint: ".picobox/start"
+          volumes_from:
+          - bundle
+          volumes:
+          - ".:/var/www:cached"
+          environment:
+            RAILS_ENV: development
+            BUNDLE_PATH: "/bundle"
+          hostname: picobox
+          ports:
+          - 8080:8080
         bundle:
           image: busybox
           volumes:

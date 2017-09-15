@@ -52,6 +52,19 @@ Feature: Remove Service Commands
             RAILS_ENV: test
             BUNDLE_PATH: "/bundle"
           hostname: picobox_test
+        webpack:
+          image: picobox/webpack_rails
+          entrypoint: ".picobox/start"
+          volumes_from:
+          - bundle
+          volumes:
+          - ".:/var/www:cached"
+          environment:
+            RAILS_ENV: development
+            BUNDLE_PATH: "/bundle"
+          hostname: picobox
+          ports:
+          - 8080:8080
         bundle:
           image: busybox
           volumes:
@@ -100,6 +113,19 @@ Feature: Remove Service Commands
             RAILS_ENV: test
             BUNDLE_PATH: "/bundle"
           hostname: picobox_test
+        webpack:
+          image: picobox/webpack_rails
+          entrypoint: ".picobox/start"
+          volumes_from:
+          - bundle
+          volumes:
+          - ".:/var/www:cached"
+          environment:
+            RAILS_ENV: development
+            BUNDLE_PATH: "/bundle"
+          hostname: picobox
+          ports:
+          - 8080:8080
         bundle:
           image: busybox
           volumes:
@@ -151,6 +177,19 @@ Feature: Remove Service Commands
             RAILS_ENV: test
             BUNDLE_PATH: "/bundle"
           hostname: picobox_test
+        webpack:
+          image: picobox/webpack_rails
+          entrypoint: ".picobox/start"
+          volumes_from:
+          - bundle
+          volumes:
+          - ".:/var/www:cached"
+          environment:
+            RAILS_ENV: development
+            BUNDLE_PATH: "/bundle"
+          hostname: picobox
+          ports:
+          - 8080:8080
         bundle:
           image: busybox
           volumes:
