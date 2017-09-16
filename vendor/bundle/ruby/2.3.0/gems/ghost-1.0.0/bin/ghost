@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'ghost/cli'
-
-Ghost::Cli.new.parse
