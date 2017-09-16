@@ -37,7 +37,7 @@ module Picobox
       end
 
       def download_docker_complete()
-        display_info('[green]Preparing to install Docker[/]')
+        display_info('Preparing to install Docker', :green)
       end
 
       def install_docker_start(size)

@@ -22,6 +22,13 @@ module Picobox
           publish_event :docker_present, subject.os.docker_version?
         end
       end
+
+
+      def visit_linux subject
+        publish_event :install_docker_start, 2
+        publish_event :install_docker_progress
+        publish_event :install_docker_complete
+      end
     end
   end
 end

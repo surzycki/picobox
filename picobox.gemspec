@@ -45,5 +45,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'tty-command',      '0.6.0'
   spec.add_dependency 'ghost'
   spec.add_dependency 'tty-platform'
+  spec.add_dependency 'tty-which'
   spec.add_dependency 'inifile'
 end

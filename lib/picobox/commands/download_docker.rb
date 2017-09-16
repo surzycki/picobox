@@ -12,6 +12,10 @@ module Picobox
           publish_event :download_docker_complete
         end
       end
+
+      def visit_linux subject
+        publish_event :download_docker_complete
+      end
     end
   end
 end

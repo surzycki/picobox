@@ -1,0 +1,4 @@
+--format documentation
+--color
+--require turnip/rspec
+--pattern "spec/acceptance/**/*.feature,spec/**/*_spec.rb"
