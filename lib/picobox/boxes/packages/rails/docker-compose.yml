@@ -32,7 +32,7 @@ services:
       BUNDLE_PATH: "/bundle"
     hostname: picobox_test
   webpack:
-    image: picobox/webpack_rails
+    build: "."
     entrypoint: ".picobox/start"
     volumes_from:
     - bundle
