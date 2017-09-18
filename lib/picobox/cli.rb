@@ -82,7 +82,6 @@ module Picobox
       set_verbosity
 
       System.new(Os::CurrentOs.get).install
-      #Utils::Shell.new(Os::CurrentOs.get).reload
     end
 
 

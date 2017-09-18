@@ -27,11 +27,6 @@ module Picobox
         end
       end
 
-      def reload_shell
-        display_status 'opening', 'new shell'
-        display_line   ''
-      end
-
       def docker_present(version)
         display_info("#{version.capitalize} present", :green)
       end
@@ -54,17 +49,14 @@ module Picobox
         Utils::ProgressBar.new(size)
       end
 
-
       def download_docker_compose_complete()
         display_info('Preparing to install Docker Compose', :green)
       end
-
 
       def install_docker_start()
         Utils::Spinner.new('Installing Docker')   
       end
 
-    
       def install_docker_complete()
         Utils::Spinner.stop
         display_info('Installed Docker', :green)
@@ -72,6 +64,11 @@ module Picobox
 
       def shell_setup_start
         display_info('Setting up Shell', :green)
+      end
+
+      def reload_shell
+        display_status 'opening', 'new shell'
+        display_line   ''
       end
 
       def remove_shell_setup_start
