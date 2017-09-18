@@ -29,7 +29,7 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 
 # utils
-RUN apt-get install -y nano git
+RUN apt-get install -y nano git build-essential
 
 # make nano work
 RUN echo "export TERM=xterm" >> /etc/bash.bashrc

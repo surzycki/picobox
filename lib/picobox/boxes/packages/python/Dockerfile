@@ -20,7 +20,7 @@ RUN apt-get update
 ## Tools
 
 # utils
-RUN apt-get install -y sudo nano wget git gcc openssh-client
+RUN apt-get install -y sudo nano wget git gcc openssh-client build-essential
 
 # set working dir
 WORKDIR $APP_HOME

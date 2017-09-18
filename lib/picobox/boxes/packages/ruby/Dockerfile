@@ -22,7 +22,7 @@ WORKDIR /tmp
 
 # add repository software
 RUN apt-get update
-RUN apt-get install -y software-properties-common tzdata wget curl gnupg2
+RUN apt-get install -y build-essential software-properties-common tzdata wget curl gnupg2
 
 ## Languages
 
