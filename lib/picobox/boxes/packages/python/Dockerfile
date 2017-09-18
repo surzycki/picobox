@@ -1,7 +1,11 @@
 # python
 #
 # VERSION               0.0.2
-FROM ubuntu
+
+# Change this for different versions of ruby (see https://hub.docker.com/_/python/)
+# FROM python:3.5-slim
+# FROM python:3.4-slim
+FROM python:slim
 MAINTAINER Stefan Surzycki <stefan.surzycki@gmail.com>
 
 ENV APP_HOME ~
@@ -13,18 +17,10 @@ ENV HOSTNAME picobox
 # add repository software
 RUN apt-get update
 
-# replace default interpreter to bash
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-
-## Languages
-
-# install python
-RUN apt-get install -y python-pip python-yaml gcc python-dev libffi-dev libssl-dev sshpass openssh-client git
-
 ## Tools
 
 # utils
-RUN apt-get install -y sudo nano wget
+RUN apt-get install -y sudo nano wget git gcc openssh-client
 
 # set working dir
 WORKDIR $APP_HOME

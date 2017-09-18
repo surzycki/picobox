@@ -1,7 +1,12 @@
 # picobox with elixir
 #
 # VERSION               0.1.0
-FROM elixir:latest
+
+# Change this for different versions of ruby (see https://hub.docker.com/_/elixir/)
+# FROM elixir:1.4-slim
+# FROM elixir:1.3-slim
+
+FROM elixir:slim
 MAINTAINER Stefan Surzycki <stefan.surzycki@gmail.com>
 
 ENV HOSTNAME picobox
