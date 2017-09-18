@@ -24,16 +24,18 @@ module Picobox
 
 
       def visit_linux subject
-        unless os.docker_installed?        
+        unless os.docker_installed?
+          publish_event :install_docker_start
+
+          stream = open('get.docker.com')
+
+          IO.copy_stream( stream, 'get-docker.sh' )
+
           commands = [
-            "curl -fsSL get.docker.com -o get-docker.sh",
             "sh get-docker.sh #{Picobox.output}",
             "rm get-docker.sh",
             "#{os.su} 'usermod -aG docker #{os.user}'"
           ]
-
-          
-          publish_event :install_docker_start
 
           commands.each do |command|
             system(command)
@@ -46,7 +48,7 @@ module Picobox
         else
           publish_event :docker_present, os.docker_version?
         end
-      end 
+      end
     end
   end
 end
