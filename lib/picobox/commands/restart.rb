@@ -3,10 +3,10 @@ module Picobox
     class Restart < Picobox::Utils::VisitorByOs
       def visit_darwin subject
         if project_running?
-          Picobox::CLI.new.stop
-          Picobox::CLI.new.start
+          System.new(Os::CurrentOs.get).stop
+          System.new(Os::CurrentOs.get).start
         else
-          Picobox::CLI.new.start
+          System.new(Os::CurrentOs.get).start
         end
       end
 

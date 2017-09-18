@@ -7,6 +7,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       Service.new(Os::CurrentOs.get).build service
+    rescue SignalException
+      exit 1
     end
 
 
@@ -17,6 +19,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       Service.new(Os::CurrentOs.get).add services
+    rescue SignalException
+      exit 1
     end
 
 
@@ -27,6 +31,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
       
       Service.new(Os::CurrentOs.get).remove service
+    rescue SignalException
+      exit 1
     end
 
 
@@ -35,6 +41,8 @@ module Picobox
     LONGDESC
     def list()
       Service.new(Os::CurrentOs.get).list
+    rescue SignalException
+      exit 1
     end
   end
 
@@ -68,6 +76,8 @@ module Picobox
     desc 'version', 'displays current version'
     def version
       say Picobox::VERSION
+    rescue SignalException
+      exit 1
     end
 
 
@@ -78,6 +88,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       System.new(Os::CurrentOs.get).install
+    rescue SignalException
+      exit 1
     end
 
 
@@ -88,6 +100,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       System.new(Os::CurrentOs.get).install
+    rescue SignalException
+      exit 1
     end
 
 
@@ -98,6 +112,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       System.new(Os::CurrentOs.get).uninstall
+    rescue SignalException
+      exit 1
     end
 
 
@@ -113,6 +129,8 @@ module Picobox
       Box.new(os).install box
       Service.new(os).build
       System.new(os).start
+    rescue SignalException
+      exit 1
     end
 
 
@@ -123,6 +141,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       System.new(Os::CurrentOs.get).start
+    rescue SignalException
+      exit 1
     end
 
 
@@ -133,6 +153,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       System.new(Os::CurrentOs.get).stop
+    rescue SignalException
+      exit 1
     end
 
 
@@ -143,6 +165,8 @@ module Picobox
       Picobox.set_verbosity options[:verbose]
 
       System.new(Os::CurrentOs.get).restart
+    rescue SignalException
+      exit 1
     end
 
 
@@ -151,6 +175,8 @@ module Picobox
     LONGDESC
     def ssh(service)
       System.new(Os::CurrentOs.get).ssh service
+    rescue SignalException
+      exit 1
     end
 
 
@@ -159,6 +185,8 @@ module Picobox
     LONGDESC
     def boxes()
       Box.new(Os::CurrentOs.get).list
+    rescue SignalException
+      exit 1
     end
 
 
@@ -167,6 +195,8 @@ module Picobox
     LONGDESC
     def status()
       system "docker-compose ps"
+    rescue SignalException
+      exit 1
     end
 
 
@@ -178,6 +208,8 @@ module Picobox
       display_status('execute', 'container prune')
       system "docker container prune"
       system "docker volume prune"
+    rescue SignalException
+      exit 1
     end
   end
 end

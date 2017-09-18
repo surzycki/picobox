@@ -7,7 +7,7 @@ module Picobox
 
 
       def visit_linux subject
-        "#{os.su} 'echo 1 > /dev/null'"
+        system "#{os.su} 'echo 1 > /dev/null'"
       end
     end
   end

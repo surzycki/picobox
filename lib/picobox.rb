@@ -48,6 +48,7 @@ require 'picobox/commands/stop'
 require 'picobox/commands/restart'
 require 'picobox/commands/ssh_instance'
 require 'picobox/commands/reload_shell'
+require 'picobox/commands/get_root_permission'
 
 require 'picobox/boxes/manifest'
 require 'picobox/boxes/unpacker'
