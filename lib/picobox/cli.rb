@@ -38,7 +38,7 @@ module Picobox
     LONGDESC
     method_option :port, default: 3000
     def add(entry)
-      puts "I'm a thor task! #{options}"
+      puts "coming soon"
     end
   end
 
@@ -47,10 +47,10 @@ module Picobox
 
     class_option :verbose, desc: 'Verbose debugging output', type: :boolean
 
-    desc 'dns SUBCOMMAND', 'do things with the DNS'
-    long_desc <<-LONGDESC
-    LONGDESC
-    subcommand 'dns', Picobox::DnsSubCommands
+    #desc 'dns SUBCOMMAND', 'do things with the DNS'
+    #long_desc <<-LONGDESC
+    #LONGDESC
+    #subcommand 'dns', Picobox::DnsSubCommands
 
 
     desc 'service SUBCOMMAND', 'do things with the SERVICES'
@@ -72,7 +72,6 @@ module Picobox
       set_verbosity
 
       System.new(Os::CurrentOs.get).install
-      Utils::Shell.new(Os::CurrentOs.get).reload
     end
 
 
@@ -83,7 +82,7 @@ module Picobox
       set_verbosity
 
       System.new(Os::CurrentOs.get).install
-      Utils::Shell.new(Os::CurrentOs.get).reload
+      #Utils::Shell.new(Os::CurrentOs.get).reload
     end
 
 
@@ -148,7 +147,7 @@ module Picobox
     def ssh(service)
       set_verbosity
 
-      System.new(Os::CurrentOs.get).open_shell service
+      System.new(Os::CurrentOs.get).ssh service
     end
 
 

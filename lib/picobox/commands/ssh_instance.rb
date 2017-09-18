@@ -1,6 +1,6 @@
 module Picobox
   module Commands
-    class OpenShell < Picobox::Utils::VisitorByOs
+    class SshInstance < Picobox::Utils::VisitorByOs
       def initialize(service)
         @service = service
       end

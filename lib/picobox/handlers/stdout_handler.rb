@@ -14,14 +14,23 @@ module Picobox
         display_line   '-------------------------------'
       end
 
-      def post_install_messages
+      def add_post_install_message(message)
+        @post_install_messages = (@post_install_messages || Array.new).push message
+      end
+
+      def post_install_messages        
         display_line   ''
-        display_line   'You should reload open shells to pick up shell changes'
-        display_line   ''
+
+        @post_install_messages.each do |message|
+          display_line message
+          display_line   ''
+        end
+      end
+
+      def reload_shell
         display_status 'opening', 'new shell'
         display_line   ''
       end
-
 
       def docker_present(version)
         display_info("#{version.capitalize} present", :green)
@@ -51,16 +60,13 @@ module Picobox
       end
 
 
-      def install_docker_start(size)
-        display_info('Installing Docker', :green)
-        Utils::ProgressBar.new(size) unless size.zero?
+      def install_docker_start()
+        Utils::Spinner.new('Installing Docker')   
       end
 
-      def install_docker_progress
-        Utils::ProgressBar.increment
-      end
-
+    
       def install_docker_complete()
+        Utils::Spinner.stop
         display_info('Installed Docker', :green)
       end
 
@@ -148,6 +154,8 @@ module Picobox
         display_info("Getting shell", :green)
         display_status('open', "Running \e[33m#{service}\e[0m shell", :green)
       end
+
+
     end
   end
 end

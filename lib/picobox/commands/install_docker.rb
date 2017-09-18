@@ -10,11 +10,10 @@ module Picobox
             "/usr/bin/hdiutil unmount -quiet /Volumes/Docker"
           ]
 
-          publish_event :install_docker_start, commands.length
+          publish_event :install_docker_start
 
           commands.each do |command|
             system(command)
-            publish_event :install_docker_progress
           end
 
           publish_event :install_docker_complete
@@ -34,13 +33,16 @@ module Picobox
           ]
 
           
-          publish_event :install_docker_start, 0
+          publish_event :install_docker_start
 
           commands.each do |command|
             system(command)
           end
 
+          publish_event :add_post_install_message, "If you would like to use Docker as a non-root user\nyou will have to log out and back in for this to take effect!"
+
           publish_event :install_docker_complete
+
         else
           publish_event :docker_present, os.docker_version?
         end

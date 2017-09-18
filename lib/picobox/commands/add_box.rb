@@ -6,7 +6,6 @@ module Picobox
       end
 
       def visit_darwin subject
-        @os = subject.os
         publish_event :add_box_start, type
 
         raise Errors::ProjectNotInitialized unless project_initialized?
@@ -15,7 +14,7 @@ module Picobox
       end
 
       private
-      attr_reader :os, :type
+      attr_reader :type
 
       def project_initialized?() Utils::Project.new(os).project_initialized? end
     end

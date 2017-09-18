@@ -15,6 +15,7 @@ module Picobox
       accept(Commands::InstallDocker.new)
       accept(Commands::SetupShell.new)
       accept(Commands::FinishInstall.new)
+      accept(Commands::ReloadShell.new)
     rescue Errors::ShellNotSupported => e
       display_shell_not_supported e.message
       exit 1
@@ -70,8 +71,8 @@ module Picobox
     end
 
 
-    def open_shell(service)
-      accept(Commands::OpenShell.new(service))
+    def ssh(service)
+      accept(Commands::SshInstance.new(service))
     rescue Errors::SystemDownError
       display_system_down
       exit 1

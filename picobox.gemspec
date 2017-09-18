@@ -43,6 +43,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'wisper',           '2.0.0'
   spec.add_dependency 'tty-file',         '0.4.0'
   spec.add_dependency 'tty-command',      '0.6.0'
+  spec.add_dependency 'tty-spinner',      '0.7.0'
   spec.add_dependency 'ghost'
   spec.add_dependency 'tty-platform'
   spec.add_dependency 'tty-which'
