@@ -60,6 +60,11 @@ module Picobox
         display_info "Picobox not installed!", :red
       end
 
+
+      def display_distro_not_supported
+        display_info('distro is not yet supported :(', :red)
+      end
+
       private
       def thor
         @thor ||= Thor::Shell::Color.new

@@ -2,7 +2,7 @@ module Picobox
   module Commands
     class InstallDocker < Picobox::Utils::VisitorByOs
       def visit_darwin subject
-        unless subject.os.docker_installed?
+        unless os.docker_installed?
           commands = [
             "/usr/bin/hdiutil attach -noidme -nobrowse -quiet #{subject.os.docker_installer}",
             "cp -R /Volumes/Docker/Docker.app /Applications",
@@ -19,16 +19,30 @@ module Picobox
 
           publish_event :install_docker_complete
         else
-          publish_event :docker_present, subject.os.docker_version?
+          publish_event :docker_present, os.docker_version?
         end
       end
 
 
       def visit_linux subject
-        publish_event :install_docker_start, 2
-        publish_event :install_docker_progress
-        publish_event :install_docker_complete
-      end
+        unless os.docker_installed?        
+          commands = [
+            "curl -fsSL get.docker.com -o get-docker.sh",
+            "sudo sh get-docker.sh",
+            "rm get-docker.sh"
+          ]
+
+          publish_event :install_docker_start, 0
+
+          commands.each do |command|
+            system(command)
+          end
+
+          publish_event :install_docker_complete
+        else
+          publish_event :docker_present, os.docker_version?
+        end
+      end 
     end
   end
 end

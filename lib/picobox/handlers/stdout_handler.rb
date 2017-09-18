@@ -24,7 +24,7 @@ module Picobox
 
 
       def docker_present(version)
-        display_info("#{version.strip} present", :green)
+        display_info("#{version.capitalize} present", :green)
       end
 
       def download_docker_start(size)
@@ -32,7 +32,7 @@ module Picobox
         Utils::ProgressBar.new(size)
       end
 
-      def download_docker_progress(progress)
+      def download_progress(progress)
         Utils::ProgressBar.step(progress)
       end
 
@@ -40,9 +40,20 @@ module Picobox
         display_info('Preparing to install Docker', :green)
       end
 
+      def download_docker_compose_start(size)
+        display_info('Downloading Docker Compose', :green)
+        Utils::ProgressBar.new(size)
+      end
+
+
+      def download_docker_compose_complete()
+        display_info('Preparing to install Docker Compose', :green)
+      end
+
+
       def install_docker_start(size)
         display_info('Installing Docker', :green)
-        Utils::ProgressBar.new(size)
+        Utils::ProgressBar.new(size) unless size.zero?
       end
 
       def install_docker_progress

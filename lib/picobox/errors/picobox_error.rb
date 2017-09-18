@@ -11,5 +11,6 @@ module Picobox
     class UnsupportedOsError < PicoboxError; end
     class FileNotFoundError < PicoboxError; end
     class PicoboxNotInstalled < PicoboxError; end
+    class DistroNotSupported < PicoboxError; end
   end
 end
