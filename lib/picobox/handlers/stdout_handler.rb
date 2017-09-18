@@ -98,6 +98,16 @@ module Picobox
         display_info("Adding #{type} box", :green)
       end
 
+      def build_service_start(service)
+        Utils::Spinner.new("Building Services (5-10min)")  
+      end
+
+      def build_service_stop
+        Utils::Spinner.stop
+        display_info("Service built", :green)
+      end
+
+
       def list_boxes(boxes)
         display_info("Available boxes:", :green)
 
@@ -132,18 +142,20 @@ module Picobox
       end
 
       def stopping
-        display_info("Picobox stopping...", :green)
+        Utils::Spinner.new('Picobox stopping')
       end
 
       def stopped
+        Utils::Spinner.stop
         display_info("Picobox stopped!", :green)
       end
 
       def starting
-        display_info("Picobox starting...", :green)
+        Utils::Spinner.new('Picobox starting')
       end
 
       def started
+        Utils::Spinner.stop
         display_info("Picobox started!", :green)
       end
 

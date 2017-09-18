@@ -2,8 +2,6 @@ module Picobox
   module Commands
     class InitializeProject < Picobox::Utils::VisitorByOs
       def visit_darwin subject
-        @os = subject.os
-
         publish_event :project_initialize_start
 
         create_project_config_dir
@@ -12,9 +10,13 @@ module Picobox
         publish_event :project_initialize_complete
       end
 
-      private
-      attr_reader :os
 
+      def visit_linux subject
+        visit_darwin subject
+      end
+
+
+      private
       def create_project_config_dir
         # for now just empty dir, but eventualy add flags with ini files 'ie enabled, etc'
         # https://github.com/albfan/bash-ini-parser

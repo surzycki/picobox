@@ -6,7 +6,13 @@ module Picobox
       end
 
       def visit_darwin subject
-        system "docker-compose build #{service}"
+        publish_event :build_service_start, service
+        system "docker-compose build #{service} #{Picobox.output}"
+        publish_event :build_service_stop 
+      end
+
+      def visit_linux subject
+        visit_darwin subject
       end
 
       private

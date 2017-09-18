@@ -13,6 +13,15 @@ module Picobox
   def box_packages_dir()     "#{Picobox.root}/lib/picobox/boxes/packages" end
   def service_packages_dir() "#{Picobox.root}/lib/picobox/services/packages" end
 
-  def debug_out()       @debug_out end
-  def debug_out=(value) @debug_out = value end
+  def output()   @output end
+  def verbose?() @verbose end
+  
+  def set_verbosity(value) 
+    @verbose = value 
+    if @verbose
+      @output = '2>&1'
+    else
+      @output = '> /dev/null 2>&1'
+    end
+  end
 end

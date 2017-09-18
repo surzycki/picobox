@@ -11,7 +11,7 @@ module Picobox
             clear: true
           )
 
-          @spinner.auto_spin
+          Picobox.verbose? ? puts(message) : spinner.auto_spin 
         end
 
        

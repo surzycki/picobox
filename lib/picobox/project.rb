@@ -1,7 +1,7 @@
 module Picobox
   class Project
     include Utils::Visitable
-     include Utils::Output
+    include Utils::Output
 
     attr_reader :os
 

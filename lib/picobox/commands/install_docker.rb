@@ -27,7 +27,7 @@ module Picobox
         unless os.docker_installed?        
           commands = [
             "curl -fsSL get.docker.com -o get-docker.sh",
-            "sh get-docker.sh #{Picobox.debug_out}",
+            "sh get-docker.sh #{Picobox.output}",
             "rm get-docker.sh",
             "#{os.su} 'usermod -aG docker #{os.user}'"
           ]

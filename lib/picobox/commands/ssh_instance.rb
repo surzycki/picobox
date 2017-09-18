@@ -6,8 +6,6 @@ module Picobox
       end
 
       def visit_darwin subject
-        @os = subject.os
-
         publish_event :opening_shell, service
 
         raise Errors::ProjectNotInitialized unless project_initialized?
@@ -17,7 +15,7 @@ module Picobox
       end
 
       private
-      attr_reader :service, :os
+      attr_reader :service
 
       def project_initialized?() Utils::Project.new(os).project_initialized? end
       def project_running?()     Utils::Project.new(os).running? end

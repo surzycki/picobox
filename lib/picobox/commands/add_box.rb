@@ -13,6 +13,11 @@ module Picobox
         Boxes::Unpacker.new(os).unpack(type)
       end
 
+
+      def visit_linux subject
+        visit_darwin subject
+      end
+
       private
       attr_reader :type
 
