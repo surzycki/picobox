@@ -75,4 +75,5 @@ Wisper.subscribe(
   scope: Picobox::Utils::DomainEventPublisher
 )
 
+Picobox.debug_out = '> /dev/null 2>&1'
 

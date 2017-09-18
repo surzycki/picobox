@@ -24,7 +24,7 @@ module Picobox
           IO.copy_stream( stream, "#{os.tmp_dir}/docker_compose" )
           publish_event :download_docker_compose_complete
 
-          system("sudo mv #{os.tmp_dir}/docker_compose #{os.docker_compose}")
+          system("#{os.su} 'mv #{os.tmp_dir}/docker_compose #{os.docker_compose}'")
           TTY::File.chmod(os.docker_compose, 'u=x')
         else
           publish_event :docker_present, os.docker_compose_version?

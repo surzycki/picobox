@@ -28,11 +28,12 @@ module Picobox
         unless os.docker_installed?        
           commands = [
             "curl -fsSL get.docker.com -o get-docker.sh",
-            "sudo sh get-docker.sh > /dev/null",
+            "sh get-docker.sh #{Picobox.debug_out}",
             "rm get-docker.sh",
-            "sudo usermod -aG docker #{os.user}"
+            "#{os.su} 'usermod -aG docker #{os.user}'"
           ]
 
+          
           publish_event :install_docker_start, 0
 
           commands.each do |command|

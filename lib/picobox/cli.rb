@@ -45,6 +45,8 @@ module Picobox
   class CLI < Thor
     include Utils::Output
 
+    class_option :verbose, desc: 'Verbose debugging output', type: :boolean
+
     desc 'dns SUBCOMMAND', 'do things with the DNS'
     long_desc <<-LONGDESC
     LONGDESC
@@ -67,6 +69,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def install
+      set_verbosity
+
       System.new(Os::CurrentOs.get).install
       Utils::Shell.new(Os::CurrentOs.get).reload
     end
@@ -76,6 +80,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def update
+      set_verbosity
+
       System.new(Os::CurrentOs.get).install
       Utils::Shell.new(Os::CurrentOs.get).reload
     end
@@ -85,6 +91,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def uninstall
+      set_verbosity
+
       System.new(Os::CurrentOs.get).uninstall
     end
 
@@ -93,6 +101,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def init(box)
+      set_verbosity
+
       os = Os::CurrentOs.get
 
       Project.new(os).init
@@ -106,6 +116,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def start()
+      set_verbosity
+
       System.new(Os::CurrentOs.get).start
     end
 
@@ -114,6 +126,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def stop()
+      set_verbosity
+
       System.new(Os::CurrentOs.get).stop
     end
 
@@ -122,6 +136,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def restart()
+      set_verbosity
+
       System.new(Os::CurrentOs.get).restart
     end
 
@@ -130,6 +146,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def ssh(service)
+      set_verbosity
+
       System.new(Os::CurrentOs.get).open_shell service
     end
 
@@ -138,6 +156,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def boxes()
+      set_verbosity
+
       Box.new(Os::CurrentOs.get).list
     end
 
@@ -146,18 +166,27 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def status()
+      set_verbosity
+
       system "docker-compose ps"
     end
 
 
-    desc 'clean', 'clean stop containers'
+    desc 'reset', 'reset picobox containers'
     long_desc <<-LONGDESC
     LONGDESC
-    def clean()
+    def reset()
+      set_verbosity
+
       display_info('Cleaning stopped containers', :green)
       display_status('execute', 'container prune')
       system "docker container prune"
       system "docker volume prune"
+    end
+
+    private
+    def set_verbosity
+      Picobox.debug_out = '2>&1' if options[:verbose]      
     end
   end
 end
