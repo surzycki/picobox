@@ -15,7 +15,7 @@ Feature: Remove Service Commands
         Removing postgres service
             modify  .+aruba\/docker-compose.yml
         Service postgres removed
-        Picobox starting...
+        Picobox starting \[:spinner\]
         Picobox started!
       """
     And the file named "docker-compose.yml" should match:
@@ -217,7 +217,7 @@ Feature: Remove Service Commands
         Removing postgres service
             modify  .+aruba\/docker-compose.yml
         Service postgres removed
-        Picobox starting...
+        Picobox starting \[:spinner\]
         Picobox started!
       """
 

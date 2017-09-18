@@ -15,6 +15,13 @@ module OsSteps
     allow(Picobox::Os::CurrentOs).
       to receive(:get).
       and_return Picobox::Os::Darwin
+
+    # we don't want the spinners in the output
+    # this will suppress those spinners
+    allow(Picobox).
+      to receive(:verbose?).
+      and_return true
+
     # stub shell reloading, otherwise we shell out to a prompt
     # during the test running
     allow(Picobox::Os::CurrentOs.get).

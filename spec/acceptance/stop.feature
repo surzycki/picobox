@@ -12,7 +12,7 @@ Feature: Stop Commands
     When I run `picobox stop`
     Then the output should match:
       """
-        Picobox stopping...
+        Picobox stopping \[:spinner\]
         Picobox stopped!
       """
 
@@ -22,7 +22,7 @@ Feature: Stop Commands
     When I run `picobox stop`
     Then the output should match:
       """
-        Picobox stopping...
+        Picobox stopping \[:spinner\]
         Picobox stopped!
       """
 
@@ -32,7 +32,7 @@ Feature: Stop Commands
     When I run `picobox stop`
     Then the output should match:
       """
-        Picobox stopping...
+        Picobox stopping \[:spinner\]
              error  no project found
         Run command in a project directory or create new project with
       """

@@ -12,7 +12,7 @@ Feature: Start Commands
     When I run `picobox start`
     Then the output should match:
       """
-        Picobox starting...
+        Picobox starting \[:spinner\]
         Picobox started!
       """
 
@@ -22,7 +22,7 @@ Feature: Start Commands
     When I run `picobox start`
     Then the output should match:
       """
-        Picobox starting...
+        Picobox starting \[:spinner\]
         Picobox started!
       """
 
@@ -32,7 +32,7 @@ Feature: Start Commands
     When I run `picobox start`
     Then the output should match:
       """
-        Picobox starting...
+        Picobox starting \[:spinner\]
         Picobox started!
       """
 
@@ -41,7 +41,7 @@ Feature: Start Commands
     When I run `picobox start`
     Then the output should match:
       """
-        Picobox starting...
+        Picobox starting \[:spinner\]
              error  no project found
         Run command in a project directory or create new project with
       """

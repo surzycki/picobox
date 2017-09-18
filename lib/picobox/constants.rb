@@ -1,12 +1,12 @@
 module Picobox
   # names for files / directories
-  VERSION          = '0.1.8'
+  VERSION          = '0.2.0'
   HOMEPAGE         = 'https://github.com/surzycki/picobox'
   CONFIG_DIR       = '.picobox'
   PROJECT_INI      = 'project.ini'
   SHELL_EXTENSIONS = 'shell_extensions'
 
-  
+
   module_function
   def root()                 File.expand_path('../../..', __FILE__) end
   def template_dir()         "#{Picobox.root}/lib/picobox/templates" end
@@ -15,9 +15,9 @@ module Picobox
 
   def output()   @output end
   def verbose?() @verbose end
-  
-  def set_verbosity(value) 
-    @verbose = value 
+
+  def set_verbosity(value)
+    @verbose = value
     if @verbose
       @output = '2>&1'
     else

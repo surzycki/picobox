@@ -7,9 +7,9 @@ Feature: CLI Commands
 
   Scenario: Picobox has a version
     Given I run `picobox version`
-    Then the output should contain "0.1.7"
+    Then the output should contain "0.2.0"
 
- 
+
   Scenario: Picobox lists boxes
     Given I run `picobox boxes`
     Then the output should match:

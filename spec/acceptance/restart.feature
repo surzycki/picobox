@@ -12,7 +12,7 @@ Feature: Restart Commands
     When I run `picobox restart`
     Then the output should match:
       """
-        Picobox starting...
+        Picobox starting \[:spinner\]
         Picobox started!
       """
 
@@ -22,8 +22,8 @@ Feature: Restart Commands
     When I run `picobox restart`
     Then the output should match:
       """
-        Picobox stopping...
+        Picobox stopping \[:spinner\]
         Picobox stopped!
-        Picobox starting...
+        Picobox starting \[:spinner\]
         Picobox started!
       """
