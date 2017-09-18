@@ -2,8 +2,6 @@ module Picobox
   module Commands
     class RemoveSetupShell < Picobox::Utils::VisitorByOs
       def visit_darwin subject
-        @os = subject.os
-
         publish_event :remove_shell_setup_start
 
         delete_config_directory
@@ -12,9 +10,13 @@ module Picobox
         publish_event :remove_shell_setup_complete
       end
 
-      private
-      attr_reader :os
 
+      def visit_linux subject
+        visit_darwin subject
+      end
+      
+
+      private
       def delete_config_directory
         TTY::File.remove_file os.config_dir, force: true
       end
