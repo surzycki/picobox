@@ -76,6 +76,6 @@ Wisper.subscribe(
 )
 
 # silence warnings found in tty-file-0.3.0 for forwarding to private method
-$VERBOSE=nil
+#$VERBOSE=nil
 
 

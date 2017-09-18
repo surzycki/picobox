@@ -28,8 +28,9 @@ module Picobox
         unless os.docker_installed?        
           commands = [
             "curl -fsSL get.docker.com -o get-docker.sh",
-            "sudo sh get-docker.sh",
-            "rm get-docker.sh"
+            "sudo sh get-docker.sh > /dev/null",
+            "rm get-docker.sh",
+            "sudo usermod -aG docker #{os.user}"
           ]
 
           publish_event :install_docker_start, 0
@@ -46,3 +47,4 @@ module Picobox
     end
   end
 end
+
