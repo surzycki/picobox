@@ -18,6 +18,9 @@ module Picobox
     rescue Errors::ShellNotSupported => e
       display_shell_not_supported e.message
       exit 1
+    rescue Errors::DistroNotSupported => e
+      display_distro_not_supported
+      exit 1
     rescue StandardError => e
       display_info(e, :red)
       exit 1

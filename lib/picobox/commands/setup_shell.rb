@@ -14,6 +14,12 @@ module Picobox
 
         publish_event :shell_setup_complete
       end
+
+
+      def visit_linux subject
+        publish_event :shell_setup_start
+        publish_event :shell_setup_complete
+      end
     end
   end
 end

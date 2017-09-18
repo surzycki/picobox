@@ -7,7 +7,7 @@
 /pkg/
 /spec/reports/
 /tmp/
-
+/vendor/bundle
 .picobox
 .byebug_history
 .DS_Store

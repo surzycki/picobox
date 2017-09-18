@@ -4,7 +4,8 @@ module Picobox
       include Utils::DomainEventPublisher
 
       def visit subject
-        method_name = "visit_#{subject.os.to_s}".intern
+        @os = subject.os
+        method_name = "visit_#{os.to_s}".intern
         send(method_name, subject )
       end
 
@@ -21,9 +22,11 @@ module Picobox
       end
 
       def visit_unsupported subject
-        os = TTY::Platform.new.os
-        raise Errors::UnsupportedOsError, "#{os} is not yet supported :("
+        raise Errors::UnsupportedOsError, "#{TTY::Platform.new.os} is not yet supported :("
       end
+
+      protected
+      attr_reader :os
     end
   end
 end

@@ -7,7 +7,7 @@ module Picobox
 
       def list
         result = Dir.glob("#{Picobox.box_packages_dir}/*").select {|f| File.directory? f}
-        result.map {|r| strip_path(r) }
+        result.map {|r| strip_path(r) }.sort!
       end
 
 
