@@ -99,14 +99,13 @@ module Picobox
       end
 
       def build_service_start(service)
-        Utils::Spinner.new("Building Services (5-10min)")  
+        Utils::Spinner.new("Building Service #{service} (5-10min)")  
       end
 
       def build_service_stop
         Utils::Spinner.stop
         display_info("Service built", :green)
       end
-
 
       def list_boxes(boxes)
         display_info("Available boxes:", :green)
@@ -131,7 +130,6 @@ module Picobox
       def add_service_completed(type)
         display_info("Service #{type} added", :green)
       end
-
 
       def remove_service_start(type)
         display_info("Removing #{type} service", :green)
@@ -163,8 +161,6 @@ module Picobox
         display_info("Getting shell", :green)
         display_status('open', "Running \e[33m#{service}\e[0m shell", :green)
       end
-
-
     end
   end
 end

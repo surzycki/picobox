@@ -10,10 +10,10 @@ module Picobox
         publish_event :started
       end
 
+
       def visit_linux subject
         visit_darwin subject
       end
-
 
       private
       def project_initialized?() Utils::Project.new(os).project_initialized? end

@@ -11,6 +11,7 @@ module Picobox
         publish_event :build_service_stop 
       end
 
+
       def visit_linux subject
         visit_darwin subject
       end

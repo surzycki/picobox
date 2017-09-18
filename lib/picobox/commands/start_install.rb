@@ -5,6 +5,7 @@ module Picobox
         publish_event :install_started
       end
 
+
       def visit_linux subject
         publish_event :install_started
       end

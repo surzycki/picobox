@@ -10,6 +10,11 @@ module Picobox
         end
       end
 
+
+      def visit_linux subject
+        visit_darwin subject
+      end
+
       private
       def project_running?() Utils::Project.new(os).running? end
     end

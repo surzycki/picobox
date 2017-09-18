@@ -14,6 +14,12 @@ module Picobox
         system "bash", "-c", "docker-compose exec #{service} bash"
       end
 
+
+      def visit_linux subject
+        visit_darwin subject
+      end
+
+
       private
       attr_reader :service
 

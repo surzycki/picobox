@@ -15,6 +15,11 @@ module Picobox
         publish_event :add_service_completed, service
       end
 
+
+      def visit_linux subject
+        visit_darwin subject
+      end
+
       private
       attr_reader :service
 

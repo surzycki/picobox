@@ -12,6 +12,7 @@ module Picobox
         publish_event :stopped
       end
 
+
       def visit_linux subject
         visit_darwin subject
       end

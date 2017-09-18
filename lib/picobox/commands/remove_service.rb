@@ -15,6 +15,11 @@ module Picobox
         publish_event :remove_service_completed, type
       end
 
+
+      def visit_linux subject
+        visit_darwin subject
+      end
+
       private
       attr_reader :type
 
