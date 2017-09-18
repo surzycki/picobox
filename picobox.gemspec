@@ -40,8 +40,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'thor',             '0.20.0'
   spec.add_dependency 'ruby-progressbar', '1.8.1'
-  spec.add_dependency 'wisper',           '~> 1.6.1'
-  spec.add_dependency 'tty-file',         '0.3.0'
+  spec.add_dependency 'wisper',           '2.0.0'
+  spec.add_dependency 'tty-file',         '0.4.0'
   spec.add_dependency 'tty-command',      '0.6.0'
   spec.add_dependency 'ghost'
   spec.add_dependency 'tty-platform'
