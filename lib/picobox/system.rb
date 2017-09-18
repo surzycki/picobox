@@ -11,6 +11,7 @@ module Picobox
 
     def install
       accept(Commands::StartInstall.new)
+      accept(Commands::GetRootPermission.new)
       accept(Commands::DownloadDocker.new)
       accept(Commands::InstallDocker.new)
       accept(Commands::SetupShell.new)

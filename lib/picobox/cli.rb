@@ -14,6 +14,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def add(*services)
+      Picobox.set_verbosity options[:verbose]
+
       Service.new(Os::CurrentOs.get).add services
     end
 
@@ -22,6 +24,8 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def remove(service)
+      Picobox.set_verbosity options[:verbose]
+      
       Service.new(Os::CurrentOs.get).remove service
     end
 
