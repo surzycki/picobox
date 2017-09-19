@@ -6,7 +6,7 @@ module Picobox
 
         raise Errors::ProjectNotInitialized unless project_initialized?
 
-        system("docker-compose down #{Picobox.output}") #if project_running?
+        system("docker-compose down #{Picobox.output}")
 
         publish_event :stopped
       end
@@ -18,7 +18,6 @@ module Picobox
 
       private
       def project_initialized?() Utils::Project.new(os).project_initialized? end
-      def project_running?()     Utils::Project.new(os).running? end
     end
   end
 end
