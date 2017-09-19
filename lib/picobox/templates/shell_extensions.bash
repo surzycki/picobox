@@ -3,11 +3,7 @@
 # setup picobox proxies
 #
 
-###
-### settings
-###
-DEV="dev"
-TEST="test"
+
 ##
 ## functions
 ##
@@ -31,15 +27,27 @@ can_execute () {
 
 picobox_proxy () {
   if can_execute; then
-    docker-compose exec $1 $2 "${@:3}"
+    docker-compose exec "${@}"
   else
     if [ "$ZSH_NAME" ]; then
-      `whence -p $2` "${@:3}"
+      `whence -p "${@[2]}"` "${@:3}"
     else
-      `type -P $2` "${@:3}"
+      `type -P "${@[2]}"` "${@:3}"
     fi
   fi
 }
+
+#picobox_cmd() {
+#  case "${@[1]}" in
+#    rails)
+#      cmd=(dev bundle exec rails "${@:2}")
+#      ;;
+#    *)
+#      echo "dunno"
+#  esac 
+#
+#  picobox_proxy $cmd 
+#}
 
 ##
 ## ruby proxies
@@ -60,14 +68,16 @@ alias ruby=picobox_ruby
 ###
 ## rails proxies
 ##
-picobox_rails ()  { picobox_proxy $DEV "bundle exec rails" "$@" ; }
-picobox_spring () { picobox_proxy $DEV "bundle exec spring" "$@" ; }
-picobox_yarn () { picobox_proxy $DEV "bundle exec yarn" "$@" ; }
-picobox_webpack () { picobox_proxy $DEV "bundle exec webpack" "$@" ; }
-picobox_guard () { picobox_proxy $TEST "bundle exec guard" "$@" ; }
-picobox_rspec () { picobox_proxy $TEST "bundle exec rspec" "$@" ; }
-picobox_webpack_dev_server() { picobox_proxy "webpack" "bundle exec webpack-dev-server" "$@"; }
-picobox_webpack_watcher () { picobox_proxy "webpack" "bundle exec webpack-watcher" "$@" ; }
+picobox_rails ()   { cmd=(dev bundle exec rails $@) ; picobox_proxy $cmd ; }
+picobox_spring ()  { cmd=(dev bundle exec spring $@) ; picobox_proxy $cmd ; }
+picobox_yarn ()    { cmd=(dev bundle exec yarn $@) ; picobox_proxy $cmd ; }
+picobox_webpack () { cmd=(dev bundle exec webpack $@) ; picobox_proxy $cmd ; }
+picobox_guard ()   { cmd=(test bundle exec guard $@) ; picobox_proxy $cmd ; }
+picobox_rspec ()   { cmd=(test bundle exec rspec $@) ; picobox_proxy $cmd ; }
+
+picobox_webpack_dev_server() { cmd=(webpack bundle exec webpack-dev-server $@) ; picobox_proxy $cmd ; }
+picobox_webpack_watcher ()   { cmd=(webpack bundle exec webpack-watcher $@) ; picobox_proxy $cmd ; }
+
 
 alias rails=picobox_rails
 alias rspec=picobox_rspec
