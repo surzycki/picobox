@@ -30,9 +30,9 @@ picobox_proxy () {
     docker-compose exec "${@}"
   else
     if [ "$ZSH_NAME" ]; then
-      `whence -p "${@[2]}"` "${@:3}"
+      `whence -p "$2"` "${@:3}"
     else
-      `type -P "${@[2]}"` "${@:3}"
+      `type -P "$2"` "${@:3}"
     fi
   fi
 }
