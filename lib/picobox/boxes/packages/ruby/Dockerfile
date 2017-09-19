@@ -36,9 +36,6 @@ RUN apt-get install -y nano git
 # make nano work
 RUN echo "export TERM=xterm" >> /etc/bash.bashrc
 
-# hook up cache volume
-ENV BUNDLE_PATH /bundle
-
 # working dir
 WORKDIR $APP_HOME
 

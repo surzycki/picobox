@@ -15,7 +15,6 @@ services:
     - bundle
     environment:
       RAILS_ENV: development
-      BUNDLE_PATH: "/bundle"
     hostname: picobox
     ports:
     - 80:3000
@@ -29,7 +28,6 @@ services:
     - bundle
     environment:
       RAILS_ENV: test
-      BUNDLE_PATH: "/bundle"
     hostname: picobox_test
   webpack:
     build: "."
@@ -40,11 +38,10 @@ services:
     - ".:/var/www:cached"
     environment:
       RAILS_ENV: development
-      BUNDLE_PATH: "/bundle"
     hostname: picobox
     ports:
     - 8080:8080
   bundle:
     image: busybox
     volumes:
-    - bundle-data:/bundle:cached
+    - bundle-data:/usr/local/bundle:cached

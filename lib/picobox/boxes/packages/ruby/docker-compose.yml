@@ -13,10 +13,8 @@ services:
     - ".:/var/www:cached"
     volumes_from:
     - bundle
-    environment:
-      BUNDLE_PATH: "/bundle"
     hostname: picobox
   bundle:
     image: busybox
     volumes:
-    - bundle-data:/bundle:cached
+    - bundle-data:/usr/local/bundle:cached
