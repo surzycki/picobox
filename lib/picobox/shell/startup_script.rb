@@ -6,7 +6,7 @@ module Picobox
           case "#{os.user_shell}:#{os.to_s}"
           when '/bin/bash:darwin'
             Shell::DotProfile.new(os)
-          when '/bin/zsh:darwin'
+          when '/bin/zsh:darwin', '/bin/zsh:linux'
             Shell::DotZshRC.new(os)
           when '/bin/bash:linux'
             Shell::DotBashRC.new(os)
