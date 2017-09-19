@@ -44,19 +44,19 @@ picobox_proxy () {
 #      ;;
 #    *)
 #      echo "dunno"
-#  esac 
+#  esac
 #
-#  picobox_proxy $cmd 
+#  picobox_proxy $cmd
 #}
 
 ##
 ## ruby proxies
 ##
-picobox_gem ()    { picobox_proxy $DEV "gem" "$@" ; }
-picobox_rake ()   { picobox_proxy $DEV "rake" "$@" ; }
-picobox_bundle () { picobox_proxy $DEV "bundle" "$@" ; }
-picobox_irb()     { picobox_proxy $DEV "irb" "$@" ;}
-picobox_ruby()    { picobox_proxy $DEV "ruby" "$@" ;}
+picobox_gem ()    { cmd=(dev gem $@) ; picobox_proxy $cmd ; }
+picobox_rake ()   { cmd=(dev rake $@) ; picobox_proxy $cmd ; }
+picobox_bundle () { cmd=(dev bundle $@) ; picobox_proxy $cmd ; }
+picobox_irb()     { cmd=(dev irb $@) ; picobox_proxy $cmd ; }
+picobox_ruby()    { cmd=(dev ruby $@) ; picobox_proxy $cmd ; }
 
 alias gem=picobox_gem
 alias rake=picobox_rake
@@ -91,32 +91,32 @@ alias guard=picobox_guard
 ##
 ## redis proxies
 ##
-picobox_redis_cli () { picobox_proxy "redis" "redis-cli" "$@" ; }
+picobox_redis_cli () { cmd=(redis redis-cli $@) ; picobox_proxy $cmd ; }
 
 alias redis-cli=picobox_redis_cli
 
 ##
 ## postgres proxies
 ##
-picobox_psql () { picobox_proxy "postgres" "psql" "$@" ; }
+picobox_psql () { cmd=(postgres psql $@) ; picobox_proxy $cmd ; }
 
 alias psql=picobox_psql
 
 ##
 ## mysql proxies
 ##
-picobox_mysql () { picobox_proxy "mysql" "mysql" "$@" ; }
+picobox_mysql () { cmd=(mysql mysql $@) ; picobox_proxy $cmd ;}
 
-alias psql=picobox_mysql
+alias mysql=picobox_mysql
 
 
 ##
 ## elixir proxies
 ##
-picobox_elixir() { picobox_proxy $DEV "elixir" "$@" ; }
-picobox_mix()    { picobox_proxy $DEV "mix" "$@" ; }
-picobox_iex()    { picobox_proxy $DEV "iex" "$@" ; }
-picobox_erl()    { picobox_proxy $DEV "erl" "$@" ; }
+picobox_elixir() { cmd=(dev elixir $@) ; picobox_proxy $cmd ; }
+picobox_mix()    { cmd=(dev mix $@) ; picobox_proxy $cmd ; }
+picobox_iex()    { cmd=(dev iex $@) ; picobox_proxy $cmd ; }
+picobox_erl()    { cmd=(dev erl $@) ; picobox_proxy $cmd ; }
 
 alias elixir=picobox_elixir
 alias mix=picobox_mix
@@ -127,8 +127,8 @@ alias erl=picobox_erl
 ##
 ## python proxies
 ##
-picobox_python() { picobox_proxy $DEV "python" "$@" ; }
-picobox_pip()    { picobox_proxy $DEV "pip" "$@" ; }
+picobox_python() { cmd=(dev python $@) ; picobox_proxy $cmd ; }
+picobox_pip()    { cmd=(dev pip $@) ; picobox_proxy $cmd ; }
 
 alias python=picobox_python
 alias pip=picobox_pip
