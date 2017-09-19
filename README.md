@@ -63,6 +63,12 @@ $ ruby
 
 Everything is running inside your box transparently !
 
+## Dependencies
+
+### Linux
+* build-essential
+* ruby
+* ruby-dev
 
 ## Development
 
