@@ -12,6 +12,16 @@ module ArubaSteps
   end
 end
 
+placeholder :whether_to do
+  match /should not/i do
+    false
+  end
+
+  match /should/ do
+    true
+  end
+end
+
 RSpec.configure do |config|
   config.include ArubaSteps
 end

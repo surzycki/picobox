@@ -2,7 +2,7 @@ module Picobox
   module Commands
     class GetRootPermission < Picobox::Utils::VisitorByOs
       def visit_darwin subject
-        
+
       end
 
 

@@ -8,7 +8,7 @@ Feature: Install feature
 
 
   Scenario: Picobox can be installed
-    And I run `picobox install`
+    Given I run `picobox install`
     Then the output should match:
       """
       INSTALL PICOBOX

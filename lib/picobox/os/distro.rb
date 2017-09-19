@@ -1,12 +1,12 @@
 module Picobox
   module Os
-    class Distro 
+    class Distro
       class << self
         def distro
           case `lsb_release -ids`.strip
           when /(Ubuntu)/
             :ubuntu
-          when /(Debian)/	
+          when /(Debian)/
             :debian
           when /(Fedora)/
             :fedora
@@ -20,10 +20,17 @@ module Picobox
             'sh -c'
           elsif TTY::Which.exist?('sudo')
             'sudo -E sh -c'
-          elsif TTY::Which.exist?('su')
-            'su -c'
           else
-            raise StandardError, "Error: this installer needs the ability to run commands as root.\n  We are unable to find either 'sudo' or 'su' available to make this happen."
+            message = <<-END.gsub(/^\s+\|/, '')
+              |This installer needs the ability to run commands as root.
+              |  We are unable to find 'sudo' available to make this happen.
+              |
+              |  Either:
+              |    * Install sudo and add yourself to sudoers
+              |    * Run as root
+              |
+            END
+            raise StandardError, message
           end
         end
       end
