@@ -46,17 +46,17 @@ picobox_proxy () {
 #      echo "dunno"
 #  esac
 #
-#  picobox_proxy $cmd
+#  picobox_proxy ${cmd[@]}
 #}
 
 ##
 ## ruby proxies
 ##
-picobox_gem ()    { cmd=(dev gem $@) ; picobox_proxy $cmd ; }
-picobox_rake ()   { cmd=(dev rake $@) ; picobox_proxy $cmd ; }
-picobox_bundle () { cmd=(dev bundle $@) ; picobox_proxy $cmd ; }
-picobox_irb()     { cmd=(dev irb $@) ; picobox_proxy $cmd ; }
-picobox_ruby()    { cmd=(dev ruby $@) ; picobox_proxy $cmd ; }
+picobox_gem ()    { cmd=(dev gem $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_rake ()   { cmd=(dev rake $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_bundle () { cmd=(dev bundle $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_irb()     { cmd=(dev irb $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_ruby()    { cmd=(dev ruby $@) ; picobox_proxy ${cmd[@]} ; }
 
 alias gem=picobox_gem
 alias rake=picobox_rake
@@ -68,15 +68,15 @@ alias ruby=picobox_ruby
 ###
 ## rails proxies
 ##
-picobox_rails ()   { cmd=(dev bundle exec rails $@) ; picobox_proxy $cmd ; }
-picobox_spring ()  { cmd=(dev bundle exec spring $@) ; picobox_proxy $cmd ; }
-picobox_yarn ()    { cmd=(dev bundle exec yarn $@) ; picobox_proxy $cmd ; }
-picobox_webpack () { cmd=(dev bundle exec webpack $@) ; picobox_proxy $cmd ; }
-picobox_guard ()   { cmd=(test bundle exec guard $@) ; picobox_proxy $cmd ; }
-picobox_rspec ()   { cmd=(test bundle exec rspec $@) ; picobox_proxy $cmd ; }
+picobox_rails ()   { cmd=(dev bundle exec rails $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_spring ()  { cmd=(dev bundle exec spring $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_yarn ()    { cmd=(dev bundle exec yarn $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_webpack () { cmd=(dev bundle exec webpack $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_guard ()   { cmd=(test bundle exec guard $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_rspec ()   { cmd=(test bundle exec rspec $@) ; picobox_proxy ${cmd[@]} ; }
 
-picobox_webpack_dev_server() { cmd=(webpack bundle exec webpack-dev-server $@) ; picobox_proxy $cmd ; }
-picobox_webpack_watcher ()   { cmd=(webpack bundle exec webpack-watcher $@) ; picobox_proxy $cmd ; }
+picobox_webpack_dev_server() { cmd=(webpack bundle exec webpack-dev-server $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_webpack_watcher ()   { cmd=(webpack bundle exec webpack-watcher $@) ; picobox_proxy ${cmd[@]} ; }
 
 
 alias rails=picobox_rails
@@ -91,21 +91,21 @@ alias guard=picobox_guard
 ##
 ## redis proxies
 ##
-picobox_redis_cli () { cmd=(redis redis-cli $@) ; picobox_proxy $cmd ; }
+picobox_redis_cli () { cmd=(redis redis-cli $@) ; picobox_proxy ${cmd[@]} ; }
 
 alias redis-cli=picobox_redis_cli
 
 ##
 ## postgres proxies
 ##
-picobox_psql () { cmd=(postgres psql $@) ; picobox_proxy $cmd ; }
+picobox_psql () { cmd=(postgres psql $@) ; picobox_proxy ${cmd[@]} ; }
 
 alias psql=picobox_psql
 
 ##
 ## mysql proxies
 ##
-picobox_mysql () { cmd=(mysql mysql $@) ; picobox_proxy $cmd ;}
+picobox_mysql () { cmd=(mysql mysql $@) ; picobox_proxy ${cmd[@]} ;}
 
 alias mysql=picobox_mysql
 
@@ -113,10 +113,10 @@ alias mysql=picobox_mysql
 ##
 ## elixir proxies
 ##
-picobox_elixir() { cmd=(dev elixir $@) ; picobox_proxy $cmd ; }
-picobox_mix()    { cmd=(dev mix $@) ; picobox_proxy $cmd ; }
-picobox_iex()    { cmd=(dev iex $@) ; picobox_proxy $cmd ; }
-picobox_erl()    { cmd=(dev erl $@) ; picobox_proxy $cmd ; }
+picobox_elixir() { cmd=(dev elixir $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_mix()    { cmd=(dev mix $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_iex()    { cmd=(dev iex $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_erl()    { cmd=(dev erl $@) ; picobox_proxy ${cmd[@]} ; }
 
 alias elixir=picobox_elixir
 alias mix=picobox_mix
@@ -127,8 +127,8 @@ alias erl=picobox_erl
 ##
 ## python proxies
 ##
-picobox_python() { cmd=(dev python $@) ; picobox_proxy $cmd ; }
-picobox_pip()    { cmd=(dev pip $@) ; picobox_proxy $cmd ; }
+picobox_python() { cmd=(dev python $@) ; picobox_proxy ${cmd[@]} ; }
+picobox_pip()    { cmd=(dev pip $@) ; picobox_proxy ${cmd[@]} ; }
 
 alias python=picobox_python
 alias pip=picobox_pip
