@@ -1,6 +1,6 @@
 module Picobox
   # names for files / directories
-  VERSION          = '0.2.2'
+  VERSION          = '0.2.3'
   HOMEPAGE         = 'https://github.com/surzycki/picobox'
   CONFIG_DIR       = '.picobox'
   PROJECT_INI      = 'project.ini'

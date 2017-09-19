@@ -27,7 +27,7 @@ module Picobox
         unless os.docker_installed?
           publish_event :install_docker_start
 
-          stream = open('get.docker.com')
+          stream = open('https://get.docker.com')
 
           IO.copy_stream( stream, 'get-docker.sh' )
 
