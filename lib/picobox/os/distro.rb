@@ -16,10 +16,17 @@ module Picobox
         end
 
         def su(os)
-          su ||= if os.user == 'root'
-            'sh -c'
-          elsif TTY::Which.exist?('sudo')
+          su ||= if TTY::Which.exist?('sudo') && os.user != 'root'
             'sudo -E sh -c'
+          elsif os.user == 'root'
+            message = <<-END.gsub(/^\s+\|/, '')
+              |Not a great idea to install things as root user.
+              |
+              |  You need to:
+              |    * Install sudo and add yourself to sudoers
+              |
+            END
+            raise StandardError, message
           else
             message = <<-END.gsub(/^\s+\|/, '')
               |This installer needs the ability to run commands as root.

@@ -17,3 +17,19 @@ Feature: Install docker feature
         You need to:
           \* Install sudo and add yourself to sudoers
       """
+
+
+  Scenario: Linux install as root
+    Given I am using a linux OS
+    And sudo should not be installed
+    And I am root
+    When I run `picobox install`
+    Then the output should match:
+      """
+      INSTALL PICOBOX
+      -------------------------------
+        Not a great idea to install things as root user.
+
+        You need to:
+          \* Install sudo and add yourself to sudoers
+      """

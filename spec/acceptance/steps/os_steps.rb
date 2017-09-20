@@ -81,6 +81,12 @@ module OsSteps
       double_cmd("sudo -E sh -c 'echo 1 > /dev/null'", :exit => 0)
     end
   end
+
+  step 'I am root' do
+    allow(Picobox::Os::CurrentOs.get).
+      to receive(:user).
+      and_return 'root'
+  end
 end
 
 RSpec.configure do |config|
