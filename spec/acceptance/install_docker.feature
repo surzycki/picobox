@@ -14,7 +14,6 @@ Feature: Install docker feature
         This installer needs the ability to run commands as root.
         We are unable to find 'sudo' available to make this happen.
 
-        Either:
+        You need to:
           \* Install sudo and add yourself to sudoers
-          \* Run as root
       """
