@@ -1,9 +1,0 @@
-# the service
-memcached:
-  image: sameersbn/memcached:latest
-  environment:
-    CACHE_SIZE: '64'
-
-# create links to these services
-links:
-  - dev
