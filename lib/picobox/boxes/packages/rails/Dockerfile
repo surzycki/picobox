@@ -40,7 +40,7 @@ RUN apt-get install -y libpq-dev postgresql-client
 RUN apt-get install -y libsqlite3-dev
 
 # mysql
-RUN apt-get install -y default-libmysqlclient-dev
+RUN apt-get install -y libmysqlclient-dev
 
 
 # Tools
