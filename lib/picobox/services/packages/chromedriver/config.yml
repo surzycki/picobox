@@ -11,15 +11,4 @@ chromedriver:
 links:
   - test
 
-# post install instructions
-instructions: |
-        For capybara:
-
-        Capybara::Selenium::Driver.new app,
-          browser: :chrome,
-          url: 'http://chromedriver:4444/',
-          desired_capabilities: capabilities
-        end
-
-        Capybara.server_host  = 'test'
 
