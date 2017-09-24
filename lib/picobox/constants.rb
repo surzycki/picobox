@@ -6,15 +6,15 @@ module Picobox
   CONFIG_DIR        = '.picobox'
   PROJECT_INI       = 'project.ini'
   PICOBOX_INI       = 'picobox.ini'
-  SHELL_EXTENSIONS  = 'shell_extensions'
+  SHELL_EXTENSIONS  = 'extensions.bash'
 
 
   module_function
   def root()                 File.expand_path('../../..', __FILE__) end
-  def template_dir()         "#{Picobox.root}/lib/picobox/templates" end
   def packages_dir()         "#{Picobox.root}/packages" end
   def box_packages_dir()     "#{packages_dir}/boxes" end
   def service_packages_dir() "#{packages_dir}/services" end
+  def extensions_dir()       "#{packages_dir}/shell" end
 
   def output()   @output end
   def verbose?() @verbose end

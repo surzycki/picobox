@@ -170,6 +170,10 @@ module Picobox
         Utils::Spinner.stop
         display_info("Packages updated!", :green)
       end
+
+      def config_setup_start
+        display_info("Setting up Config", :green)
+      end
     end
   end
 end

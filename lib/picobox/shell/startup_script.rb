@@ -23,7 +23,7 @@ module Picobox
       end
 
       def install_extensions
-        source  = "#{Picobox.template_dir}/shell_extensions.bash"
+        source  = "#{Picobox.extensions_dir}/extensions.bash"
         dest    = os.shell_extensions
 
         TTY::File.copy_file source, dest

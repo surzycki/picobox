@@ -52,6 +52,7 @@ require 'picobox/commands/ssh_instance'
 require 'picobox/commands/reload_shell'
 require 'picobox/commands/get_root_permission'
 require 'picobox/commands/update_packages'
+require 'picobox/commands/install_config'
 
 require 'picobox/boxes/manifest'
 require 'picobox/boxes/installer'

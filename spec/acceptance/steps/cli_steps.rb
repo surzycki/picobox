@@ -7,6 +7,19 @@ module CliSteps
   step 'the test environment is setup' do
     send 'a mocked home directory'
 
+    # stub tmp dir
+    create_directory 'tmp'
+    allow(Picobox::Os::CurrentOs.get).
+      to receive(:tmp_dir).
+      and_return("#{Picobox.root}/#{Aruba.config.working_directory}/tmp")
+
+    # place tar from fixtures (like it was downloaded but it wasn't)
+    allow_any_instance_of(Picobox::Utils::Packages).
+      to receive(:download).
+      and_return("#{Picobox.root}/#{Aruba.config.working_directory}/tmp/packages_v0.1.tar")
+
+    copy '%/packages_v0.1.tar', 'tmp/packages_v0.1.tar'
+
     # stub packages directory
     allow(Picobox).
       to receive(:packages_dir).
@@ -30,6 +43,7 @@ module CliSteps
 
     send 'I copy (a/the) directory from ":source" to ":destination"', 'packages/boxes', 'packages'
     send 'I copy (a/the) directory from ":source" to ":destination"', 'packages/services', 'packages'
+    send 'I copy (a/the) directory from ":source" to ":destination"', 'packages/shell', 'packages'
   end
 
   def package_info_url_response

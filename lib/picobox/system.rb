@@ -14,8 +14,9 @@ module Picobox
       accept(Commands::GetRootPermission.new)
       accept(Commands::DownloadDocker.new)
       accept(Commands::InstallDocker.new)
-      accept(Commands::SetupShell.new)
+      accept(Commands::InstallConfig.new)
       accept(Commands::UpdatePackages.new)
+      accept(Commands::SetupShell.new)
       accept(Commands::FinishInstall.new)
       accept(Commands::ReloadShell.new)
     rescue Errors::ShellNotSupported => e

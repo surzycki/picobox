@@ -13,13 +13,14 @@ Feature: Install feature
       INSTALL PICOBOX
       -------------------------------
         Docker version test! present
-        Setting up Shell
+        Setting up Config
             create .+aruba\/.picobox
             create .+aruba\/.picobox/picobox.ini
-            create .+aruba\/.picobox/shell_extensions
-            append .+aruba\/.profile
         Updating packages \[:spinner\]
         Packages updated!
+        Setting up Shell
+            create .+aruba\/.picobox/extensions.bash
+            append .+aruba\/.profile
         Install Complete
       -------------------------------
 
@@ -29,9 +30,9 @@ Feature: Install feature
       """
     Then a directory named ".picobox" should exist
     And a directory named "packages" should exist
-    And a file named ".picobox/shell_extensions" should exist
+    And a file named ".picobox/extensions.bash" should exist
     And a file named ".picobox/picobox.ini" should exist
-    And the file named ".profile" should contain "source ~/.picobox/shell_extensions"
+    And the file named ".profile" should contain "source ~/.picobox/extensions.bash"
     And the file named ".picobox/picobox.ini" should contain "version ="
     And the file named ".picobox/picobox.ini" should contain "last_update ="
 
@@ -53,9 +54,12 @@ Feature: Install feature
       INSTALL PICOBOX
       -------------------------------
         Docker version test! present
-        Setting up Shell
+        Setting up Config
             create .+aruba\/.picobox
             create .+aruba\/.picobox/picobox.ini
+        Updating packages \[:spinner\]
+        Packages updated!
+        Setting up Shell
              error  shell not supported .+
 
       You can file a request at: https://github.com/surzycki/picobox
