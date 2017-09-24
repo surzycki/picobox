@@ -120,7 +120,6 @@ $ bundle exec byebug -R localhost:8989
 
 
 ## TODO
-- [ ] Move box definitions to remote
 - [ ] Documentation (both in code and wiki)
 - [ ] Include aliases specific to the box when unpacking (maybe)
 - [ ] Add more boxes
