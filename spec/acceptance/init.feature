@@ -1,9 +1,10 @@
 @acceptance
 Feature: Init Commands
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
+    And picobox has been installed
+    And I am in a project directory called 'test'
 
 
   Scenario: Picobox init with rails box
@@ -11,14 +12,14 @@ Feature: Init Commands
     Then the output should match:
       """
         Initializing Project
-            create .+aruba\/.picobox
-            create .+aruba\/.picobox/project.ini
+            create .+test\/.picobox
+            create .+test\/.picobox/project.ini
         Project Initialized
         Adding rails box
-            create .+aruba\/.picobox/start
-             chmod .+aruba\/.picobox/start
-            create .+aruba\/docker-compose.yml
-            create .+aruba\/Dockerfile
+            create .+test\/.picobox/start
+             chmod .+test\/.picobox/start
+            create .+test\/docker-compose.yml
+            create .+test\/Dockerfile
       """
     And a directory named ".picobox" should exist
     And a file named ".picobox/start" should exist
@@ -38,8 +39,8 @@ Feature: Init Commands
     Then the output should match:
       """
         Initializing Project
-            create .+aruba\/.picobox
-            create .+aruba\/.picobox/project.ini
+            create .+test\/.picobox
+            create .+test\/.picobox/project.ini
         Project Initialized
         Adding nerd box
              error  Nerd boxes are not available...yet

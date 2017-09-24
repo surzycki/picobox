@@ -1,9 +1,10 @@
 @acceptance
 Feature: Start Commands
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
+    And picobox has been installed
+    And I am in a project directory called 'test'
     And I run `picobox init rails`
 
 
@@ -36,14 +37,6 @@ Feature: Start Commands
         Picobox started!
       """
 
-  Scenario: Starting system when no project intialized
-    Given the directory ".picobox" does not exist
-    When I run `picobox start`
-    Then the output should match:
-      """
-        Picobox starting \[:spinner\]
-             error  no project found
-        Run command in a project directory or create new project with
-      """
+
 
 

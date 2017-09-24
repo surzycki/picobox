@@ -1,9 +1,10 @@
 @acceptance
 Feature: Restart Commands
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
+    And picobox has been installed
+    And I am in a project directory called 'test'
     And I run `picobox init rails`
 
 

@@ -1,9 +1,10 @@
 @acceptance
 Feature: Open Shell Commands
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
+    And picobox has been installed
+    And I am in a project directory called 'test'
     And I run `picobox init rails`
 
 
@@ -18,15 +19,6 @@ Feature: Open Shell Commands
       """
 
 
-  Scenario: Opening shell when no project initialize
-    Given the directory ".picobox" does not exist
-    When I run `picobox ssh dev`
-    Then the output should match:
-      """
-        Getting shell
-              open  Running dev shell
-             error  no project found
-        Run command in a project directory or create new project with
-      """
+
 
 

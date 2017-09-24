@@ -1,0 +1,47 @@
+---
+version: '2'
+volumes:
+  db-data:
+    external: false
+  bundle-data:
+    external: false
+services:
+  dev:
+    build: "."
+    entrypoint: ".picobox/start"
+    volumes:
+    - ".:/var/www:cached"
+    volumes_from:
+    - bundle
+    environment:
+      RAILS_ENV: development
+    hostname: picobox
+    ports:
+    - 80:3000
+    - 3000:3000
+  test:
+    build: "."
+    entrypoint: ".picobox/start"
+    volumes:
+    - ".:/var/www:cached"
+    volumes_from:
+    - bundle
+    environment:
+      RAILS_ENV: test
+    hostname: picobox_test
+  webpack:
+    build: "."
+    entrypoint: ".picobox/start"
+    volumes_from:
+    - bundle
+    volumes:
+    - ".:/var/www:cached"
+    environment:
+      RAILS_ENV: development
+    hostname: picobox
+    ports:
+    - 8080:8080
+  bundle:
+    image: busybox
+    volumes:
+    - bundle-data:/usr/local/bundle:cached

@@ -1,10 +1,11 @@
 @acceptance
 Feature: Remove Service Commands
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
-    Given I run `picobox init rails`
+    And picobox has been installed
+    And I am in a project directory called 'test'
+    And I run `picobox init rails`
     And I run `picobox service add postgres`
 
 
@@ -13,7 +14,7 @@ Feature: Remove Service Commands
     Then the output should match:
       """
         Removing postgres service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
         Service postgres removed
         Picobox starting \[:spinner\]
         Picobox started!
@@ -188,17 +189,6 @@ Feature: Remove Service Commands
       """
 
 
-  Scenario: Removing service to un-initialized project
-    Given the project is uninitialized
-    When I run `picobox service remove postgres`
-    Then the output should match:
-      """
-        Removing postgres service
-             error  no project found
-        Run command in a project directory or create new project with 'picobox init \[BOX\]'
-      """
-
-
   Scenario: Removing service in project sub-directory
     Given a directory named "lib"
     And I cd to "lib"
@@ -206,7 +196,7 @@ Feature: Remove Service Commands
     Then the output should match:
       """
         Removing postgres service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
         Service postgres removed
         Picobox starting \[:spinner\]
         Picobox started!
@@ -228,5 +218,5 @@ Feature: Remove Service Commands
     Then the output should match:
       """
         Removing postgres service
-             error  could not open .+aruba\/docker-compose.yml
+             error  could not open .+test\/docker-compose.yml
       """

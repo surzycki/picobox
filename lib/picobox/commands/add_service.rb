@@ -8,7 +8,7 @@ module Picobox
       def visit_darwin subject
         publish_event :add_service_start, service
 
-        raise Errors::ProjectNotInitialized unless project_initialized?
+        raise Errors::ProjectNotInitialized unless os.project_initialized?
 
         Services::Installer.new(os).install(service)
 
@@ -22,8 +22,6 @@ module Picobox
 
       private
       attr_reader :service
-
-      def project_initialized?() Utils::Project.new(os).project_initialized? end
     end
   end
 end

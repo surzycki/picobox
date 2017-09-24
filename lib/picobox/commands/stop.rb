@@ -4,7 +4,7 @@ module Picobox
       def visit_darwin subject
         publish_event :stopping
 
-        raise Errors::ProjectNotInitialized unless project_initialized?
+        raise Errors::ProjectNotInitialized unless os.project_initialized?
 
         system("docker-compose down #{Picobox.output}")
 
@@ -15,9 +15,6 @@ module Picobox
       def visit_linux subject
         visit_darwin subject
       end
-
-      private
-      def project_initialized?() Utils::Project.new(os).project_initialized? end
     end
   end
 end

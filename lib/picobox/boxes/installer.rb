@@ -1,11 +1,11 @@
 module Picobox
   module Boxes
-    class Unpacker
+    class Installer
       def initialize(os)
         @os = os
       end
 
-      def unpack(type)
+      def install(type)
         @manifest = Manifest.new(os, type)
         @manifest.check! # raises an exception if we can't find the type in the manifest
 

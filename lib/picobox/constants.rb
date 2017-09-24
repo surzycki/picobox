@@ -1,17 +1,20 @@
 module Picobox
   # names for files / directories
-  VERSION          = '0.2.6'
-  HOMEPAGE         = 'https://github.com/surzycki/picobox'
-  CONFIG_DIR       = '.picobox'
-  PROJECT_INI      = 'project.ini'
-  SHELL_EXTENSIONS = 'shell_extensions'
+  VERSION           = '0.2.6'
+  HOMEPAGE          = 'https://github.com/surzycki/picobox'
+  PACKAGES_INFO_URL = 'https://api.github.com/repos/picobox/packages/releases/latest'
+  CONFIG_DIR        = '.picobox'
+  PROJECT_INI       = 'project.ini'
+  PICOBOX_INI       = 'picobox.ini'
+  SHELL_EXTENSIONS  = 'shell_extensions'
 
 
   module_function
   def root()                 File.expand_path('../../..', __FILE__) end
   def template_dir()         "#{Picobox.root}/lib/picobox/templates" end
-  def box_packages_dir()     "#{Picobox.root}/lib/picobox/boxes/packages" end
-  def service_packages_dir() "#{Picobox.root}/lib/picobox/services/packages" end
+  def packages_dir()         "#{Picobox.root}/packages" end
+  def box_packages_dir()     "#{packages_dir}/boxes" end
+  def service_packages_dir() "#{packages_dir}/services" end
 
   def output()   @output end
   def verbose?() @verbose end

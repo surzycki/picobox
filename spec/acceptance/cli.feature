@@ -1,9 +1,10 @@
 @acceptance
 Feature: CLI Commands
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
+    And picobox has been installed
+
 
   Scenario: Picobox has a version
     Given I run `picobox version`
@@ -15,8 +16,6 @@ Feature: CLI Commands
     Then the output should match:
       """
         Available boxes:
-          elixir
-          python
           rails
           ruby
       """
@@ -27,10 +26,7 @@ Feature: CLI Commands
     Then the output should match:
       """
         Available services:
-          elasticsearch
           memcached
-          mongodb
-          mysql
           postgres
           redis
       """

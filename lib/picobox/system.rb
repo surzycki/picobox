@@ -15,6 +15,7 @@ module Picobox
       accept(Commands::DownloadDocker.new)
       accept(Commands::InstallDocker.new)
       accept(Commands::SetupShell.new)
+      accept(Commands::UpdatePackages.new)
       accept(Commands::FinishInstall.new)
       accept(Commands::ReloadShell.new)
     rescue Errors::ShellNotSupported => e
@@ -66,6 +67,9 @@ module Picobox
 
     def restart
       accept(Commands::Restart.new)
+    rescue Errors::ProjectNotInitialized
+      display_project_not_initialized
+      exit 1
     rescue StandardError => e
       display_info(e, :red)
       exit 1

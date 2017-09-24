@@ -8,8 +8,8 @@ module Picobox
       def visit_darwin subject
         publish_event :opening_shell, service
 
-        raise Errors::ProjectNotInitialized unless project_initialized?
-        raise Errors::SystemDownError unless project_running?
+        raise Errors::ProjectNotInitialized unless os.project_initialized?
+        raise Errors::SystemDownError unless os.project_running?
 
         system "bash", "-c", "docker-compose exec #{service} bash"
       end
@@ -22,9 +22,6 @@ module Picobox
 
       private
       attr_reader :service
-
-      def project_initialized?() Utils::Project.new(os).project_initialized? end
-      def project_running?()     Utils::Project.new(os).running? end
     end
   end
 end

@@ -11,10 +11,6 @@ module Picobox
 
     def install(type = nil)
       return if type.nil?
-      # TODO place to inject unpacker for different types
-      # of unpacking (ie net), could first search locally
-      # then on the net
-      # accept(Commands::AddBox.new(type, FileUnpacker, NetUnpacker))
       accept(Commands::AddBox.new(type))
     rescue Errors::BoxNotImplemented
       display_box_not_available type
@@ -28,7 +24,11 @@ module Picobox
     end
 
     def list()
+      accept(Commands::UpdatePackages.new)
       accept(Commands::ListBoxes.new)
+    rescue Errors::PicoboxNotInstalled
+      display_picobox_not_installed
+      exit 1
     rescue StandardError => e
       display_info(e, :red)
       exit 1

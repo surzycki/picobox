@@ -1,10 +1,9 @@
 @acceptance
 Feature: Install feature
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
-    And the file named ".profile" with "# test bash script"
+    And picobox can be installed
 
 
   Scenario: Picobox can be installed
@@ -16,8 +15,11 @@ Feature: Install feature
         Docker version test! present
         Setting up Shell
             create .+aruba\/.picobox
+            create .+aruba\/.picobox/picobox.ini
             create .+aruba\/.picobox/shell_extensions
             append .+aruba\/.profile
+        Updating packages \[:spinner\]
+        Packages updated!
         Install Complete
       -------------------------------
 
@@ -26,8 +28,12 @@ Feature: Install feature
            opening  new shell
       """
     Then a directory named ".picobox" should exist
+    And a directory named "packages" should exist
     And a file named ".picobox/shell_extensions" should exist
+    And a file named ".picobox/picobox.ini" should exist
     And the file named ".profile" should contain "source ~/.picobox/shell_extensions"
+    And the file named ".picobox/picobox.ini" should contain "version ="
+    And the file named ".picobox/picobox.ini" should contain "last_update ="
 
 
   Scenario: Picobox on unsupported OS
@@ -48,6 +54,8 @@ Feature: Install feature
       -------------------------------
         Docker version test! present
         Setting up Shell
+            create .+aruba\/.picobox
+            create .+aruba\/.picobox/picobox.ini
              error  shell not supported .+
 
       You can file a request at: https://github.com/surzycki/picobox

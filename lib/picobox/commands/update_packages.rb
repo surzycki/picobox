@@ -1,0 +1,30 @@
+module Picobox
+  module Commands
+    class UpdatePackages < Picobox::Utils::VisitorByOs
+      def visit_darwin subject
+        raise Errors::PicoboxNotInstalled unless os.picobox_installed?
+
+        packages = Utils::Packages.new(os)
+
+        if packages.update?
+          publish_event :update_packages_start
+
+          filename = packages.download
+
+          system("rm -rf #{Picobox.packages_dir}")
+          system("mkdir  #{Picobox.packages_dir}")
+          system("tar xvf #{filename} -C #{Picobox.packages_dir} --strip-components=1 #{Picobox.output}")
+
+          Shell::IniFile.get(os)[:packages] = { version: packages.version, last_update: Time.now.to_i }
+
+          publish_event :update_packages_stop
+        end
+      end
+
+
+      def visit_linux subject
+        visit_darwin subject
+      end
+    end
+  end
+end

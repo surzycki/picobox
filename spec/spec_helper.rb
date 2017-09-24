@@ -13,7 +13,7 @@ Dir["#{spec}/shared/**/*.rb"].each   { |f| require f }
 require 'byebug'
 require 'turnip_helper'
 require 'turnip/rspec'
-
+require 'webmock/rspec'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

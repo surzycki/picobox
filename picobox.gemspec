@@ -31,10 +31,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'aruba-turnip', '0.1.1'
   spec.add_development_dependency 'turnip'
   spec.add_development_dependency 'aruba-doubles'
-  spec.add_development_dependency 'aruba', '0.14.2'
+  spec.add_development_dependency 'aruba',        '0.14.2'
   spec.add_development_dependency 'rb-readline'
   spec.add_development_dependency 'guard'
   spec.add_development_dependency 'guard-rspec'
+  spec.add_development_dependency 'webmock'
 
 
 

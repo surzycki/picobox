@@ -27,6 +27,8 @@ module OsSteps
     allow(Picobox::Os::CurrentOs.get).
       to receive(:reload_shell).
       and_return(true)
+
+    send '(a/the) file (named) ":file_name" with:', '.profile', '# test bash script'
   end
 
   step 'I am using a linux OS' do
@@ -45,6 +47,8 @@ module OsSteps
     allow(Picobox::Os::CurrentOs.get).
       to receive(:reload_shell).
       and_return(true)
+
+    send '(a/the) file (named) ":file_name" with:', '.bashrc', '# test bash script'
   end
 
   step 'docker is installed' do

@@ -19,7 +19,7 @@ module Picobox
 
       def display_project_not_initialized
         display_status('error', 'no project found', :red)
-        display_info("Run command in a project directory or create new project with 'picobox init [BOX]'", :green)
+        display_info("Run 'picobox init [BOX]'", :yellow)
       end
 
 
@@ -58,6 +58,7 @@ module Picobox
 
       def display_picobox_not_installed
         display_info "Picobox not installed!", :red
+        display_info "Run: picobox install", :yellow
       end
 
 

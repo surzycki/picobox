@@ -18,7 +18,7 @@ module Picobox
         @post_install_messages = (@post_install_messages || Array.new).push message
       end
 
-      def post_install_messages        
+      def post_install_messages
         display_line   ''
 
         @post_install_messages.each do |message|
@@ -54,7 +54,7 @@ module Picobox
       end
 
       def install_docker_start()
-        Utils::Spinner.new('Installing Docker')   
+        Utils::Spinner.new('Installing Docker')
       end
 
       def install_docker_complete()
@@ -99,7 +99,7 @@ module Picobox
       end
 
       def build_service_start(service)
-        Utils::Spinner.new("Building Service #{service} (5-10min)")  
+        Utils::Spinner.new("Building Service #{service} (5-10min)")
       end
 
       def build_service_stop
@@ -160,6 +160,15 @@ module Picobox
       def opening_shell(service)
         display_info("Getting shell", :green)
         display_status('open', "Running \e[33m#{service}\e[0m shell", :green)
+      end
+
+      def update_packages_start
+        Utils::Spinner.new('Updating packages')
+      end
+
+      def update_packages_stop
+        Utils::Spinner.stop
+        display_info("Packages updated!", :green)
       end
     end
   end

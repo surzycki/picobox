@@ -1,9 +1,10 @@
 @acceptance
 Feature: Add Service Commands
   Background:
-    Given a mocked home directory
+    Given the test environment is setup
     And I am using a darwin OS
-    And docker is installed
+    And picobox has been installed
+    And I am in a project directory called 'test'
     And I run `picobox init rails`
 
 
@@ -12,7 +13,7 @@ Feature: Add Service Commands
     Then the output should match:
       """
         Adding postgres service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
               info  hostname 'postgres' is visible to other services
               info  postgres user and password are 'picobox'
         Service postgres added
@@ -74,7 +75,7 @@ Feature: Add Service Commands
         postgres:
           image: postgres:9.4
           volumes:
-          - db-data:/var/lib/postgresql/db-data
+          - db-data:/var/lib/postgresql/data
           environment:
             POSTGRES_USER: picobox
             POSTGRES_PASSWORD: picobox
@@ -86,16 +87,16 @@ Feature: Add Service Commands
     Then the output should match:
       """
         Adding postgres service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
               info  hostname 'postgres' is visible to other services
               info  postgres user and password are 'picobox'
         Service postgres added
         Adding memcached service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
               info  hostname 'memcached' is visible to other services
         Service memcached added
         Adding redis service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
               info  hostname 'redis' is visible to other services
         Service redis added
         Picobox starting \[:spinner\]
@@ -158,7 +159,7 @@ Feature: Add Service Commands
         postgres:
           image: postgres:9.4
           volumes:
-          - db-data:/var/lib/postgresql/db-data
+          - db-data:/var/lib/postgresql/data
           environment:
             POSTGRES_USER: picobox
             POSTGRES_PASSWORD: picobox
@@ -229,7 +230,7 @@ Feature: Add Service Commands
         postgres:
           image: postgres:9.4
           volumes:
-          - db-data:/var/lib/postgresql/db-data
+          - db-data:/var/lib/postgresql/data
           environment:
             POSTGRES_USER: picobox
             POSTGRES_PASSWORD: picobox
@@ -241,23 +242,12 @@ Feature: Add Service Commands
     Then the output should match:
       """
         Adding postgres service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
               info  hostname 'postgres' is visible to other services
               info  postgres user and password are 'picobox'
         Service postgres added
         Adding geek service
              error  geek service is not available...yet
-      """
-
-
-  Scenario: Adding service to un-initialized project
-    Given the project is uninitialized
-    When I run `picobox service add postgres`
-    Then the output should match:
-      """
-        Adding postgres service
-             error  no project found
-        Run command in a project directory or create new project with 'picobox init \[BOX\]'
       """
 
 
@@ -268,7 +258,7 @@ Feature: Add Service Commands
     Then the output should match:
       """
         Adding postgres service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
               info  hostname 'postgres' is visible to other services
               info  postgres user and password are 'picobox'
         Service postgres added
@@ -292,7 +282,7 @@ Feature: Add Service Commands
     Then the output should match:
       """
         Adding postgres service
-             error  could not open .+aruba\/docker-compose.yml
+             error  could not open .+test\/docker-compose.yml
       """
 
 
@@ -329,7 +319,7 @@ Feature: Add Service Commands
         postgres:
           image: postgres:9.4
           volumes:
-          - db-data:/var/lib/postgresql/db-data
+          - db-data:/var/lib/postgresql/data
           environment:
             POSTGRES_USER: picobox
             POSTGRES_PASSWORD: picobox
@@ -343,7 +333,7 @@ Feature: Add Service Commands
     Then the output should match:
       """
         Adding redis service
-            modify  .+aruba\/docker-compose.yml
+            modify  .+test\/docker-compose.yml
               info  hostname 'redis' is visible to other services
         Service redis added
       """

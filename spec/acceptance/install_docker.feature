@@ -1,11 +1,12 @@
 @acceptance
 Feature: Install docker feature
-  Given a mocked home directory
-  And the file named ".bashrc" with "# test bash script"
+  Background:
+    Given the test environment is setup
+    And I am using a linux OS
+
 
   Scenario: Linux install without sudo
-    Given I am using a linux OS
-    And sudo should not be installed
+    Given sudo should not be installed
     When I run `picobox install`
     Then the output should match:
       """
@@ -20,8 +21,7 @@ Feature: Install docker feature
 
 
   Scenario: Linux install as root
-    Given I am using a linux OS
-    And sudo should not be installed
+    Given sudo should not be installed
     And I am root
     When I run `picobox install`
     Then the output should match:

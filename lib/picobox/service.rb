@@ -55,7 +55,11 @@ module Picobox
 
 
     def list()
+      accept(Commands::UpdatePackages.new)
       accept(Commands::ListServices.new)
+    rescue Errors::PicoboxNotInstalled
+      display_picobox_not_installed
+      exit 1
     rescue StandardError => e
       display_info(e, :red)
       exit 1

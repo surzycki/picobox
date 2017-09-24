@@ -4,8 +4,8 @@ module Picobox
       def visit_darwin subject
         publish_event :remove_shell_setup_start
 
-        delete_config_directory
-        uninstall_shell_extensions
+        TTY::File.remove_file os.config_dir, force: true
+        Shell::StartupScript.get(os).uninstall_extensions
 
         publish_event :remove_shell_setup_complete
       end
@@ -13,17 +13,6 @@ module Picobox
 
       def visit_linux subject
         visit_darwin subject
-      end
-      
-
-      private
-      def delete_config_directory
-        TTY::File.remove_file os.config_dir, force: true
-      end
-
-      def uninstall_shell_extensions
-        script = Shell::StartupScript.get(os)
-        script.uninstall_extensions
       end
     end
   end

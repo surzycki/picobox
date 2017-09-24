@@ -1,0 +1,7 @@
+# the service
+redis:
+  image: redis
+
+# create links to these services
+links:
+  - dev

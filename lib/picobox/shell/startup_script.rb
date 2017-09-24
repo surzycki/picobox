@@ -34,14 +34,16 @@ module Picobox
           )
       end
 
+
       def uninstall_extensions
         TTY::File.gsub_file filename, /#{Regexp.escape(extension)}/ do
           "# picobox removed #{Time.now}"
         end
       end
 
+
       def filename
-        raise ::NotImplementedError, 'must filename'
+        raise ::NotImplementedError, 'must have filename'
       end
 
       private

@@ -11,6 +11,7 @@
 .picobox
 .byebug_history
 .DS_Store
+/packages
 
 # rspec failure tracking
 .rspec_status

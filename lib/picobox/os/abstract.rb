@@ -25,6 +25,10 @@ module Picobox
 
         def project_root() Utils::Project.new(self).root end
         def reload_shell() system("exec #{user_shell} -l") end
+
+        def picobox_installed?()   File.exist? config_dir end
+        def project_initialized?() Utils::Project.new(self).project_initialized? end
+        def project_running?()     Utils::Project.new(self).running? end
       end
     end
   end

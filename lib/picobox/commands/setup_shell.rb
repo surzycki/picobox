@@ -4,11 +4,10 @@ module Picobox
       def visit_darwin subject
         publish_event :shell_setup_start
 
-        start_up_script = Shell::StartupScript.get(os)
-
         TTY::File.create_dir os.config_dir
+        Shell::IniFile.get(os).install
 
-        start_up_script.install_extensions
+        Shell::StartupScript.get(os).install_extensions
 
         publish_event :shell_setup_complete
       end

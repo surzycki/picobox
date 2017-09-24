@@ -11,6 +11,9 @@ module Picobox
 
     def init
       accept(Commands::InitializeProject.new)
+    rescue Errors::PicoboxNotInstalled
+      display_picobox_not_installed
+      exit 1
     rescue StandardError => e
       display_info(e, :red)
       exit 1

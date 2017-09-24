@@ -10,6 +10,10 @@ module ArubaSteps
   step '(a/the) (file/directory) (named) ":name" does not exist' do |name|
     remove(name, :force => true)
   end
+
+  step 'I copy (a/the) directory from ":source" to ":destination"' do |source, destination|
+    copy "%/#{source}", destination
+  end
 end
 
 placeholder :whether_to do
