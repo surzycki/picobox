@@ -29,7 +29,7 @@ module Picobox
     LONGDESC
     def remove(service)
       Picobox.set_verbosity options[:verbose]
-      
+
       Service.new(Os::CurrentOs.get).remove service
     rescue SignalException
       exit 1
@@ -75,7 +75,9 @@ module Picobox
 
     desc 'version', 'displays current version'
     def version
-      say Picobox::VERSION
+      say "Picobox:  #{Picobox::VERSION}"
+      say "Packages: #{Picobox::Utils::Packages.new(Os::CurrentOs.get).installed_version[1..-1]}"
+
     rescue SignalException
       exit 1
     end
