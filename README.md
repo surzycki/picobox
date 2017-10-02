@@ -120,16 +120,14 @@ $ bundle exec byebug -R localhost:8989
 
 
 ## TODO
+- [ ] Install runtime dependecies on linux during setup
 - [ ] Documentation (both in code and wiki)
 - [ ] Include aliases specific to the box when unpacking (maybe)
-- [ ] Add more boxes
 - [ ] Add destroy command
 - [ ] Add Habitus API web server to add ssh keys to containers**
 - [ ] Use traefik.io for dns
 - [ ] Uninstall should stop and remove all instances that are running
-- [ ] Block most commands if picobox not installed
 - [ ] Some services should install thier own volumes
-- [ ] Box update function
 - [ ] Remove TTY::File, TTY::Prompt dependency (needs native extensions)
 
 **http://blog.cloud66.com/using-ssh-private-keys-securely-in-docker-build/
