@@ -38,8 +38,6 @@ Now you are really done
 $ mkdir -p Code/rails
 $ cd Code/rails
 $ picobox init rails
-$ picobox build
-$ picobox start
 ```
 
 Your box is up and running, use your container-ized rails as you would normally
@@ -79,7 +77,7 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 To use without installing, use:
 
 ```bash
-$ bin/picobox version
+$ bin/picobox_dev version
 ```
 
 To run tests:
