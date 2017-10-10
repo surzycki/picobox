@@ -1,14 +1,23 @@
 # Picobox
 
-Docker development environment for humans.  So thin (1×10−12 m) you can barley feel it.
+Docker development environment for humans.
 
 Don't want to learn a whole -bunch --of -commands_with_flags/just -to run_rails || other_things?
 
 Start picobox and continue with the way you have always done things, except now, isolated inside containers
 
-*Early release, caution, there be dragons...*
 
-## Installation CLI
+## Why Picobox ?
+
+If you find yourself googling each time how to untar an archive, picobox is for
+you.  As a developer, you have enough to remember, without adding a layer
+of crypic commands to run your development environment.
+
+With picobox, you don't have to change your workflow in order to take advantage of Docker and containerization
+
+
+## Install CLI
+
 
 ```bash
 $ gem install picobox
@@ -17,14 +26,13 @@ $ picobox install
 
 That's it your done
 
+**Available boxes**
 
-## Uninstall Picobox
-```bash
-$ picobox uninstall
-$ gem uninstall picobox
-```
-
-Now you are really done
+    elixir
+    nodejs
+    python
+    rails
+    ruby
 
 
 ## Usage
@@ -32,7 +40,7 @@ Now you are really done
 ![demo](https://github.com/surzycki/picobox/blob/master/docs/testdrive.gif)
 (may take a sec to load)
 
-**Create box**
+**Create rails box**
 
 ```bash
 $ mkdir -p Code/rails
@@ -51,7 +59,7 @@ $ rake -T
 $ rails s
 ```
 
-**Do more stuff**
+**Install gems, irb, bundler and more**
 ```bash
 $ gem install rails --no-ri --no-rdoc
 $ irb
@@ -61,12 +69,44 @@ $ ruby
 
 Everything is running inside your box transparently !
 
-## Dependencies
 
-### Linux
+## Detailed Usage
+
+```bash
+Commands:
+  picobox boxes               # list of available boxes
+  picobox help [COMMAND]      # Describe available commands or one specific command
+  picobox init [BOX]          # initialize directory for use with picobox
+  picobox install             # installs picobox
+  picobox reset               # reset picobox containers
+  picobox restart             # restart picobox
+  picobox service SUBCOMMAND  # do things with the SERVICES
+  picobox ssh [SERVICE]       # open shell to service
+  picobox start               # start picobox
+  picobox status              # current status of containers
+  picobox stop                # stop picobox
+  picobox uninstall           # removes picobox
+  picobox update              # udpates picobox
+  picobox version             # displays current version
+
+Commands:
+  picobox service add [SERVICE]             # adds a service to your box
+  picobox service build [SERVICE] optional  # builds the picobox
+  picobox service help [COMMAND]            # Describe subcommands or one specific subcommand
+  picobox service list                      # list available services
+  picobox service remove [SERVICE]          # removes a service from your box
+
+Options:
+  [--verbose], [--no-verbose]  # Verbose debugging output
+```
+
+### Dependencies
+**Linux**
+
 * build-essential
 * ruby
 * ruby-dev
+
 
 ## Development
 
@@ -96,9 +136,10 @@ $ rake build
 $ gem install pkg/picobox-x.x.x.gem
 ```
 
-## Helpful stuff
+### Helpful stuff
 
 **debug during an aruba test run**
+
 spec/support/aruba.rb
 ```ruby
 require 'byebug/core'
@@ -115,14 +156,12 @@ $ bundle exec byebug -R localhost:8989
 (byebug) last_command_started
 ```
 
-
-
-## TODO
+### TODO
 - [ ] Install runtime dependecies on linux during setup
 - [ ] Documentation (both in code and wiki)
 - [ ] Include aliases specific to the box when unpacking (maybe)
 - [ ] Add destroy command
-- [ ] Add Habitus API web server to add ssh keys to containers**
+- [ ] Explore Habitus API web server to add ssh keys to containers**
 - [ ] Use traefik.io for dns
 - [ ] Uninstall should stop and remove all instances that are running
 - [ ] Some services should install thier own volumes
