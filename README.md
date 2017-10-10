@@ -7,15 +7,6 @@ Don't want to learn a whole -bunch --of -commands_with_flags/just -to run_rails 
 Start picobox and continue with the way you have always done things, except now, isolated inside containers
 
 
-## Why Picobox ?
-
-If you find yourself googling each time how to untar an archive, picobox is for
-you.  As a developer, you have enough to remember, without adding a layer
-of crypic commands to run your development environment.
-
-With picobox, you don't have to change your workflow in order to take advantage of Docker and containerization
-
-
 ## Install CLI
 
 
