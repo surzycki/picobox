@@ -12,24 +12,15 @@ module Picobox
     def build(service=nil)
       accept(Commands::BuildService.new(service))
     rescue StandardError => e
-      display_info(e, :red)
+      display_error e
       exit 1
     end
 
     def add(services)
       services.each { |service| accept(Commands::AddService.new(service)) }
       accept(Commands::Restart.new)
-    rescue Errors::ServiceNotImplemented => e
-      display_service_not_available e.message
-      exit 1
-    rescue Errors::ProjectNotInitialized
-      display_project_not_initialized
-      exit 1
-    rescue Picobox::Errors::FileNotFoundError => e
-      display_file_not_found e.message
-      exit 1
     rescue StandardError => e
-      display_info(e, :red)
+      display_error e
       exit 1
     end
 
@@ -42,14 +33,8 @@ module Picobox
       display_service_not_installed type
     rescue Errors::ServiceNotImplemented
       display_service_not_available type
-    rescue Errors::ProjectNotInitialized
-      display_project_not_initialized
-      exit 1
-    rescue Picobox::Errors::FileNotFoundError => e
-      display_file_not_found e.message
-      exit
     rescue StandardError => e
-      display_info(e, :red)
+      display_error e
       exit 1
     end
 
@@ -57,11 +42,8 @@ module Picobox
     def list()
       accept(Commands::UpdatePackages.new)
       accept(Commands::ListServices.new)
-    rescue Errors::PicoboxNotInstalled
-      display_picobox_not_installed
-      exit 1
     rescue StandardError => e
-      display_info(e, :red)
+      display_error e
       exit 1
     end
   end

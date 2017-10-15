@@ -17,6 +17,30 @@ module Picobox
       end
 
 
+      def display_error(e)
+        case e
+        when Errors::ProjectNotInitialized
+          display_project_not_initialized
+        when Errors::DockerError
+          display_docker_error
+        when Errors::SystemDownError
+          display_system_down
+        when Errors::ShellNotSupported
+          display_shell_not_supported e.message
+        when Errors::DistroNotSupported
+          display_distro_not_supported
+        when Errors::PicoboxNotInstalled
+          display_picobox_not_installed
+        when Errors::ServiceNotImplemented
+          display_service_not_available e.message
+        when Picobox::Errors::FileNotFoundError
+          display_file_not_found e.message
+        else
+          display_info(e, :red)
+        end
+      end
+
+      private
       def display_project_not_initialized
         display_status('error', 'no project found', :red)
         display_info("Run 'picobox init [BOX]'", :yellow)
@@ -64,6 +88,12 @@ module Picobox
 
       def display_distro_not_supported
         display_info('distro is not yet supported :(', :red)
+      end
+
+      def display_docker_error
+        display_info "Docker gave an error", :red
+        display_info "Check to see if docker is running", :red
+        display_info("Try running 'docker ps'", :yellow)
       end
 
       private

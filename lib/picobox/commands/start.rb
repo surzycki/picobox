@@ -6,7 +6,8 @@ module Picobox
 
         raise Errors::ProjectNotInitialized unless os.project_initialized?
 
-        system("docker-compose up -d #{Picobox.output}")
+        system("docker-compose up -d #{Picobox.output}") or raise Errors::DockerError
+
         publish_event :started
       end
 

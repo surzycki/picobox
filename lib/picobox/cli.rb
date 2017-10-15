@@ -77,7 +77,6 @@ module Picobox
     def version
       say "Picobox:  #{Picobox::VERSION}"
       say "Packages: #{Picobox::Utils::Packages.new(Os::CurrentOs.get).installed_version[1..-1]}"
-
     rescue SignalException
       exit 1
     end
@@ -88,7 +87,6 @@ module Picobox
     LONGDESC
     def install
       Picobox.set_verbosity options[:verbose]
-
       System.new(Os::CurrentOs.get).install
     rescue SignalException
       exit 1
@@ -100,7 +98,6 @@ module Picobox
     LONGDESC
     def update
       Picobox.set_verbosity options[:verbose]
-
       System.new(Os::CurrentOs.get).install
     rescue SignalException
       exit 1
@@ -112,7 +109,6 @@ module Picobox
     LONGDESC
     def uninstall
       Picobox.set_verbosity options[:verbose]
-
       System.new(Os::CurrentOs.get).uninstall
     rescue SignalException
       exit 1
@@ -141,7 +137,6 @@ module Picobox
     LONGDESC
     def start()
       Picobox.set_verbosity options[:verbose]
-
       System.new(Os::CurrentOs.get).start
     rescue SignalException
       exit 1
@@ -153,7 +148,6 @@ module Picobox
     LONGDESC
     def stop()
       Picobox.set_verbosity options[:verbose]
-
       System.new(Os::CurrentOs.get).stop
     rescue SignalException
       exit 1
@@ -165,7 +159,6 @@ module Picobox
     LONGDESC
     def restart()
       Picobox.set_verbosity options[:verbose]
-
       System.new(Os::CurrentOs.get).restart
     rescue SignalException
       exit 1

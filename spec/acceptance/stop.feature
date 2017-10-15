@@ -28,4 +28,16 @@ Feature: Stop Commands
       """
 
 
+  Scenario: Stopping system (docker error)
+    Given docker throws an error
+    When I run `picobox stop`
+    Then the output should match:
+      """
+        Picobox stopping \[:spinner\]
+        Docker gave an error
+        Check to see if docker is running
+        Try running 'docker ps'
+      """
+
+
 

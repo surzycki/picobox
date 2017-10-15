@@ -6,7 +6,7 @@ module Picobox
 
         raise Errors::ProjectNotInitialized unless os.project_initialized?
 
-        system("docker-compose down #{Picobox.output}")
+        system("docker-compose down #{Picobox.output}") or raise Errors::DockerError
 
         publish_event :stopped
       end

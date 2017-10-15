@@ -15,22 +15,16 @@ module Picobox
     rescue Errors::BoxNotImplemented
       display_box_not_available type
       list # called like for exception handling
-    rescue Errors::ProjectNotInitialized
-      display_project_not_initialized
-      exit 1
     rescue StandardError => e
-      display_info(e, :red)
+      display_error e
       exit 1
     end
 
     def list()
       accept(Commands::UpdatePackages.new)
       accept(Commands::ListBoxes.new)
-    rescue Errors::PicoboxNotInstalled
-      display_picobox_not_installed
-      exit 1
     rescue StandardError => e
-      display_info(e, :red)
+      display_error e
       exit 1
     end
   end

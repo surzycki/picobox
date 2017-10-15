@@ -38,5 +38,15 @@ Feature: Start Commands
       """
 
 
+  Scenario: Starting system (docker error)
+    Given docker throws an error
+    When I run `picobox start`
+    Then the output should match:
+      """
+        Picobox starting \[:spinner\]
+        Docker gave an error
+        Check to see if docker is running
+        Try running 'docker ps'
+      """
 
 

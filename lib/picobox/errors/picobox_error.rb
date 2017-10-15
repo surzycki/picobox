@@ -12,5 +12,6 @@ module Picobox
     class FileNotFoundError < PicoboxError; end
     class PicoboxNotInstalled < PicoboxError; end
     class DistroNotSupported < PicoboxError; end
+    class DockerError < PicoboxError; end
   end
 end

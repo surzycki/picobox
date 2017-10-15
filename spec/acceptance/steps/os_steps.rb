@@ -76,9 +76,21 @@ module OsSteps
       and_return true
 
     # don't do anything docker-ish during tests
-    double_cmd('docker-compose up -d 2>/dev/null')
-    double_cmd('docker-compose stop 2>/dev/null')
-    double_cmd('docker-compose build')
+    double_cmd("docker-compose up -d")
+    double_cmd("docker-compose up -d #{Picobox.output}")
+    double_cmd("docker-compose down #{Picobox.output}")
+    double_cmd("docker-compose build #{Picobox.output}")
+  end
+
+
+  step 'docker throws an error' do
+    double_cmd("docker-compose up -d", warn: 'error', exit: 1)
+    double_cmd("docker-compose down",  warn: 'error', exit: 1)
+    double_cmd("docker-compose build", warn: 'error', exit: 1)
+
+    double_cmd("docker-compose up -d #{Picobox.output}", warn: 'error', exit: 1)
+    double_cmd("docker-compose down #{Picobox.output}",  warn: 'error', exit: 1)
+    double_cmd("docker-compose build #{Picobox.output}", warn: 'error', exit: 1)
   end
 
 
