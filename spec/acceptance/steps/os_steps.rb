@@ -11,6 +11,13 @@ module OsSteps
       and_return('/sh')
   end
 
+
+  step 'I am using :shell shell' do |shell|
+    allow(Picobox::Os::CurrentOs.get).
+      to receive(:user_shell).
+      and_return("/bin/#{shell}")
+  end
+
   step 'I am using a darwin OS' do
     allow(Picobox::Os::CurrentOs).
       to receive(:get).

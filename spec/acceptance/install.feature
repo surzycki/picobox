@@ -65,3 +65,27 @@ Feature: Install feature
       You can file a request at: https://github.com/surzycki/picobox
       and we'll get right on it!
       """
+
+
+  Scenario: Picobox on unsupported shell switch to supported shell
+    Given I am using an unsupported shell
+    And I run `picobox install`
+    Then I am using 'bash' shell
+    When I run `picobox install`
+    Then the output should match:
+      """
+      INSTALL PICOBOX
+      -------------------------------
+        Docker version test! present
+        Setting up Config
+        Setting up Shell
+            create .+aruba\/.picobox/extensions.bash
+            append .+aruba\/.profile
+        Install Complete
+      -------------------------------
+
+      You should reload open shells to pick up shell changes
+
+           opening  new shell
+      """
+

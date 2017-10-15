@@ -4,11 +4,11 @@ module Picobox
       class << self
         def get(os)
           case "#{os.user_shell}:#{os.to_s}"
-          when '/bin/bash:darwin'
+          when /\/bin\/bash:darwin/
             Shell::DotProfile.new(os)
-          when '/bin/zsh:darwin', '/usr/bin/zsh:linux'
+          when /\/bin\/zsh:darwin/, /\/bin\/zsh:linux/
             Shell::DotZshRC.new(os)
-          when '/bin/bash:linux'
+          when /\/bin\/bash:linux/
             Shell::DotBashRC.new(os)
           else
             raise Errors::ShellNotSupported, "#{os.user_shell}:#{os.to_s}"
