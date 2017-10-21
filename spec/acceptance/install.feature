@@ -37,6 +37,7 @@ Feature: Install feature
     And the file named ".picobox/picobox.ini" should contain "last_update ="
 
 
+
   Scenario: Picobox on unsupported OS
     Given I am using an unsupported OS
     And I run `picobox install`

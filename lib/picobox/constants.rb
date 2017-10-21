@@ -1,6 +1,6 @@
 module Picobox
   # names for files / directories
-  VERSION           = '0.3.4'
+  VERSION           = '0.3.41'
   HOMEPAGE          = 'https://github.com/surzycki/picobox'
   PACKAGES_INFO_URL = 'https://api.github.com/repos/picobox/packages/releases/latest'
   CONFIG_DIR        = '.picobox'

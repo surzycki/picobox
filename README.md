@@ -157,6 +157,7 @@ $ bundle exec byebug -R localhost:8989
 - [ ] Uninstall should stop and remove all instances that are running
 - [ ] Some services should install thier own volumes
 - [ ] Remove TTY::File, TTY::Prompt dependency (needs native extensions)
+- [ ] Rake spec / test etc should point to test instance
 
 **http://blog.cloud66.com/using-ssh-private-keys-securely-in-docker-build/
 

@@ -1,8 +1,8 @@
 module Picobox
   module Shell
-    class DotProfile < StartupScript
+    class Zsh < StartupScript
       def filename
-        "#{os.home_dir}/.profile"
+        "#{os.home_dir}/.zshrc"
       end
     end
   end
