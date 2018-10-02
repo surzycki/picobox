@@ -11,10 +11,6 @@ module Picobox
 
   module_function
   def root()                 File.expand_path('../../..', __FILE__) end
-  def packages_dir()         "#{Picobox.root}/packages" end
-  def box_packages_dir()     "#{packages_dir}/boxes" end
-  def service_packages_dir() "#{packages_dir}/services" end
-  def extensions_dir()       "#{packages_dir}/shell" end
 
   def output()   @output end
   def verbose?() @verbose end

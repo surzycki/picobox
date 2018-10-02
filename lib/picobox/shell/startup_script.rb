@@ -21,7 +21,7 @@ module Picobox
       end
 
       def install_extensions
-        source  = "#{Picobox.extensions_dir}/extensions.bash"
+        source  = "#{os.extensions_dir}/extensions.bash"
         dest    = os.shell_extensions
 
         TTY::File.copy_file source, dest
@@ -45,12 +45,8 @@ module Picobox
       end
 
       private
-      def source_file
-        "~/#{Picobox::CONFIG_DIR}/#{Picobox::SHELL_EXTENSIONS}"
-      end
-
       def extension
-        "# added by picobox\nsource #{source_file}"
+        "# added by picobox\nsource #{os.shell_extensions}"
       end
     end
   end

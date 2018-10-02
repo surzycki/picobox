@@ -5,9 +5,14 @@ module Picobox
         def tmp_dir()     '/tmp'           end
         def home_dir()    "#{ENV['HOME']}" end
         def current_dir() `pwd`.strip      end
-        def config_dir()  "#{home_dir}/#{Picobox::CONFIG_DIR}" end
 
-        def shell_extensions() "#{config_dir}/#{Picobox::SHELL_EXTENSIONS}" end
+        def config_dir()           "#{home_dir}/#{Picobox::CONFIG_DIR}" end
+        def packages_dir()         "#{config_dir}/packages" end
+        def box_packages_dir()     "#{packages_dir}/boxes" end
+        def service_packages_dir() "#{packages_dir}/services" end
+        def extensions_dir()       "#{packages_dir}/shell" end
+        def shell_extensions()     "#{extensions_dir}/#{Picobox::SHELL_EXTENSIONS}" end
+
         def user()             "#{ENV['USER']}" end
         def user_shell()       "#{ENV['SHELL']}"  end
 

@@ -19,7 +19,7 @@ Feature: Install feature
         Updating packages \[:spinner\]
         Packages updated!
         Setting up Shell
-            create .+aruba\/.picobox/extensions.bash
+         identical .+aruba\/.picobox/packages/shell/extensions.bash
             append .+aruba\/.profile
         Install Complete
       -------------------------------
@@ -29,14 +29,16 @@ Feature: Install feature
            opening  new shell
       """
     Then a directory named ".picobox" should exist
-    And a directory named "packages" should exist
-    And a file named ".picobox/extensions.bash" should exist
+    And a directory named ".picobox/packages" should exist
+    And a file named ".picobox/packages/shell/extensions.bash" should exist
     And a file named ".picobox/picobox.ini" should exist
-    And the file named ".profile" should contain "source ~/.picobox/extensions.bash"
+    #And the file named ".profile" should contain "source .+aruba\/.picobox/packages/shell/extensions.bash"
     And the file named ".picobox/picobox.ini" should contain "version ="
     And the file named ".picobox/picobox.ini" should contain "last_update ="
-
-
+    And the file named ".profile" should match:
+      """
+      source .+aruba\/.picobox/packages/shell/extensions.bash
+      """
 
   Scenario: Picobox on unsupported OS
     Given I am using an unsupported OS
@@ -80,7 +82,7 @@ Feature: Install feature
         Docker version test! present
         Setting up Config
         Setting up Shell
-            create .+aruba\/.picobox/extensions.bash
+         identical .+aruba\/.picobox/packages/shell/extensions.bash
             append .+aruba\/.profile
         Install Complete
       -------------------------------

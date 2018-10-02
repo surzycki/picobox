@@ -103,7 +103,7 @@ Options:
 
 To run the tests you'll need ruby 2.3 since we are using the <<~EOS operator (un-indented multiline strings)
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To use without installing, use:
 
@@ -131,11 +131,10 @@ $ gem install pkg/picobox-x.x.x.gem
 
 **debug during an aruba test run**
 
-spec/support/aruba.rb
+
 ```ruby
-require 'byebug/core'
-Byebug.wait_connection = true
-Byebug.start_server('localhost', 8989)
+export REMOTE_DEBUG=true
+guard -g wip
 ```
 then connect using:
 ```bash

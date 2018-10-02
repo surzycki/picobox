@@ -11,9 +11,9 @@ module Picobox
 
           filename = packages.download
 
-          system("rm -rf #{Picobox.packages_dir}")
-          system("mkdir  #{Picobox.packages_dir}")
-          system("tar xvf #{filename} -C #{Picobox.packages_dir} --strip-components=1 #{Picobox.output}")
+          system("rm -rf #{os.packages_dir}")
+          system("mkdir  #{os.packages_dir}")
+          system("tar xvf #{filename} -C #{os.packages_dir} --strip-components=1 #{Picobox.output}")
 
           Shell::IniFile.get(os)[:packages] = { version: packages.current_version, last_update: Time.now.to_i }
 
@@ -32,9 +32,9 @@ module Picobox
 
           filename = packages.download
 
-          system("sudo rm -rf #{Picobox.packages_dir}")
-          system("sudo mkdir  #{Picobox.packages_dir}")
-          system("sudo tar xvf #{filename} -C #{Picobox.packages_dir} --strip-components=1 #{Picobox.output}")
+          system("sudo rm -rf #{os.packages_dir}")
+          system("sudo mkdir  #{os.packages_dir}")
+          system("sudo tar xvf #{filename} -C #{os.packages_dir} --strip-components=1 #{Picobox.output}")
 
           Shell::IniFile.get(os)[:packages] = { version: packages.current_version, last_update: Time.now.to_i }
 

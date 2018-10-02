@@ -6,7 +6,7 @@ module Picobox
       end
 
       def list
-        result = Dir.glob("#{Picobox.box_packages_dir}/*").select {|f| File.directory? f}
+        result = Dir.glob("#{os.box_packages_dir}/*").select {|f| File.directory? f}
         result.map {|r| strip_path(r) }.sort!
       end
 
@@ -48,7 +48,7 @@ module Picobox
       attr_reader :os, :type
 
       def package_dir
-        "#{Picobox.box_packages_dir}/#{type}"
+        "#{os.box_packages_dir}/#{type}"
       end
 
       def strip_path(file)

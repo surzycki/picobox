@@ -6,7 +6,7 @@ module Picobox
       end
 
       def list
-        result = Dir.glob("#{Picobox.service_packages_dir}/*").select {|f| File.directory? f}
+        result = Dir.glob("#{os.service_packages_dir}/*").select {|f| File.directory? f}
         result.map {|r| strip_path(r) }.sort!
       end
 
@@ -35,7 +35,7 @@ module Picobox
       end
 
       def package_dir
-        "#{Picobox.service_packages_dir}/#{type}"
+        "#{os.service_packages_dir}/#{type}"
       end
 
       def strip_path(file)

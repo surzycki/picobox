@@ -21,9 +21,9 @@ module CliSteps
     copy '%/packages_v0.1.tar', 'tmp/packages_v0.1.tar'
 
     # stub packages directory
-    allow(Picobox).
-      to receive(:packages_dir).
-      and_return("#{Picobox.root}/#{Aruba.config.working_directory}/packages")
+    #allow(Picobox).
+    #  to receive(:packages_dir).
+    #  and_return("#{Picobox.root}/#{Aruba.config.working_directory}/packages")
   end
 
   step 'picobox can be installed' do
