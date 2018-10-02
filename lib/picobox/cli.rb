@@ -4,7 +4,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def build(service = nil)
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
 
       Service.new(Os::CurrentOs.get).build service
     rescue SignalException
@@ -16,7 +16,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def add(*services)
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
 
       Service.new(Os::CurrentOs.get).add services
     rescue SignalException
@@ -28,7 +28,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def remove(service)
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
 
       Service.new(Os::CurrentOs.get).remove service
     rescue SignalException
@@ -59,7 +59,7 @@ module Picobox
   class CLI < Thor
     include Utils::Output
 
-    class_option :verbose, desc: 'Verbose debugging output', type: :boolean
+    class_option :silent, desc: 'Silence output', type: :boolean
 
     #desc 'dns SUBCOMMAND', 'do things with the DNS'
     #long_desc <<-LONGDESC
@@ -86,7 +86,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def install
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
       System.new(Os::CurrentOs.get).install
     rescue SignalException
       exit 1
@@ -97,7 +97,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def update
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
       System.new(Os::CurrentOs.get).install
     rescue SignalException
       exit 1
@@ -108,7 +108,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def uninstall
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
       System.new(Os::CurrentOs.get).uninstall
     rescue SignalException
       exit 1
@@ -119,7 +119,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def init(box)
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
 
       os = Os::CurrentOs.get
 
@@ -136,7 +136,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def start()
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
       System.new(Os::CurrentOs.get).start
     rescue SignalException
       exit 1
@@ -147,7 +147,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def stop()
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
       System.new(Os::CurrentOs.get).stop
     rescue SignalException
       exit 1
@@ -158,7 +158,7 @@ module Picobox
     long_desc <<-LONGDESC
     LONGDESC
     def restart()
-      Picobox.set_verbosity options[:verbose]
+      Picobox.set_verbosity !options[:silent]
       System.new(Os::CurrentOs.get).restart
     rescue SignalException
       exit 1
