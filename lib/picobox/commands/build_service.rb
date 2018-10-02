@@ -7,8 +7,7 @@ module Picobox
 
       def visit_darwin subject
         publish_event :build_service_start, service
-        # force verbose during building of boxes and services
-        system "docker-compose build #{service} 2>&1"
+        system "docker-compose build #{service} #{Picobox.output}"
         publish_event :build_service_stop
       end
 

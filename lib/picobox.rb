@@ -84,5 +84,5 @@ Wisper.subscribe(
   scope: Picobox::Utils::DomainEventPublisher
 )
 
-Picobox.set_verbosity(false)
+Picobox.set_verbosity(true)
 

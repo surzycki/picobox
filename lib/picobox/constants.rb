@@ -1,6 +1,6 @@
 module Picobox
   # names for files / directories
-  VERSION           = '0.3.41'
+  VERSION           = '0.3.50'
   HOMEPAGE          = 'https://github.com/surzycki/picobox'
   PACKAGES_INFO_URL = 'https://api.github.com/repos/picobox/packages/releases/latest'
   CONFIG_DIR        = '.picobox'
@@ -10,7 +10,7 @@ module Picobox
 
 
   module_function
-  def root()                 File.expand_path('../../..', __FILE__) end
+  def root() File.expand_path('../../..', __FILE__) end
 
   def output()   @output end
   def verbose?() @verbose end
